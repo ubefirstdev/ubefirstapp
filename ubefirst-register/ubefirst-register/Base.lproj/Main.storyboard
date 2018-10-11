@@ -17,15 +17,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHV-ee-Wnu">
-                                <rect key="frame" x="186" y="437" width="42" height="21"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Fondo" translatesAutoresizingMaskIntoConstraints="NO" id="GCl-vg-1Wb">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Fondo" translatesAutoresizingMaskIntoConstraints="NO" id="GCl-vg-1Wb">
-                                <rect key="frame" x="17" y="44" width="377" height="771"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Iniciar Sesion Holder" translatesAutoresizingMaskIntoConstraints="NO" id="4yG-1Y-FC8">
+                                <rect key="frame" x="-25" y="221" width="465" height="492"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Usuario y Nombre" translatesAutoresizingMaskIntoConstraints="NO" id="XeM-zr-P3K">
+                                <rect key="frame" x="29" y="334" width="144" height="113"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Contrasena" translatesAutoresizingMaskIntoConstraints="NO" id="Zf3-QG-rGT">
+                                <rect key="frame" x="29" y="411" width="144" height="113"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Boton" translatesAutoresizingMaskIntoConstraints="NO" id="k1Z-4K-GTe">
+                                <rect key="frame" x="113" y="498" width="188" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Bu-Es-fP8">
+                                <rect key="frame" x="119" y="517" width="176" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Iniciar Sesion"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Facebook" translatesAutoresizingMaskIntoConstraints="NO" id="NZs-r4-Oei">
+                                <rect key="frame" x="76" y="564" width="75" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Gmail" translatesAutoresizingMaskIntoConstraints="NO" id="WRz-BF-Sbx">
+                                <rect key="frame" x="170" y="564" width="75" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Instagram" translatesAutoresizingMaskIntoConstraints="NO" id="j0N-Oa-GdA">
+                                <rect key="frame" x="253" y="564" width="75" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Cuadro de texto" translatesAutoresizingMaskIntoConstraints="NO" id="rGo-Bp-Nud">
+                                <rect key="frame" x="120" y="343" width="240" height="95"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Cuadro de texto" translatesAutoresizingMaskIntoConstraints="NO" id="WTv-w3-uaW">
+                                <rect key="frame" x="120" y="420" width="240" height="95"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -106,10 +140,16 @@
     </scenes>
     <resources>
         <image name="Apellido" width="456" height="705"/>
+        <image name="Boton" width="1920" height="705"/>
         <image name="Contrasena" width="483" height="705"/>
         <image name="Correo Electronico" width="462" height="705"/>
         <image name="Crear cuenta" width="1920" height="705"/>
+        <image name="Cuadro de texto" width="1500" height="705"/>
+        <image name="Facebook" width="524" height="438"/>
         <image name="Fondo" width="1080" height="1920"/>
+        <image name="Gmail" width="512" height="512"/>
+        <image name="Iniciar Sesion Holder" width="1080" height="1920"/>
+        <image name="Instagram" width="1046" height="1054"/>
         <image name="Usuario y Nombre" width="474" height="705"/>
     </resources>
 </document>
