@@ -9,10 +9,10 @@
 import UIKit
 import FBSDKLoginKit
 import Firebase
+import FirebaseAuth
 
 class LoginViewController: UIViewController {
 
-    
     @IBAction func btn_FacebookLogin(_ sender: Any) {
         let fbLoginManager : FBSDKLoginManager = FBSDKLoginManager()
         fbLoginManager.logIn(withReadPermissions: ["public_profile","email","user_friends"], from: self) { (result, error) -> Void in
