@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ubefirst_register" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="ubefirst_register" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -67,14 +67,6 @@
                                 <rect key="frame" x="118" y="146" width="240" height="95"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oxl-3a-PBi">
-                                <rect key="frame" x="78" y="455" width="75" height="55"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="Facebook"/>
-                                <connections>
-                                    <action selector="btn_FacebookLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iFS-z1-gbP"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yAv-xy-52J">
                                 <rect key="frame" x="171" y="305" width="177" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -135,12 +127,27 @@
                                 <rect key="frame" x="128" y="81" width="164" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q9b-UG-Yt4">
+                                <rect key="frame" x="82" y="453" width="72" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="Facebook"/>
+                                <connections>
+                                    <action selector="btn_LoginFacebook:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sey-Hy-WcM"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Dg-UM-i6S">
+                                <rect key="frame" x="51" y="46" width="328" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="btn_LoginFacebook" destination="oxl-3a-PBi" id="lc0-10-1AZ"/>
+                        <outlet property="test_label" destination="1Dg-UM-i6S" id="dwd-Bq-ftJ"/>
                         <segue destination="SXh-2S-ZrU" kind="show" identifier="LoginToInicial" id="iIc-KV-rza"/>
                     </connections>
                 </viewController>
@@ -207,7 +214,7 @@
                         <outlet property="imageUserPicture" destination="HMs-yL-7We" id="ahe-Tj-FWL"/>
                         <outlet property="lbl_UID" destination="Fb4-j6-pCM" id="R9r-96-4fy"/>
                         <outlet property="lbl_username" destination="A5a-6j-4at" id="5mi-LK-T9T"/>
-                        <segue destination="SXh-2S-ZrU" kind="replace" identifier="HomeToInicial" splitViewControllerTargetIndex="1" id="d7y-dS-nbv"/>
+                        <segue destination="SXh-2S-ZrU" kind="push" identifier="HomeToInicial" splitViewControllerTargetIndex="1" id="d7y-dS-nbv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dIv-X5-ed0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -246,6 +253,6 @@
         <image name="logoFondo" width="455" height="154"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="iIc-KV-rza"/>
+        <segue reference="d7y-dS-nbv"/>
     </inferredMetricsTieBreakers>
 </document>

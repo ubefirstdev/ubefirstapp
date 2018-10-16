@@ -26,6 +26,11 @@ class HomeViewController: UIViewController {
             print ("Error signing out: %@", signOutError)
         }
         FBSDKAccessToken.setCurrent(nil)
+        OperationQueue.main.addOperation {
+            [weak self] in
+            self?.performSegue(withIdentifier: "HomeToInicial", sender: self)
+        }
+        
         
     }
     

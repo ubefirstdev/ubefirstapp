@@ -8,8 +8,10 @@
 
 import UIKit
 import FBSDKLoginKit
+import Firebase
+import FirebaseAuth
 
-class InicialViewController: UIViewController {
+class InicialViewController: UIViewController, FBSDKLoginButtonDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +31,9 @@ class InicialViewController: UIViewController {
             }
         }
         // Do any additional setup after loading the view.
+        
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,15 +41,40 @@ class InicialViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
+        
+        if error != nil{
+           // self.lbl_logStatus.text = error.localizedDescription
+        }else if result.isCancelled{
+            //self.lbl_logStatus.text="inicio de sesion cancelado"
+        } else {
+            //self.lbl_logStatus.text="inicio de sesion correcto"
+            
+            let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
+            
+            Auth.auth().signInAndRetrieveData(with: credential) { (authResult, error) in
+                if let error = error {
+                    //self.lbl_logStatus.text="error con firebase"
+                    return
+                }
+                // User is signed in
+                //self.lbl_logStatus.text="usuario conectado con firebase"
+                /*OperationQueue.main.addOperation {
+                    [weak self] in
+                    self?.performSegue(withIdentifier: "GoInicialView", sender: self)
+                }*/
+                
+                
+            }
+        }
+        
+        
     }
-    */
+    
+    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
+        //self.lbl_logStatus.text="usuario desconectado"
+    }
+    
+
 
 }

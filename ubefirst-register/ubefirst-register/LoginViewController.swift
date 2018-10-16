@@ -12,10 +12,14 @@ import Firebase
 import FirebaseAuth
 
 class LoginViewController: UIViewController {
-
-    @IBAction func btn_FacebookLogin(_ sender: Any) {
+    
+    
+    @IBOutlet weak var test_label: UILabel!
+    
+    @IBAction func btn_LoginFacebook(_ sender: Any) {
         let fbLoginManager : FBSDKLoginManager = FBSDKLoginManager()
-        fbLoginManager.logIn(withReadPermissions: ["public_profile","email","user_friends"], from: self) { (result, error) -> Void in
+        fbLoginManager.logIn(withReadPermissions: ["public_profile","email","user_friends"], from: self)
+        { (result, error) -> Void in
             if (error == nil){
                 let fbloginresult : FBSDKLoginManagerLoginResult = result!
                 // if user cancel the login
@@ -36,22 +40,27 @@ class LoginViewController: UIViewController {
                         // User is signed in
                         //inicio de sesion correcto con firebase
                         OperationQueue.main.addOperation {
-                            [weak self] in
-                            self?.performSegue(withIdentifier: "LoginToInicial", sender: self)
-                        }
+                         [weak self] in
+                         self?.performSegue(withIdentifier: "LoginToInicial", sender: self)
+                         }
                     }
                 }
             }
         }
-        
-        
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        if (FBSDKAccessToken.current()==nil){
+            self.test_label.text="usuario desconectado"
+        }else{
+            self.test_label.text="sesion activa"
+        }
+        
+
     }
-
-
+    
 }
 

@@ -16,6 +16,7 @@
 		EC8FED63216FB37A00D76752 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC8FED62216FB37A00D76752 /* Media.xcassets */; };
 		FCA4CF7E21750C97009FD4E0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA4CF7D21750C97009FD4E0 /* HomeViewController.swift */; };
 		FCA4CF80217511C8009FD4E0 /* InicialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA4CF7F217511C8009FD4E0 /* InicialViewController.swift */; };
+		FCA4CF84217611A1009FD4E0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FCA4CF83217611A0009FD4E0 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		EC8FED62216FB37A00D76752 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		FCA4CF7D21750C97009FD4E0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FCA4CF7F217511C8009FD4E0 /* InicialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InicialViewController.swift; sourceTree = "<group>"; };
+		FCA4CF83217611A0009FD4E0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				EC8FED52216F9BD900D76752 /* Main.storyboard */,
 				EC8FED57216F9BDB00D76752 /* LaunchScreen.storyboard */,
 				EC8FED5A216F9BDB00D76752 /* Info.plist */,
+				FCA4CF83217611A0009FD4E0 /* GoogleService-Info.plist */,
 				EC8FED62216FB37A00D76752 /* Media.xcassets */,
 			);
 			path = "ubefirst-register";
@@ -158,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC8FED59216F9BDB00D76752 /* LaunchScreen.storyboard in Resources */,
+				FCA4CF84217611A1009FD4E0 /* GoogleService-Info.plist in Resources */,
 				EC8FED63216FB37A00D76752 /* Media.xcassets in Resources */,
 				EC8FED54216F9BD900D76752 /* Main.storyboard in Resources */,
 			);
