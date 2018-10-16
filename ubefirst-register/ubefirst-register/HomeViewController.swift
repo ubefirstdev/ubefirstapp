@@ -28,7 +28,7 @@ class HomeViewController: UIViewController {
         FBSDKAccessToken.setCurrent(nil)
         OperationQueue.main.addOperation {
             [weak self] in
-            self?.performSegue(withIdentifier: "HomeToInicial", sender: self)
+            self?.performSegue(withIdentifier: "HomeToLogin", sender: self)
         }
         
         

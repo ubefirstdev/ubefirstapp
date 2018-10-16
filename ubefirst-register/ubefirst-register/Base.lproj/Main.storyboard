@@ -135,20 +135,13 @@
                                     <action selector="btn_LoginFacebook:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sey-Hy-WcM"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Dg-UM-i6S">
-                                <rect key="frame" x="51" y="46" width="328" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="mjb-gk-Thd"/>
                     <connections>
-                        <outlet property="test_label" destination="1Dg-UM-i6S" id="dwd-Bq-ftJ"/>
-                        <segue destination="SXh-2S-ZrU" kind="show" identifier="LoginToInicial" id="iIc-KV-rza"/>
+                        <segue destination="SXh-2S-ZrU" kind="show" identifier="LoginToHome" id="sF9-SW-Cmp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -214,12 +207,12 @@
                         <outlet property="imageUserPicture" destination="HMs-yL-7We" id="ahe-Tj-FWL"/>
                         <outlet property="lbl_UID" destination="Fb4-j6-pCM" id="R9r-96-4fy"/>
                         <outlet property="lbl_username" destination="A5a-6j-4at" id="5mi-LK-T9T"/>
-                        <segue destination="SXh-2S-ZrU" kind="push" identifier="HomeToInicial" splitViewControllerTargetIndex="1" id="d7y-dS-nbv"/>
+                        <segue destination="BYZ-38-t0r" kind="showDetail" identifier="HomeToLogin" id="zTG-Qb-YBh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dIv-X5-ed0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4578.2608695652179" y="-1157.608695652174"/>
+            <point key="canvasLocation" x="-4459" y="-1157"/>
         </scene>
         <!--Inicial View Controller-->
         <scene sceneID="kVY-Vh-G2b">
@@ -231,6 +224,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="iD2-fc-Hm5"/>
                     </view>
+                    <navigationItem key="navigationItem" id="eSj-Ro-y8P"/>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="InicialToLogin" id="Bem-9v-tBl"/>
                         <segue destination="R13-rb-1dI" kind="show" identifier="InicialToHome" id="kBJ-0Q-EFH"/>
@@ -253,6 +247,6 @@
         <image name="logoFondo" width="455" height="154"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="d7y-dS-nbv"/>
+        <segue reference="zTG-Qb-YBh"/>
     </inferredMetricsTieBreakers>
 </document>

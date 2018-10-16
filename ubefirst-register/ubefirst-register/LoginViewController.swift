@@ -11,10 +11,7 @@ import FBSDKLoginKit
 import Firebase
 import FirebaseAuth
 
-class LoginViewController: UIViewController {
-    
-    
-    @IBOutlet weak var test_label: UILabel!
+class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     @IBAction func btn_LoginFacebook(_ sender: Any) {
         let fbLoginManager : FBSDKLoginManager = FBSDKLoginManager()
@@ -41,7 +38,7 @@ class LoginViewController: UIViewController {
                         //inicio de sesion correcto con firebase
                         OperationQueue.main.addOperation {
                          [weak self] in
-                         self?.performSegue(withIdentifier: "LoginToInicial", sender: self)
+                         self?.performSegue(withIdentifier: "LoginToHome", sender: self)
                          }
                     }
                 }
@@ -54,13 +51,46 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         if (FBSDKAccessToken.current()==nil){
-            self.test_label.text="usuario desconectado"
+            //self.test_label.text="usuario desconectado"
         }else{
-            self.test_label.text="sesion activa"
+            //self.test_label.text="sesion activa"
+        }
+    }
+    
+    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
+        
+        if error != nil{
+           // self.lbl_logStatus.text = error.localizedDescription
+        }else if result.isCancelled{
+            //self.lbl_logStatus.text="inicio de sesion cancelado"
+        } else {
+            //self.lbl_logStatus.text="inicio de sesion correcto"
+            
+            let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
+            
+            Auth.auth().signInAndRetrieveData(with: credential) { (authResult, error) in
+                if let error = error {
+                  //  self.lbl_logStatus.text="error con firebase"
+                    return
+                }
+                // User is signed in
+               /* self.lbl_logStatus.text="usuario conectado con firebase"
+                OperationQueue.main.addOperation {
+                    [weak self] in
+                    self?.performSegue(withIdentifier: "GoInicialView", sender: self)
+                }*/
+                
+                
+            }
         }
         
-
+        
     }
+    
+    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
+        //self.lbl_logStatus.text="usuario desconectado"
+    }
+
     
 }
 
