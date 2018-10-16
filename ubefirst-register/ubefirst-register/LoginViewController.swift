@@ -13,6 +13,16 @@ import FirebaseAuth
 
 class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     
+    @IBOutlet weak var textField_usernameLogin: UITextField!
+    @IBOutlet weak var textField_passwordLogin: UITextField!
+    @IBOutlet weak var btn_forgotPassword: UIButton!
+    @IBOutlet weak var btn_loginButton: UIButton!
+    @IBOutlet weak var btn_instagramLogin: UIButton!
+    @IBOutlet weak var btn_googleLogin: UIButton!
+    @IBOutlet weak var btn_facebookButton: UIButton!
+    @IBOutlet weak var btn_registerButton: UIButton!
+    
+    
     @IBAction func btn_LoginFacebook(_ sender: Any) {
         let fbLoginManager : FBSDKLoginManager = FBSDKLoginManager()
         fbLoginManager.logIn(withReadPermissions: ["public_profile","email","user_friends"], from: self)

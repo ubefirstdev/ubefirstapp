@@ -124,7 +124,7 @@
                                 </state>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logoFondo" translatesAutoresizingMaskIntoConstraints="NO" id="GvI-Sw-Xdm">
-                                <rect key="frame" x="128" y="81" width="164" height="57"/>
+                                <rect key="frame" x="128" y="63" width="164" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q9b-UG-Yt4">
@@ -135,12 +135,36 @@
                                     <action selector="btn_LoginFacebook:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sey-Hy-WcM"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ID3-mD-rSw">
+                                <rect key="frame" x="143" y="255" width="192" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.9371148943901062" green="0.93698835372924805" blue="0.958759605884552" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nombre de usuario" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yqh-Dp-Irj">
+                                <rect key="frame" x="143" y="176" width="192" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.93711489439999995" green="0.9369883537" blue="0.95875960589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="mjb-gk-Thd"/>
                     <connections>
+                        <outlet property="btn_facebookButton" destination="Q9b-UG-Yt4" id="QNW-CZ-5kC"/>
+                        <outlet property="btn_forgotPassword" destination="yAv-xy-52J" id="W6x-7e-3uj"/>
+                        <outlet property="btn_googleLogin" destination="xr2-qg-cUt" id="jW3-PW-Us4"/>
+                        <outlet property="btn_instagramLogin" destination="gpn-by-o0p" id="MIo-RW-ETy"/>
+                        <outlet property="btn_loginButton" destination="2Bu-Es-fP8" id="iv6-As-efu"/>
+                        <outlet property="btn_registerButton" destination="m5F-YA-TGh" id="dzO-dn-Wdw"/>
+                        <outlet property="textField_passwordLogin" destination="ID3-mD-rSw" id="4jX-K0-BZ0"/>
+                        <outlet property="textField_usernameLogin" destination="Yqh-Dp-Irj" id="x0k-Rc-dfA"/>
                         <segue destination="SXh-2S-ZrU" kind="show" identifier="LoginToHome" id="sF9-SW-Cmp"/>
                     </connections>
                 </viewController>
