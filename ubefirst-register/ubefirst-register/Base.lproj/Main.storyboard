@@ -165,7 +165,7 @@
                         <outlet property="btn_registerButton" destination="m5F-YA-TGh" id="dzO-dn-Wdw"/>
                         <outlet property="textField_passwordLogin" destination="ID3-mD-rSw" id="4jX-K0-BZ0"/>
                         <outlet property="textField_usernameLogin" destination="Yqh-Dp-Irj" id="x0k-Rc-dfA"/>
-                        <segue destination="SXh-2S-ZrU" kind="show" identifier="LoginToHome" id="sF9-SW-Cmp"/>
+                        <segue destination="SXh-2S-ZrU" kind="showDetail" identifier="LoginToHome" id="sF9-SW-Cmp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

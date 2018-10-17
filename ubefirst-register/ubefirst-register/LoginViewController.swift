@@ -60,6 +60,8 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.btn_loginButton.layer.cornerRadius = 10
+
         if (FBSDKAccessToken.current()==nil){
             //self.test_label.text="usuario desconectado"
         }else{
