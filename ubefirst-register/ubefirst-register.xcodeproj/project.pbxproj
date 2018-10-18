@@ -12,8 +12,12 @@
 		EC8FED51216F9BD900D76752 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8FED50216F9BD900D76752 /* LoginViewController.swift */; };
 		EC8FED54216F9BD900D76752 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC8FED52216F9BD900D76752 /* Main.storyboard */; };
 		EC8FED59216F9BDB00D76752 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC8FED57216F9BDB00D76752 /* LaunchScreen.storyboard */; };
-		EC8FED61216FAE3200D76752 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8FED60216FAE3200D76752 /* RegisterViewController.swift */; };
 		EC8FED63216FB37A00D76752 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC8FED62216FB37A00D76752 /* Media.xcassets */; };
+		FC5FDD522178E8420046512C /* RegistrarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5FDD512178E8420046512C /* RegistrarViewController.swift */; };
+		FC5FDD642178F3460046512C /* favicon-180-precomposed.png in Resources */ = {isa = PBXBuildFile; fileRef = FC5FDD602178F3450046512C /* favicon-180-precomposed.png */; };
+		FC5FDD652178F3460046512C /* favicon-144-precomposed.png in Resources */ = {isa = PBXBuildFile; fileRef = FC5FDD612178F3450046512C /* favicon-144-precomposed.png */; };
+		FC5FDD662178F3460046512C /* favicon-152-precomposed.png in Resources */ = {isa = PBXBuildFile; fileRef = FC5FDD622178F3450046512C /* favicon-152-precomposed.png */; };
+		FC5FDD672178F3460046512C /* favicon-120-precomposed.png in Resources */ = {isa = PBXBuildFile; fileRef = FC5FDD632178F3460046512C /* favicon-120-precomposed.png */; };
 		FCA4CF7E21750C97009FD4E0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA4CF7D21750C97009FD4E0 /* HomeViewController.swift */; };
 		FCA4CF80217511C8009FD4E0 /* InicialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA4CF7F217511C8009FD4E0 /* InicialViewController.swift */; };
 		FCA4CF84217611A1009FD4E0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FCA4CF83217611A0009FD4E0 /* GoogleService-Info.plist */; };
@@ -29,8 +33,12 @@
 		EC8FED53216F9BD900D76752 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EC8FED58216F9BDB00D76752 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC8FED5A216F9BDB00D76752 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EC8FED60216FAE3200D76752 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		EC8FED62216FB37A00D76752 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		FC5FDD512178E8420046512C /* RegistrarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrarViewController.swift; sourceTree = "<group>"; };
+		FC5FDD602178F3450046512C /* favicon-180-precomposed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "favicon-180-precomposed.png"; path = "icono logo/elbueno/favicon-180-precomposed.png"; sourceTree = "<group>"; };
+		FC5FDD612178F3450046512C /* favicon-144-precomposed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "favicon-144-precomposed.png"; path = "icono logo/elbueno/favicon-144-precomposed.png"; sourceTree = "<group>"; };
+		FC5FDD622178F3450046512C /* favicon-152-precomposed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "favicon-152-precomposed.png"; path = "icono logo/elbueno/favicon-152-precomposed.png"; sourceTree = "<group>"; };
+		FC5FDD632178F3460046512C /* favicon-120-precomposed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "favicon-120-precomposed.png"; path = "icono logo/elbueno/favicon-120-precomposed.png"; sourceTree = "<group>"; };
 		FCA4CF7D21750C97009FD4E0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FCA4CF7F217511C8009FD4E0 /* InicialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InicialViewController.swift; sourceTree = "<group>"; };
 		FCA4CF83217611A0009FD4E0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -68,6 +76,7 @@
 		EC8FED42216F9BD900D76752 = {
 			isa = PBXGroup;
 			children = (
+				FC5FDD532178EC4A0046512C /* recursos */,
 				EC8FED4D216F9BD900D76752 /* ubefirst-register */,
 				EC8FED4C216F9BD900D76752 /* Products */,
 				92E99C3C8AEA7CE41A16520E /* Pods */,
@@ -88,8 +97,8 @@
 			children = (
 				EC8FED4E216F9BD900D76752 /* AppDelegate.swift */,
 				EC8FED50216F9BD900D76752 /* LoginViewController.swift */,
+				FC5FDD512178E8420046512C /* RegistrarViewController.swift */,
 				FCA4CF7D21750C97009FD4E0 /* HomeViewController.swift */,
-				EC8FED60216FAE3200D76752 /* RegisterViewController.swift */,
 				FCA4CF7F217511C8009FD4E0 /* InicialViewController.swift */,
 				EC8FED52216F9BD900D76752 /* Main.storyboard */,
 				EC8FED57216F9BDB00D76752 /* LaunchScreen.storyboard */,
@@ -98,6 +107,17 @@
 				EC8FED62216FB37A00D76752 /* Media.xcassets */,
 			);
 			path = "ubefirst-register";
+			sourceTree = "<group>";
+		};
+		FC5FDD532178EC4A0046512C /* recursos */ = {
+			isa = PBXGroup;
+			children = (
+				FC5FDD632178F3460046512C /* favicon-120-precomposed.png */,
+				FC5FDD612178F3450046512C /* favicon-144-precomposed.png */,
+				FC5FDD622178F3450046512C /* favicon-152-precomposed.png */,
+				FC5FDD602178F3450046512C /* favicon-180-precomposed.png */,
+			);
+			path = recursos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,6 +180,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC5FDD642178F3460046512C /* favicon-180-precomposed.png in Resources */,
+				FC5FDD672178F3460046512C /* favicon-120-precomposed.png in Resources */,
+				FC5FDD652178F3460046512C /* favicon-144-precomposed.png in Resources */,
+				FC5FDD662178F3460046512C /* favicon-152-precomposed.png in Resources */,
 				EC8FED59216F9BDB00D76752 /* LaunchScreen.storyboard in Resources */,
 				FCA4CF84217611A1009FD4E0 /* GoogleService-Info.plist in Resources */,
 				EC8FED63216FB37A00D76752 /* Media.xcassets in Resources */,
@@ -226,9 +250,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCA4CF80217511C8009FD4E0 /* InicialViewController.swift in Sources */,
-				EC8FED61216FAE3200D76752 /* RegisterViewController.swift in Sources */,
 				EC8FED51216F9BD900D76752 /* LoginViewController.swift in Sources */,
 				EC8FED4F216F9BD900D76752 /* AppDelegate.swift in Sources */,
+				FC5FDD522178E8420046512C /* RegistrarViewController.swift in Sources */,
 				FCA4CF7E21750C97009FD4E0 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -375,7 +399,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 22C70E8A9C5C775DFE51533E /* Pods-ubefirst-register.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-3";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ASK9PBQ6AZ;
@@ -396,7 +420,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0C880E81A148295BAB330F9C /* Pods-ubefirst-register.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-3";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ASK9PBQ6AZ;

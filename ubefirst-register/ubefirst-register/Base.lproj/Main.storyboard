@@ -96,7 +96,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9wx-Kw-0hI">
-                                <rect key="frame" x="83" y="546" width="152" height="21"/>
+                                <rect key="frame" x="83" y="545" width="152" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="No tengo cuenta ">
@@ -122,6 +122,9 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <segue destination="pZ0-Jm-pmS" kind="show" id="By8-vc-hkb"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logoFondo" translatesAutoresizingMaskIntoConstraints="NO" id="GvI-Sw-Xdm">
                                 <rect key="frame" x="128" y="63" width="164" height="57"/>
@@ -171,6 +174,157 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-5452.1739130434789" y="-2004.6195652173915"/>
+        </scene>
+        <!--Registrar View Controller-->
+        <scene sceneID="2Gw-cv-aY9">
+            <objects>
+                <viewController modalTransitionStyle="flipHorizontal" id="pZ0-Jm-pmS" customClass="RegistrarViewController" customModule="ubefirst_register" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jV7-UY-uXF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Fondo" translatesAutoresizingMaskIntoConstraints="NO" id="hsN-jU-qr2">
+                                <rect key="frame" x="0.0" y="177" width="415" height="559"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logoFondo" translatesAutoresizingMaskIntoConstraints="NO" id="Xus-If-cdq">
+                                <rect key="frame" x="125" y="64" width="164" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" semanticContentAttribute="playback" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Iniciar Sesion Holder" translatesAutoresizingMaskIntoConstraints="NO" id="bED-28-gHi">
+                                <rect key="frame" x="-41" y="95" width="496" height="497"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Usuario y Nombre" translatesAutoresizingMaskIntoConstraints="NO" id="M7L-Cd-jBe">
+                                <rect key="frame" x="23" y="121" width="144" height="113"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Cuadro de texto" translatesAutoresizingMaskIntoConstraints="NO" id="D0e-DH-D1n">
+                                <rect key="frame" x="113" y="130" width="240" height="95"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Correo Electronico" translatesAutoresizingMaskIntoConstraints="NO" id="U5r-uZ-R3q">
+                                <rect key="frame" x="23" y="257" width="144" height="113"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Cuadro de texto" translatesAutoresizingMaskIntoConstraints="NO" id="beP-qq-PoY">
+                                <rect key="frame" x="113" y="266" width="240" height="95"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Contrasena" translatesAutoresizingMaskIntoConstraints="NO" id="Vxb-E9-ttv">
+                                <rect key="frame" x="23" y="324" width="144" height="113"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Cuadro de texto" translatesAutoresizingMaskIntoConstraints="NO" id="okY-x0-wsr">
+                                <rect key="frame" x="113" y="333" width="240" height="95"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Apellido" translatesAutoresizingMaskIntoConstraints="NO" id="lca-qv-2gL">
+                                <rect key="frame" x="23" y="188" width="144" height="113"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Cuadro de texto" translatesAutoresizingMaskIntoConstraints="NO" id="fEY-EC-6fQ">
+                                <rect key="frame" x="113" y="197" width="240" height="95"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5iN-gZ-cFa">
+                                <rect key="frame" x="102" y="433" width="229" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.83914172649383545" green="0.83926308155059814" blue="0.8391152024269104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Crear cuenta">
+                                            <attributes>
+                                                <font key="NSFont" size="36" name="SignPainter-HouseScript"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="btn_crearCuentaRegistroPressed:" destination="pZ0-Jm-pmS" eventType="touchUpInside" id="fzz-hI-hYX"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nxs-uP-9ea">
+                                <rect key="frame" x="142" y="162" width="189" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.94128221273422241" green="0.94512861967086792" blue="0.94502359628677368" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Apellido" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PYG-35-wB7">
+                                <rect key="frame" x="139" y="228" width="189" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.94128221270000001" green="0.94512861969999995" blue="0.94502359629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Correo" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gEm-P9-kSC">
+                                <rect key="frame" x="139" y="298" width="189" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.94128221270000001" green="0.94512861969999995" blue="0.94502359629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DJN-e2-fwF">
+                                <rect key="frame" x="139" y="365" width="189" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.94128221270000001" green="0.94512861969999995" blue="0.94502359629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ojT-ve-dx0">
+                                <rect key="frame" x="183" y="531" width="98" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Iniciar sesión">
+                                            <attributes>
+                                                <font key="NSFont" size="24" name="SignPainter-HouseScript"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="VV2-Hy-eC3"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K8K-uE-VPG">
+                                <rect key="frame" x="133" y="538" width="49" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="o bien">
+                                        <attributes>
+                                            <color key="NSColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="23" name="SignPainter-HouseScript"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="392-kb-wmr"/>
+                    </view>
+                    <connections>
+                        <outlet property="btn_crearCuentaRegistro" destination="5iN-gZ-cFa" id="qft-ez-CrC"/>
+                        <outlet property="textField_apellidoRegistro" destination="PYG-35-wB7" id="jwr-eb-Jes"/>
+                        <outlet property="textField_correoRegistro" destination="gEm-P9-kSC" id="68Z-vb-AvZ"/>
+                        <outlet property="textField_nombreRegistro" destination="Nxs-uP-9ea" id="fj2-Za-RA7"/>
+                        <outlet property="textField_passwordRegistro" destination="DJN-e2-fwF" id="deX-OL-fQA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qif-LJ-gkr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4584.057971014493" y="-2005.4347826086957"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="iJM-mb-gMt">
@@ -260,7 +414,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Apellido" width="456" height="705"/>
         <image name="Contrasena" width="483" height="705"/>
+        <image name="Correo Electronico" width="462" height="705"/>
         <image name="Cuadro de texto" width="1500" height="705"/>
         <image name="Facebook" width="524" height="438"/>
         <image name="Fondo" width="1064" height="1301"/>
@@ -272,6 +428,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ueO-d4-Txi"/>
-        <segue reference="Bem-9v-tBl"/>
+        <segue reference="VV2-Hy-eC3"/>
     </inferredMetricsTieBreakers>
 </document>

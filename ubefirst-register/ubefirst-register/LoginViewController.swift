@@ -60,7 +60,11 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        //modifica la apariencia del boton a un boton con bordes redondeados
         self.btn_loginButton.layer.cornerRadius = 10
+        //modifica el textfield para que se oculte la contraseña
+        self.textField_passwordLogin.isSecureTextEntry = true
 
         if (FBSDKAccessToken.current()==nil){
             //self.test_label.text="usuario desconectado"
@@ -86,23 +90,25 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
                     return
                 }
                 // User is signed in
-               /* self.lbl_logStatus.text="usuario conectado con firebase"
-                OperationQueue.main.addOperation {
-                    [weak self] in
-                    self?.performSegue(withIdentifier: "GoInicialView", sender: self)
-                }*/
-                
-                
             }
         }
-        
-        
     }
     
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
         //self.lbl_logStatus.text="usuario desconectado"
     }
 
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    //metodo para que al presionar "intro" en el teclado, el teclado se oculte
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.textField_usernameLogin.resignFirstResponder()
+        self.textField_passwordLogin.resignFirstResponder()
+        return true
+    }
+    
     
 }
 
