@@ -45,6 +45,9 @@
                                 <rect key="frame" x="275" y="455" width="60" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="google" image="Gmail"/>
+                                <connections>
+                                    <action selector="btn_LoginGoogle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1kX-Na-kiK"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gpn-by-o0p">
                                 <rect key="frame" x="180" y="455" width="60" height="55"/>
@@ -392,6 +395,21 @@
             </objects>
             <point key="canvasLocation" x="-4459" y="-1157"/>
         </scene>
+        <!--Test Google View Controller-->
+        <scene sceneID="oZt-bI-410">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6G0-CB-Cpw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="BQh-oF-eda" customClass="TestGoogleViewController" customModule="ubefirst_register" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZoS-RA-Zyf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Eoi-sI-MbU"/>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-6999" y="-2249"/>
+        </scene>
         <!--Inicial View Controller-->
         <scene sceneID="kVY-Vh-G2b">
             <objects>
@@ -427,7 +445,7 @@
         <image name="logoFondo" width="455" height="154"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ueO-d4-Txi"/>
-        <segue reference="VV2-Hy-eC3"/>
+        <segue reference="kBJ-0Q-EFH"/>
+        <segue reference="Bem-9v-tBl"/>
     </inferredMetricsTieBreakers>
 </document>

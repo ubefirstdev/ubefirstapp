@@ -10,6 +10,9 @@ import UIKit
 import FBSDKLoginKit
 import Firebase
 import FirebaseAuth
+import GoogleSignIn
+
+//variables globales
 
 class InicialViewController: UIViewController, FBSDKLoginButtonDelegate {
 
@@ -25,13 +28,28 @@ class InicialViewController: UIViewController, FBSDKLoginButtonDelegate {
             
         }else{
             //ninguna sesion
-            OperationQueue.main.addOperation {
+            
+            //sesion con google
+            if GIDSignIn.sharedInstance().hasAuthInKeychain() {
+                //sesion activa con google
+                OperationQueue.main.addOperation {
+                    [weak self] in
+                    self?.performSegue(withIdentifier: "InicialToHome", sender: self)
+                }
+            } else {
+                //ninguna sesion de google
+                OperationQueue.main.addOperation {
+                    [weak self] in
+                    self?.performSegue(withIdentifier: "InicialToLogin", sender: self)
+                }
+            }
+            
+            /*OperationQueue.main.addOperation {
                 [weak self] in
                 self?.performSegue(withIdentifier: "InicialToLogin", sender: self)
-            }
+            }*/
         }
         // Do any additional setup after loading the view.
-        
         
         
     }

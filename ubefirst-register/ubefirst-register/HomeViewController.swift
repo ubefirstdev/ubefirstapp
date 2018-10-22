@@ -10,6 +10,7 @@ import UIKit
 import FBSDKLoginKit
 import FirebaseAuth
 import Firebase
+import GoogleSignIn
 
 class HomeViewController: UIViewController {
     
@@ -31,7 +32,7 @@ class HomeViewController: UIViewController {
             self?.performSegue(withIdentifier: "HomeToLogin", sender: self)
         }
         
-        
+        GIDSignIn.sharedInstance().signOut()
     }
     
     override func viewDidLoad() {

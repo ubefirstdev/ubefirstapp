@@ -10,18 +10,24 @@ import UIKit
 import FBSDKLoginKit
 import Firebase
 import FirebaseAuth
+import GoogleSignIn
 
-class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
+class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignInUIDelegate, GIDSignInDelegate {
     
     @IBOutlet weak var textField_usernameLogin: UITextField!
     @IBOutlet weak var textField_passwordLogin: UITextField!
     @IBOutlet weak var btn_forgotPassword: UIButton!
     @IBOutlet weak var btn_loginButton: UIButton!
     @IBOutlet weak var btn_instagramLogin: UIButton!
-    @IBOutlet weak var btn_googleLogin: UIButton!
+    @IBOutlet weak var btn_googleLogin: GIDSignInButton!
     @IBOutlet weak var btn_facebookButton: UIButton!
     @IBOutlet weak var btn_registerButton: UIButton!
     
+    @IBAction func btn_LoginGoogle(_ sender: Any) {
+        GIDSignIn.sharedInstance().delegate = self
+        GIDSignIn.sharedInstance().uiDelegate = self
+        GIDSignIn.sharedInstance().signIn()
+    }
     
     @IBAction func btn_LoginFacebook(_ sender: Any) {
         let fbLoginManager : FBSDKLoginManager = FBSDKLoginManager()
@@ -65,7 +71,8 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         self.btn_loginButton.layer.cornerRadius = 10
         //modifica el textfield para que se oculte la contraseña
         self.textField_passwordLogin.isSecureTextEntry = true
-
+        GIDSignIn.sharedInstance().uiDelegate=self
+        
         if (FBSDKAccessToken.current()==nil){
             //self.test_label.text="usuario desconectado"
         }else{
@@ -97,6 +104,36 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
         //self.lbl_logStatus.text="usuario desconectado"
     }
+    
+    //sign in google+
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        if let error = error {
+            print("failed to log in", error)
+            return
+        }else{
+            print("login sucessfull", user)
+        }
+        
+        guard let authentication = user.authentication else { return }
+        let credential = GoogleAuthProvider.credential(withIDToken:authentication.idToken,accessToken: authentication.accessToken)
+        
+        Auth.auth().signInAndRetrieveData(with: credential) { (authResult, error) in
+            if let error = error {
+                // ...
+                print("error during firebase authentication", error)
+                return
+            }
+            // User is signed in
+            // ...
+            print("user successfully login into firebase")
+            OperationQueue.main.addOperation {
+                [weak self] in
+                self?.performSegue(withIdentifier: "LoginToHome", sender: self)
+            }
+        }
+    }
+    
+    
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
