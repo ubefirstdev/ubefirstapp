@@ -11,7 +11,6 @@ import Firebase
 import FBSDKCoreKit
 import GoogleSignIn
 
-let db = Firestore.firestore()
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

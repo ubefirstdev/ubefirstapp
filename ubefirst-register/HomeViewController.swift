@@ -12,6 +12,7 @@ import FirebaseAuth
 import FirebaseFirestore
 import GoogleSignIn
 
+let db = Firestore.firestore()
 var userUID: String!
 var userData = Padre()
 var database=GetFirestoreDatabase()
