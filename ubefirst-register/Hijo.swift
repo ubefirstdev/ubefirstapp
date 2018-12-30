@@ -9,11 +9,13 @@
 class Hijo{
     var nombre: String!
     var alias: String!
-    var dimensiones: [String]!
+    var dimensionesref: [String]!
+    var dimensiones: [Dimension]!
     
     init() {
         self.nombre=""
         self.alias=""
-        self.dimensiones=[String]()
+        self.dimensiones=[Dimension]()
+        self.dimensionesref=[String]()
     }
 }

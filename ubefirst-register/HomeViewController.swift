@@ -12,10 +12,6 @@ import FirebaseAuth
 import FirebaseFirestore
 import GoogleSignIn
 
-let db = Firestore.firestore()
-var userUID: String!
-var userData = Padre()
-var database=GetFirestoreDatabase()
 
 
 class HomeViewController: UIViewController {
@@ -43,10 +39,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let user = Auth.auth().currentUser
-        userUID=user?.uid
-        database.loadDataHijos()
-        database.loadDataPadre()
+        self.lbl_username.text="se ha cargado completamente el usuario " + userData.nombre + " de firestore"
         /*if let user = user {
             // The user's ID, unique to the Firebase project.
             // Do NOT use this value to authenticate with your backend server,

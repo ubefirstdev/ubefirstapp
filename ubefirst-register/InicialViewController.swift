@@ -23,7 +23,7 @@ class InicialViewController: UIViewController, FBSDKLoginButtonDelegate {
             //sesion activa
             OperationQueue.main.addOperation {
                 [weak self] in
-                self?.performSegue(withIdentifier: "InicialToHome", sender: self)
+                self?.performSegue(withIdentifier: "InicialToLoadingPage", sender: self)
             }
             
         }else{
@@ -34,7 +34,7 @@ class InicialViewController: UIViewController, FBSDKLoginButtonDelegate {
                 //sesion activa con google
                 OperationQueue.main.addOperation {
                     [weak self] in
-                    self?.performSegue(withIdentifier: "InicialToHome", sender: self)
+                    self?.performSegue(withIdentifier: "InicialToLoadingPage", sender: self)
                 }
             } else {
                 //ninguna sesion de google

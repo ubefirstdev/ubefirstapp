@@ -9,15 +9,17 @@
 class Padre{
     var nombre: String!
     var correo: String!
-    var hijosref: String!
-    var alias: String!
+    var uid: String!
+    var hijosref: [String]!
     var hijos: [Hijo]!
     
     init() {
         self.nombre=""
         self.correo=""
         self.hijos = [Hijo]()
-        self.hijosref=""
+        self.hijosref=[String]()
+        self.uid=""
+        
     }
 }
 

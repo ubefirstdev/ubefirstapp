@@ -54,7 +54,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignIn
                         //inicio de sesion correcto con firebase
                         OperationQueue.main.addOperation {
                          [weak self] in
-                         self?.performSegue(withIdentifier: "LoginToHome", sender: self)
+                         self?.performSegue(withIdentifier: "LoginToLoadingPage", sender: self)
                          }
                     }
                 }

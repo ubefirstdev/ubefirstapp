@@ -15,6 +15,10 @@
 		EC8FED63216FB37A00D76752 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC8FED62216FB37A00D76752 /* Media.xcassets */; };
 		FC001EA321D7D278001B033B /* RegistroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC001EA221D7D278001B033B /* RegistroViewController.swift */; };
 		FC001EA721D7DAC3001B033B /* FormularioRecuerdoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC001EA621D7DAC2001B033B /* FormularioRecuerdoViewController.swift */; };
+		FC001EA921D7FDB1001B033B /* LoadingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC001EA821D7FDB1001B033B /* LoadingPageViewController.swift */; };
+		FC001EAB21D8340A001B033B /* Dimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC001EAA21D8340A001B033B /* Dimension.swift */; };
+		FC001EAD21D84207001B033B /* Recuerdo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC001EAC21D84207001B033B /* Recuerdo.swift */; };
+		FC001EAF21D860F5001B033B /* PersonasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC001EAE21D860F5001B033B /* PersonasViewController.swift */; };
 		FC1B9DA5217D3E5000145AFD /* TestGoogleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1B9DA4217D3E5000145AFD /* TestGoogleViewController.swift */; };
 		FCA4CF7E21750C97009FD4E0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA4CF7D21750C97009FD4E0 /* HomeViewController.swift */; };
 		FCA4CF80217511C8009FD4E0 /* InicialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA4CF7F217511C8009FD4E0 /* InicialViewController.swift */; };
@@ -43,6 +47,10 @@
 		EC8FED62216FB37A00D76752 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		FC001EA221D7D278001B033B /* RegistroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistroViewController.swift; sourceTree = "<group>"; };
 		FC001EA621D7DAC2001B033B /* FormularioRecuerdoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormularioRecuerdoViewController.swift; sourceTree = "<group>"; };
+		FC001EA821D7FDB1001B033B /* LoadingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingPageViewController.swift; sourceTree = "<group>"; };
+		FC001EAA21D8340A001B033B /* Dimension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dimension.swift; sourceTree = "<group>"; };
+		FC001EAC21D84207001B033B /* Recuerdo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recuerdo.swift; sourceTree = "<group>"; };
+		FC001EAE21D860F5001B033B /* PersonasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonasViewController.swift; sourceTree = "<group>"; };
 		FC1B9DA4217D3E5000145AFD /* TestGoogleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGoogleViewController.swift; sourceTree = "<group>"; };
 		FCA4CF7D21750C97009FD4E0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FCA4CF7F217511C8009FD4E0 /* InicialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InicialViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +120,7 @@
 				EC8FED4E216F9BD900D76752 /* AppDelegate.swift */,
 				EC8FED50216F9BD900D76752 /* LoginViewController.swift */,
 				FC001EA221D7D278001B033B /* RegistroViewController.swift */,
+				FC001EA821D7FDB1001B033B /* LoadingPageViewController.swift */,
 				FC001EA621D7DAC2001B033B /* FormularioRecuerdoViewController.swift */,
 				FCA4CF7D21750C97009FD4E0 /* HomeViewController.swift */,
 				FCA4CF7F217511C8009FD4E0 /* InicialViewController.swift */,
@@ -126,6 +135,9 @@
 				FCA9895F21D597730071748E /* GetFirestoreDatabase.swift */,
 				FCA9896121D598B80071748E /* Padre.swift */,
 				FCA9896321D59A2B0071748E /* Hijo.swift */,
+				FC001EAA21D8340A001B033B /* Dimension.swift */,
+				FC001EAC21D84207001B033B /* Recuerdo.swift */,
+				FC001EAE21D860F5001B033B /* PersonasViewController.swift */,
 			);
 			path = "ubefirst-register";
 			sourceTree = "<group>";
@@ -310,15 +322,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCA4CF80217511C8009FD4E0 /* InicialViewController.swift in Sources */,
+				FC001EAF21D860F5001B033B /* PersonasViewController.swift in Sources */,
 				EC8FED51216F9BD900D76752 /* LoginViewController.swift in Sources */,
 				FCA9895E21D42CD60071748E /* TutorialViewController.swift in Sources */,
 				FCA9896221D598B80071748E /* Padre.swift in Sources */,
+				FC001EAB21D8340A001B033B /* Dimension.swift in Sources */,
 				FCA9896021D597730071748E /* GetFirestoreDatabase.swift in Sources */,
+				FC001EAD21D84207001B033B /* Recuerdo.swift in Sources */,
 				FCA9895C21D426630071748E /* DimensionesViewController.swift in Sources */,
 				FC001EA321D7D278001B033B /* RegistroViewController.swift in Sources */,
 				EC8FED4F216F9BD900D76752 /* AppDelegate.swift in Sources */,
 				FCA4CF7E21750C97009FD4E0 /* HomeViewController.swift in Sources */,
 				FC001EA721D7DAC3001B033B /* FormularioRecuerdoViewController.swift in Sources */,
+				FC001EA921D7FDB1001B033B /* LoadingPageViewController.swift in Sources */,
 				FC1B9DA5217D3E5000145AFD /* TestGoogleViewController.swift in Sources */,
 				FCA9896421D59A2B0071748E /* Hijo.swift in Sources */,
 			);
