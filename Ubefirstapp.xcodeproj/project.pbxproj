@@ -23,10 +23,6 @@
 		FCA4CF7E21750C97009FD4E0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA4CF7D21750C97009FD4E0 /* HomeViewController.swift */; };
 		FCA4CF80217511C8009FD4E0 /* InicialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA4CF7F217511C8009FD4E0 /* InicialViewController.swift */; };
 		FCA4CF84217611A1009FD4E0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FCA4CF83217611A0009FD4E0 /* GoogleService-Info.plist */; };
-		FCA9895721CC069F0071748E /* Boton.png in Resources */ = {isa = PBXBuildFile; fileRef = FCA9895321CC069F0071748E /* Boton.png */; };
-		FCA9895821CC069F0071748E /* Fondo iniciar sesion.png in Resources */ = {isa = PBXBuildFile; fileRef = FCA9895421CC069F0071748E /* Fondo iniciar sesion.png */; };
-		FCA9895921CC069F0071748E /* icono iniciar sesion.png in Resources */ = {isa = PBXBuildFile; fileRef = FCA9895521CC069F0071748E /* icono iniciar sesion.png */; };
-		FCA9895A21CC069F0071748E /* Ventana Datos iniciar sesino.png in Resources */ = {isa = PBXBuildFile; fileRef = FCA9895621CC069F0071748E /* Ventana Datos iniciar sesino.png */; };
 		FCA9895C21D426630071748E /* DimensionesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA9895B21D426630071748E /* DimensionesViewController.swift */; };
 		FCA9895E21D42CD60071748E /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA9895D21D42CD60071748E /* TutorialViewController.swift */; };
 		FCA9896021D597730071748E /* GetFirestoreDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA9895F21D597730071748E /* GetFirestoreDatabase.swift */; };
@@ -55,10 +51,6 @@
 		FCA4CF7D21750C97009FD4E0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FCA4CF7F217511C8009FD4E0 /* InicialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InicialViewController.swift; sourceTree = "<group>"; };
 		FCA4CF83217611A0009FD4E0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		FCA9895321CC069F0071748E /* Boton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Boton.png; sourceTree = "<group>"; };
-		FCA9895421CC069F0071748E /* Fondo iniciar sesion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fondo iniciar sesion.png"; sourceTree = "<group>"; };
-		FCA9895521CC069F0071748E /* icono iniciar sesion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icono iniciar sesion.png"; sourceTree = "<group>"; };
-		FCA9895621CC069F0071748E /* Ventana Datos iniciar sesino.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ventana Datos iniciar sesino.png"; sourceTree = "<group>"; };
 		FCA9895B21D426630071748E /* DimensionesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimensionesViewController.swift; sourceTree = "<group>"; };
 		FCA9895D21D42CD60071748E /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		FCA9895F21D597730071748E /* GetFirestoreDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFirestoreDatabase.swift; sourceTree = "<group>"; };
@@ -98,7 +90,6 @@
 		EC8FED42216F9BD900D76752 = {
 			isa = PBXGroup;
 			children = (
-				FC5FDD532178EC4A0046512C /* recursos */,
 				EC8FED4D216F9BD900D76752 /* Ubefirstapp */,
 				EC8FED4C216F9BD900D76752 /* Products */,
 				92E99C3C8AEA7CE41A16520E /* Pods */,
@@ -142,17 +133,6 @@
 			path = Ubefirstapp;
 			sourceTree = "<group>";
 		};
-		FC5FDD532178EC4A0046512C /* recursos */ = {
-			isa = PBXGroup;
-			children = (
-				FCA9895321CC069F0071748E /* Boton.png */,
-				FCA9895421CC069F0071748E /* Fondo iniciar sesion.png */,
-				FCA9895521CC069F0071748E /* icono iniciar sesion.png */,
-				FCA9895621CC069F0071748E /* Ventana Datos iniciar sesino.png */,
-			);
-			path = recursos;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -184,7 +164,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1000;
 				LastUpgradeCheck = 1000;
-				ORGANIZATIONNAME = roman;
+				ORGANIZATIONNAME = UMayab;
 				TargetAttributes = {
 					EC8FED4A216F9BD900D76752 = {
 						CreatedOnToolsVersion = 10.0;
@@ -214,14 +194,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCA9895721CC069F0071748E /* Boton.png in Resources */,
 				EC8FED59216F9BDB00D76752 /* LaunchScreen.storyboard in Resources */,
 				FCA4CF84217611A1009FD4E0 /* GoogleService-Info.plist in Resources */,
 				EC8FED63216FB37A00D76752 /* Media.xcassets in Resources */,
 				EC8FED54216F9BD900D76752 /* Main.storyboard in Resources */,
-				FCA9895821CC069F0071748E /* Fondo iniciar sesion.png in Resources */,
-				FCA9895A21CC069F0071748E /* Ventana Datos iniciar sesino.png in Resources */,
-				FCA9895921CC069F0071748E /* icono iniciar sesion.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,7 +468,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "falcon.ubefirst-register.1";
+				PRODUCT_BUNDLE_IDENTIFIER = UMayab.Ubefirstapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -513,7 +489,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "falcon.ubefirst-register.1";
+				PRODUCT_BUNDLE_IDENTIFIER = UMayab.Ubefirstapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;

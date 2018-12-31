@@ -9,24 +9,49 @@
 import UIKit
 
 class RegistroViewController: UIViewController {
-    @IBOutlet weak var button_crearCuentaRegistro: UIButton!
 
+    @IBOutlet weak var inputNombre: UITextField!
+    
+    @IBOutlet weak var inputApellido: UITextField!
+    
+    @IBOutlet var inputContraseña: UITextField!
+    
+    @IBOutlet weak var inputCorreo: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-       // self.textField_passwordRegistro.isSecureTextEntry = true
-
     }
-
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    //metodo para que al presionar "intro" en el teclado, el teclado se oculte
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        /*self.textField_nombreRegistro.resignFirstResponder()
-        self.textField_apellidoRegistro.resignFirstResponder()
-        self.textField_correoRegistro.resignFirstResponder()
-        self.textField_passwordRegistro.resignFirstResponder()*/
+        self.inputCorreo.resignFirstResponder()
+        self.inputApellido.resignFirstResponder()
+        self.inputNombre.resignFirstResponder()
+        self.inputContraseña.resignFirstResponder()
         return true
     }
-
+    
+    @IBAction func CrearCuenta(_ sender: UIButton) {
+        if(validar(nombre: inputNombre.text!,apellido: inputApellido.text!,correo: inputCorreo.text!,contraseña: inputContraseña.text!)){
+        //Se revisa si el correo no esta asociado a una cuenta
+        }
+    else{
+        //Se indica que algun campo esta incompleto
+        }
+    }
+    
+    func validar(nombre: String,apellido: String,correo: String, contraseña: String) -> Bool
+    {
+        if(nombre==""||apellido==""||correo==""||contraseña=="")
+        {
+            return false
+        }
+        return true
+    }
     
 }
 
