@@ -18,7 +18,6 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignIn
     @IBOutlet weak var textField_passwordLogin: UITextField!
     @IBOutlet weak var btn_forgotPassword: UIButton!
     @IBOutlet weak var btn_loginButton: UIButton!
-    @IBOutlet weak var btn_instagramLogin: UIButton!
     @IBOutlet weak var btn_googleLogin: GIDSignInButton!
     @IBOutlet weak var btn_facebookButton: UIButton!
     @IBOutlet weak var btn_registerButton: UIButton!

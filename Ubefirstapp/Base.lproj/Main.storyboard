@@ -186,7 +186,7 @@
                                 <rect key="frame" x="75" y="438" width="42" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Fondo menu principal" translatesAutoresizingMaskIntoConstraints="NO" id="vUH-VC-43j">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Fondo iniciar sesion" translatesAutoresizingMaskIntoConstraints="NO" id="vUH-VC-43j">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -313,7 +313,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Fondo dimensiones" translatesAutoresizingMaskIntoConstraints="NO" id="yfm-g7-f5o">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Fondo iniciar sesion" translatesAutoresizingMaskIntoConstraints="NO" id="yfm-g7-f5o">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -338,7 +338,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Fondo dimensiones" translatesAutoresizingMaskIntoConstraints="NO" id="gc4-wQ-tNC">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Fondo iniciar sesion" translatesAutoresizingMaskIntoConstraints="NO" id="gc4-wQ-tNC">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -729,9 +729,7 @@
         <image name="Boton mejores momentos" width="557" height="579"/>
         <image name="Boton-1" width="474" height="118"/>
         <image name="Facebook" width="524" height="438"/>
-        <image name="Fondo dimensiones" width="750" height="1334"/>
         <image name="Fondo iniciar sesion" width="750" height="1334"/>
-        <image name="Fondo menu principal" width="750" height="1334"/>
         <image name="Gmail" width="512" height="512"/>
         <image name="Logo Temporal" width="328" height="306"/>
         <image name="Seleccionador Dimensiones" width="956" height="934"/>
@@ -740,8 +738,7 @@
         <image name="icono iniciar sesion" width="240" height="240"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="mFs-h3-eub"/>
         <segue reference="tPu-P9-ELw"/>
-        <segue reference="Nlc-3U-gNL"/>
+        <segue reference="zTG-Qb-YBh"/>
     </inferredMetricsTieBreakers>
 </document>
