@@ -23,6 +23,9 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignIn
     @IBOutlet weak var btn_facebookButton: UIButton!
     @IBOutlet weak var btn_registerButton: UIButton!
     
+    @IBAction func btn_LoginUser(_ sender: Any) {
+        //VALIDAR SI EL USUARIO Y CONTRASEÑA SE INGRESARON OSEA !="" Y DE AHI REALIZAR LA BUSQUEDA EN BD 
+    }
     @IBAction func btn_LoginGoogle(_ sender: Any) {
         GIDSignIn.sharedInstance().delegate = self
         GIDSignIn.sharedInstance().uiDelegate = self
