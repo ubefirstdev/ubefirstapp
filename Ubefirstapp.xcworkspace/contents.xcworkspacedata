@@ -2,7 +2,11 @@
 <Workspace
    version = "1.0">
    <FileRef
+<<<<<<< HEAD:Ubefirstapp.xcworkspace/contents.xcworkspacedata
       location = "group:Ubefirstapp.xcodeproj">
+=======
+      location = "group:ubefirst-register.xcodeproj">
+>>>>>>> parent of 9717d36... Cambios en los nombres y modificacion de archivo de pods para hacerlo funcionar en mi maquina:ubefirst-register.xcworkspace/contents.xcworkspacedata
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
