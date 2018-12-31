@@ -1,0 +1,6 @@
+framework module Pods_Ubefirstapp {
+  umbrella header "Pods-Ubefirstapp-umbrella.h"
+
+  export *
+  module * { export * }
+}
