@@ -195,7 +195,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="Boton Personas"/>
                                 <connections>
-                                    <segue destination="WzH-aA-zDv" kind="show" id="8XG-eW-AGZ"/>
+                                    <segue destination="WzH-aA-zDv" kind="show" id="Dbc-x8-uZn"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZg-cS-8Mt">
@@ -261,15 +261,11 @@
         <!--Personas-->
         <scene sceneID="C4y-hm-hEP">
             <objects>
-                <viewController storyboardIdentifier="PersonasViewController" id="WzH-aA-zDv" customClass="PersonasViewController" customModule="Ubefirstapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PersonasViewController" title="Personas" id="WzH-aA-zDv" customClass="PersonasViewController" customModule="Ubefirstapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eMP-Jf-D3a">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D8O-tI-h2z">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YxL-wB-d0r">
                                 <rect key="frame" x="142" y="336" width="90" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -278,6 +274,10 @@
                                 <state key="normal" title="persona">
                                     <color key="titleColor" red="0.99019607843137258" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonPersona2_pressed:" destination="WzH-aA-zDv" eventType="touchUpInside" id="Ukr-MJ-pRA"/>
+                                    <segue destination="zFE-6J-P3C" kind="show" id="dXI-Sh-epP"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bOE-dG-Wvm">
                                 <rect key="frame" x="142" y="138" width="90" height="90"/>
@@ -288,14 +288,14 @@
                                     <color key="titleColor" red="0.99019607843137258" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="zFE-6J-P3C" kind="show" id="Moj-fu-Eot"/>
+                                    <action selector="buttonPersona1_pressed:" destination="WzH-aA-zDv" eventType="touchUpInside" id="uxJ-Cj-OUJ"/>
+                                    <segue destination="zFE-6J-P3C" kind="show" id="opO-cV-paQ"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="nW1-XG-CwC"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Personas" id="yhB-oq-Vke"/>
                     <connections>
                         <outlet property="button_persona1" destination="bOE-dG-Wvm" id="2ay-tF-KwU"/>
                         <outlet property="button_persona2" destination="YxL-wB-d0r" id="smB-Qt-gOI"/>
@@ -330,10 +330,10 @@
             </objects>
             <point key="canvasLocation" x="-4586.3999999999996" y="-2810.6446776611697"/>
         </scene>
-        <!--DimensionesViewController-->
+        <!--Dimensiones-->
         <scene sceneID="5IN-fQ-mwP">
             <objects>
-                <viewController title="DimensionesViewController" id="zFE-6J-P3C" customClass="DimensionesViewController" customModule="Ubefirstapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Dimensiones" id="zFE-6J-P3C" customClass="DimensionesViewController" customModule="Ubefirstapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fyy-PO-FjS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -347,7 +347,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tSz-3b-Fqk">
-                                <rect key="frame" x="76" y="233" width="44" height="30"/>
+                                <rect key="frame" x="61" y="233" width="77" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Patrio">
@@ -363,18 +363,10 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pOu-a9-RI1">
-                                <rect key="frame" x="243" y="239" width="72" height="30"/>
+                                <rect key="frame" x="222" y="239" width="93" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Deportiva">
-                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pMl-O6-iLO">
-                                <rect key="frame" x="268" y="318" width="59" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Cultural">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
@@ -387,7 +379,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mHQ-o3-cql">
-                                <rect key="frame" x="168" y="434" width="39" height="30"/>
+                                <rect key="frame" x="151" y="434" width="77" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Extra">
@@ -395,7 +387,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SbG-Xs-sff">
-                                <rect key="frame" x="81" y="396" width="57" height="30"/>
+                                <rect key="frame" x="61" y="396" width="85" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Musical">
@@ -403,7 +395,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQ5-aR-xM1">
-                                <rect key="frame" x="43" y="318" width="52" height="30"/>
+                                <rect key="frame" x="43" y="318" width="78" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Viajero">
@@ -415,22 +407,40 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="Boton Agregar"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lalo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HvV-Z2-VWf">
-                                <rect key="frame" x="170" y="84" width="35" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lalo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HvV-Z2-VWf">
+                                <rect key="frame" x="130" y="82" width="115" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="0.50627620688924047" green="0.51128884260101515" blue="0.51128884260101515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pMl-O6-iLO">
+                                <rect key="frame" x="252" y="318" width="95" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Cultural">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="4OJ-8Q-76r"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Dimensiones" id="Cyd-d1-Sf4"/>
+                    <connections>
+                        <outlet property="button_dimension1" destination="J3R-98-jWp" id="1So-ey-0a9"/>
+                        <outlet property="button_dimension2" destination="pOu-a9-RI1" id="RKe-CZ-1pp"/>
+                        <outlet property="button_dimension3" destination="pMl-O6-iLO" id="yfh-xu-oqD"/>
+                        <outlet property="button_dimension4" destination="VSH-Tg-ngp" id="63M-Rc-qbV"/>
+                        <outlet property="button_dimension5" destination="mHQ-o3-cql" id="6zc-gg-HpC"/>
+                        <outlet property="button_dimension6" destination="SbG-Xs-sff" id="kDb-l3-t0Y"/>
+                        <outlet property="button_dimension7" destination="eQ5-aR-xM1" id="AAs-Jv-PnJ"/>
+                        <outlet property="button_dimension8" destination="tSz-3b-Fqk" id="Mqm-Ge-vBv"/>
+                        <outlet property="label_nombrePersona" destination="HvV-Z2-VWf" id="vl2-1H-Odh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mhf-UU-29w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2514" y="-1490"/>
+            <point key="canvasLocation" x="-2402.4000000000001" y="-1863.4182908545729"/>
         </scene>
         <!--Inicial View Controller-->
         <scene sceneID="kVY-Vh-G2b">
@@ -740,6 +750,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="tPu-P9-ELw"/>
+        <segue reference="opO-cV-paQ"/>
         <segue reference="zTG-Qb-YBh"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -8,11 +8,22 @@
 
 import UIKit
 
+var lastPersonIndexTap: Int!
+
 class PersonasViewController: UIViewController {
 
     @IBOutlet weak var button_persona1: UIButton!
-    
     @IBOutlet weak var button_persona2: UIButton!
+    
+    
+    @IBAction func buttonPersona1_pressed(_ sender: Any) {
+        lastPersonIndexTap=0
+    }
+    
+    @IBAction func buttonPersona2_pressed(_ sender: Any) {
+        lastPersonIndexTap=1
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

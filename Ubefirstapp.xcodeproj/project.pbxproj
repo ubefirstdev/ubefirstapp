@@ -19,13 +19,11 @@
 		FC001EAB21D8340A001B033B /* Dimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC001EAA21D8340A001B033B /* Dimension.swift */; };
 		FC001EAD21D84207001B033B /* Recuerdo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC001EAC21D84207001B033B /* Recuerdo.swift */; };
 		FC001EAF21D860F5001B033B /* PersonasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC001EAE21D860F5001B033B /* PersonasViewController.swift */; };
-		FC1B9DA5217D3E5000145AFD /* TestGoogleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1B9DA4217D3E5000145AFD /* TestGoogleViewController.swift */; };
 		FCA4CF7E21750C97009FD4E0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA4CF7D21750C97009FD4E0 /* HomeViewController.swift */; };
 		FCA4CF80217511C8009FD4E0 /* InicialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA4CF7F217511C8009FD4E0 /* InicialViewController.swift */; };
 		FCA4CF84217611A1009FD4E0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FCA4CF83217611A0009FD4E0 /* GoogleService-Info.plist */; };
 		FCA9895C21D426630071748E /* DimensionesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA9895B21D426630071748E /* DimensionesViewController.swift */; };
 		FCA9895E21D42CD60071748E /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA9895D21D42CD60071748E /* TutorialViewController.swift */; };
-		FCA9896021D597730071748E /* GetFirestoreDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA9895F21D597730071748E /* GetFirestoreDatabase.swift */; };
 		FCA9896221D598B80071748E /* Padre.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA9896121D598B80071748E /* Padre.swift */; };
 		FCA9896421D59A2B0071748E /* Hijo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA9896321D59A2B0071748E /* Hijo.swift */; };
 /* End PBXBuildFile section */
@@ -47,13 +45,11 @@
 		FC001EAA21D8340A001B033B /* Dimension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dimension.swift; sourceTree = "<group>"; };
 		FC001EAC21D84207001B033B /* Recuerdo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recuerdo.swift; sourceTree = "<group>"; };
 		FC001EAE21D860F5001B033B /* PersonasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonasViewController.swift; sourceTree = "<group>"; };
-		FC1B9DA4217D3E5000145AFD /* TestGoogleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGoogleViewController.swift; sourceTree = "<group>"; };
 		FCA4CF7D21750C97009FD4E0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FCA4CF7F217511C8009FD4E0 /* InicialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InicialViewController.swift; sourceTree = "<group>"; };
 		FCA4CF83217611A0009FD4E0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FCA9895B21D426630071748E /* DimensionesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimensionesViewController.swift; sourceTree = "<group>"; };
 		FCA9895D21D42CD60071748E /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
-		FCA9895F21D597730071748E /* GetFirestoreDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFirestoreDatabase.swift; sourceTree = "<group>"; };
 		FCA9896121D598B80071748E /* Padre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Padre.swift; sourceTree = "<group>"; };
 		FCA9896321D59A2B0071748E /* Hijo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hijo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,27 +104,25 @@
 		EC8FED4D216F9BD900D76752 /* Ubefirstapp */ = {
 			isa = PBXGroup;
 			children = (
+				EC8FED5A216F9BDB00D76752 /* Info.plist */,
+				FCA4CF83217611A0009FD4E0 /* GoogleService-Info.plist */,
 				EC8FED4E216F9BD900D76752 /* AppDelegate.swift */,
+				FCA4CF7F217511C8009FD4E0 /* InicialViewController.swift */,
+				FCA9895D21D42CD60071748E /* TutorialViewController.swift */,
 				EC8FED50216F9BD900D76752 /* LoginViewController.swift */,
 				FC001EA221D7D278001B033B /* RegistroViewController.swift */,
 				FC001EA821D7FDB1001B033B /* LoadingPageViewController.swift */,
 				FC001EA621D7DAC2001B033B /* FormularioRecuerdoViewController.swift */,
 				FCA4CF7D21750C97009FD4E0 /* HomeViewController.swift */,
-				FCA4CF7F217511C8009FD4E0 /* InicialViewController.swift */,
-				EC8FED52216F9BD900D76752 /* Main.storyboard */,
-				FCA9895D21D42CD60071748E /* TutorialViewController.swift */,
+				FC001EAE21D860F5001B033B /* PersonasViewController.swift */,
 				FCA9895B21D426630071748E /* DimensionesViewController.swift */,
+				EC8FED52216F9BD900D76752 /* Main.storyboard */,
 				EC8FED57216F9BDB00D76752 /* LaunchScreen.storyboard */,
-				EC8FED5A216F9BDB00D76752 /* Info.plist */,
-				FCA4CF83217611A0009FD4E0 /* GoogleService-Info.plist */,
 				EC8FED62216FB37A00D76752 /* Media.xcassets */,
-				FC1B9DA4217D3E5000145AFD /* TestGoogleViewController.swift */,
-				FCA9895F21D597730071748E /* GetFirestoreDatabase.swift */,
 				FCA9896121D598B80071748E /* Padre.swift */,
 				FCA9896321D59A2B0071748E /* Hijo.swift */,
 				FC001EAA21D8340A001B033B /* Dimension.swift */,
 				FC001EAC21D84207001B033B /* Recuerdo.swift */,
-				FC001EAE21D860F5001B033B /* PersonasViewController.swift */,
 			);
 			path = Ubefirstapp;
 			sourceTree = "<group>";
@@ -303,7 +297,6 @@
 				FCA9895E21D42CD60071748E /* TutorialViewController.swift in Sources */,
 				FCA9896221D598B80071748E /* Padre.swift in Sources */,
 				FC001EAB21D8340A001B033B /* Dimension.swift in Sources */,
-				FCA9896021D597730071748E /* GetFirestoreDatabase.swift in Sources */,
 				FC001EAD21D84207001B033B /* Recuerdo.swift in Sources */,
 				FCA9895C21D426630071748E /* DimensionesViewController.swift in Sources */,
 				FC001EA321D7D278001B033B /* RegistroViewController.swift in Sources */,
@@ -311,7 +304,6 @@
 				FCA4CF7E21750C97009FD4E0 /* HomeViewController.swift in Sources */,
 				FC001EA721D7DAC3001B033B /* FormularioRecuerdoViewController.swift in Sources */,
 				FC001EA921D7FDB1001B033B /* LoadingPageViewController.swift in Sources */,
-				FC1B9DA5217D3E5000145AFD /* TestGoogleViewController.swift in Sources */,
 				FCA9896421D59A2B0071748E /* Hijo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
