@@ -128,6 +128,7 @@ class LoadingPageViewController: UIViewController {
     }
     
     public func loadRecuerdosData(){
+            //arreglar falla que ocasiona un error si una dimension no tiene ningun recuerdo
         db.collection("recuerdos").document(userData.hijos[self.indexHijos].dimensiones[self.indexDimension].recuerdosref[self.indexRecuerdo]).getDocument(completion: {(document, error) in
             if error != nil {
                 print(error)
