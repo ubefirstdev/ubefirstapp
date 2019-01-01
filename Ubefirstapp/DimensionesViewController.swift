@@ -23,6 +23,7 @@ class DimensionesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        clearButtonsTitles()
         self.label_nombrePersona.text=userData.hijos[lastPersonIndexTap].alias
         loadDimensionesFromMemory()
 
@@ -32,6 +33,17 @@ class DimensionesViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func clearButtonsTitles(){
+        self.button_dimension1.setTitle("", for: .normal)
+        self.button_dimension2.setTitle("", for: .normal)
+        self.button_dimension3.setTitle("", for: .normal)
+        self.button_dimension4.setTitle("", for: .normal)
+        self.button_dimension5.setTitle("", for: .normal)
+        self.button_dimension6.setTitle("", for: .normal)
+        self.button_dimension7.setTitle("", for: .normal)
+        self.button_dimension8.setTitle("", for: .normal)
     }
     
     func loadDimensionesFromMemory(){
