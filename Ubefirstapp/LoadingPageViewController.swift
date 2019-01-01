@@ -11,7 +11,6 @@ import FirebaseFirestore
 import FBSDKLoginKit
 import FirebaseAuth
 
-
 let db = Firestore.firestore()
 var userUID: String!
 var userData = Padre()
@@ -73,7 +72,6 @@ class LoadingPageViewController: UIViewController {
     }
     
     public func loadDataHijos(){
-        self.progressBar.progress=0.50
         db.collection("hijos").document(userData.hijosref[self.indexHijos]).getDocument(completion: {(document, error) in
             if error != nil {
                 print(error)
@@ -89,6 +87,7 @@ class LoadingPageViewController: UIViewController {
                     self.loadDataHijos()
                 }else{
                     self.indexHijos=0
+                    self.progressBar.progress=0.50
                     self.loadDimensionesData()
                 }
             }
@@ -98,9 +97,7 @@ class LoadingPageViewController: UIViewController {
     }
     
     public func loadDimensionesData(){
-        self.progressBar.progress=0.75
-
-        db.collection("dimensiones").document(userData.hijos[self.indexHijos].dimensionesref[self.indexDimension]).getDocument(completion: {(document, error) in
+    db.collection("dimensiones").document(userData.hijos[self.indexHijos].dimensionesref[self.indexDimension]).getDocument(completion: {(document, error) in
             if error != nil {
                 print(error)
             } else {
@@ -120,6 +117,7 @@ class LoadingPageViewController: UIViewController {
                     }else{
                         self.indexDimension=0
                         self.indexHijos=0
+                        self.progressBar.progress=0.75
                         self.loadRecuerdosData()
                     }
                 }
