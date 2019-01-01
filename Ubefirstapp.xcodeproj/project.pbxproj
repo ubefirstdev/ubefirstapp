@@ -19,6 +19,7 @@
 		FC001EAB21D8340A001B033B /* Dimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC001EAA21D8340A001B033B /* Dimension.swift */; };
 		FC001EAD21D84207001B033B /* Recuerdo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC001EAC21D84207001B033B /* Recuerdo.swift */; };
 		FC001EAF21D860F5001B033B /* PersonasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC001EAE21D860F5001B033B /* PersonasViewController.swift */; };
+		FC588B1A21DC04D50065622A /* RecuerdosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC588B1921DC04D50065622A /* RecuerdosViewController.swift */; };
 		FCA4CF7E21750C97009FD4E0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA4CF7D21750C97009FD4E0 /* HomeViewController.swift */; };
 		FCA4CF80217511C8009FD4E0 /* InicialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA4CF7F217511C8009FD4E0 /* InicialViewController.swift */; };
 		FCA4CF84217611A1009FD4E0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FCA4CF83217611A0009FD4E0 /* GoogleService-Info.plist */; };
@@ -45,6 +46,7 @@
 		FC001EAA21D8340A001B033B /* Dimension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dimension.swift; sourceTree = "<group>"; };
 		FC001EAC21D84207001B033B /* Recuerdo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recuerdo.swift; sourceTree = "<group>"; };
 		FC001EAE21D860F5001B033B /* PersonasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonasViewController.swift; sourceTree = "<group>"; };
+		FC588B1921DC04D50065622A /* RecuerdosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecuerdosViewController.swift; sourceTree = "<group>"; };
 		FCA4CF7D21750C97009FD4E0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FCA4CF7F217511C8009FD4E0 /* InicialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InicialViewController.swift; sourceTree = "<group>"; };
 		FCA4CF83217611A0009FD4E0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				FCA4CF7D21750C97009FD4E0 /* HomeViewController.swift */,
 				FC001EAE21D860F5001B033B /* PersonasViewController.swift */,
 				FCA9895B21D426630071748E /* DimensionesViewController.swift */,
+				FC588B1921DC04D50065622A /* RecuerdosViewController.swift */,
 				EC8FED52216F9BD900D76752 /* Main.storyboard */,
 				EC8FED57216F9BDB00D76752 /* LaunchScreen.storyboard */,
 				EC8FED62216FB37A00D76752 /* Media.xcassets */,
@@ -291,6 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC588B1A21DC04D50065622A /* RecuerdosViewController.swift in Sources */,
 				FCA4CF80217511C8009FD4E0 /* InicialViewController.swift in Sources */,
 				FC001EAF21D860F5001B033B /* PersonasViewController.swift in Sources */,
 				EC8FED51216F9BD900D76752 /* LoginViewController.swift in Sources */,
