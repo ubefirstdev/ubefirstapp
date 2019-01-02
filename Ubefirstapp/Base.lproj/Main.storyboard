@@ -210,11 +210,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="Boton mejores momentos"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s1m-xG-dze">
-                                <rect key="frame" x="157" y="572" width="60" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="Boton Agregar"/>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Personas" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yUC-9w-k9S">
                                 <rect key="frame" x="158" y="253" width="60" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -242,6 +237,14 @@
                                     <action selector="btn_pressed:" destination="kcT-vT-O7F" eventType="touchUpInside" id="22y-rF-xyN"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s1m-xG-dze">
+                                <rect key="frame" x="157" y="470" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Boton Agregar"/>
+                                <connections>
+                                    <action selector="button_addPhoto:" destination="kcT-vT-O7F" eventType="touchUpInside" id="wsC-2Z-lZl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="RYZ-nK-qjS"/>
@@ -252,6 +255,7 @@
                         <outlet property="lbl_UID" destination="Fb4-j6-pCM" id="R9r-96-4fy"/>
                         <outlet property="lbl_username" destination="A5a-6j-4at" id="5mi-LK-T9T"/>
                         <segue destination="BYZ-38-t0r" kind="showDetail" identifier="HomeToLogin" id="zTG-Qb-YBh"/>
+                        <segue destination="bn6-xo-tQN" kind="show" identifier="HomeToAgregarRecuerdo" id="0GV-A2-sIu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dIv-X5-ed0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -610,10 +614,10 @@
             </objects>
             <point key="canvasLocation" x="-4535.1999999999998" y="-2005.5472263868066"/>
         </scene>
-        <!--FormularioRecuerdoViewController-->
+        <!--Agregar recuerdo-->
         <scene sceneID="XLS-At-Uz1">
             <objects>
-                <viewController title="FormularioRecuerdoViewController" id="bn6-xo-tQN" customClass="FormularioRecuerdoViewController" customModule="Ubefirstapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Agregar recuerdo" id="bn6-xo-tQN" customClass="FormularioRecuerdoViewController" customModule="Ubefirstapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hOZ-hG-o5G">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -657,10 +661,6 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Boton mejores momentos" translatesAutoresizingMaskIntoConstraints="NO" id="kXc-Qb-wdW">
-                                <rect key="frame" x="28" y="138" width="114" height="85"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Descripcion" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="MsN-ff-LjT">
                                 <rect key="frame" x="16" y="572" width="343" height="87"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -697,15 +697,21 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ckf-bm-aPX">
+                                <rect key="frame" x="42" y="127" width="109" height="105"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="foS-0X-HKq"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" leftItemsSupplementBackButton="YES" id="Xcf-91-YQX"/>
+                    <connections>
+                        <outlet property="imageview_previaImagen" destination="ckf-bm-aPX" id="JQ7-xM-Dzu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iA2-VA-PQt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5359" y="-330"/>
+            <point key="canvasLocation" x="-5359.1999999999998" y="-330.58470764617692"/>
         </scene>
         <!--Loading Page View Controller-->
         <scene sceneID="efL-Ml-T4A">

@@ -27,6 +27,7 @@
 		FCA9895E21D42CD60071748E /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA9895D21D42CD60071748E /* TutorialViewController.swift */; };
 		FCA9896221D598B80071748E /* Padre.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA9896121D598B80071748E /* Padre.swift */; };
 		FCA9896421D59A2B0071748E /* Hijo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA9896321D59A2B0071748E /* Hijo.swift */; };
+		FCFD895921DC725C003A01D1 /* CameraFunctions2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFD895821DC725C003A01D1 /* CameraFunctions2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		FCA9895D21D42CD60071748E /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		FCA9896121D598B80071748E /* Padre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Padre.swift; sourceTree = "<group>"; };
 		FCA9896321D59A2B0071748E /* Hijo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hijo.swift; sourceTree = "<group>"; };
+		FCFD895821DC725C003A01D1 /* CameraFunctions2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraFunctions2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 				FCA9896321D59A2B0071748E /* Hijo.swift */,
 				FC001EAA21D8340A001B033B /* Dimension.swift */,
 				FC001EAC21D84207001B033B /* Recuerdo.swift */,
+				FCFD895821DC725C003A01D1 /* CameraFunctions2.swift */,
 			);
 			path = Ubefirstapp;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCFD895921DC725C003A01D1 /* CameraFunctions2.swift in Sources */,
 				FC588B1A21DC04D50065622A /* RecuerdosViewController.swift in Sources */,
 				FCA4CF80217511C8009FD4E0 /* InicialViewController.swift in Sources */,
 				FC001EAF21D860F5001B033B /* PersonasViewController.swift in Sources */,

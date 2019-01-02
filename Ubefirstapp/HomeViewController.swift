@@ -12,7 +12,7 @@ import FirebaseAuth
 import FirebaseFirestore
 import GoogleSignIn
 
-
+var imagenRecuerdoBuffer = UIImage()
 
 class HomeViewController: UIViewController {
     
@@ -20,6 +20,9 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var imageUserPicture: UIImageView!
     @IBOutlet weak var lbl_UID: UILabel!
     
+    @IBAction func button_addPhoto(_ sender: Any) {
+        CameraHandler.shared.showActionSheet(vc: self)
+    }
     
     @IBAction func btn_pressed(_ sender: Any) {
         let firebaseAuth = Auth.auth()
@@ -40,29 +43,6 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.lbl_username.text="se ha cargado completamente el usuario " + userData.nombre + " de firestore"
-        /*if let user = user {
-            // The user's ID, unique to the Firebase project.
-            // Do NOT use this value to authenticate with your backend server,
-            // if you have one. Use getTokenWithCompletion:completion: instead.
-            self.lbl_UID.text = user.uid
-            self.lbl_username.text=user.displayName
-            let docRef = Firestore.firestore().collection("hijos").document("o1rnYjHywxh6WqtBHIro")
-            docRef.getDocument{(document, error) in
-                if let document = document, document.exists{
-                    let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
-                    print("Document data: \(dataDescription)")
-                }else{
-                    print("Document do not exist")
-                }
-            }
-            
-            let photo=user.photoURL
-            let data=NSData(contentsOf: photo!)
-            self.imageUserPicture.image=UIImage(data: data! as Data)
-            navigationItem.leftBarButtonItem =  UIBarButtonItem(image: UIImage(named: "Boton Ajustes.png"), style: .plain, target: self, action: Selector(("addFav")))
-            // ...
-        }*/
-        // Do any additional setup after loading the view.
       
     }
     

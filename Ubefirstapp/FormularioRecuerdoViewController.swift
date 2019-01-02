@@ -11,8 +11,12 @@ import UIKit
 
 class FormularioRecuerdoViewController: UIViewController {
 
+    @IBOutlet weak var imageview_previaImagen: UIImageView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.imageview_previaImagen.image = imagenRecuerdoBuffer
         // Do any additional setup after loading the view.
     }
     
