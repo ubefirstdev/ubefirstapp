@@ -16,7 +16,7 @@ class CameraHandler: NSObject{
             let image = UIImagePickerController()
             image.delegate = self
             image.sourceType = UIImagePickerController.SourceType.camera
-            image.allowsEditing = true
+            image.allowsEditing = false
             currentVC.present(image, animated: true, completion: nil)
         }
         
@@ -29,7 +29,7 @@ class CameraHandler: NSObject{
             let image = UIImagePickerController()
             image.delegate = self
             image.sourceType = UIImagePickerController.SourceType.photoLibrary
-            image.allowsEditing = true
+            image.allowsEditing = false
             currentVC.present(image, animated: true, completion: nil)
         }
         
@@ -65,7 +65,7 @@ extension CameraHandler: UIImagePickerControllerDelegate, UINavigationController
             imagenRecuerdoBuffer = image
             OperationQueue.main.addOperation {
                 [weak self] in
-                self?.currentVC.performSegue(withIdentifier: "HomeToAgregarRecuerdo", sender: self)
+                self?.currentVC.performSegue(withIdentifier: segueSender, sender: self)
             }
         } else {
             //error message loading image

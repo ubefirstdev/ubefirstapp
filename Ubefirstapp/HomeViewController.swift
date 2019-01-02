@@ -13,6 +13,7 @@ import FirebaseFirestore
 import GoogleSignIn
 
 var imagenRecuerdoBuffer = UIImage()
+var segueSender = ""
 
 class HomeViewController: UIViewController {
     
@@ -21,6 +22,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var lbl_UID: UILabel!
     
     @IBAction func button_addPhoto(_ sender: Any) {
+        segueSender = "HomeToAgregarRecuerdo"
         CameraHandler.shared.showActionSheet(vc: self)
     }
     
