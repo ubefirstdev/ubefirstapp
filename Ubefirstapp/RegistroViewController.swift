@@ -32,10 +32,7 @@ class RegistroViewController: UIViewController {
         let contraseña = inputContraseña.text!
         
         //Revisa si no estan vacios los inputs
-        if(validar(nombre: nombre,apellido: apellido,correo: correo,contraseña: contraseña)){
-            
-        //revisar si el formato del correo esta bien puesto y contraseña mayor de 6 digitos
-
+        if(validar(nombre: nombre,apellido: apellido,correo: correo,contraseña: contraseña)&&isValidEmail(email: correo)&&isValidPassword(password: contraseña)){
             
         // [START create_user]
         Auth.auth().createUser(withEmail: correo, password: contraseña) { (authResult, error) in
@@ -49,17 +46,16 @@ class RegistroViewController: UIViewController {
                     return
             }
             //Cuenta creada
-            print("bien")
+            let alertController = UIAlertController(title: "Felicidades", message: "Cuenta creada de manera correcta.", preferredStyle: UIAlertController.Style.alert)
+            alertController.addAction(UIAlertAction(title: "Iniciar Sesión", style: UIAlertAction.Style.default) {
+                UIAlertAction in
+                self.toLogIn()
+            })
+            self.present(alertController, animated: true, completion: nil)
             // [END_EXCLUDE]
             guard let user = authResult?.user else { return }
-        }
+            }
         // [END create_user]
-        }
-        else{
-            //Se indica que algun campo esta incompleto
-            let alertController = UIAlertController(title: "Error en registro", message: "Favor de llenar todos los campos", preferredStyle: UIAlertController.Style.alert)
-            alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
-            self.present(alertController, animated: true, completion: nil)
         }
         
         /* Creacion de documento para usuarios
@@ -71,7 +67,6 @@ class RegistroViewController: UIViewController {
         
         var ref: DocumentReference? = nil
         
-        if(validar(nombre: nombre,apellido: apellido,correo: correo,contraseña: contraseña)){
             ref = db.collection("Usuarios").addDocument(data: [
                 "correo": correo,
                 "nombre": nombre+" "+apellido,
@@ -83,38 +78,58 @@ class RegistroViewController: UIViewController {
                     print("Error adding document: \(err)")
                 } else {
                     print("Document added with ID: \(ref!.documentID)")
-                    //Almacenar el documentID en estructura padre
-                    let alertController = UIAlertController(title: "Felicidades", message: "Cuenta creada de manera correcta.", preferredStyle: UIAlertController.Style.alert)
-                    alertController.addAction(UIAlertAction(title: "Iniciar Sesión", style: UIAlertAction.Style.default) {
-                        UIAlertAction in
-                        self.toLogIn()
-                    })
-                    self.present(alertController, animated: true, completion: nil)
                 }
             }
-        }
-    else{
-        //Se indica que algun campo esta incompleto
-            let alertController = UIAlertController(title: "Error en registro", message: "Favor de llenar todos los campos", preferredStyle: UIAlertController.Style.alert)
-            alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
-            self.present(alertController, animated: true, completion: nil)
-        }
  */
     }
  
     func toLogIn() {
-   //Enviar a pantalla de log in
-        /* OperationQueue.main.addOperation {
+        OperationQueue.main.addOperation {
             [weak self] in
-            self?.performSegue(withIdentifier: "login", sender: self)
+            self?.performSegue(withIdentifier: "registerToLogIn", sender: self)
         }
- */
     }
     
     func validar(nombre: String,apellido: String,correo: String, contraseña: String) -> Bool
     {
         if(nombre==""||apellido==""||correo==""||contraseña=="")
         {
+            //Se indica que algun campo esta incompleto
+            let alertController = UIAlertController(title: "Error en registro", message: "Favor de llenar todos los campos", preferredStyle: UIAlertController.Style.alert)
+            alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+            return false
+        }
+        return true
+    }
+    
+    
+    func isValidEmail(email:String?) -> Bool {
+        
+        guard email != nil else { return false }
+        
+        let regEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+        
+        let pred = NSPredicate(format:"SELF MATCHES %@", regEx)
+        if(pred.evaluate(with: email))
+        {
+            return true
+        }
+        else
+        {
+            let alertController = UIAlertController(title: "Error en registro", message: "Formato de correo electronico incorrecto", preferredStyle: UIAlertController.Style.alert)
+            alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+            return false
+        }
+    }
+    
+    func isValidPassword(password:String?) -> Bool {
+        guard password != nil else { return false }
+        if password!.count<6{
+            let alertController = UIAlertController(title: "Error en registro", message: "Formato en contraseña incorrecto. (Debe contener al menos 6 caracteres)", preferredStyle: UIAlertController.Style.alert)
+            alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alertController, animated: true, completion: nil)
             return false
         }
         return true
