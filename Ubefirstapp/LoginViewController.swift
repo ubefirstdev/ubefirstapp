@@ -23,23 +23,32 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignIn
     @IBOutlet weak var btn_registerButton: UIButton!
     
     @IBAction func btn_LoginUser(_ sender: Any) {
-        if !(textField_usernameLogin.text==""&&textField_passwordLogin.text=="")
+        //Validar el formato del correo y la contraseña y tambien que no esten vacios
+        if (isValidEmail(email: textField_usernameLogin.text)&&isValidPassword(password: textField_passwordLogin.text))
         {
             Auth.auth().signIn(withEmail: textField_usernameLogin.text!, password: textField_passwordLogin.text!)
             { (user, error) in
-                print("KE")
                 //Nos devuelve al usuario en formato
-                print(user?.user.uid)
-                //Nos dice que esta pasanda
-                print(error)
+                var usuario = user?.user.uid ?? nil
+                
+                if !(usuario==nil){
+                    OperationQueue.main.addOperation {
+                        [weak self] in
+                        self?.performSegue(withIdentifier: "LoginToLoadingPage", sender: self)
+                    }
+                }
+                else {
+                    let alertController = UIAlertController(title: "Error en Inicio de Sesión", message: (error as! String), preferredStyle: UIAlertController.Style.alert)
+                    alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+                    self.present(alertController, animated: true, completion: nil)
+                }
             }
             
         }
         else
         {
-            //Mensaje de llenar los campos
             //Se indica que algun campo esta incompleto
-            let alertController = UIAlertController(title: "Error en registro", message: "Favor de llenar todos los campos", preferredStyle: UIAlertController.Style.alert)
+            let alertController = UIAlertController(title: "Error en Inicio de Sesión", message: "Es necesario ingresar los datos de forma correcta", preferredStyle: UIAlertController.Style.alert)
             alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
             self.present(alertController, animated: true, completion: nil)
         }
@@ -168,6 +177,22 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignIn
         return true
     }
     
+    func isValidEmail(email:String?) -> Bool {
+        
+        guard email != nil else { return false }
+        
+        let regEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+        
+        let pred = NSPredicate(format:"SELF MATCHES %@", regEx)
+        return pred.evaluate(with: email)
+    }
     
+    func isValidPassword(password:String?) -> Bool {
+        guard password != nil else { return false }
+        if password!.count<6{
+            return false
+        }
+        return true
+    }
 }
 

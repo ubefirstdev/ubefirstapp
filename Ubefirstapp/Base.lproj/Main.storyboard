@@ -576,7 +576,7 @@
                                     </attributedString>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="Nlc-3U-gNL"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="registerToLogIn" id="Nlc-3U-gNL"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icono iniciar sesion" translatesAutoresizingMaskIntoConstraints="NO" id="gaZ-GY-OM7">
@@ -773,6 +773,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="tPu-P9-ELw"/>
-        <segue reference="zTG-Qb-YBh"/>
+        <segue reference="Nlc-3U-gNL"/>
     </inferredMetricsTieBreakers>
 </document>
