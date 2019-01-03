@@ -15,5 +15,6 @@ pod 'Firebase/Database'
 pod 'Firebase/Storage'
 pod 'GoogleSignIn'
 pod 'Firebase/Firestore'
+pod 'IQKeyboardManager'
 
 end

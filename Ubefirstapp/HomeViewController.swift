@@ -40,6 +40,7 @@ class HomeViewController: UIViewController {
         }
         
         GIDSignIn.sharedInstance().signOut()
+        userData = Padre()
     }
     
     override func viewDidLoad() {
