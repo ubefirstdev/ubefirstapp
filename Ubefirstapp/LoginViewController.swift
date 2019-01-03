@@ -23,8 +23,28 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignIn
     @IBOutlet weak var btn_registerButton: UIButton!
     
     @IBAction func btn_LoginUser(_ sender: Any) {
-        //VALIDAR SI EL USUARIO Y CONTRASEÑA SE INGRESARON OSEA !="" Y DE AHI REALIZAR LA BUSQUEDA EN BD 
+        if !(textField_usernameLogin.text==""&&textField_passwordLogin.text=="")
+        {
+            Auth.auth().signIn(withEmail: textField_usernameLogin.text!, password: textField_passwordLogin.text!)
+            { (user, error) in
+                print("KE")
+                //Nos devuelve al usuario en formato
+                print(user?.user.uid)
+                //Nos dice que esta pasanda
+                print(error)
+            }
+            
+        }
+        else
+        {
+            //Mensaje de llenar los campos
+            //Se indica que algun campo esta incompleto
+            let alertController = UIAlertController(title: "Error en registro", message: "Favor de llenar todos los campos", preferredStyle: UIAlertController.Style.alert)
+            alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+        }
     }
+    
     @IBAction func btn_LoginGoogle(_ sender: Any) {
         GIDSignIn.sharedInstance().delegate = self
         GIDSignIn.sharedInstance().uiDelegate = self
