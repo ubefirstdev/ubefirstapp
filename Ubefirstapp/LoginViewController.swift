@@ -23,7 +23,34 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignIn
     @IBOutlet weak var btn_registerButton: UIButton!
     
     @IBAction func btn_LoginUser(_ sender: Any) {
-        //VALIDAR SI EL USUARIO Y CONTRASEÑA SE INGRESARON OSEA !="" Y DE AHI REALIZAR LA BUSQUEDA EN BD 
+        //VALIDAR SI EL USUARIO Y CONTRASEÑA SE INGRESARON OSEA !="" Y DE AHI REALIZAR LA BUSQUEDA EN BD
+        if !(textField_usernameLogin.text==""&&textField_passwordLogin.text=="")
+        {
+            //Revisar si se encuentra registrado el user en la db
+            if(true)
+            {
+                /*
+                let userRef = db.collection("Usuarios")
+                let query = userRef.whereField("correo", isEqualTo: textField_usernameLogin.text!)
+                print(query)
+                
+                 Enviar a siguiente pantalla logeado
+                 
+                OperationQueue.main.addOperation {
+                    [weak self] in
+                    self?.performSegue(withIdentifier: "LoginToLoadingPage", sender: self)
+                }
+ */
+            }
+            else
+            {
+                //algo anda mal
+            }
+        }
+        else
+        {
+            //Mensaje de llenar los campos
+        }
     }
     @IBAction func btn_LoginGoogle(_ sender: Any) {
         GIDSignIn.sharedInstance().delegate = self
