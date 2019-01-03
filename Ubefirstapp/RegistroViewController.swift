@@ -24,19 +24,6 @@ class RegistroViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
-    }
-    
-    //metodo para que al presionar "intro" en el teclado, el teclado se oculte
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        self.inputCorreo.resignFirstResponder()
-        self.inputApellido.resignFirstResponder()
-        self.inputNombre.resignFirstResponder()
-        self.inputContraseña.resignFirstResponder()
-        return true
-    }
-    
     @IBAction func CrearCuenta(_ sender: UIButton) {
         
         let nombre = inputNombre.text!
@@ -44,16 +31,47 @@ class RegistroViewController: UIViewController {
         let correo = inputCorreo.text!
         let contraseña = inputContraseña.text!
         
+        //Revisa si no estan vacios los inputs
+        if(validar(nombre: nombre,apellido: apellido,correo: correo,contraseña: contraseña)){
+            
+        //revisar si el formato del correo esta bien puesto y contraseña mayor de 6 digitos
+
+            
+        // [START create_user]
+        Auth.auth().createUser(withEmail: correo, password: contraseña) { (authResult, error) in
+            // [START_EXCLUDE]
+                guard let email = authResult?.user.email, error == nil else {
+                    //Si esta mal elformato del correo
+                    //Si la contraseña tiene menos de 6 caracteres
+                    //Si el correo ya esta registrado
+                    //Si validamos los dos primeros puntos antes podemos enviar un mensaje asegurando que es el punto 3
+                    print("mal")
+                    return
+            }
+            //Cuenta creada
+            print("bien")
+            // [END_EXCLUDE]
+            guard let user = authResult?.user else { return }
+        }
+        // [END create_user]
+        }
+        else{
+            //Se indica que algun campo esta incompleto
+            let alertController = UIAlertController(title: "Error en registro", message: "Favor de llenar todos los campos", preferredStyle: UIAlertController.Style.alert)
+            alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+        }
+        
+        /* Creacion de documento para usuarios
+ 
         let db = Firestore.firestore()
         let settings = db.settings
         settings.areTimestampsInSnapshotsEnabled = true
         db.settings = settings
+        
         var ref: DocumentReference? = nil
         
         if(validar(nombre: nombre,apellido: apellido,correo: correo,contraseña: contraseña)){
-        //Se revisa si el correo no esta asociado a una cuenta
-        //Falta validar si el correo ya esta registrado
-        //!!!
             ref = db.collection("Usuarios").addDocument(data: [
                 "correo": correo,
                 "nombre": nombre+" "+apellido,
@@ -81,8 +99,9 @@ class RegistroViewController: UIViewController {
             alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
             self.present(alertController, animated: true, completion: nil)
         }
+ */
     }
-    
+ 
     func toLogIn() {
    //Enviar a pantalla de log in
         /* OperationQueue.main.addOperation {
@@ -98,6 +117,19 @@ class RegistroViewController: UIViewController {
         {
             return false
         }
+        return true
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    //metodo para que al presionar "intro" en el teclado, el teclado se oculte
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.inputCorreo.resignFirstResponder()
+        self.inputApellido.resignFirstResponder()
+        self.inputNombre.resignFirstResponder()
+        self.inputContraseña.resignFirstResponder()
         return true
     }
     
