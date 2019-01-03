@@ -10,27 +10,41 @@ import UIKit
 
 var lastPersonIndexTap: Int!
 
-class PersonasViewController: UIViewController {
-
-    @IBOutlet weak var button_persona1: UIButton!
-    @IBOutlet weak var button_persona2: UIButton!
+class PersonasViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    let cellReuseIdentifier = "PersonasCell"
     
-    @IBAction func buttonPersona1_pressed(_ sender: Any) {
-        lastPersonIndexTap=0
-    }
-    
-    @IBAction func buttonPersona2_pressed(_ sender: Any) {
-        lastPersonIndexTap=1
-    }
-    
+    @IBOutlet weak var personasTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.button_persona1.setTitle(userData.hijos[0].alias, for: .normal)
-        self.button_persona2.setTitle(userData.hijos[1].alias, for: .normal)
-
+        self.personasTableView.delegate = self
+        self.personasTableView.dataSource = self
         // Do any additional setup after loading the view.
+    }
+    
+    //numero de celdas en la tabla
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return userData.hijos.count
+    }
+    
+    //creacion de cada celda de la tabla
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell:PersonasTableViewCell = self.personasTableView.dequeueReusableCell(withIdentifier: self.cellReuseIdentifier) as! PersonasTableViewCell
+        cell.lbl_nombreHijo.text=userData.hijos[indexPath.row].alias
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        lastPersonIndexTap=indexPath.row
+        OperationQueue.main.addOperation {
+            [weak self] in
+            self?.performSegue(withIdentifier: "PersonasToDimensiones", sender: self)
+        }
+        tableView.reloadData()
+
+        
     }
 
     override func didReceiveMemoryWarning() {

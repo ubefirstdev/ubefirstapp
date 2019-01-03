@@ -202,7 +202,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="Boton Personas"/>
                                 <connections>
-                                    <segue destination="WzH-aA-zDv" kind="show" id="Dbc-x8-uZn"/>
+                                    <segue destination="WzH-aA-zDv" kind="show" id="oKE-Xh-F5N"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZg-cS-8Mt">
@@ -270,39 +270,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YxL-wB-d0r">
-                                <rect key="frame" x="142" y="336" width="90" height="90"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="250" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Zpp-El-whT">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.49509803921568629" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="persona">
-                                    <color key="titleColor" red="0.99019607843137258" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="buttonPersona2_pressed:" destination="WzH-aA-zDv" eventType="touchUpInside" id="Ukr-MJ-pRA"/>
-                                    <segue destination="zFE-6J-P3C" kind="show" id="dXI-Sh-epP"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bOE-dG-Wvm">
-                                <rect key="frame" x="142" y="138" width="90" height="90"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.49509803921568629" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="persona">
-                                    <color key="titleColor" red="0.99019607843137258" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="buttonPersona1_pressed:" destination="WzH-aA-zDv" eventType="touchUpInside" id="uxJ-Cj-OUJ"/>
-                                    <segue destination="zFE-6J-P3C" kind="show" id="opO-cV-paQ"/>
-                                </connections>
-                            </button>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PersonasCell" id="OhN-ee-EXa" customClass="PersonasTableViewCell" customModule="Ubefirstapp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="250"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OhN-ee-EXa" id="0Nx-WZ-dAq">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Cuadro de texto" translatesAutoresizingMaskIntoConstraints="NO" id="ogW-qu-Kx0">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9n7-gW-DQq">
+                                                    <rect key="frame" x="127" y="111" width="120" height="29"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lbl_nombreHijo" destination="9n7-gW-DQq" id="2N2-v2-v56"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="nW1-XG-CwC"/>
                     </view>
                     <connections>
-                        <outlet property="button_persona1" destination="bOE-dG-Wvm" id="2ay-tF-KwU"/>
-                        <outlet property="button_persona2" destination="YxL-wB-d0r" id="smB-Qt-gOI"/>
+                        <outlet property="personasTableView" destination="Zpp-El-whT" id="spC-Z9-zf1"/>
+                        <segue destination="zFE-6J-P3C" kind="show" identifier="PersonasToDimensiones" id="Nni-cl-ASC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ua3-Oa-hbM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -762,6 +767,7 @@
         <image name="Boton Personas" width="637" height="641"/>
         <image name="Boton mejores momentos" width="557" height="579"/>
         <image name="Boton-1" width="474" height="118"/>
+        <image name="Cuadro de texto" width="1500" height="705"/>
         <image name="Facebook" width="524" height="438"/>
         <image name="Fondo iniciar sesion" width="750" height="1334"/>
         <image name="Fondo menu principal" width="750" height="1334"/>
@@ -774,7 +780,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="tPu-P9-ELw"/>
-        <segue reference="opO-cV-paQ"/>
         <segue reference="zTG-Qb-YBh"/>
     </inferredMetricsTieBreakers>
 </document>
