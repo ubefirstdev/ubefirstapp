@@ -10,15 +10,20 @@ import UIKit
 
 class FormularioAgregarHijoViewController: UIViewController {
 
+    
+    @IBOutlet weak var textfield_nombre: UITextField!
+    @IBOutlet weak var textfield_alias: UITextField!
+    
+    @IBAction func btnGuardar_pressed(_ sender: Any) {
+        let update = LoadDataToFirestore()
+        update.agregarHijoNuevo(alias: self.textfield_alias.text!, nombre: self.textfield_nombre.text!)
+        self.navigationController?.popViewController(animated: true)
+
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let array = ["hola", "como", "estas"]
-        print(array)
-        let clss = LoadDataToFirestore()
-        //let c = clss.makeStringFromArray(StringsArray: userData.hijosref)
-        clss.guarddocTest()
-        //print(c)
         // Do any additional setup after loading the view.
     }
     

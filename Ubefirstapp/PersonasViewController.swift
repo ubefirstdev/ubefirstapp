@@ -38,13 +38,11 @@ class PersonasViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         lastPersonIndexTap=indexPath.row
-        OperationQueue.main.addOperation {
+        /*OperationQueue.main.addOperation {
             [weak self] in
             self?.performSegue(withIdentifier: "PersonasToDimensiones", sender: self)
-        }
-        tableView.reloadData()
-
-        
+        }*/
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 
     override func didReceiveMemoryWarning() {

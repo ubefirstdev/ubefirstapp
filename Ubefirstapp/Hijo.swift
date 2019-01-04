@@ -18,4 +18,11 @@ class Hijo{
         self.dimensiones=[Dimension]()
         self.dimensionesref=[String]()
     }
+    
+    init (nombre: String, alias: String, dimensionesref: [String], dimensiones: [Dimension]){
+        self.nombre=nombre
+        self.alias=alias
+        self.dimensiones=dimensiones
+        self.dimensionesref=dimensionesref
+    }
 }

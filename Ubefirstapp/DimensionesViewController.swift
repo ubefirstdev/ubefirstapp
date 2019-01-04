@@ -21,6 +21,12 @@ class DimensionesViewController: UIViewController {
     @IBOutlet weak var button_dimension8: UIButton!
     
     
+    @IBAction func buttonAgregarRecuerdo_pressed(_ sender: Any) {
+        segueSender = "DimensionesToAgregarRecuerdo"
+        CameraHandler.shared.showActionSheet(vc: self)
+
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         clearButtonsTitles()
