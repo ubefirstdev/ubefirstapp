@@ -19,6 +19,8 @@
 		FC001EAB21D8340A001B033B /* Dimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC001EAA21D8340A001B033B /* Dimension.swift */; };
 		FC001EAD21D84207001B033B /* Recuerdo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC001EAC21D84207001B033B /* Recuerdo.swift */; };
 		FC001EAF21D860F5001B033B /* PersonasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC001EAE21D860F5001B033B /* PersonasViewController.swift */; };
+		FC05171121DED90700BEBA3F /* LoadDataToFirestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC05171021DED90700BEBA3F /* LoadDataToFirestore.swift */; };
+		FC05171321DEDE2300BEBA3F /* FormularioAgregarHijoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC05171221DEDE2300BEBA3F /* FormularioAgregarHijoViewController.swift */; };
 		FC588B1A21DC04D50065622A /* RecuerdosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC588B1921DC04D50065622A /* RecuerdosViewController.swift */; };
 		FC6706B421DD7D8900BEE2B1 /* PersonasTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6706B321DD7D8900BEE2B1 /* PersonasTableViewCell.swift */; };
 		FCA4CF7E21750C97009FD4E0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA4CF7D21750C97009FD4E0 /* HomeViewController.swift */; };
@@ -48,6 +50,8 @@
 		FC001EAA21D8340A001B033B /* Dimension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dimension.swift; sourceTree = "<group>"; };
 		FC001EAC21D84207001B033B /* Recuerdo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recuerdo.swift; sourceTree = "<group>"; };
 		FC001EAE21D860F5001B033B /* PersonasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonasViewController.swift; sourceTree = "<group>"; };
+		FC05171021DED90700BEBA3F /* LoadDataToFirestore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadDataToFirestore.swift; sourceTree = "<group>"; };
+		FC05171221DEDE2300BEBA3F /* FormularioAgregarHijoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormularioAgregarHijoViewController.swift; sourceTree = "<group>"; };
 		FC588B1921DC04D50065622A /* RecuerdosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecuerdosViewController.swift; sourceTree = "<group>"; };
 		FC6706B321DD7D8900BEE2B1 /* PersonasTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonasTableViewCell.swift; sourceTree = "<group>"; };
 		FCA4CF7D21750C97009FD4E0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +136,8 @@
 				FC001EAC21D84207001B033B /* Recuerdo.swift */,
 				FCFD895821DC725C003A01D1 /* CameraHandler.swift */,
 				FC6706B321DD7D8900BEE2B1 /* PersonasTableViewCell.swift */,
+				FC05171021DED90700BEBA3F /* LoadDataToFirestore.swift */,
+				FC05171221DEDE2300BEBA3F /* FormularioAgregarHijoViewController.swift */,
 			);
 			path = Ubefirstapp;
 			sourceTree = "<group>";
@@ -304,6 +310,7 @@
 			files = (
 				FCFD895921DC725C003A01D1 /* CameraHandler.swift in Sources */,
 				FC588B1A21DC04D50065622A /* RecuerdosViewController.swift in Sources */,
+				FC05171121DED90700BEBA3F /* LoadDataToFirestore.swift in Sources */,
 				FCA4CF80217511C8009FD4E0 /* InicialViewController.swift in Sources */,
 				FC001EAF21D860F5001B033B /* PersonasViewController.swift in Sources */,
 				EC8FED51216F9BD900D76752 /* LoginViewController.swift in Sources */,
@@ -318,6 +325,7 @@
 				FCA4CF7E21750C97009FD4E0 /* HomeViewController.swift in Sources */,
 				FC001EA721D7DAC3001B033B /* FormularioRecuerdoViewController.swift in Sources */,
 				FC001EA921D7FDB1001B033B /* LoadingPageViewController.swift in Sources */,
+				FC05171321DEDE2300BEBA3F /* FormularioAgregarHijoViewController.swift in Sources */,
 				FCA9896421D59A2B0071748E /* Hijo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

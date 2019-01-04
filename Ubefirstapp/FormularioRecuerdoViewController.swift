@@ -15,6 +15,14 @@ class FormularioRecuerdoViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var textField_nombreRecuerdo: UITextField!
     @IBOutlet weak var textField_ubicacionRecuerdo: UITextField!
     @IBOutlet weak var textField_descripcionRecuerdo: UITextView!
+    @IBOutlet weak var picker_persona: UIPickerView!
+    @IBOutlet weak var picker_dimension: UIPickerView!
+    @IBOutlet weak var picker_fecha: UIDatePicker!
+    @IBOutlet weak var button_agregarRecuerdo: UIBarButtonItem!
+    
+    @IBAction func btnAgregar_pressed(_ sender: Any) {
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
