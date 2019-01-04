@@ -29,9 +29,12 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignIn
             Auth.auth().signIn(withEmail: textField_usernameLogin.text!, password: textField_passwordLogin.text!)
             { (user, error) in
                 //Nos devuelve al usuario en formato
-                var usuario = user?.user.uid ?? nil
+                let usuario = user?.user.uid ?? nil
                 
                 if !(usuario==nil){
+                    //Si entramos aqui quiere decir que ya se creo el nuevo usuario en AUTH
+                    //Aqui debemos de setear en base de datos al usuario para que funcione correctamente cuando lo mandemos a la loading page
+                    
                     OperationQueue.main.addOperation {
                         [weak self] in
                         self?.performSegue(withIdentifier: "LoginToLoadingPage", sender: self)
