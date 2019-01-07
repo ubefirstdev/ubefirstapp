@@ -37,17 +37,20 @@ class InicialViewController: UIViewController, FBSDKLoginButtonDelegate {
                     self?.performSegue(withIdentifier: "InicialToLoadingPage", sender: self)
                 }
             } else {
-                //ninguna sesion de google
-                OperationQueue.main.addOperation {
-                    [weak self] in
-                    self?.performSegue(withIdentifier: "InicialToLogin", sender: self)
+                //ninguna sesion de google y facebook
+                if (UserDefaults.standard.string(forKey: "accessTokenUID") != nil){
+                    OperationQueue.main.addOperation {
+                        [weak self] in
+                        self?.performSegue(withIdentifier: "InicialToLoadingPage", sender: self)
+                    }
+                } else {
+                    //ninguna sesion con google, facebook y correo
+                    OperationQueue.main.addOperation {
+                        [weak self] in
+                        self?.performSegue(withIdentifier: "InicialToLogin", sender: self)
+                    }
                 }
             }
-            
-            /*OperationQueue.main.addOperation {
-                [weak self] in
-                self?.performSegue(withIdentifier: "InicialToLogin", sender: self)
-            }*/
         }
         // Do any additional setup after loading the view.
     }

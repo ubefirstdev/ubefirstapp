@@ -34,10 +34,12 @@ class HomeViewController: UIViewController {
             print ("Error signing out: %@", signOutError)
         }
         FBSDKAccessToken.setCurrent(nil)
+        UserDefaults.standard.removeObject(forKey: "accessTokenUID")
         OperationQueue.main.addOperation {
             [weak self] in
             self?.performSegue(withIdentifier: "HomeToLogin", sender: self)
         }
+        UserDefaults.standard.removeObject(forKey: "accessTokenUID")
         
         GIDSignIn.sharedInstance().signOut()
         userData = Padre()

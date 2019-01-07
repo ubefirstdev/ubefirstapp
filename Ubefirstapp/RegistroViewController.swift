@@ -49,38 +49,18 @@ class RegistroViewController: UIViewController {
             let alertController = UIAlertController(title: "Felicidades", message: "Cuenta creada de manera correcta.", preferredStyle: UIAlertController.Style.alert)
             alertController.addAction(UIAlertAction(title: "Iniciar Sesión", style: UIAlertAction.Style.default) {
                 UIAlertAction in
-                self.toLogIn()
             })
             self.present(alertController, animated: true, completion: nil)
             // [END_EXCLUDE]
             guard let user = authResult?.user else { return }
+            userData.uid = user.uid
+            
+            let newUserFirestore = LoadDataToFirestore()
+            newUserFirestore.agregarNuevoUsuario(uid: userData.uid, nombre: nombre, correo: correo)
+            self.toLogIn()
             }
         // [END create_user]
         }
-        
-        /* Creacion de documento para usuarios
- 
-        let db = Firestore.firestore()
-        let settings = db.settings
-        settings.areTimestampsInSnapshotsEnabled = true
-        db.settings = settings
-        
-        var ref: DocumentReference? = nil
-        
-            ref = db.collection("Usuarios").addDocument(data: [
-                "correo": correo,
-                "nombre": nombre+" "+apellido,
-                "contraseña": contraseña,
-                "CreadoEn": NSDate(),
-                "Hijos": ["caca","qk","boy","girl"]
-                ]) { err in
-                if let err = err {
-                    print("Error adding document: \(err)")
-                } else {
-                    print("Document added with ID: \(ref!.documentID)")
-                }
-            }
- */
     }
  
     func toLogIn() {

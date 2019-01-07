@@ -51,20 +51,24 @@ class LoadingPageViewController: UIViewController {
     */
     
     public func loadDataPadre(){
-        db.collection("users").whereField("uid", isEqualTo: userData.uid).limit(to: 1).getDocuments{(snapshot, error) in
+        db.collection("users").document(userData.uid).getDocument{(document, error) in
             if error != nil {
                 print(error!)
             }else {
-                for document in (snapshot?.documents)!{
-                    userData.nombre = document.data()["nombre"] as? String
-                    userData.correo = document.data()["correo"] as? String
-                    userData.hijosref = document.data()["hijosref"] as? [String]
-                    
-                    if (userData.hijosref.isEmpty){
-                    } else {
-                        self.progressBar.progress=0.25
-                        self.loadDataHijos()
+                userData.nombre = document?.data()!["nombre"] as? String
+                userData.correo = document?.data()!["correo"] as? String
+                userData.hijosref = document?.data()!["hijosref"] as? [String]
+                
+                if (userData.hijosref.isEmpty){
+                    self.activityIndicator.stopAnimating()
+                    self.progressBar.progress=1
+                    OperationQueue.main.addOperation {
+                        [weak self] in
+                        self?.performSegue(withIdentifier: "LoadingPageToHome", sender: self)
                     }
+                } else {
+                    self.progressBar.progress=0.25
+                    self.loadDataHijos()
                 }
             }
         }

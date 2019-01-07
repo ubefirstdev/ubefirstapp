@@ -8,6 +8,7 @@
 
 import UIKit
 
+var flagNuevoHijo = 0
 class FormularioAgregarHijoViewController: UIViewController {
 
     
@@ -16,8 +17,9 @@ class FormularioAgregarHijoViewController: UIViewController {
     
     @IBAction func btnGuardar_pressed(_ sender: Any) {
         let update = LoadDataToFirestore()
-        update.agregarHijoNuevo(alias: self.textfield_alias.text!, nombre: self.textfield_nombre.text!)
+        update.agregarHijoNuevoAndReturnHijoref(alias: self.textfield_alias.text!, nombre: self.textfield_nombre.text!)
         self.navigationController?.popViewController(animated: true)
+        flagNuevoHijo=1
 
     }
     

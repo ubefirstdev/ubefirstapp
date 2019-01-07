@@ -18,8 +18,12 @@ class PersonasViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if (flagNuevoHijo==1){
+            self.personasTableView.reloadData()
+        }
         self.personasTableView.delegate = self
         self.personasTableView.dataSource = self
+        flagNuevoHijo=0
         // Do any additional setup after loading the view.
     }
     
@@ -27,6 +31,11 @@ class PersonasViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return userData.hijos.count
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.viewDidLoad()
+    }
+    
     
     //creacion de cada celda de la tabla
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
