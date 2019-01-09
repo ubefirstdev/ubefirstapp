@@ -41,9 +41,17 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignIn
                     }
                 }
                 else {
-                    let alertController = UIAlertController(title: "Error en Inicio de Sesión", message: (error as! String), preferredStyle: UIAlertController.Style.alert)
+                    /*let alertController = UIAlertController(title: "Error en Inicio de Sesión", message: (error as! String), preferredStyle: UIAlertController.Style.alert)
                     alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
                     self.present(alertController, animated: true, completion: nil)
+                    print("error de inicio de sesion")*/
+                    let alertController = UIAlertController(title: "Error de inicio de sesión", message: "No se pudo inciar sesion correctamente", preferredStyle: UIAlertController.Style.alert)
+                    alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default) {
+                        UIAlertAction in
+                    })
+                    self.present(alertController, animated: true, completion: nil)
+                    
+                    
                 }
             }
             
@@ -54,6 +62,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignIn
             let alertController = UIAlertController(title: "Error en Inicio de Sesión", message: "Es necesario ingresar los datos de forma correcta", preferredStyle: UIAlertController.Style.alert)
             alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
             self.present(alertController, animated: true, completion: nil)
+            print("datos incorrectos")
         }
     }
     
@@ -61,6 +70,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignIn
         GIDSignIn.sharedInstance().delegate = self
         GIDSignIn.sharedInstance().uiDelegate = self
         GIDSignIn.sharedInstance().signIn()
+        
     }
     
     @IBAction func btn_LoginFacebook(_ sender: Any) {
@@ -82,6 +92,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignIn
                     Auth.auth().signInAndRetrieveData(with: credential) { (authResult, error) in
                         if let error = error {
                             //inicio de sesion con error al conectar con firebase
+                            print("error de inicio de sesion al intentar conectar con el servidor de firebase")
                             return
                         }
                         // User is signed in
@@ -162,7 +173,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignIn
             print("user successfully login into firebase")
             OperationQueue.main.addOperation {
                 [weak self] in
-                self?.performSegue(withIdentifier: "LoginToHome", sender: self)
+                self?.performSegue(withIdentifier: "LoginToLoadingPage", sender: self)
             }
         }
     }

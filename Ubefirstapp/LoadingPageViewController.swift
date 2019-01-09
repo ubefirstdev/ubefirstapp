@@ -26,10 +26,11 @@ class LoadingPageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        userData.uid=Auth.auth().currentUser?.uid
+        userData.correo=Auth.auth().currentUser?.email
+        userData.nombre=Auth.auth().currentUser?.displayName
         self.progressBar.progress=0.0
         self.activityIndicator.startAnimating()
-        let userUID = Auth.auth().currentUser?.uid
-        userData.uid=userUID
         self.loadDataPadre()
         
         // Do any additional setup after loading the view.
@@ -50,11 +51,39 @@ class LoadingPageViewController: UIViewController {
     }
     */
     
+    public func userExists() -> Bool{
+        var r = false
+        db.collection("users").whereField("uid", isEqualTo: userData.uid).getDocuments() { (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                } else if ((querySnapshot?.isEmpty)!){
+                    print("usuario no existe")
+                    r=false
+                }else {
+                    print("usuario existe")
+                    r=true
+                }
+        }
+
+        
+        return r
+    }
+    
     public func loadDataPadre(){
         db.collection("users").document(userData.uid).getDocument{(document, error) in
             if error != nil {
                 print(error!)
-            }else {
+            }else if ((document?.exists == false)) {
+                print("usuario no existe")
+                let d = LoadDataToFirestore()
+                d.agregarNuevoUsuario(uid: userData.uid, nombre: userData.nombre, correo: userData.correo)
+                self.activityIndicator.stopAnimating()
+                self.progressBar.progress=1
+                OperationQueue.main.addOperation {
+                    [weak self] in
+                    self?.performSegue(withIdentifier: "LoadingPageToHome", sender: self)
+                }
+            }else{
                 userData.nombre = document?.data()!["nombre"] as? String
                 userData.correo = document?.data()!["correo"] as? String
                 userData.hijosref = document?.data()!["hijosref"] as? [String]
@@ -176,7 +205,4 @@ class LoadingPageViewController: UIViewController {
             }
         })
     }
-    
-
-
 }

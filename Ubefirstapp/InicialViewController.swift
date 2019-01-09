@@ -18,7 +18,6 @@ class InicialViewController: UIViewController, FBSDKLoginButtonDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         if FBSDKAccessToken.current() != nil{
             //sesion activa
             OperationQueue.main.addOperation {
