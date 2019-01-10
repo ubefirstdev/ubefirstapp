@@ -14,7 +14,7 @@ class Recuerdo {
     var dimension: String!
     var fecha: String!
     var ubicacion: String!
-    var elementosref: [String]!
+    var elementospath: String!
     
     init(){
         self.titulo=""
@@ -22,6 +22,6 @@ class Recuerdo {
         self.dimension=""
         self.fecha=""
         self.ubicacion=""
-        self.elementosref=[String]()
+        self.elementospath=""
     }
 }

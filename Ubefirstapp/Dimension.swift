@@ -10,12 +10,10 @@ import Foundation
 
 class Dimension {
     var nombre: String!
-    var recuerdosref: [String]!
     var recuerdos: [Recuerdo]!
     
     init() {
         self.nombre=""
-        self.recuerdosref=[String]()
         self.recuerdos=[Recuerdo]()
     }
 }

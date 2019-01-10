@@ -105,9 +105,9 @@ class LoadingPageViewController: UIViewController {
         }
         
     }
-    
+    //inician modificaciones
     public func loadDataHijos(){
-        db.collection("hijos").document(userData.hijosref[self.indexHijos]).getDocument(completion: {(document, error) in
+        db.collection("users").document(userData.uid).collection("hijos").document(userData.hijosref[self.indexHijos]).getDocument(completion: {(document, error) in
             if error != nil {
                 print(error)
             } else {
@@ -132,13 +132,12 @@ class LoadingPageViewController: UIViewController {
     }
     
     public func loadDimensionesData(){
-    db.collection("dimensiones").document(userData.hijos[self.indexHijos].dimensionesref[self.indexDimension]).getDocument(completion: {(document, error) in
+    db.collection("users").document(userData.uid).collection("hijos").document(userData.hijosref[self.indexHijos]).collection("dimensiones").document(userData.hijos[self.indexHijos].dimensionesref[self.indexDimension]).getDocument(completion: {(document, error) in
             if error != nil {
                 print(error)
             } else {
                 let dimensionTemp = Dimension()
                 dimensionTemp.nombre = document?.data()!["nombre"] as? String
-                dimensionTemp.recuerdosref = document?.data()!["recuerdosref"] as? [String]
                 userData.hijos[self.indexHijos].dimensiones.append(dimensionTemp)
                 self.indexDimension=self.indexDimension+1
                 
@@ -163,48 +162,45 @@ class LoadingPageViewController: UIViewController {
     }
     
     public func loadRecuerdosData(){
-            //arreglar falla que ocasiona un error si una dimension no tiene ningun recuerdo
-        db.collection("recuerdos").document(userData.hijos[self.indexHijos].dimensiones[self.indexDimension].recuerdosref[self.indexRecuerdo]).getDocument(completion: {(document, error) in
-            if error != nil {
-                print(error)
+        db.collection("users").document(userData.uid).collection("hijos").document(userData.hijosref[self.indexHijos]).collection("dimensiones").document(userData.hijos[self.indexHijos].dimensionesref[self.indexDimension]).collection("recuerdos").getDocuments(){ (querySnapshot, err) in
+            if err != nil {
+                print(err)
             } else {
+                for document in querySnapshot!.documents {
                 let recuerdoTemp = Recuerdo()
-                recuerdoTemp.titulo = document?.data()!["titulo"] as? String
-                recuerdoTemp.hijo = document?.data()!["hijo"] as? String
-                recuerdoTemp.dimension = document?.data()!["dimension"] as? String
-                recuerdoTemp.fecha = document?.data()!["fecha"] as? String
-                recuerdoTemp.ubicacion = document?.data()!["ubicacion"] as? String
-                recuerdoTemp.elementosref = document?.data()!["elementosref"] as? [String]
+                recuerdoTemp.titulo = document.data()["titulo"] as? String
+                recuerdoTemp.hijo = document.data()["hijo"] as? String
+                recuerdoTemp.dimension = document.data()["dimension"] as? String
+                recuerdoTemp.fecha = document.data()["fecha"] as? String
+                recuerdoTemp.ubicacion = document.data()["ubicacion"] as? String
+                recuerdoTemp.elementospath = document.data()["elementospath"] as? String
                 userData.hijos[self.indexHijos].dimensiones[self.indexDimension].recuerdos.append(recuerdoTemp)
                 self.indexRecuerdo=self.indexRecuerdo+1
-                
-                if (self.indexRecuerdo<userData.hijos[self.indexHijos].dimensiones[self.indexDimension].recuerdosref.count){
+                }
+            }
+            self.indexDimension=self.indexDimension+1
+            if (self.indexDimension<userData.hijos[self.indexHijos].dimensiones.count){
+                self.loadRecuerdosData()
+            }else{
+                self.indexHijos=self.indexHijos+1
+                self.indexDimension=0
+                self.indexRecuerdo=0
+                if(self.indexHijos<userData.hijos.count){
                     self.loadRecuerdosData()
                 }else{
+                    self.indexDimension=0
+                    self.indexHijos=0
                     self.indexRecuerdo=0
-                    self.indexDimension=self.indexDimension+1
-                    if (self.indexDimension<userData.hijos[self.indexHijos].dimensiones.count){
-                        self.loadRecuerdosData()
-                    }else{
-                        self.indexHijos=self.indexHijos+1
-                        self.indexDimension=0
-                        self.indexRecuerdo=0
-                        if(self.indexHijos<userData.hijos.count){
-                            self.loadRecuerdosData()
-                        }else{
-                            self.indexDimension=0
-                            self.indexHijos=0
-                            self.indexRecuerdo=0
-                            self.activityIndicator.stopAnimating()
-                            self.progressBar.progress=1
-                            OperationQueue.main.addOperation {
-                                [weak self] in
-                                self?.performSegue(withIdentifier: "LoadingPageToHome", sender: self)
-                            }
-                        }
+                    self.activityIndicator.stopAnimating()
+                    self.progressBar.progress=1
+                    OperationQueue.main.addOperation {
+                        [weak self] in
+                        self?.performSegue(withIdentifier: "LoadingPageToHome", sender: self)
                     }
                 }
             }
-        })
+        }
     }
+    
+    
 }

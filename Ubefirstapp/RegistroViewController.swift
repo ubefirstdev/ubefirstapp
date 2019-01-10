@@ -47,8 +47,8 @@ class RegistroViewController: UIViewController {
             }
             //Cuenta creada
             let alertController = UIAlertController(title: "Felicidades", message: "Cuenta creada de manera correcta.", preferredStyle: UIAlertController.Style.alert)
-            alertController.addAction(UIAlertAction(title: "Iniciar Sesión", style: UIAlertAction.Style.default) {
-                UIAlertAction in
+            alertController.addAction(UIAlertAction(title: "Iniciar Sesión", style: UIAlertAction.Style.default) { UIAlertAction in
+                self.toLogIn()
             })
             self.present(alertController, animated: true, completion: nil)
             // [END_EXCLUDE]
@@ -57,9 +57,9 @@ class RegistroViewController: UIViewController {
             
             let newUserFirestore = LoadDataToFirestore()
             newUserFirestore.agregarNuevoUsuario(uid: userData.uid, nombre: nombre, correo: correo)
-            self.toLogIn()
             }
-        // [END create_user]
+        // [END create_user
+
         }
     }
  

@@ -11,28 +11,25 @@ import Foundation
 class LoadDataToFirestore {
     
     func agregarHijoNuevoAndReturnHijoref(alias: String, nombre: String){
-        let docIDhijo = db.collection("hijos").document().documentID
+        let docIDhijo = db.collection("users").document(userData.uid).collection("hijos").document().documentID
         var i = 0
-        var recuerdoref=[String]()
+        /*var recuerdoref=[String]()
         
         while (i<8){
             recuerdoref.append(self.crearRecuerdoVacio())
             i = i + 1
 
-        }
+        }*/
         
-        let dimensionesref = self.crearDimensionesDefaultAndReturnDimensionesref(recuerdoref: recuerdoref)
-        
-        
+        let dimensionesref = self.crearDimensionesDefaultAndReturnDimensionesref(hijosref: docIDhijo)
         
         let docData: [String: Any] = [
             "nombre": nombre,
             "alias": alias,
-            "childOf": userData.uid,
             "dimensionesref": [dimensionesref[0],dimensionesref[1],dimensionesref[2],dimensionesref[3],dimensionesref[4],dimensionesref[5],dimensionesref[6],dimensionesref[7]]
         ]
         
-        db.collection("hijos").document(docIDhijo).setData(docData) { err in
+        db.collection("users").document(userData.uid).collection("hijos").document(docIDhijo).setData(docData) { err in
             if let err=err {
                 print("Error writing document: \(err)")
             } else {
@@ -100,77 +97,60 @@ class LoadDataToFirestore {
         return docid
     }
     
-    func crearDimensionesDefaultAndReturnDimensionesref(recuerdoref: [String]) -> [String]{
+    func crearDimensionesDefaultAndReturnDimensionesref(hijosref: String) -> [String]{
         var i = 0
         var docid = [String]()
         var dimensionesDefault = [Dimension]()
 
         while i<8 {
-            docid.append(db.collection("dimensiones").document().documentID)
+            docid.append(db.collection("users").document(userData.uid).collection("hijos").document(hijosref).collection("dimensiones").document().documentID)
             dimensionesDefault.append(Dimension())
             i = i + 1
 
         }
     
-        let docData1: [String: Any] = [
-            "nombre": "Deportes",
-            "recuerdosref": [recuerdoref[0]]
+        let docData0: [String: Any] = [
+            "nombre": "Deportes"
         ]
         dimensionesDefault[0].nombre="Deportes"
-        dimensionesDefault[0].recuerdosref.append(recuerdoref[0])
         
-        let docData2: [String: Any] = [
-            "nombre": "Académica",
-            "recuerdosref": [recuerdoref[1]]
+        let docData1: [String: Any] = [
+            "nombre": "Académica"
         ]
         
         dimensionesDefault[1].nombre="Académica"
-        dimensionesDefault[1].recuerdosref.append(recuerdoref[1])
         
-        let docData3: [String: Any] = [
-            "nombre": "Cultural",
-            "recuerdosref": [recuerdoref[2]]
+        let docData2: [String: Any] = [
+            "nombre": "Cultural"
         ]
         dimensionesDefault[2].nombre="Cultural"
-        dimensionesDefault[2].recuerdosref.append(recuerdoref[2])
         
-        let docData4: [String: Any] = [
-            "nombre": "Espiritual",
-            "recuerdosref": [recuerdoref[3]]
+        let docData3: [String: Any] = [
+            "nombre": "Espiritual"
         ]
         dimensionesDefault[3].nombre="Espiritual"
-        dimensionesDefault[3].recuerdosref.append(recuerdoref[3])
         
-        let docData5: [String: Any] = [
-            "nombre": "Musical",
-            "recuerdosref": [recuerdoref[4]]
+        let docData4: [String: Any] = [
+            "nombre": "Musical"
         ]
         dimensionesDefault[4].nombre="Musical"
-        dimensionesDefault[4].recuerdosref.append(recuerdoref[4])
         
-        let docData6: [String: Any] = [
-            "nombre": "Cívico",
-            "recuerdosref": [recuerdoref[5]]
+        let docData5: [String: Any] = [
+            "nombre": "Cívico"
         ]
         dimensionesDefault[5].nombre="Cívico"
-        dimensionesDefault[5].recuerdosref.append(recuerdoref[5])
         
-        let docData7: [String: Any] = [
-            "nombre": "Viajero",
-            "recuerdosref": [recuerdoref[6]]
+        let docData6: [String: Any] = [
+            "nombre": "Viajero"
         ]
         dimensionesDefault[6].nombre="Viajero"
-        dimensionesDefault[6].recuerdosref.append(recuerdoref[6])
         
-        let docData8: [String: Any] = [
-            "nombre": "Otros",
-            "recuerdosref": [recuerdoref[7]]
+        let docData7: [String: Any] = [
+            "nombre": "Otros"
         ]
         dimensionesDefault[7].nombre="Otros"
-        dimensionesDefault[7].recuerdosref.append(recuerdoref[7])
         
-        
-        db.collection("dimensiones").document(docid[0]).setData(docData1) { err in
+        db.collection("users").document(userData.uid).collection("hijos").document(hijosref).collection("dimensiones").document(docid[0]).setData(docData0) { err in
             if let err=err {
                 print("Error writing document: \(err)")
             } else {
@@ -178,7 +158,7 @@ class LoadDataToFirestore {
             }
         }
         
-        db.collection("dimensiones").document(docid[1]).setData(docData2) { err in
+        db.collection("users").document(userData.uid).collection("hijos").document(hijosref).collection("dimensiones").document(docid[1]).setData(docData1) { err in
             if let err=err {
                 print("Error writing document: \(err)")
             } else {
@@ -186,7 +166,7 @@ class LoadDataToFirestore {
             }
         }
         
-        db.collection("dimensiones").document(docid[2]).setData(docData3) { err in
+        db.collection("users").document(userData.uid).collection("hijos").document(hijosref).collection("dimensiones").document(docid[2]).setData(docData2) { err in
             if let err=err {
                 print("Error writing document: \(err)")
             } else {
@@ -194,7 +174,7 @@ class LoadDataToFirestore {
             }
         }
         
-        db.collection("dimensiones").document(docid[3]).setData(docData4) { err in
+        db.collection("users").document(userData.uid).collection("hijos").document(hijosref).collection("dimensiones").document(docid[3]).setData(docData3) { err in
             if let err=err {
                 print("Error writing document: \(err)")
             } else {
@@ -202,7 +182,7 @@ class LoadDataToFirestore {
             }
         }
         
-        db.collection("dimensiones").document(docid[4]).setData(docData5) { err in
+        db.collection("users").document(userData.uid).collection("hijos").document(hijosref).collection("dimensiones").document(docid[4]).setData(docData4) { err in
             if let err=err {
                 print("Error writing document: \(err)")
             } else {
@@ -210,7 +190,7 @@ class LoadDataToFirestore {
             }
         }
         
-        db.collection("dimensiones").document(docid[5]).setData(docData6) { err in
+        db.collection("users").document(userData.uid).collection("hijos").document(hijosref).collection("dimensiones").document(docid[5]).setData(docData5) { err in
             if let err=err {
                 print("Error writing document: \(err)")
             } else {
@@ -218,7 +198,7 @@ class LoadDataToFirestore {
             }
         }
         
-        db.collection("dimensiones").document(docid[6]).setData(docData7) { err in
+        db.collection("users").document(userData.uid).collection("hijos").document(hijosref).collection("dimensiones").document(docid[6]).setData(docData6) { err in
             if let err=err {
                 print("Error writing document: \(err)")
             } else {
@@ -226,14 +206,14 @@ class LoadDataToFirestore {
             }
         }
         
-        db.collection("dimensiones").document(docid[7]).setData(docData8) { err in
+        db.collection("users").document(userData.uid).collection("hijos").document(hijosref).collection("dimensiones").document(docid[7]).setData(docData7) { err in
             if let err=err {
                 print("Error writing document: \(err)")
             } else {
                 print("Document successfully written!")
             }
         }
-
+        
         userData.hijos.append(Hijo())
         userData.hijos[userData.hijos.count-1].dimensiones.append(contentsOf: dimensionesDefault)
         
@@ -245,6 +225,8 @@ class LoadDataToFirestore {
         
         let docDataUser: [String: Any] = [
             "uid": uid,
+            "premium": false,
+            "colaborador": false,
             "nombre": nombre,
             "correo": correo,
             "hijosref": []
