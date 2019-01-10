@@ -10,6 +10,8 @@ class Padre{
     var nombre: String!
     var correo: String!
     var uid: String!
+    var premium: Bool!
+    var colaborador: Bool!
     var hijosref: [String]!
     var hijos: [Hijo]!
     
@@ -19,7 +21,8 @@ class Padre{
         self.hijos = [Hijo]()
         self.hijosref=[String]()
         self.uid=""
-        
+        self.premium=nil
+        self.colaborador=nil
     }
 }
 

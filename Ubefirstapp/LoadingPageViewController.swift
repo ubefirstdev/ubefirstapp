@@ -27,8 +27,8 @@ class LoadingPageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         userData.uid=Auth.auth().currentUser?.uid
-        userData.correo=Auth.auth().currentUser?.email
-        userData.nombre=Auth.auth().currentUser?.displayName
+        /*userData.correo=Auth.auth().currentUser?.email
+        userData.nombre=Auth.auth().currentUser?.displayName*/
         self.progressBar.progress=0.0
         self.activityIndicator.startAnimating()
         self.loadDataPadre()
@@ -87,6 +87,8 @@ class LoadingPageViewController: UIViewController {
                 userData.nombre = document?.data()!["nombre"] as? String
                 userData.correo = document?.data()!["correo"] as? String
                 userData.hijosref = document?.data()!["hijosref"] as? [String]
+                userData.premium = document?.data()!["premium"] as? Bool
+                userData.colaborador = document?.data()!["colaborador"] as? Bool
                 
                 if (userData.hijosref.isEmpty){
                     self.activityIndicator.stopAnimating()

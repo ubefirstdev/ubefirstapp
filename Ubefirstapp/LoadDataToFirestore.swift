@@ -11,11 +11,7 @@ import Foundation
 class LoadDataToFirestore {
     
     func agregarHijoNuevoAndReturnHijoref(alias: String, nombre: String){
-        let hijo = Hijo()
-        hijo.nombre=nombre
-        hijo.alias=alias
-        userData.hijos.append(hijo)
-        /*let docIDhijo = db.collection("hijos").document().documentID
+        let docIDhijo = db.collection("hijos").document().documentID
         var i = 0
         var recuerdoref=[String]()
         
@@ -48,7 +44,7 @@ class LoadDataToFirestore {
         userData.hijos[userData.hijos.count-1].nombre=nombre
         userData.hijos[userData.hijos.count-1].alias=alias
         userData.hijos[userData.hijos.count-1].dimensionesref=dimensionesref
-        agregarReferenciaNuevoHijo()*/
+        agregarReferenciaNuevoHijo()
         
         }
     
@@ -111,6 +107,7 @@ class LoadDataToFirestore {
 
         while i<8 {
             docid.append(db.collection("dimensiones").document().documentID)
+            dimensionesDefault.append(Dimension())
             i = i + 1
 
         }

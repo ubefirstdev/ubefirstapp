@@ -13,13 +13,33 @@ var lastPersonIndexTap: Int!
 class PersonasViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     let cellReuseIdentifier = "PersonasCell"
-    
+    @IBOutlet weak var btn_agregarPersona: UIBarButtonItem!
     @IBOutlet weak var personasTableView: UITableView!
+    
+    @IBAction func btnPressed_agregarPersonas(_ sender: Any) {
+        if (userData.premium==true){
+            OperationQueue.main.addOperation {
+                [weak self] in
+                self?.performSegue(withIdentifier: "PersonasToAgregarPersonas", sender: self)
+            }
+        } else {
+            let alertController = UIAlertController(title: "Funcionalidad limitada", message: "Obtenga una cuenta ubefirst Premium para agregar Personas", preferredStyle: UIAlertController.Style.alert)
+            alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default) {
+                UIAlertAction in
+            })
+            self.present(alertController, animated: true, completion: nil)
+            
+        }
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         if (flagNuevoHijo==1){
             self.personasTableView.reloadData()
+        }
+        if (userData.colaborador==true){
+            self.navigationItem.rightBarButtonItem = nil
         }
         self.personasTableView.delegate = self
         self.personasTableView.dataSource = self
