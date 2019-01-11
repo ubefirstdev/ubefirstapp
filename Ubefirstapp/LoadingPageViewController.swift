@@ -174,6 +174,7 @@ class LoadingPageViewController: UIViewController {
                 recuerdoTemp.fecha = document.data()["fecha"] as? String
                 recuerdoTemp.ubicacion = document.data()["ubicacion"] as? String
                 recuerdoTemp.elementospath = document.data()["elementospath"] as? String
+                recuerdoTemp.descripcion = document.data()["descripcion"] as? String
                 userData.hijos[self.indexHijos].dimensiones[self.indexDimension].recuerdos.append(recuerdoTemp)
                 self.indexRecuerdo=self.indexRecuerdo+1
                 }

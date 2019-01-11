@@ -55,7 +55,7 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-	<string>ubefirst necesita permiso para acceder a camara</string>
+	<string>ubefirst necesita permiso para acceder a la camara</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

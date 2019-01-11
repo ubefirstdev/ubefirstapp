@@ -14,6 +14,7 @@ class Recuerdo {
     var dimension: String!
     var fecha: String!
     var ubicacion: String!
+    var descripcion: String!
     var elementospath: String!
     
     init(){
@@ -23,5 +24,6 @@ class Recuerdo {
         self.fecha=""
         self.ubicacion=""
         self.elementospath=""
+        self.descripcion=""
     }
 }
