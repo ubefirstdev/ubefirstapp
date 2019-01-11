@@ -29,6 +29,8 @@ class RecuerdosDetallesViewController: UIViewController {
         self.txtView_descripcion.text = userData.hijos[lastPersonIndexTap].dimensiones[lastIndexDimensionTap].recuerdos[lastRecuerdoIndexTap].descripcion
 
         // Do any additional setup after loading the view.
+        
+        //MOSTARLAIMAGEN QUE ESTE EN SU PATH
     }
     
 
