@@ -20,7 +20,6 @@ class FormularioRecuerdoViewController: UIViewController, UIPickerViewDelegate, 
     var indexDimension = 0
     
     @IBAction func btnPressed_agregarRecuerdo(_ sender: UIBarButtonItem) {
-        print("boton presionado ")
         var docData: [String: Any] = [:]
         self.picker_fecha.datePickerMode = UIDatePicker.Mode.date
         let dateFormatter = DateFormatter()
@@ -37,6 +36,21 @@ class FormularioRecuerdoViewController: UIViewController, UIPickerViewDelegate, 
             "descripcion": self.textField_descripcionRecuerdo.text,
             "elementospath": "/path/path/path"
         ]
+        
+        //aqui iria el codigo para poder subir elementos a dropbox, en esta parte del codigo es donde se realiza la creacion de un nuevo recuerdo
+        
+        //se agrega el recuerdo al objeto padre
+        let recuerdoNuevo  = Recuerdo()
+        recuerdoNuevo.titulo = self.textField_nombreRecuerdo.text
+        recuerdoNuevo.hijo = userData.hijos[self.indexPersona].nombre
+        recuerdoNuevo.dimension = userData.hijos[self.indexPersona].dimensiones[self.indexDimension].nombre
+        recuerdoNuevo.fecha = selectedDate
+        recuerdoNuevo.ubicacion = self.textField_ubicacionRecuerdo.text!
+        recuerdoNuevo.descripcion = self.textField_descripcionRecuerdo.text
+        recuerdoNuevo.elementospath = "/path/path/path"
+        
+        userData.hijos[self.indexPersona].dimensiones[self.indexDimension].recuerdos.append(recuerdoNuevo)
+        
         db.collection("users").document(userData.uid).collection("hijos").document(userData.hijosref[self.indexPersona]).collection("dimensiones").document(userData.hijos[self.indexPersona].dimensionesref[self.indexDimension]).collection("recuerdos").document().setData(docData)
         self.navigationController?.popViewController(animated: true)
 
