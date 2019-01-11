@@ -126,14 +126,14 @@ class LoadDataToFirestore {
         dimensionesDefault[2].nombre="Cultural"
         
         let docData3: [String: Any] = [
-            "nombre": "Espiritual"
-        ]
-        dimensionesDefault[3].nombre="Espiritual"
-        
-        let docData4: [String: Any] = [
             "nombre": "Musical"
         ]
-        dimensionesDefault[4].nombre="Musical"
+        dimensionesDefault[3].nombre="Musical"
+        
+        let docData4: [String: Any] = [
+            "nombre": "Espiritual"
+        ]
+        dimensionesDefault[4].nombre="Espiritual"
         
         let docData5: [String: Any] = [
             "nombre": "Cívico"

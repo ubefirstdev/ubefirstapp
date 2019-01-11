@@ -8,6 +8,8 @@
 
 import UIKit
 
+var lastIndexDimensionTap: Int!
+
 class DimensionesViewController: UIViewController {
 
     @IBOutlet weak var label_nombrePersona: UILabel!
@@ -19,6 +21,116 @@ class DimensionesViewController: UIViewController {
     @IBOutlet weak var button_dimension6: UIButton!
     @IBOutlet weak var button_dimension7: UIButton!
     @IBOutlet weak var button_dimension8: UIButton!
+    
+    @IBAction func btnPressed_dimension1(_ sender: Any) {
+        if (userData.premium==true){
+            lastIndexDimensionTap = 0
+            OperationQueue.main.addOperation {
+                [weak self] in
+                self?.performSegue(withIdentifier: "DimensionToRecuerdos", sender: self)
+            }
+        } else {
+            let alertController = UIAlertController(title: "Funcionalidad limitada", message: "Obtenga una cuenta ubefirst Premium para acceder a esta dimensión", preferredStyle: UIAlertController.Style.alert)
+            alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default) {
+                UIAlertAction in
+            })
+            self.present(alertController, animated: true, completion: nil)
+            
+        }
+        
+    }
+    
+    @IBAction func btnPressed_dimension2(_ sender: Any) {
+        if (userData.premium==true){
+            lastIndexDimensionTap = 1
+            OperationQueue.main.addOperation {
+                [weak self] in
+                self?.performSegue(withIdentifier: "DimensionToRecuerdos", sender: self)
+            }
+        }else {
+            let alertController = UIAlertController(title: "Funcionalidad limitada", message: "Obtenga una cuenta ubefirst Premium para acceder a esta dimensión", preferredStyle: UIAlertController.Style.alert)
+            alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default) {
+                UIAlertAction in
+            })
+            self.present(alertController, animated: true, completion: nil)
+            
+        }
+    }
+    
+    @IBAction func btnPreseed_dimension3(_ sender: Any) {
+        if (userData.premium==true){
+            lastIndexDimensionTap = 2
+            OperationQueue.main.addOperation {
+                [weak self] in
+                self?.performSegue(withIdentifier: "DimensionToRecuerdos", sender: self)
+            }
+        } else {
+            let alertController = UIAlertController(title: "Funcionalidad limitada", message: "Obtenga una cuenta ubefirst Premium para acceder a esta dimensión", preferredStyle: UIAlertController.Style.alert)
+            alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default) {
+                UIAlertAction in
+            })
+            self.present(alertController, animated: true, completion: nil)
+            
+        }
+    }
+    
+    @IBAction func btnPressed_dimension4(_ sender: Any) {
+        if (userData.premium==true){
+            lastIndexDimensionTap = 3
+            OperationQueue.main.addOperation {
+                [weak self] in
+                self?.performSegue(withIdentifier: "DimensionToRecuerdos", sender: self)
+            }
+        } else {
+            let alertController = UIAlertController(title: "Funcionalidad limitada", message: "Obtenga una cuenta ubefirst Premium para acceder a esta dimensión", preferredStyle: UIAlertController.Style.alert)
+            alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default) {
+                UIAlertAction in
+            })
+            self.present(alertController, animated: true, completion: nil)
+            
+        }
+    }
+    
+    @IBAction func btnPressed_dimension5(_ sender: Any) {
+        lastIndexDimensionTap = 4
+        OperationQueue.main.addOperation {
+            [weak self] in
+            self?.performSegue(withIdentifier: "DimensionToRecuerdos", sender: self)
+        }
+    }
+    
+    @IBAction func btnPressed_dimension6(_ sender: Any) {
+        lastIndexDimensionTap = 5
+        OperationQueue.main.addOperation {
+            [weak self] in
+            self?.performSegue(withIdentifier: "DimensionToRecuerdos", sender: self)
+        }
+    }
+    
+    @IBAction func btnPressed_dimension7(_ sender: Any) {
+        lastIndexDimensionTap = 6
+        OperationQueue.main.addOperation {
+            [weak self] in
+            self?.performSegue(withIdentifier: "DimensionToRecuerdos", sender: self)
+        }
+    }
+    
+    @IBAction func btnPressed_dimension8(_ sender: Any) {
+        if (userData.premium==true){
+            lastIndexDimensionTap = 7
+            OperationQueue.main.addOperation {
+                [weak self] in
+                self?.performSegue(withIdentifier: "DimensionToRecuerdos", sender: self)
+            }
+        } else {
+            let alertController = UIAlertController(title: "Funcionalidad limitada", message: "Obtenga una cuenta ubefirst Premium para acceder a esta dimensión", preferredStyle: UIAlertController.Style.alert)
+            alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default) {
+                UIAlertAction in
+            })
+            self.present(alertController, animated: true, completion: nil)
+            
+        }
+    }
     
     
     @IBAction func buttonAgregarRecuerdo_pressed(_ sender: Any) {

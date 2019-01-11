@@ -12,6 +12,7 @@ class RecuerdosViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = userData.hijos[lastPersonIndexTap].dimensiones[lastIndexDimensionTap].nombre
 
         // Do any additional setup after loading the view.
     }

@@ -22,8 +22,13 @@ class PersonasViewController: UIViewController, UITableViewDelegate, UITableView
                 [weak self] in
                 self?.performSegue(withIdentifier: "PersonasToAgregarPersonas", sender: self)
             }
-        } else {
-            let alertController = UIAlertController(title: "Funcionalidad limitada", message: "Obtenga una cuenta ubefirst Premium para agregar Personas", preferredStyle: UIAlertController.Style.alert)
+        } else if (userData.hijos.count<1){
+            OperationQueue.main.addOperation {
+                [weak self] in
+                self?.performSegue(withIdentifier: "PersonasToAgregarPersonas", sender: self)
+            }
+        }else {
+            let alertController = UIAlertController(title: "Funcionalidad limitada", message: "Obtenga una cuenta ubefirst Premium para agregar más Personas", preferredStyle: UIAlertController.Style.alert)
             alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default) {
                 UIAlertAction in
             })
