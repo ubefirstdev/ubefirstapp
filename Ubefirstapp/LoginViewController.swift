@@ -95,6 +95,11 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignIn
                             print("error de inicio de sesion al intentar conectar con el servidor de firebase")
                             return
                         }
+                        userData.uid=Auth.auth().currentUser?.uid
+                        userData.correo=Auth.auth().currentUser?.email
+                        userData.nombre=Auth.auth().currentUser?.displayName
+
+
                         // User is signed in
                         //inicio de sesion correcto con firebase
                         OperationQueue.main.addOperation {
@@ -142,6 +147,10 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignIn
                     return
                 }
                 // User is signed in
+                
+                userData.uid=Auth.auth().currentUser?.uid
+                userData.correo=Auth.auth().currentUser?.email
+                userData.nombre=Auth.auth().currentUser?.displayName
             }
         }
     }

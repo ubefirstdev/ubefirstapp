@@ -20,6 +20,7 @@ class FormularioRecuerdoViewController: UIViewController, UIPickerViewDelegate, 
     var indexPersona = 0
     var indexDimension = 0
     var folderPath = "/path/path/path"
+
     @IBAction func btnPressed_agregarRecuerdo(_ sender: UIBarButtonItem) {
         var docData: [String: Any] = [:]
         self.picker_fecha.datePickerMode = UIDatePicker.Mode.date
