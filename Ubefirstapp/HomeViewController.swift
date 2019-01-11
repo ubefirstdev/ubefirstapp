@@ -77,6 +77,7 @@ class HomeViewController: UIViewController {
             [weak self] in
             self?.performSegue(withIdentifier: "HomeToLogin", sender: self)
         }
+        DropboxClientsManager.unlinkClients()
     }
     
     override func viewDidLoad() {
