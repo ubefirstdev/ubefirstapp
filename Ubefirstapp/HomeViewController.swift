@@ -27,7 +27,7 @@ class HomeViewController: UIViewController {
     
     
     @IBAction func btnPressed_configuracion(_ sender: Any) {
-        /*if (userData.premium==false){
+        if (userData.premium==false){
          let alertController = UIAlertController(title: "Funcionalidad limitada", message: "Obtenga una cuenta ubefirst Premium para gestionar hijos, dimensiones y más.", preferredStyle: UIAlertController.Style.alert)
          alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default) {
          UIAlertAction in
@@ -38,7 +38,7 @@ class HomeViewController: UIViewController {
          }
         
         //Aqui se logea con Dropbox de manera provicional
-        DropboxClientsManager.authorizeFromController(UIApplication.shared,controller: self,openURL: {
+        /*DropboxClientsManager.authorizeFromController(UIApplication.shared,controller: self,openURL: {
             (url: URL) -> Void in UIApplication.shared.openURL(url)
         })*/
     }
@@ -78,7 +78,7 @@ class HomeViewController: UIViewController {
             [weak self] in
             self?.performSegue(withIdentifier: "HomeToLogin", sender: self)
         }
-        DropboxClientsManager.unlinkClients()
+        //DropboxClientsManager.unlinkClients()
     }
     
     override func viewDidLoad() {
@@ -96,8 +96,7 @@ class HomeViewController: UIViewController {
             self.lbl_username.textColor = UIColor.red
         }
         SideMenuManager.default.menuFadeStatusBar = false
-        //var menuWidth: CGFloat = max(round(min((appScreenRect.width), (appScreenRect.height)) * 0.75), 240)
-        SideMenuManager.default.menuWidth = 300
+        SideMenuManager.default.menuWidth = 320
 
 
 
