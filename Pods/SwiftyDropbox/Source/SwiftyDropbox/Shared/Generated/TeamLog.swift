@@ -142,9 +142,9 @@ open class TeamLog {
     /// Granted/revoked option to enable account capture on team domains.
     open class AccountCaptureChangeAvailabilityDetails: CustomStringConvertible {
         /// New account capture availabilty value.
-        public let newValue: TeamLog.AccountCaptureAvailability
+        open let newValue: TeamLog.AccountCaptureAvailability
         /// Previous account capture availabilty value. Might be missing due to historical data gap.
-        public let previousValue: TeamLog.AccountCaptureAvailability?
+        open let previousValue: TeamLog.AccountCaptureAvailability?
         public init(newValue: TeamLog.AccountCaptureAvailability, previousValue: TeamLog.AccountCaptureAvailability? = nil) {
             self.newValue = newValue
             self.previousValue = previousValue
@@ -177,7 +177,7 @@ open class TeamLog {
     /// The AccountCaptureChangeAvailabilityType struct
     open class AccountCaptureChangeAvailabilityType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -208,9 +208,9 @@ open class TeamLog {
     /// Changed account capture setting on team domain.
     open class AccountCaptureChangePolicyDetails: CustomStringConvertible {
         /// New account capture policy.
-        public let newValue: TeamLog.AccountCapturePolicy
+        open let newValue: TeamLog.AccountCapturePolicy
         /// Previous account capture policy. Might be missing due to historical data gap.
-        public let previousValue: TeamLog.AccountCapturePolicy?
+        open let previousValue: TeamLog.AccountCapturePolicy?
         public init(newValue: TeamLog.AccountCapturePolicy, previousValue: TeamLog.AccountCapturePolicy? = nil) {
             self.newValue = newValue
             self.previousValue = previousValue
@@ -243,7 +243,7 @@ open class TeamLog {
     /// The AccountCaptureChangePolicyType struct
     open class AccountCaptureChangePolicyType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -274,7 +274,7 @@ open class TeamLog {
     /// Account-captured user migrated account to team.
     open class AccountCaptureMigrateAccountDetails: CustomStringConvertible {
         /// Domain name.
-        public let domainName: String
+        open let domainName: String
         public init(domainName: String) {
             stringValidator()(domainName)
             self.domainName = domainName
@@ -305,7 +305,7 @@ open class TeamLog {
     /// The AccountCaptureMigrateAccountType struct
     open class AccountCaptureMigrateAccountType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -336,7 +336,7 @@ open class TeamLog {
     /// Sent proactive account capture email to all unmanaged members.
     open class AccountCaptureNotificationEmailsSentDetails: CustomStringConvertible {
         /// Domain name.
-        public let domainName: String
+        open let domainName: String
         public init(domainName: String) {
             stringValidator()(domainName)
             self.domainName = domainName
@@ -367,7 +367,7 @@ open class TeamLog {
     /// The AccountCaptureNotificationEmailsSentType struct
     open class AccountCaptureNotificationEmailsSentType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -457,7 +457,7 @@ open class TeamLog {
     /// Account-captured user changed account email to personal email.
     open class AccountCaptureRelinquishAccountDetails: CustomStringConvertible {
         /// Domain name.
-        public let domainName: String
+        open let domainName: String
         public init(domainName: String) {
             stringValidator()(domainName)
             self.domainName = domainName
@@ -488,7 +488,7 @@ open class TeamLog {
     /// The AccountCaptureRelinquishAccountType struct
     open class AccountCaptureRelinquishAccountType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -758,7 +758,7 @@ open class TeamLog {
     /// The AllowDownloadDisabledType struct
     open class AllowDownloadDisabledType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -813,7 +813,7 @@ open class TeamLog {
     /// The AllowDownloadEnabledType struct
     open class AllowDownloadEnabledType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -844,7 +844,7 @@ open class TeamLog {
     /// Api session.
     open class ApiSessionLogInfo: CustomStringConvertible {
         /// Api request ID.
-        public let requestId: String
+        open let requestId: String
         public init(requestId: String) {
             stringValidator()(requestId)
             self.requestId = requestId
@@ -875,7 +875,7 @@ open class TeamLog {
     /// Linked app for team.
     open class AppLinkTeamDetails: CustomStringConvertible {
         /// Relevant application details.
-        public let appInfo: TeamLog.AppLogInfo
+        open let appInfo: TeamLog.AppLogInfo
         public init(appInfo: TeamLog.AppLogInfo) {
             self.appInfo = appInfo
         }
@@ -905,7 +905,7 @@ open class TeamLog {
     /// The AppLinkTeamType struct
     open class AppLinkTeamType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -936,7 +936,7 @@ open class TeamLog {
     /// Linked app for member.
     open class AppLinkUserDetails: CustomStringConvertible {
         /// Relevant application details.
-        public let appInfo: TeamLog.AppLogInfo
+        open let appInfo: TeamLog.AppLogInfo
         public init(appInfo: TeamLog.AppLogInfo) {
             self.appInfo = appInfo
         }
@@ -966,7 +966,7 @@ open class TeamLog {
     /// The AppLinkUserType struct
     open class AppLinkUserType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -997,9 +997,9 @@ open class TeamLog {
     /// App's logged information.
     open class AppLogInfo: CustomStringConvertible {
         /// App unique ID. Might be missing due to historical data gap.
-        public let appId: String?
+        open let appId: String?
         /// App display name. Might be missing due to historical data gap.
-        public let displayName: String?
+        open let displayName: String?
         public init(appId: String? = nil, displayName: String? = nil) {
             nullableValidator(stringValidator())(appId)
             self.appId = appId
@@ -1062,7 +1062,7 @@ open class TeamLog {
     /// Unlinked app for team.
     open class AppUnlinkTeamDetails: CustomStringConvertible {
         /// Relevant application details.
-        public let appInfo: TeamLog.AppLogInfo
+        open let appInfo: TeamLog.AppLogInfo
         public init(appInfo: TeamLog.AppLogInfo) {
             self.appInfo = appInfo
         }
@@ -1092,7 +1092,7 @@ open class TeamLog {
     /// The AppUnlinkTeamType struct
     open class AppUnlinkTeamType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -1123,7 +1123,7 @@ open class TeamLog {
     /// Unlinked app for member.
     open class AppUnlinkUserDetails: CustomStringConvertible {
         /// Relevant application details.
-        public let appInfo: TeamLog.AppLogInfo
+        open let appInfo: TeamLog.AppLogInfo
         public init(appInfo: TeamLog.AppLogInfo) {
             self.appInfo = appInfo
         }
@@ -1153,7 +1153,7 @@ open class TeamLog {
     /// The AppUnlinkUserType struct
     open class AppUnlinkUserType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -1261,139 +1261,22 @@ open class TeamLog {
         }
     }
 
-    /// Policy for controlling if team members can activate camera uploads
-    public enum CameraUploadsPolicy: CustomStringConvertible {
-        /// An unspecified error.
-        case disabled
-        /// An unspecified error.
-        case enabled
-        /// An unspecified error.
-        case other
-
-        public var description: String {
-            return "\(SerializeUtil.prepareJSONForSerialization(CameraUploadsPolicySerializer().serialize(self)))"
-        }
-    }
-    open class CameraUploadsPolicySerializer: JSONSerializer {
-        public init() { }
-        open func serialize(_ value: CameraUploadsPolicy) -> JSON {
-            switch value {
-                case .disabled:
-                    var d = [String: JSON]()
-                    d[".tag"] = .str("disabled")
-                    return .dictionary(d)
-                case .enabled:
-                    var d = [String: JSON]()
-                    d[".tag"] = .str("enabled")
-                    return .dictionary(d)
-                case .other:
-                    var d = [String: JSON]()
-                    d[".tag"] = .str("other")
-                    return .dictionary(d)
-            }
-        }
-        open func deserialize(_ json: JSON) -> CameraUploadsPolicy {
-            switch json {
-                case .dictionary(let d):
-                    let tag = Serialization.getTag(d)
-                    switch tag {
-                        case "disabled":
-                            return CameraUploadsPolicy.disabled
-                        case "enabled":
-                            return CameraUploadsPolicy.enabled
-                        case "other":
-                            return CameraUploadsPolicy.other
-                        default:
-                            return CameraUploadsPolicy.other
-                    }
-                default:
-                    fatalError("Failed to deserialize")
-            }
-        }
-    }
-
-    /// Changed camera uploads setting for team.
-    open class CameraUploadsPolicyChangedDetails: CustomStringConvertible {
-        /// New camera uploads setting.
-        public let newValue: TeamLog.CameraUploadsPolicy
-        /// Previous camera uploads setting.
-        public let previousValue: TeamLog.CameraUploadsPolicy
-        public init(newValue: TeamLog.CameraUploadsPolicy, previousValue: TeamLog.CameraUploadsPolicy) {
-            self.newValue = newValue
-            self.previousValue = previousValue
-        }
-        open var description: String {
-            return "\(SerializeUtil.prepareJSONForSerialization(CameraUploadsPolicyChangedDetailsSerializer().serialize(self)))"
-        }
-    }
-    open class CameraUploadsPolicyChangedDetailsSerializer: JSONSerializer {
-        public init() { }
-        open func serialize(_ value: CameraUploadsPolicyChangedDetails) -> JSON {
-            let output = [ 
-            "new_value": TeamLog.CameraUploadsPolicySerializer().serialize(value.newValue),
-            "previous_value": TeamLog.CameraUploadsPolicySerializer().serialize(value.previousValue),
-            ]
-            return .dictionary(output)
-        }
-        open func deserialize(_ json: JSON) -> CameraUploadsPolicyChangedDetails {
-            switch json {
-                case .dictionary(let dict):
-                    let newValue = TeamLog.CameraUploadsPolicySerializer().deserialize(dict["new_value"] ?? .null)
-                    let previousValue = TeamLog.CameraUploadsPolicySerializer().deserialize(dict["previous_value"] ?? .null)
-                    return CameraUploadsPolicyChangedDetails(newValue: newValue, previousValue: previousValue)
-                default:
-                    fatalError("Type error deserializing")
-            }
-        }
-    }
-
-    /// The CameraUploadsPolicyChangedType struct
-    open class CameraUploadsPolicyChangedType: CustomStringConvertible {
-        /// (no description)
-        public let description_: String
-        public init(description_: String) {
-            stringValidator()(description_)
-            self.description_ = description_
-        }
-        open var description: String {
-            return "\(SerializeUtil.prepareJSONForSerialization(CameraUploadsPolicyChangedTypeSerializer().serialize(self)))"
-        }
-    }
-    open class CameraUploadsPolicyChangedTypeSerializer: JSONSerializer {
-        public init() { }
-        open func serialize(_ value: CameraUploadsPolicyChangedType) -> JSON {
-            let output = [ 
-            "description": Serialization._StringSerializer.serialize(value.description_),
-            ]
-            return .dictionary(output)
-        }
-        open func deserialize(_ json: JSON) -> CameraUploadsPolicyChangedType {
-            switch json {
-                case .dictionary(let dict):
-                    let description_ = Serialization._StringSerializer.deserialize(dict["description"] ?? .null)
-                    return CameraUploadsPolicyChangedType(description_: description_)
-                default:
-                    fatalError("Type error deserializing")
-            }
-        }
-    }
-
     /// Certificate details.
     open class Certificate: CustomStringConvertible {
         /// Certificate subject.
-        public let subject: String
+        open let subject: String
         /// Certificate issuer.
-        public let issuer: String
+        open let issuer: String
         /// Certificate issue date.
-        public let issueDate: String
+        open let issueDate: String
         /// Certificate expiration date.
-        public let expirationDate: String
+        open let expirationDate: String
         /// Certificate serial number.
-        public let serialNumber: String
+        open let serialNumber: String
         /// Certificate sha1 fingerprint.
-        public let sha1Fingerprint: String
+        open let sha1Fingerprint: String
         /// Certificate common name.
-        public let commonName: String?
+        open let commonName: String?
         public init(subject: String, issuer: String, issueDate: String, expirationDate: String, serialNumber: String, sha1Fingerprint: String, commonName: String? = nil) {
             stringValidator()(subject)
             self.subject = subject
@@ -1448,7 +1331,7 @@ open class TeamLog {
     /// Shared album.
     open class CollectionShareDetails: CustomStringConvertible {
         /// Album name.
-        public let albumName: String
+        open let albumName: String
         public init(albumName: String) {
             stringValidator()(albumName)
             self.albumName = albumName
@@ -1479,7 +1362,7 @@ open class TeamLog {
     /// The CollectionShareType struct
     open class CollectionShareType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -1568,8 +1451,6 @@ open class TeamLog {
         case anonymous
         /// Action was done on behalf of the team.
         case team
-        /// Action was done on behalf of a trusted non team member.
-        case trustedNonTeamMember(TeamLog.TrustedNonTeamMemberLogInfo)
         /// An unspecified error.
         case other
 
@@ -1597,10 +1478,6 @@ open class TeamLog {
                     var d = [String: JSON]()
                     d[".tag"] = .str("team")
                     return .dictionary(d)
-                case .trustedNonTeamMember(let arg):
-                    var d = Serialization.getFields(TeamLog.TrustedNonTeamMemberLogInfoSerializer().serialize(arg))
-                    d[".tag"] = .str("trusted_non_team_member")
-                    return .dictionary(d)
                 case .other:
                     var d = [String: JSON]()
                     d[".tag"] = .str("other")
@@ -1622,9 +1499,6 @@ open class TeamLog {
                             return ContextLogInfo.anonymous
                         case "team":
                             return ContextLogInfo.team
-                        case "trusted_non_team_member":
-                            let v = TeamLog.TrustedNonTeamMemberLogInfoSerializer().deserialize(json)
-                            return ContextLogInfo.trustedNonTeamMember(v)
                         case "other":
                             return ContextLogInfo.other
                         default:
@@ -1663,7 +1537,7 @@ open class TeamLog {
     /// The CreateFolderType struct
     open class CreateFolderType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -1694,9 +1568,9 @@ open class TeamLog {
     /// Set restrictions on data center locations where team data resides.
     open class DataPlacementRestrictionChangePolicyDetails: CustomStringConvertible {
         /// Previous placement restriction.
-        public let previousValue: TeamLog.PlacementRestriction
+        open let previousValue: TeamLog.PlacementRestriction
         /// New placement restriction.
-        public let newValue: TeamLog.PlacementRestriction
+        open let newValue: TeamLog.PlacementRestriction
         public init(previousValue: TeamLog.PlacementRestriction, newValue: TeamLog.PlacementRestriction) {
             self.previousValue = previousValue
             self.newValue = newValue
@@ -1729,7 +1603,7 @@ open class TeamLog {
     /// The DataPlacementRestrictionChangePolicyType struct
     open class DataPlacementRestrictionChangePolicyType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -1760,7 +1634,7 @@ open class TeamLog {
     /// Completed restrictions on data center locations where team data resides.
     open class DataPlacementRestrictionSatisfyPolicyDetails: CustomStringConvertible {
         /// Placement restriction.
-        public let placementRestriction: TeamLog.PlacementRestriction
+        open let placementRestriction: TeamLog.PlacementRestriction
         public init(placementRestriction: TeamLog.PlacementRestriction) {
             self.placementRestriction = placementRestriction
         }
@@ -1790,7 +1664,7 @@ open class TeamLog {
     /// The DataPlacementRestrictionSatisfyPolicyType struct
     open class DataPlacementRestrictionSatisfyPolicyType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -1821,11 +1695,11 @@ open class TeamLog {
     /// Device's session logged information.
     open class DeviceSessionLogInfo: CustomStringConvertible {
         /// The IP address of the last activity from this session. Might be missing due to historical data gap.
-        public let ipAddress: String?
+        open let ipAddress: String?
         /// The time this session was created. Might be missing due to historical data gap.
-        public let created: Date?
+        open let created: Date?
         /// The time of the last activity from this session. Might be missing due to historical data gap.
-        public let updated: Date?
+        open let updated: Date?
         public init(ipAddress: String? = nil, created: Date? = nil, updated: Date? = nil) {
             nullableValidator(stringValidator())(ipAddress)
             self.ipAddress = ipAddress
@@ -1897,17 +1771,17 @@ open class TeamLog {
     /// Information about linked Dropbox desktop client sessions
     open class DesktopDeviceSessionLogInfo: TeamLog.DeviceSessionLogInfo {
         /// Desktop session unique id. Might be missing due to historical data gap.
-        public let sessionInfo: TeamLog.DesktopSessionLogInfo?
+        open let sessionInfo: TeamLog.DesktopSessionLogInfo?
         /// Name of the hosting desktop.
-        public let hostName: String
+        open let hostName: String
         /// The Dropbox desktop client type.
-        public let clientType: Team.DesktopPlatform
+        open let clientType: Team.DesktopPlatform
         /// The Dropbox client version.
-        public let clientVersion: String?
+        open let clientVersion: String?
         /// Information on the hosting platform.
-        public let platform: String
+        open let platform: String
         /// Whether itu2019s possible to delete all of the account files upon unlinking.
-        public let isDeleteOnUnlinkSupported: Bool
+        open let isDeleteOnUnlinkSupported: Bool
         public init(hostName: String, clientType: Team.DesktopPlatform, platform: String, isDeleteOnUnlinkSupported: Bool, ipAddress: String? = nil, created: Date? = nil, updated: Date? = nil, sessionInfo: TeamLog.DesktopSessionLogInfo? = nil, clientVersion: String? = nil) {
             self.sessionInfo = sessionInfo
             stringValidator()(hostName)
@@ -1962,7 +1836,7 @@ open class TeamLog {
     /// Session's logged information.
     open class SessionLogInfo: CustomStringConvertible {
         /// Session ID. Might be missing due to historical data gap.
-        public let sessionId: String?
+        open let sessionId: String?
         public init(sessionId: String? = nil) {
             nullableValidator(stringValidator())(sessionId)
             self.sessionId = sessionId
@@ -2046,9 +1920,9 @@ open class TeamLog {
     /// Set/removed limit on number of computers member can link to team Dropbox account.
     open class DeviceApprovalsChangeDesktopPolicyDetails: CustomStringConvertible {
         /// New desktop device approvals policy. Might be missing due to historical data gap.
-        public let newValue: TeamLog.DeviceApprovalsPolicy?
+        open let newValue: TeamLog.DeviceApprovalsPolicy?
         /// Previous desktop device approvals policy. Might be missing due to historical data gap.
-        public let previousValue: TeamLog.DeviceApprovalsPolicy?
+        open let previousValue: TeamLog.DeviceApprovalsPolicy?
         public init(newValue: TeamLog.DeviceApprovalsPolicy? = nil, previousValue: TeamLog.DeviceApprovalsPolicy? = nil) {
             self.newValue = newValue
             self.previousValue = previousValue
@@ -2081,7 +1955,7 @@ open class TeamLog {
     /// The DeviceApprovalsChangeDesktopPolicyType struct
     open class DeviceApprovalsChangeDesktopPolicyType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -2112,9 +1986,9 @@ open class TeamLog {
     /// Set/removed limit on number of mobile devices member can link to team Dropbox account.
     open class DeviceApprovalsChangeMobilePolicyDetails: CustomStringConvertible {
         /// New mobile device approvals policy. Might be missing due to historical data gap.
-        public let newValue: TeamLog.DeviceApprovalsPolicy?
+        open let newValue: TeamLog.DeviceApprovalsPolicy?
         /// Previous mobile device approvals policy. Might be missing due to historical data gap.
-        public let previousValue: TeamLog.DeviceApprovalsPolicy?
+        open let previousValue: TeamLog.DeviceApprovalsPolicy?
         public init(newValue: TeamLog.DeviceApprovalsPolicy? = nil, previousValue: TeamLog.DeviceApprovalsPolicy? = nil) {
             self.newValue = newValue
             self.previousValue = previousValue
@@ -2147,7 +2021,7 @@ open class TeamLog {
     /// The DeviceApprovalsChangeMobilePolicyType struct
     open class DeviceApprovalsChangeMobilePolicyType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -2178,9 +2052,9 @@ open class TeamLog {
     /// Changed device approvals setting when member is over limit.
     open class DeviceApprovalsChangeOverageActionDetails: CustomStringConvertible {
         /// New over the limits policy. Might be missing due to historical data gap.
-        public let newValue: TeamPolicies.RolloutMethod?
+        open let newValue: TeamPolicies.RolloutMethod?
         /// Previous over the limit policy. Might be missing due to historical data gap.
-        public let previousValue: TeamPolicies.RolloutMethod?
+        open let previousValue: TeamPolicies.RolloutMethod?
         public init(newValue: TeamPolicies.RolloutMethod? = nil, previousValue: TeamPolicies.RolloutMethod? = nil) {
             self.newValue = newValue
             self.previousValue = previousValue
@@ -2213,7 +2087,7 @@ open class TeamLog {
     /// The DeviceApprovalsChangeOverageActionType struct
     open class DeviceApprovalsChangeOverageActionType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -2244,9 +2118,9 @@ open class TeamLog {
     /// Changed device approvals setting when member unlinks approved device.
     open class DeviceApprovalsChangeUnlinkActionDetails: CustomStringConvertible {
         /// New device unlink policy. Might be missing due to historical data gap.
-        public let newValue: TeamLog.DeviceUnlinkPolicy?
+        open let newValue: TeamLog.DeviceUnlinkPolicy?
         /// Previous device unlink policy. Might be missing due to historical data gap.
-        public let previousValue: TeamLog.DeviceUnlinkPolicy?
+        open let previousValue: TeamLog.DeviceUnlinkPolicy?
         public init(newValue: TeamLog.DeviceUnlinkPolicy? = nil, previousValue: TeamLog.DeviceUnlinkPolicy? = nil) {
             self.newValue = newValue
             self.previousValue = previousValue
@@ -2279,7 +2153,7 @@ open class TeamLog {
     /// The DeviceApprovalsChangeUnlinkActionType struct
     open class DeviceApprovalsChangeUnlinkActionType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -2361,7 +2235,7 @@ open class TeamLog {
     /// Changed IP address associated with active desktop session.
     open class DeviceChangeIpDesktopDetails: CustomStringConvertible {
         /// Device's session logged information.
-        public let deviceSessionInfo: TeamLog.DeviceSessionLogInfo
+        open let deviceSessionInfo: TeamLog.DeviceSessionLogInfo
         public init(deviceSessionInfo: TeamLog.DeviceSessionLogInfo) {
             self.deviceSessionInfo = deviceSessionInfo
         }
@@ -2391,7 +2265,7 @@ open class TeamLog {
     /// The DeviceChangeIpDesktopType struct
     open class DeviceChangeIpDesktopType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -2422,7 +2296,7 @@ open class TeamLog {
     /// Changed IP address associated with active mobile session.
     open class DeviceChangeIpMobileDetails: CustomStringConvertible {
         /// Device's session logged information.
-        public let deviceSessionInfo: TeamLog.DeviceSessionLogInfo?
+        open let deviceSessionInfo: TeamLog.DeviceSessionLogInfo?
         public init(deviceSessionInfo: TeamLog.DeviceSessionLogInfo? = nil) {
             self.deviceSessionInfo = deviceSessionInfo
         }
@@ -2452,7 +2326,7 @@ open class TeamLog {
     /// The DeviceChangeIpMobileType struct
     open class DeviceChangeIpMobileType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -2483,7 +2357,7 @@ open class TeamLog {
     /// Changed IP address associated with active web session.
     open class DeviceChangeIpWebDetails: CustomStringConvertible {
         /// Web browser name.
-        public let userAgent: String
+        open let userAgent: String
         public init(userAgent: String) {
             stringValidator()(userAgent)
             self.userAgent = userAgent
@@ -2514,7 +2388,7 @@ open class TeamLog {
     /// The DeviceChangeIpWebType struct
     open class DeviceChangeIpWebType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -2545,11 +2419,11 @@ open class TeamLog {
     /// Failed to delete all files from unlinked device.
     open class DeviceDeleteOnUnlinkFailDetails: CustomStringConvertible {
         /// Session unique id. Might be missing due to historical data gap.
-        public let sessionInfo: TeamLog.SessionLogInfo?
+        open let sessionInfo: TeamLog.SessionLogInfo?
         /// The device name. Might be missing due to historical data gap.
-        public let displayName: String?
+        open let displayName: String?
         /// The number of times that remote file deletion failed.
-        public let numFailures: Int64
+        open let numFailures: Int64
         public init(numFailures: Int64, sessionInfo: TeamLog.SessionLogInfo? = nil, displayName: String? = nil) {
             self.sessionInfo = sessionInfo
             nullableValidator(stringValidator())(displayName)
@@ -2587,7 +2461,7 @@ open class TeamLog {
     /// The DeviceDeleteOnUnlinkFailType struct
     open class DeviceDeleteOnUnlinkFailType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -2618,9 +2492,9 @@ open class TeamLog {
     /// Deleted all files from unlinked device.
     open class DeviceDeleteOnUnlinkSuccessDetails: CustomStringConvertible {
         /// Session unique id. Might be missing due to historical data gap.
-        public let sessionInfo: TeamLog.SessionLogInfo?
+        open let sessionInfo: TeamLog.SessionLogInfo?
         /// The device name. Might be missing due to historical data gap.
-        public let displayName: String?
+        open let displayName: String?
         public init(sessionInfo: TeamLog.SessionLogInfo? = nil, displayName: String? = nil) {
             self.sessionInfo = sessionInfo
             nullableValidator(stringValidator())(displayName)
@@ -2654,7 +2528,7 @@ open class TeamLog {
     /// The DeviceDeleteOnUnlinkSuccessType struct
     open class DeviceDeleteOnUnlinkSuccessType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -2685,9 +2559,9 @@ open class TeamLog {
     /// Failed to link device.
     open class DeviceLinkFailDetails: CustomStringConvertible {
         /// IP address. Might be missing due to historical data gap.
-        public let ipAddress: String?
+        open let ipAddress: String?
         /// A description of the device used while user approval blocked.
-        public let deviceType: TeamLog.DeviceType
+        open let deviceType: TeamLog.DeviceType
         public init(deviceType: TeamLog.DeviceType, ipAddress: String? = nil) {
             nullableValidator(stringValidator())(ipAddress)
             self.ipAddress = ipAddress
@@ -2721,7 +2595,7 @@ open class TeamLog {
     /// The DeviceLinkFailType struct
     open class DeviceLinkFailType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -2752,7 +2626,7 @@ open class TeamLog {
     /// Linked device.
     open class DeviceLinkSuccessDetails: CustomStringConvertible {
         /// Device's session logged information.
-        public let deviceSessionInfo: TeamLog.DeviceSessionLogInfo?
+        open let deviceSessionInfo: TeamLog.DeviceSessionLogInfo?
         public init(deviceSessionInfo: TeamLog.DeviceSessionLogInfo? = nil) {
             self.deviceSessionInfo = deviceSessionInfo
         }
@@ -2782,7 +2656,7 @@ open class TeamLog {
     /// The DeviceLinkSuccessType struct
     open class DeviceLinkSuccessType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -2837,7 +2711,7 @@ open class TeamLog {
     /// The DeviceManagementDisabledType struct
     open class DeviceManagementDisabledType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -2892,7 +2766,7 @@ open class TeamLog {
     /// The DeviceManagementEnabledType struct
     open class DeviceManagementEnabledType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -2974,11 +2848,11 @@ open class TeamLog {
     /// Disconnected device.
     open class DeviceUnlinkDetails: CustomStringConvertible {
         /// Session unique id.
-        public let sessionInfo: TeamLog.SessionLogInfo?
+        open let sessionInfo: TeamLog.SessionLogInfo?
         /// The device name. Might be missing due to historical data gap.
-        public let displayName: String?
+        open let displayName: String?
         /// True if the user requested to delete data after device unlink, false otherwise.
-        public let deleteData: Bool
+        open let deleteData: Bool
         public init(deleteData: Bool, sessionInfo: TeamLog.SessionLogInfo? = nil, displayName: String? = nil) {
             self.sessionInfo = sessionInfo
             nullableValidator(stringValidator())(displayName)
@@ -3066,7 +2940,7 @@ open class TeamLog {
     /// The DeviceUnlinkType struct
     open class DeviceUnlinkType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -3121,7 +2995,7 @@ open class TeamLog {
     /// The DirectoryRestrictionsAddMembersType struct
     open class DirectoryRestrictionsAddMembersType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -3176,7 +3050,7 @@ open class TeamLog {
     /// The DirectoryRestrictionsRemoveMembersType struct
     open class DirectoryRestrictionsRemoveMembersType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -3231,7 +3105,7 @@ open class TeamLog {
     /// The DisabledDomainInvitesType struct
     open class DisabledDomainInvitesType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -3286,7 +3160,7 @@ open class TeamLog {
     /// The DomainInvitesApproveRequestToJoinTeamType struct
     open class DomainInvitesApproveRequestToJoinTeamType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -3341,7 +3215,7 @@ open class TeamLog {
     /// The DomainInvitesDeclineRequestToJoinTeamType struct
     open class DomainInvitesDeclineRequestToJoinTeamType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -3372,9 +3246,9 @@ open class TeamLog {
     /// Sent domain invites to existing domain accounts.
     open class DomainInvitesEmailExistingUsersDetails: CustomStringConvertible {
         /// Domain names.
-        public let domainName: String
+        open let domainName: String
         /// Number of recipients.
-        public let numRecipients: UInt64
+        open let numRecipients: UInt64
         public init(domainName: String, numRecipients: UInt64) {
             stringValidator()(domainName)
             self.domainName = domainName
@@ -3409,7 +3283,7 @@ open class TeamLog {
     /// The DomainInvitesEmailExistingUsersType struct
     open class DomainInvitesEmailExistingUsersType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -3464,7 +3338,7 @@ open class TeamLog {
     /// The DomainInvitesRequestToJoinTeamType struct
     open class DomainInvitesRequestToJoinTeamType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -3519,7 +3393,7 @@ open class TeamLog {
     /// The DomainInvitesSetInviteNewUserPrefToNoType struct
     open class DomainInvitesSetInviteNewUserPrefToNoType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -3574,7 +3448,7 @@ open class TeamLog {
     /// The DomainInvitesSetInviteNewUserPrefToYesType struct
     open class DomainInvitesSetInviteNewUserPrefToYesType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -3605,9 +3479,9 @@ open class TeamLog {
     /// Failed to verify team domain.
     open class DomainVerificationAddDomainFailDetails: CustomStringConvertible {
         /// Domain name.
-        public let domainName: String
+        open let domainName: String
         /// Domain name verification method. Might be missing due to historical data gap.
-        public let verificationMethod: String?
+        open let verificationMethod: String?
         public init(domainName: String, verificationMethod: String? = nil) {
             stringValidator()(domainName)
             self.domainName = domainName
@@ -3642,7 +3516,7 @@ open class TeamLog {
     /// The DomainVerificationAddDomainFailType struct
     open class DomainVerificationAddDomainFailType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -3673,9 +3547,9 @@ open class TeamLog {
     /// Verified team domain.
     open class DomainVerificationAddDomainSuccessDetails: CustomStringConvertible {
         /// Domain names.
-        public let domainNames: Array<String>
+        open let domainNames: Array<String>
         /// Domain name verification method. Might be missing due to historical data gap.
-        public let verificationMethod: String?
+        open let verificationMethod: String?
         public init(domainNames: Array<String>, verificationMethod: String? = nil) {
             arrayValidator(itemValidator: stringValidator())(domainNames)
             self.domainNames = domainNames
@@ -3710,7 +3584,7 @@ open class TeamLog {
     /// The DomainVerificationAddDomainSuccessType struct
     open class DomainVerificationAddDomainSuccessType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -3741,7 +3615,7 @@ open class TeamLog {
     /// Removed domain from list of verified team domains.
     open class DomainVerificationRemoveDomainDetails: CustomStringConvertible {
         /// Domain names.
-        public let domainNames: Array<String>
+        open let domainNames: Array<String>
         public init(domainNames: Array<String>) {
             arrayValidator(itemValidator: stringValidator())(domainNames)
             self.domainNames = domainNames
@@ -3772,7 +3646,7 @@ open class TeamLog {
     /// The DomainVerificationRemoveDomainType struct
     open class DomainVerificationRemoveDomainType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -3854,9 +3728,9 @@ open class TeamLog {
     /// Represents a time duration: unit and amount
     open class DurationLogInfo: CustomStringConvertible {
         /// Time unit.
-        public let unit: TeamLog.TimeUnit
+        open let unit: TeamLog.TimeUnit
         /// Amount of time.
-        public let amount: UInt64
+        open let amount: UInt64
         public init(unit: TeamLog.TimeUnit, amount: UInt64) {
             self.unit = unit
             comparableValidator()(amount)
@@ -3914,7 +3788,7 @@ open class TeamLog {
     /// The EmmAddExceptionType struct
     open class EmmAddExceptionType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -3945,9 +3819,9 @@ open class TeamLog {
     /// Enabled/disabled enterprise mobility management for members.
     open class EmmChangePolicyDetails: CustomStringConvertible {
         /// New enterprise mobility management policy.
-        public let newValue: TeamPolicies.EmmState
+        open let newValue: TeamPolicies.EmmState
         /// Previous enterprise mobility management policy. Might be missing due to historical data gap.
-        public let previousValue: TeamPolicies.EmmState?
+        open let previousValue: TeamPolicies.EmmState?
         public init(newValue: TeamPolicies.EmmState, previousValue: TeamPolicies.EmmState? = nil) {
             self.newValue = newValue
             self.previousValue = previousValue
@@ -3980,7 +3854,7 @@ open class TeamLog {
     /// The EmmChangePolicyType struct
     open class EmmChangePolicyType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -4035,7 +3909,7 @@ open class TeamLog {
     /// The EmmCreateExceptionsReportType struct
     open class EmmCreateExceptionsReportType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -4090,7 +3964,7 @@ open class TeamLog {
     /// The EmmCreateUsageReportType struct
     open class EmmCreateUsageReportType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -4121,7 +3995,7 @@ open class TeamLog {
     /// Failed to sign in via EMM.
     open class EmmErrorDetails: CustomStringConvertible {
         /// Error details.
-        public let errorDetails: TeamLog.FailureDetailsLogInfo
+        open let errorDetails: TeamLog.FailureDetailsLogInfo
         public init(errorDetails: TeamLog.FailureDetailsLogInfo) {
             self.errorDetails = errorDetails
         }
@@ -4151,7 +4025,7 @@ open class TeamLog {
     /// The EmmErrorType struct
     open class EmmErrorType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -4206,7 +4080,7 @@ open class TeamLog {
     /// The EmmRefreshAuthTokenType struct
     open class EmmRefreshAuthTokenType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -4261,7 +4135,7 @@ open class TeamLog {
     /// The EmmRemoveExceptionType struct
     open class EmmRemoveExceptionType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -4316,7 +4190,7 @@ open class TeamLog {
     /// The EnabledDomainInvitesType struct
     open class EnabledDomainInvitesType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -4550,8 +4424,6 @@ open class TeamLog {
         /// An unspecified error.
         case fileDeleteCommentDetails(TeamLog.FileDeleteCommentDetails)
         /// An unspecified error.
-        case fileEditCommentDetails(TeamLog.FileEditCommentDetails)
-        /// An unspecified error.
         case fileLikeCommentDetails(TeamLog.FileLikeCommentDetails)
         /// An unspecified error.
         case fileResolveCommentDetails(TeamLog.FileResolveCommentDetails)
@@ -4706,8 +4578,6 @@ open class TeamLog {
         /// An unspecified error.
         case memberChangeStatusDetails(TeamLog.MemberChangeStatusDetails)
         /// An unspecified error.
-        case memberDeleteManualContactsDetails(TeamLog.MemberDeleteManualContactsDetails)
-        /// An unspecified error.
         case memberPermanentlyDeleteAccountContentsDetails(TeamLog.MemberPermanentlyDeleteAccountContentsDetails)
         /// An unspecified error.
         case memberSpaceLimitsAddCustomQuotaDetails(TeamLog.MemberSpaceLimitsAddCustomQuotaDetails)
@@ -4763,8 +4633,6 @@ open class TeamLog {
         case paperDocFollowedDetails(TeamLog.PaperDocFollowedDetails)
         /// An unspecified error.
         case paperDocMentionDetails(TeamLog.PaperDocMentionDetails)
-        /// An unspecified error.
-        case paperDocOwnershipChangedDetails(TeamLog.PaperDocOwnershipChangedDetails)
         /// An unspecified error.
         case paperDocRequestAccessDetails(TeamLog.PaperDocRequestAccessDetails)
         /// An unspecified error.
@@ -5030,8 +4898,6 @@ open class TeamLog {
         /// An unspecified error.
         case allowDownloadEnabledDetails(TeamLog.AllowDownloadEnabledDetails)
         /// An unspecified error.
-        case cameraUploadsPolicyChangedDetails(TeamLog.CameraUploadsPolicyChangedDetails)
-        /// An unspecified error.
         case dataPlacementRestrictionChangePolicyDetails(TeamLog.DataPlacementRestrictionChangePolicyDetails)
         /// An unspecified error.
         case dataPlacementRestrictionSatisfyPolicyDetails(TeamLog.DataPlacementRestrictionSatisfyPolicyDetails)
@@ -5118,13 +4984,9 @@ open class TeamLog {
         /// An unspecified error.
         case ssoChangePolicyDetails(TeamLog.SsoChangePolicyDetails)
         /// An unspecified error.
-        case teamSelectiveSyncPolicyChangedDetails(TeamLog.TeamSelectiveSyncPolicyChangedDetails)
-        /// An unspecified error.
         case tfaChangePolicyDetails(TeamLog.TfaChangePolicyDetails)
         /// An unspecified error.
         case twoAccountChangePolicyDetails(TeamLog.TwoAccountChangePolicyDetails)
-        /// An unspecified error.
-        case viewerInfoPolicyChangedDetails(TeamLog.ViewerInfoPolicyChangedDetails)
         /// An unspecified error.
         case webSessionsChangeFixedLengthPolicyDetails(TeamLog.WebSessionsChangeFixedLengthPolicyDetails)
         /// An unspecified error.
@@ -5197,10 +5059,6 @@ open class TeamLog {
                 case .fileDeleteCommentDetails(let arg):
                     var d = Serialization.getFields(TeamLog.FileDeleteCommentDetailsSerializer().serialize(arg))
                     d[".tag"] = .str("file_delete_comment_details")
-                    return .dictionary(d)
-                case .fileEditCommentDetails(let arg):
-                    var d = Serialization.getFields(TeamLog.FileEditCommentDetailsSerializer().serialize(arg))
-                    d[".tag"] = .str("file_edit_comment_details")
                     return .dictionary(d)
                 case .fileLikeCommentDetails(let arg):
                     var d = Serialization.getFields(TeamLog.FileLikeCommentDetailsSerializer().serialize(arg))
@@ -5510,10 +5368,6 @@ open class TeamLog {
                     var d = Serialization.getFields(TeamLog.MemberChangeStatusDetailsSerializer().serialize(arg))
                     d[".tag"] = .str("member_change_status_details")
                     return .dictionary(d)
-                case .memberDeleteManualContactsDetails(let arg):
-                    var d = Serialization.getFields(TeamLog.MemberDeleteManualContactsDetailsSerializer().serialize(arg))
-                    d[".tag"] = .str("member_delete_manual_contacts_details")
-                    return .dictionary(d)
                 case .memberPermanentlyDeleteAccountContentsDetails(let arg):
                     var d = Serialization.getFields(TeamLog.MemberPermanentlyDeleteAccountContentsDetailsSerializer().serialize(arg))
                     d[".tag"] = .str("member_permanently_delete_account_contents_details")
@@ -5625,10 +5479,6 @@ open class TeamLog {
                 case .paperDocMentionDetails(let arg):
                     var d = Serialization.getFields(TeamLog.PaperDocMentionDetailsSerializer().serialize(arg))
                     d[".tag"] = .str("paper_doc_mention_details")
-                    return .dictionary(d)
-                case .paperDocOwnershipChangedDetails(let arg):
-                    var d = Serialization.getFields(TeamLog.PaperDocOwnershipChangedDetailsSerializer().serialize(arg))
-                    d[".tag"] = .str("paper_doc_ownership_changed_details")
                     return .dictionary(d)
                 case .paperDocRequestAccessDetails(let arg):
                     var d = Serialization.getFields(TeamLog.PaperDocRequestAccessDetailsSerializer().serialize(arg))
@@ -6158,10 +6008,6 @@ open class TeamLog {
                     var d = Serialization.getFields(TeamLog.AllowDownloadEnabledDetailsSerializer().serialize(arg))
                     d[".tag"] = .str("allow_download_enabled_details")
                     return .dictionary(d)
-                case .cameraUploadsPolicyChangedDetails(let arg):
-                    var d = Serialization.getFields(TeamLog.CameraUploadsPolicyChangedDetailsSerializer().serialize(arg))
-                    d[".tag"] = .str("camera_uploads_policy_changed_details")
-                    return .dictionary(d)
                 case .dataPlacementRestrictionChangePolicyDetails(let arg):
                     var d = Serialization.getFields(TeamLog.DataPlacementRestrictionChangePolicyDetailsSerializer().serialize(arg))
                     d[".tag"] = .str("data_placement_restriction_change_policy_details")
@@ -6334,10 +6180,6 @@ open class TeamLog {
                     var d = Serialization.getFields(TeamLog.SsoChangePolicyDetailsSerializer().serialize(arg))
                     d[".tag"] = .str("sso_change_policy_details")
                     return .dictionary(d)
-                case .teamSelectiveSyncPolicyChangedDetails(let arg):
-                    var d = Serialization.getFields(TeamLog.TeamSelectiveSyncPolicyChangedDetailsSerializer().serialize(arg))
-                    d[".tag"] = .str("team_selective_sync_policy_changed_details")
-                    return .dictionary(d)
                 case .tfaChangePolicyDetails(let arg):
                     var d = Serialization.getFields(TeamLog.TfaChangePolicyDetailsSerializer().serialize(arg))
                     d[".tag"] = .str("tfa_change_policy_details")
@@ -6345,10 +6187,6 @@ open class TeamLog {
                 case .twoAccountChangePolicyDetails(let arg):
                     var d = Serialization.getFields(TeamLog.TwoAccountChangePolicyDetailsSerializer().serialize(arg))
                     d[".tag"] = .str("two_account_change_policy_details")
-                    return .dictionary(d)
-                case .viewerInfoPolicyChangedDetails(let arg):
-                    var d = Serialization.getFields(TeamLog.ViewerInfoPolicyChangedDetailsSerializer().serialize(arg))
-                    d[".tag"] = .str("viewer_info_policy_changed_details")
                     return .dictionary(d)
                 case .webSessionsChangeFixedLengthPolicyDetails(let arg):
                     var d = Serialization.getFields(TeamLog.WebSessionsChangeFixedLengthPolicyDetailsSerializer().serialize(arg))
@@ -6450,9 +6288,6 @@ open class TeamLog {
                         case "file_delete_comment_details":
                             let v = TeamLog.FileDeleteCommentDetailsSerializer().deserialize(json)
                             return EventDetails.fileDeleteCommentDetails(v)
-                        case "file_edit_comment_details":
-                            let v = TeamLog.FileEditCommentDetailsSerializer().deserialize(json)
-                            return EventDetails.fileEditCommentDetails(v)
                         case "file_like_comment_details":
                             let v = TeamLog.FileLikeCommentDetailsSerializer().deserialize(json)
                             return EventDetails.fileLikeCommentDetails(v)
@@ -6684,9 +6519,6 @@ open class TeamLog {
                         case "member_change_status_details":
                             let v = TeamLog.MemberChangeStatusDetailsSerializer().deserialize(json)
                             return EventDetails.memberChangeStatusDetails(v)
-                        case "member_delete_manual_contacts_details":
-                            let v = TeamLog.MemberDeleteManualContactsDetailsSerializer().deserialize(json)
-                            return EventDetails.memberDeleteManualContactsDetails(v)
                         case "member_permanently_delete_account_contents_details":
                             let v = TeamLog.MemberPermanentlyDeleteAccountContentsDetailsSerializer().deserialize(json)
                             return EventDetails.memberPermanentlyDeleteAccountContentsDetails(v)
@@ -6771,9 +6603,6 @@ open class TeamLog {
                         case "paper_doc_mention_details":
                             let v = TeamLog.PaperDocMentionDetailsSerializer().deserialize(json)
                             return EventDetails.paperDocMentionDetails(v)
-                        case "paper_doc_ownership_changed_details":
-                            let v = TeamLog.PaperDocOwnershipChangedDetailsSerializer().deserialize(json)
-                            return EventDetails.paperDocOwnershipChangedDetails(v)
                         case "paper_doc_request_access_details":
                             let v = TeamLog.PaperDocRequestAccessDetailsSerializer().deserialize(json)
                             return EventDetails.paperDocRequestAccessDetails(v)
@@ -7170,9 +6999,6 @@ open class TeamLog {
                         case "allow_download_enabled_details":
                             let v = TeamLog.AllowDownloadEnabledDetailsSerializer().deserialize(json)
                             return EventDetails.allowDownloadEnabledDetails(v)
-                        case "camera_uploads_policy_changed_details":
-                            let v = TeamLog.CameraUploadsPolicyChangedDetailsSerializer().deserialize(json)
-                            return EventDetails.cameraUploadsPolicyChangedDetails(v)
                         case "data_placement_restriction_change_policy_details":
                             let v = TeamLog.DataPlacementRestrictionChangePolicyDetailsSerializer().deserialize(json)
                             return EventDetails.dataPlacementRestrictionChangePolicyDetails(v)
@@ -7302,18 +7128,12 @@ open class TeamLog {
                         case "sso_change_policy_details":
                             let v = TeamLog.SsoChangePolicyDetailsSerializer().deserialize(json)
                             return EventDetails.ssoChangePolicyDetails(v)
-                        case "team_selective_sync_policy_changed_details":
-                            let v = TeamLog.TeamSelectiveSyncPolicyChangedDetailsSerializer().deserialize(json)
-                            return EventDetails.teamSelectiveSyncPolicyChangedDetails(v)
                         case "tfa_change_policy_details":
                             let v = TeamLog.TfaChangePolicyDetailsSerializer().deserialize(json)
                             return EventDetails.tfaChangePolicyDetails(v)
                         case "two_account_change_policy_details":
                             let v = TeamLog.TwoAccountChangePolicyDetailsSerializer().deserialize(json)
                             return EventDetails.twoAccountChangePolicyDetails(v)
-                        case "viewer_info_policy_changed_details":
-                            let v = TeamLog.ViewerInfoPolicyChangedDetailsSerializer().deserialize(json)
-                            return EventDetails.viewerInfoPolicyChangedDetails(v)
                         case "web_sessions_change_fixed_length_policy_details":
                             let v = TeamLog.WebSessionsChangeFixedLengthPolicyDetailsSerializer().deserialize(json)
                             return EventDetails.webSessionsChangeFixedLengthPolicyDetails(v)
@@ -7392,8 +7212,6 @@ open class TeamLog {
         case fileChangeCommentSubscription(TeamLog.FileChangeCommentSubscriptionType)
         /// (comments) Deleted file comment
         case fileDeleteComment(TeamLog.FileDeleteCommentType)
-        /// (comments) Edited file comment
-        case fileEditComment(TeamLog.FileEditCommentType)
         /// (comments) Liked file comment (deprecated, no longer logged)
         case fileLikeComment(TeamLog.FileLikeCommentType)
         /// (comments) Resolved file comment
@@ -7548,8 +7366,6 @@ open class TeamLog {
         case memberChangeName(TeamLog.MemberChangeNameType)
         /// (members) Changed member status (invited, joined, suspended, etc.)
         case memberChangeStatus(TeamLog.MemberChangeStatusType)
-        /// (members) Cleared manually added contacts
-        case memberDeleteManualContacts(TeamLog.MemberDeleteManualContactsType)
         /// (members) Permanently deleted contents of deleted team member account
         case memberPermanentlyDeleteAccountContents(TeamLog.MemberPermanentlyDeleteAccountContentsType)
         /// (members) Set custom member space limit
@@ -7606,8 +7422,6 @@ open class TeamLog {
         case paperDocFollowed(TeamLog.PaperDocFollowedType)
         /// (paper) Mentioned team member in Paper doc
         case paperDocMention(TeamLog.PaperDocMentionType)
-        /// (paper) Transferred ownership of Paper doc
-        case paperDocOwnershipChanged(TeamLog.PaperDocOwnershipChangedType)
         /// (paper) Requested access to Paper doc
         case paperDocRequestAccess(TeamLog.PaperDocRequestAccessType)
         /// (paper) Resolved Paper doc comment
@@ -7874,8 +7688,6 @@ open class TeamLog {
         case allowDownloadDisabled(TeamLog.AllowDownloadDisabledType)
         /// (team_policies) Enabled downloads (deprecated, no longer logged)
         case allowDownloadEnabled(TeamLog.AllowDownloadEnabledType)
-        /// (team_policies) Changed camera uploads setting for team
-        case cameraUploadsPolicyChanged(TeamLog.CameraUploadsPolicyChangedType)
         /// (team_policies) Set restrictions on data center locations where team data resides
         case dataPlacementRestrictionChangePolicy(TeamLog.DataPlacementRestrictionChangePolicyType)
         /// (team_policies) Completed restrictions on data center locations where team data resides
@@ -7965,15 +7777,11 @@ open class TeamLog {
         case smartSyncOptOut(TeamLog.SmartSyncOptOutType)
         /// (team_policies) Changed single sign-on setting for team
         case ssoChangePolicy(TeamLog.SsoChangePolicyType)
-        /// (team_policies) Enabled/disabled Team Selective Sync for team
-        case teamSelectiveSyncPolicyChanged(TeamLog.TeamSelectiveSyncPolicyChangedType)
         /// (team_policies) Changed two-step verification setting for team
         case tfaChangePolicy(TeamLog.TfaChangePolicyType)
         /// (team_policies) Enabled/disabled option for members to link personal Dropbox account and team account to
         /// same computer
         case twoAccountChangePolicy(TeamLog.TwoAccountChangePolicyType)
-        /// (team_policies) Changed team policy for viewer info
-        case viewerInfoPolicyChanged(TeamLog.ViewerInfoPolicyChangedType)
         /// (team_policies) Changed how long members can stay signed in to Dropbox.com
         case webSessionsChangeFixedLengthPolicy(TeamLog.WebSessionsChangeFixedLengthPolicyType)
         /// (team_policies) Changed how long team members can be idle while signed in to Dropbox.com
@@ -8044,10 +7852,6 @@ open class TeamLog {
                 case .fileDeleteComment(let arg):
                     var d = Serialization.getFields(TeamLog.FileDeleteCommentTypeSerializer().serialize(arg))
                     d[".tag"] = .str("file_delete_comment")
-                    return .dictionary(d)
-                case .fileEditComment(let arg):
-                    var d = Serialization.getFields(TeamLog.FileEditCommentTypeSerializer().serialize(arg))
-                    d[".tag"] = .str("file_edit_comment")
                     return .dictionary(d)
                 case .fileLikeComment(let arg):
                     var d = Serialization.getFields(TeamLog.FileLikeCommentTypeSerializer().serialize(arg))
@@ -8357,10 +8161,6 @@ open class TeamLog {
                     var d = Serialization.getFields(TeamLog.MemberChangeStatusTypeSerializer().serialize(arg))
                     d[".tag"] = .str("member_change_status")
                     return .dictionary(d)
-                case .memberDeleteManualContacts(let arg):
-                    var d = Serialization.getFields(TeamLog.MemberDeleteManualContactsTypeSerializer().serialize(arg))
-                    d[".tag"] = .str("member_delete_manual_contacts")
-                    return .dictionary(d)
                 case .memberPermanentlyDeleteAccountContents(let arg):
                     var d = Serialization.getFields(TeamLog.MemberPermanentlyDeleteAccountContentsTypeSerializer().serialize(arg))
                     d[".tag"] = .str("member_permanently_delete_account_contents")
@@ -8472,10 +8272,6 @@ open class TeamLog {
                 case .paperDocMention(let arg):
                     var d = Serialization.getFields(TeamLog.PaperDocMentionTypeSerializer().serialize(arg))
                     d[".tag"] = .str("paper_doc_mention")
-                    return .dictionary(d)
-                case .paperDocOwnershipChanged(let arg):
-                    var d = Serialization.getFields(TeamLog.PaperDocOwnershipChangedTypeSerializer().serialize(arg))
-                    d[".tag"] = .str("paper_doc_ownership_changed")
                     return .dictionary(d)
                 case .paperDocRequestAccess(let arg):
                     var d = Serialization.getFields(TeamLog.PaperDocRequestAccessTypeSerializer().serialize(arg))
@@ -9005,10 +8801,6 @@ open class TeamLog {
                     var d = Serialization.getFields(TeamLog.AllowDownloadEnabledTypeSerializer().serialize(arg))
                     d[".tag"] = .str("allow_download_enabled")
                     return .dictionary(d)
-                case .cameraUploadsPolicyChanged(let arg):
-                    var d = Serialization.getFields(TeamLog.CameraUploadsPolicyChangedTypeSerializer().serialize(arg))
-                    d[".tag"] = .str("camera_uploads_policy_changed")
-                    return .dictionary(d)
                 case .dataPlacementRestrictionChangePolicy(let arg):
                     var d = Serialization.getFields(TeamLog.DataPlacementRestrictionChangePolicyTypeSerializer().serialize(arg))
                     d[".tag"] = .str("data_placement_restriction_change_policy")
@@ -9181,10 +8973,6 @@ open class TeamLog {
                     var d = Serialization.getFields(TeamLog.SsoChangePolicyTypeSerializer().serialize(arg))
                     d[".tag"] = .str("sso_change_policy")
                     return .dictionary(d)
-                case .teamSelectiveSyncPolicyChanged(let arg):
-                    var d = Serialization.getFields(TeamLog.TeamSelectiveSyncPolicyChangedTypeSerializer().serialize(arg))
-                    d[".tag"] = .str("team_selective_sync_policy_changed")
-                    return .dictionary(d)
                 case .tfaChangePolicy(let arg):
                     var d = Serialization.getFields(TeamLog.TfaChangePolicyTypeSerializer().serialize(arg))
                     d[".tag"] = .str("tfa_change_policy")
@@ -9192,10 +8980,6 @@ open class TeamLog {
                 case .twoAccountChangePolicy(let arg):
                     var d = Serialization.getFields(TeamLog.TwoAccountChangePolicyTypeSerializer().serialize(arg))
                     d[".tag"] = .str("two_account_change_policy")
-                    return .dictionary(d)
-                case .viewerInfoPolicyChanged(let arg):
-                    var d = Serialization.getFields(TeamLog.ViewerInfoPolicyChangedTypeSerializer().serialize(arg))
-                    d[".tag"] = .str("viewer_info_policy_changed")
                     return .dictionary(d)
                 case .webSessionsChangeFixedLengthPolicy(let arg):
                     var d = Serialization.getFields(TeamLog.WebSessionsChangeFixedLengthPolicyTypeSerializer().serialize(arg))
@@ -9293,9 +9077,6 @@ open class TeamLog {
                         case "file_delete_comment":
                             let v = TeamLog.FileDeleteCommentTypeSerializer().deserialize(json)
                             return EventType.fileDeleteComment(v)
-                        case "file_edit_comment":
-                            let v = TeamLog.FileEditCommentTypeSerializer().deserialize(json)
-                            return EventType.fileEditComment(v)
                         case "file_like_comment":
                             let v = TeamLog.FileLikeCommentTypeSerializer().deserialize(json)
                             return EventType.fileLikeComment(v)
@@ -9527,9 +9308,6 @@ open class TeamLog {
                         case "member_change_status":
                             let v = TeamLog.MemberChangeStatusTypeSerializer().deserialize(json)
                             return EventType.memberChangeStatus(v)
-                        case "member_delete_manual_contacts":
-                            let v = TeamLog.MemberDeleteManualContactsTypeSerializer().deserialize(json)
-                            return EventType.memberDeleteManualContacts(v)
                         case "member_permanently_delete_account_contents":
                             let v = TeamLog.MemberPermanentlyDeleteAccountContentsTypeSerializer().deserialize(json)
                             return EventType.memberPermanentlyDeleteAccountContents(v)
@@ -9614,9 +9392,6 @@ open class TeamLog {
                         case "paper_doc_mention":
                             let v = TeamLog.PaperDocMentionTypeSerializer().deserialize(json)
                             return EventType.paperDocMention(v)
-                        case "paper_doc_ownership_changed":
-                            let v = TeamLog.PaperDocOwnershipChangedTypeSerializer().deserialize(json)
-                            return EventType.paperDocOwnershipChanged(v)
                         case "paper_doc_request_access":
                             let v = TeamLog.PaperDocRequestAccessTypeSerializer().deserialize(json)
                             return EventType.paperDocRequestAccess(v)
@@ -10013,9 +9788,6 @@ open class TeamLog {
                         case "allow_download_enabled":
                             let v = TeamLog.AllowDownloadEnabledTypeSerializer().deserialize(json)
                             return EventType.allowDownloadEnabled(v)
-                        case "camera_uploads_policy_changed":
-                            let v = TeamLog.CameraUploadsPolicyChangedTypeSerializer().deserialize(json)
-                            return EventType.cameraUploadsPolicyChanged(v)
                         case "data_placement_restriction_change_policy":
                             let v = TeamLog.DataPlacementRestrictionChangePolicyTypeSerializer().deserialize(json)
                             return EventType.dataPlacementRestrictionChangePolicy(v)
@@ -10145,18 +9917,12 @@ open class TeamLog {
                         case "sso_change_policy":
                             let v = TeamLog.SsoChangePolicyTypeSerializer().deserialize(json)
                             return EventType.ssoChangePolicy(v)
-                        case "team_selective_sync_policy_changed":
-                            let v = TeamLog.TeamSelectiveSyncPolicyChangedTypeSerializer().deserialize(json)
-                            return EventType.teamSelectiveSyncPolicyChanged(v)
                         case "tfa_change_policy":
                             let v = TeamLog.TfaChangePolicyTypeSerializer().deserialize(json)
                             return EventType.tfaChangePolicy(v)
                         case "two_account_change_policy":
                             let v = TeamLog.TwoAccountChangePolicyTypeSerializer().deserialize(json)
                             return EventType.twoAccountChangePolicy(v)
-                        case "viewer_info_policy_changed":
-                            let v = TeamLog.ViewerInfoPolicyChangedTypeSerializer().deserialize(json)
-                            return EventType.viewerInfoPolicyChanged(v)
                         case "web_sessions_change_fixed_length_policy":
                             let v = TeamLog.WebSessionsChangeFixedLengthPolicyTypeSerializer().deserialize(json)
                             return EventType.webSessionsChangeFixedLengthPolicy(v)
@@ -10243,7 +10009,7 @@ open class TeamLog {
     /// The ExportMembersReportType struct
     open class ExportMembersReportType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -10274,9 +10040,9 @@ open class TeamLog {
     /// Accepted/opted out of extended version history.
     open class ExtendedVersionHistoryChangePolicyDetails: CustomStringConvertible {
         /// New extended version history policy.
-        public let newValue: TeamLog.ExtendedVersionHistoryPolicy
+        open let newValue: TeamLog.ExtendedVersionHistoryPolicy
         /// Previous extended version history policy. Might be missing due to historical data gap.
-        public let previousValue: TeamLog.ExtendedVersionHistoryPolicy?
+        open let previousValue: TeamLog.ExtendedVersionHistoryPolicy?
         public init(newValue: TeamLog.ExtendedVersionHistoryPolicy, previousValue: TeamLog.ExtendedVersionHistoryPolicy? = nil) {
             self.newValue = newValue
             self.previousValue = previousValue
@@ -10309,7 +10075,7 @@ open class TeamLog {
     /// The ExtendedVersionHistoryChangePolicyType struct
     open class ExtendedVersionHistoryChangePolicyType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -10407,9 +10173,9 @@ open class TeamLog {
     /// A user without a Dropbox account.
     open class ExternalUserLogInfo: CustomStringConvertible {
         /// An external user identifier.
-        public let userIdentifier: String
+        open let userIdentifier: String
         /// Identifier type.
-        public let identifierType: TeamLog.IdentifierType
+        open let identifierType: TeamLog.IdentifierType
         public init(userIdentifier: String, identifierType: TeamLog.IdentifierType) {
             stringValidator()(userIdentifier)
             self.userIdentifier = userIdentifier
@@ -10443,9 +10209,9 @@ open class TeamLog {
     /// Provides details about a failure
     open class FailureDetailsLogInfo: CustomStringConvertible {
         /// A user friendly explanation of the error. Might be missing due to historical data gap.
-        public let userFriendlyMessage: String?
+        open let userFriendlyMessage: String?
         /// A technical explanation of the error. This is relevant for some errors.
-        public let technicalErrorMessage: String?
+        open let technicalErrorMessage: String?
         public init(userFriendlyMessage: String? = nil, technicalErrorMessage: String? = nil) {
             nullableValidator(stringValidator())(userFriendlyMessage)
             self.userFriendlyMessage = userFriendlyMessage
@@ -10480,7 +10246,7 @@ open class TeamLog {
     /// Added file comment.
     open class FileAddCommentDetails: CustomStringConvertible {
         /// Comment text. Might be missing due to historical data gap.
-        public let commentText: String?
+        open let commentText: String?
         public init(commentText: String? = nil) {
             nullableValidator(stringValidator())(commentText)
             self.commentText = commentText
@@ -10511,7 +10277,7 @@ open class TeamLog {
     /// The FileAddCommentType struct
     open class FileAddCommentType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -10566,7 +10332,7 @@ open class TeamLog {
     /// The FileAddType struct
     open class FileAddType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -10597,9 +10363,9 @@ open class TeamLog {
     /// Subscribed to or unsubscribed from comment notifications for file.
     open class FileChangeCommentSubscriptionDetails: CustomStringConvertible {
         /// New file comment subscription.
-        public let newValue: TeamLog.FileCommentNotificationPolicy
+        open let newValue: TeamLog.FileCommentNotificationPolicy
         /// Previous file comment subscription. Might be missing due to historical data gap.
-        public let previousValue: TeamLog.FileCommentNotificationPolicy?
+        open let previousValue: TeamLog.FileCommentNotificationPolicy?
         public init(newValue: TeamLog.FileCommentNotificationPolicy, previousValue: TeamLog.FileCommentNotificationPolicy? = nil) {
             self.newValue = newValue
             self.previousValue = previousValue
@@ -10632,7 +10398,7 @@ open class TeamLog {
     /// The FileChangeCommentSubscriptionType struct
     open class FileChangeCommentSubscriptionType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -10714,9 +10480,9 @@ open class TeamLog {
     /// Enabled/disabled commenting on team files.
     open class FileCommentsChangePolicyDetails: CustomStringConvertible {
         /// New commenting on team files policy.
-        public let newValue: TeamLog.FileCommentsPolicy
+        open let newValue: TeamLog.FileCommentsPolicy
         /// Previous commenting on team files policy. Might be missing due to historical data gap.
-        public let previousValue: TeamLog.FileCommentsPolicy?
+        open let previousValue: TeamLog.FileCommentsPolicy?
         public init(newValue: TeamLog.FileCommentsPolicy, previousValue: TeamLog.FileCommentsPolicy? = nil) {
             self.newValue = newValue
             self.previousValue = previousValue
@@ -10749,7 +10515,7 @@ open class TeamLog {
     /// The FileCommentsChangePolicyType struct
     open class FileCommentsChangePolicyType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -10831,7 +10597,7 @@ open class TeamLog {
     /// Copied files and/or folders.
     open class FileCopyDetails: CustomStringConvertible {
         /// Relocate action details.
-        public let relocateActionDetails: Array<TeamLog.RelocateAssetReferencesLogInfo>
+        open let relocateActionDetails: Array<TeamLog.RelocateAssetReferencesLogInfo>
         public init(relocateActionDetails: Array<TeamLog.RelocateAssetReferencesLogInfo>) {
             self.relocateActionDetails = relocateActionDetails
         }
@@ -10861,7 +10627,7 @@ open class TeamLog {
     /// The FileCopyType struct
     open class FileCopyType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -10892,7 +10658,7 @@ open class TeamLog {
     /// Deleted file comment.
     open class FileDeleteCommentDetails: CustomStringConvertible {
         /// Comment text. Might be missing due to historical data gap.
-        public let commentText: String?
+        open let commentText: String?
         public init(commentText: String? = nil) {
             nullableValidator(stringValidator())(commentText)
             self.commentText = commentText
@@ -10923,7 +10689,7 @@ open class TeamLog {
     /// The FileDeleteCommentType struct
     open class FileDeleteCommentType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -10978,7 +10744,7 @@ open class TeamLog {
     /// The FileDeleteType struct
     open class FileDeleteType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -11033,7 +10799,7 @@ open class TeamLog {
     /// The FileDownloadType struct
     open class FileDownloadType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -11055,74 +10821,6 @@ open class TeamLog {
                 case .dictionary(let dict):
                     let description_ = Serialization._StringSerializer.deserialize(dict["description"] ?? .null)
                     return FileDownloadType(description_: description_)
-                default:
-                    fatalError("Type error deserializing")
-            }
-        }
-    }
-
-    /// Edited file comment.
-    open class FileEditCommentDetails: CustomStringConvertible {
-        /// Comment text. Might be missing due to historical data gap.
-        public let commentText: String?
-        /// Previous comment text.
-        public let previousCommentText: String
-        public init(previousCommentText: String, commentText: String? = nil) {
-            nullableValidator(stringValidator())(commentText)
-            self.commentText = commentText
-            stringValidator()(previousCommentText)
-            self.previousCommentText = previousCommentText
-        }
-        open var description: String {
-            return "\(SerializeUtil.prepareJSONForSerialization(FileEditCommentDetailsSerializer().serialize(self)))"
-        }
-    }
-    open class FileEditCommentDetailsSerializer: JSONSerializer {
-        public init() { }
-        open func serialize(_ value: FileEditCommentDetails) -> JSON {
-            let output = [ 
-            "previous_comment_text": Serialization._StringSerializer.serialize(value.previousCommentText),
-            "comment_text": NullableSerializer(Serialization._StringSerializer).serialize(value.commentText),
-            ]
-            return .dictionary(output)
-        }
-        open func deserialize(_ json: JSON) -> FileEditCommentDetails {
-            switch json {
-                case .dictionary(let dict):
-                    let previousCommentText = Serialization._StringSerializer.deserialize(dict["previous_comment_text"] ?? .null)
-                    let commentText = NullableSerializer(Serialization._StringSerializer).deserialize(dict["comment_text"] ?? .null)
-                    return FileEditCommentDetails(previousCommentText: previousCommentText, commentText: commentText)
-                default:
-                    fatalError("Type error deserializing")
-            }
-        }
-    }
-
-    /// The FileEditCommentType struct
-    open class FileEditCommentType: CustomStringConvertible {
-        /// (no description)
-        public let description_: String
-        public init(description_: String) {
-            stringValidator()(description_)
-            self.description_ = description_
-        }
-        open var description: String {
-            return "\(SerializeUtil.prepareJSONForSerialization(FileEditCommentTypeSerializer().serialize(self)))"
-        }
-    }
-    open class FileEditCommentTypeSerializer: JSONSerializer {
-        public init() { }
-        open func serialize(_ value: FileEditCommentType) -> JSON {
-            let output = [ 
-            "description": Serialization._StringSerializer.serialize(value.description_),
-            ]
-            return .dictionary(output)
-        }
-        open func deserialize(_ json: JSON) -> FileEditCommentType {
-            switch json {
-                case .dictionary(let dict):
-                    let description_ = Serialization._StringSerializer.deserialize(dict["description"] ?? .null)
-                    return FileEditCommentType(description_: description_)
                 default:
                     fatalError("Type error deserializing")
             }
@@ -11156,7 +10854,7 @@ open class TeamLog {
     /// The FileEditType struct
     open class FileEditType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -11211,7 +10909,7 @@ open class TeamLog {
     /// The FileGetCopyReferenceType struct
     open class FileGetCopyReferenceType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -11242,7 +10940,7 @@ open class TeamLog {
     /// Liked file comment.
     open class FileLikeCommentDetails: CustomStringConvertible {
         /// Comment text. Might be missing due to historical data gap.
-        public let commentText: String?
+        open let commentText: String?
         public init(commentText: String? = nil) {
             nullableValidator(stringValidator())(commentText)
             self.commentText = commentText
@@ -11273,7 +10971,7 @@ open class TeamLog {
     /// The FileLikeCommentType struct
     open class FileLikeCommentType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -11304,11 +11002,11 @@ open class TeamLog {
     /// Generic information relevant both for files and folders
     open class FileOrFolderLogInfo: CustomStringConvertible {
         /// Path relative to event context.
-        public let path: TeamLog.PathLogInfo
+        open let path: TeamLog.PathLogInfo
         /// Display name. Might be missing due to historical data gap.
-        public let displayName: String?
+        open let displayName: String?
         /// Unique ID. Might be missing due to historical data gap.
-        public let fileId: String?
+        open let fileId: String?
         public init(path: TeamLog.PathLogInfo, displayName: String? = nil, fileId: String? = nil) {
             self.path = path
             nullableValidator(stringValidator())(displayName)
@@ -11375,7 +11073,7 @@ open class TeamLog {
     /// Moved files and/or folders.
     open class FileMoveDetails: CustomStringConvertible {
         /// Relocate action details.
-        public let relocateActionDetails: Array<TeamLog.RelocateAssetReferencesLogInfo>
+        open let relocateActionDetails: Array<TeamLog.RelocateAssetReferencesLogInfo>
         public init(relocateActionDetails: Array<TeamLog.RelocateAssetReferencesLogInfo>) {
             self.relocateActionDetails = relocateActionDetails
         }
@@ -11405,7 +11103,7 @@ open class TeamLog {
     /// The FileMoveType struct
     open class FileMoveType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -11460,7 +11158,7 @@ open class TeamLog {
     /// The FilePermanentlyDeleteType struct
     open class FilePermanentlyDeleteType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -11515,7 +11213,7 @@ open class TeamLog {
     /// The FilePreviewType struct
     open class FilePreviewType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -11546,7 +11244,7 @@ open class TeamLog {
     /// Renamed files and/or folders.
     open class FileRenameDetails: CustomStringConvertible {
         /// Relocate action details.
-        public let relocateActionDetails: Array<TeamLog.RelocateAssetReferencesLogInfo>
+        open let relocateActionDetails: Array<TeamLog.RelocateAssetReferencesLogInfo>
         public init(relocateActionDetails: Array<TeamLog.RelocateAssetReferencesLogInfo>) {
             self.relocateActionDetails = relocateActionDetails
         }
@@ -11576,7 +11274,7 @@ open class TeamLog {
     /// The FileRenameType struct
     open class FileRenameType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -11607,11 +11305,11 @@ open class TeamLog {
     /// Changed file request.
     open class FileRequestChangeDetails: CustomStringConvertible {
         /// File request id. Might be missing due to historical data gap.
-        public let fileRequestId: String?
+        open let fileRequestId: String?
         /// Previous file request details. Might be missing due to historical data gap.
-        public let previousDetails: TeamLog.FileRequestDetails?
+        open let previousDetails: TeamLog.FileRequestDetails?
         /// New file request details.
-        public let newDetails: TeamLog.FileRequestDetails
+        open let newDetails: TeamLog.FileRequestDetails
         public init(newDetails: TeamLog.FileRequestDetails, fileRequestId: String? = nil, previousDetails: TeamLog.FileRequestDetails? = nil) {
             nullableValidator(stringValidator(minLength: 1, pattern: "[-_0-9a-zA-Z]+"))(fileRequestId)
             self.fileRequestId = fileRequestId
@@ -11648,7 +11346,7 @@ open class TeamLog {
     /// The FileRequestChangeType struct
     open class FileRequestChangeType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -11679,9 +11377,9 @@ open class TeamLog {
     /// Closed file request.
     open class FileRequestCloseDetails: CustomStringConvertible {
         /// File request id. Might be missing due to historical data gap.
-        public let fileRequestId: String?
+        open let fileRequestId: String?
         /// Previous file request details. Might be missing due to historical data gap.
-        public let previousDetails: TeamLog.FileRequestDetails?
+        open let previousDetails: TeamLog.FileRequestDetails?
         public init(fileRequestId: String? = nil, previousDetails: TeamLog.FileRequestDetails? = nil) {
             nullableValidator(stringValidator(minLength: 1, pattern: "[-_0-9a-zA-Z]+"))(fileRequestId)
             self.fileRequestId = fileRequestId
@@ -11715,7 +11413,7 @@ open class TeamLog {
     /// The FileRequestCloseType struct
     open class FileRequestCloseType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -11746,9 +11444,9 @@ open class TeamLog {
     /// Created file request.
     open class FileRequestCreateDetails: CustomStringConvertible {
         /// File request id. Might be missing due to historical data gap.
-        public let fileRequestId: String?
+        open let fileRequestId: String?
         /// File request details. Might be missing due to historical data gap.
-        public let requestDetails: TeamLog.FileRequestDetails?
+        open let requestDetails: TeamLog.FileRequestDetails?
         public init(fileRequestId: String? = nil, requestDetails: TeamLog.FileRequestDetails? = nil) {
             nullableValidator(stringValidator(minLength: 1, pattern: "[-_0-9a-zA-Z]+"))(fileRequestId)
             self.fileRequestId = fileRequestId
@@ -11782,7 +11480,7 @@ open class TeamLog {
     /// The FileRequestCreateType struct
     open class FileRequestCreateType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -11813,9 +11511,9 @@ open class TeamLog {
     /// File request deadline
     open class FileRequestDeadline: CustomStringConvertible {
         /// The deadline for this file request. Might be missing due to historical data gap.
-        public let deadline: Date?
+        open let deadline: Date?
         /// If set, allow uploads after the deadline has passed. Might be missing due to historical data gap.
-        public let allowLateUploads: String?
+        open let allowLateUploads: String?
         public init(deadline: Date? = nil, allowLateUploads: String? = nil) {
             self.deadline = deadline
             nullableValidator(stringValidator())(allowLateUploads)
@@ -11849,9 +11547,9 @@ open class TeamLog {
     /// File request details
     open class FileRequestDetails: CustomStringConvertible {
         /// Asset position in the Assets list.
-        public let assetIndex: UInt64
+        open let assetIndex: UInt64
         /// File request deadline. Might be missing due to historical data gap.
-        public let deadline: TeamLog.FileRequestDeadline?
+        open let deadline: TeamLog.FileRequestDeadline?
         public init(assetIndex: UInt64, deadline: TeamLog.FileRequestDeadline? = nil) {
             comparableValidator()(assetIndex)
             self.assetIndex = assetIndex
@@ -11885,22 +11583,22 @@ open class TeamLog {
     /// Received files for file request.
     open class FileRequestReceiveFileDetails: CustomStringConvertible {
         /// File request id. Might be missing due to historical data gap.
-        public let fileRequestId: String?
+        open let fileRequestId: String?
         /// File request details. Might be missing due to historical data gap.
-        public let fileRequestDetails: TeamLog.FileRequestDetails?
+        open let fileRequestDetails: TeamLog.FileRequestDetails?
         /// Submitted file names.
-        public let submittedFileNames: Array<String>
+        open let submittedFileNames: Array<String>
         /// The name as provided by the submitter. Might be missing due to historical data gap.
-        public let submitterName: String?
+        open let submitterName: String?
         /// The email as provided by the submitter. Might be missing due to historical data gap.
-        public let submitterEmail: String?
+        open let submitterEmail: String?
         public init(submittedFileNames: Array<String>, fileRequestId: String? = nil, fileRequestDetails: TeamLog.FileRequestDetails? = nil, submitterName: String? = nil, submitterEmail: String? = nil) {
             nullableValidator(stringValidator(minLength: 1, pattern: "[-_0-9a-zA-Z]+"))(fileRequestId)
             self.fileRequestId = fileRequestId
             self.fileRequestDetails = fileRequestDetails
             arrayValidator(itemValidator: stringValidator())(submittedFileNames)
             self.submittedFileNames = submittedFileNames
-            nullableValidator(stringValidator())(submitterName)
+            nullableValidator(stringValidator(minLength: 1))(submitterName)
             self.submitterName = submitterName
             nullableValidator(stringValidator(maxLength: 255))(submitterEmail)
             self.submitterEmail = submitterEmail
@@ -11939,7 +11637,7 @@ open class TeamLog {
     /// The FileRequestReceiveFileType struct
     open class FileRequestReceiveFileType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -11970,9 +11668,9 @@ open class TeamLog {
     /// Enabled/disabled file requests.
     open class FileRequestsChangePolicyDetails: CustomStringConvertible {
         /// New file requests policy.
-        public let newValue: TeamLog.FileRequestsPolicy
+        open let newValue: TeamLog.FileRequestsPolicy
         /// Previous file requests policy. Might be missing due to historical data gap.
-        public let previousValue: TeamLog.FileRequestsPolicy?
+        open let previousValue: TeamLog.FileRequestsPolicy?
         public init(newValue: TeamLog.FileRequestsPolicy, previousValue: TeamLog.FileRequestsPolicy? = nil) {
             self.newValue = newValue
             self.previousValue = previousValue
@@ -12005,7 +11703,7 @@ open class TeamLog {
     /// The FileRequestsChangePolicyType struct
     open class FileRequestsChangePolicyType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -12060,7 +11758,7 @@ open class TeamLog {
     /// The FileRequestsEmailsEnabledType struct
     open class FileRequestsEmailsEnabledType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -12115,7 +11813,7 @@ open class TeamLog {
     /// The FileRequestsEmailsRestrictedToTeamOnlyType struct
     open class FileRequestsEmailsRestrictedToTeamOnlyType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -12197,7 +11895,7 @@ open class TeamLog {
     /// Resolved file comment.
     open class FileResolveCommentDetails: CustomStringConvertible {
         /// Comment text. Might be missing due to historical data gap.
-        public let commentText: String?
+        open let commentText: String?
         public init(commentText: String? = nil) {
             nullableValidator(stringValidator())(commentText)
             self.commentText = commentText
@@ -12228,7 +11926,7 @@ open class TeamLog {
     /// The FileResolveCommentType struct
     open class FileResolveCommentType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -12283,7 +11981,7 @@ open class TeamLog {
     /// The FileRestoreType struct
     open class FileRestoreType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -12338,7 +12036,7 @@ open class TeamLog {
     /// The FileRevertType struct
     open class FileRevertType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -12393,7 +12091,7 @@ open class TeamLog {
     /// The FileRollbackChangesType struct
     open class FileRollbackChangesType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -12424,7 +12122,7 @@ open class TeamLog {
     /// Saved file/folder using copy reference.
     open class FileSaveCopyReferenceDetails: CustomStringConvertible {
         /// Relocate action details.
-        public let relocateActionDetails: Array<TeamLog.RelocateAssetReferencesLogInfo>
+        open let relocateActionDetails: Array<TeamLog.RelocateAssetReferencesLogInfo>
         public init(relocateActionDetails: Array<TeamLog.RelocateAssetReferencesLogInfo>) {
             self.relocateActionDetails = relocateActionDetails
         }
@@ -12454,7 +12152,7 @@ open class TeamLog {
     /// The FileSaveCopyReferenceType struct
     open class FileSaveCopyReferenceType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -12485,7 +12183,7 @@ open class TeamLog {
     /// Unliked file comment.
     open class FileUnlikeCommentDetails: CustomStringConvertible {
         /// Comment text. Might be missing due to historical data gap.
-        public let commentText: String?
+        open let commentText: String?
         public init(commentText: String? = nil) {
             nullableValidator(stringValidator())(commentText)
             self.commentText = commentText
@@ -12516,7 +12214,7 @@ open class TeamLog {
     /// The FileUnlikeCommentType struct
     open class FileUnlikeCommentType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -12547,7 +12245,7 @@ open class TeamLog {
     /// Unresolved file comment.
     open class FileUnresolveCommentDetails: CustomStringConvertible {
         /// Comment text. Might be missing due to historical data gap.
-        public let commentText: String?
+        open let commentText: String?
         public init(commentText: String? = nil) {
             nullableValidator(stringValidator())(commentText)
             self.commentText = commentText
@@ -12578,7 +12276,7 @@ open class TeamLog {
     /// The FileUnresolveCommentType struct
     open class FileUnresolveCommentType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -12638,13 +12336,13 @@ open class TeamLog {
     /// Geographic location details.
     open class GeoLocationLogInfo: CustomStringConvertible {
         /// City name.
-        public let city: String?
+        open let city: String?
         /// Region name.
-        public let region: String?
+        open let region: String?
         /// Country code.
-        public let country: String?
+        open let country: String?
         /// IP address.
-        public let ipAddress: String
+        open let ipAddress: String
         public init(ipAddress: String, city: String? = nil, region: String? = nil, country: String? = nil) {
             nullableValidator(stringValidator())(city)
             self.city = city
@@ -12686,17 +12384,15 @@ open class TeamLog {
 
     /// The GetTeamEventsArg struct
     open class GetTeamEventsArg: CustomStringConvertible {
-        /// The maximal number of results to return per call. Note that some calls may not return limit number of
-        /// events, and may even return no events, even with `has_more` set to true. In this case, callers should fetch
-        /// again using getEventsContinue.
-        public let limit: UInt32
+        /// Number of results to return per call.
+        open let limit: UInt32
         /// Filter the events by account ID. Return ony events with this account_id as either Actor, Context, or
         /// Participants.
-        public let accountId: String?
+        open let accountId: String?
         /// Filter by time range.
-        public let time: TeamCommon.TimeRange?
+        open let time: TeamCommon.TimeRange?
         /// Filter the returned events to a single category.
-        public let category: TeamLog.EventCategory?
+        open let category: TeamLog.EventCategory?
         public init(limit: UInt32 = 1000, accountId: String? = nil, time: TeamCommon.TimeRange? = nil, category: TeamLog.EventCategory? = nil) {
             comparableValidator(minValue: 1, maxValue: 1000)(limit)
             self.limit = limit
@@ -12737,7 +12433,7 @@ open class TeamLog {
     /// The GetTeamEventsContinueArg struct
     open class GetTeamEventsContinueArg: CustomStringConvertible {
         /// Indicates from what point to get the next set of events.
-        public let cursor: String
+        open let cursor: String
         public init(cursor: String) {
             stringValidator()(cursor)
             self.cursor = cursor
@@ -12769,11 +12465,6 @@ open class TeamLog {
     public enum GetTeamEventsContinueError: CustomStringConvertible {
         /// Bad cursor.
         case badCursor
-        /// Cursors are intended to be used quickly. Individual cursor values are normally valid for days, but in rare
-        /// cases may be reset sooner. Cursor reset errors should be handled by fetching a new cursor from getEvents.
-        /// The associated value is the approximate timestamp of the most recent event returned by the cursor. This
-        /// should be used as a resumption point when calling getEvents to obtain a new cursor.
-        case reset(Date)
         /// An unspecified error.
         case other
 
@@ -12789,10 +12480,6 @@ open class TeamLog {
                     var d = [String: JSON]()
                     d[".tag"] = .str("bad_cursor")
                     return .dictionary(d)
-                case .reset(let arg):
-                    var d = ["reset": NSDateSerializer("%Y-%m-%dT%H:%M:%SZ").serialize(arg)]
-                    d[".tag"] = .str("reset")
-                    return .dictionary(d)
                 case .other:
                     var d = [String: JSON]()
                     d[".tag"] = .str("other")
@@ -12806,9 +12493,6 @@ open class TeamLog {
                     switch tag {
                         case "bad_cursor":
                             return GetTeamEventsContinueError.badCursor
-                        case "reset":
-                            let v = NSDateSerializer("%Y-%m-%dT%H:%M:%SZ").deserialize(d["reset"] ?? .null)
-                            return GetTeamEventsContinueError.reset(v)
                         case "other":
                             return GetTeamEventsContinueError.other
                         default:
@@ -12873,17 +12557,13 @@ open class TeamLog {
 
     /// The GetTeamEventsResult struct
     open class GetTeamEventsResult: CustomStringConvertible {
-        /// List of events. Note that events are not guaranteed to be sorted by their timestamp value.
-        public let events: Array<TeamLog.TeamEvent>
-        /// Pass the cursor into getEventsContinue to obtain additional events. The value of cursor may change for each
-        /// response from getEventsContinue, regardless of the value of hasMore; older cursor strings may expire. Thus,
-        /// callers should ensure that they update their cursor based on the latest value of cursor after each call, and
-        /// poll regularly if they wish to poll for new events. Callers should handle reset exceptions for expired
-        /// cursors.
-        public let cursor: String
-        /// Is true if there may be additional events that have not been returned yet. An additional call to
-        /// getEventsContinue can retrieve them. Note that hasMore may be true, even if events is empty.
-        public let hasMore: Bool
+        /// List of events.
+        open let events: Array<TeamLog.TeamEvent>
+        /// Pass the cursor into getEventsContinue to obtain additional events.
+        open let cursor: String
+        /// Is true if there are additional events that have not been returned yet. An additional call to
+        /// getEventsContinue can retrieve them.
+        open let hasMore: Bool
         public init(events: Array<TeamLog.TeamEvent>, cursor: String, hasMore: Bool) {
             self.events = events
             stringValidator()(cursor)
@@ -12920,9 +12600,9 @@ open class TeamLog {
     /// Enabled/disabled Google single sign-on for team.
     open class GoogleSsoChangePolicyDetails: CustomStringConvertible {
         /// New Google single sign-on policy.
-        public let newValue: TeamLog.GoogleSsoPolicy
+        open let newValue: TeamLog.GoogleSsoPolicy
         /// Previous Google single sign-on policy. Might be missing due to historical data gap.
-        public let previousValue: TeamLog.GoogleSsoPolicy?
+        open let previousValue: TeamLog.GoogleSsoPolicy?
         public init(newValue: TeamLog.GoogleSsoPolicy, previousValue: TeamLog.GoogleSsoPolicy? = nil) {
             self.newValue = newValue
             self.previousValue = previousValue
@@ -12955,7 +12635,7 @@ open class TeamLog {
     /// The GoogleSsoChangePolicyType struct
     open class GoogleSsoChangePolicyType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -13037,7 +12717,7 @@ open class TeamLog {
     /// Added external ID for group.
     open class GroupAddExternalIdDetails: CustomStringConvertible {
         /// Current external id.
-        public let newValue: String
+        open let newValue: String
         public init(newValue: String) {
             stringValidator()(newValue)
             self.newValue = newValue
@@ -13068,7 +12748,7 @@ open class TeamLog {
     /// The GroupAddExternalIdType struct
     open class GroupAddExternalIdType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -13099,7 +12779,7 @@ open class TeamLog {
     /// Added team members to group.
     open class GroupAddMemberDetails: CustomStringConvertible {
         /// Is group owner.
-        public let isGroupOwner: Bool
+        open let isGroupOwner: Bool
         public init(isGroupOwner: Bool) {
             self.isGroupOwner = isGroupOwner
         }
@@ -13129,7 +12809,7 @@ open class TeamLog {
     /// The GroupAddMemberType struct
     open class GroupAddMemberType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -13160,9 +12840,9 @@ open class TeamLog {
     /// Changed external ID for group.
     open class GroupChangeExternalIdDetails: CustomStringConvertible {
         /// Current external id.
-        public let newValue: String
+        open let newValue: String
         /// Old external id.
-        public let previousValue: String
+        open let previousValue: String
         public init(newValue: String, previousValue: String) {
             stringValidator()(newValue)
             self.newValue = newValue
@@ -13197,7 +12877,7 @@ open class TeamLog {
     /// The GroupChangeExternalIdType struct
     open class GroupChangeExternalIdType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -13228,9 +12908,9 @@ open class TeamLog {
     /// Changed group management type.
     open class GroupChangeManagementTypeDetails: CustomStringConvertible {
         /// New group management type.
-        public let newValue: TeamCommon.GroupManagementType
+        open let newValue: TeamCommon.GroupManagementType
         /// Previous group management type. Might be missing due to historical data gap.
-        public let previousValue: TeamCommon.GroupManagementType?
+        open let previousValue: TeamCommon.GroupManagementType?
         public init(newValue: TeamCommon.GroupManagementType, previousValue: TeamCommon.GroupManagementType? = nil) {
             self.newValue = newValue
             self.previousValue = previousValue
@@ -13263,7 +12943,7 @@ open class TeamLog {
     /// The GroupChangeManagementTypeType struct
     open class GroupChangeManagementTypeType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -13294,7 +12974,7 @@ open class TeamLog {
     /// Changed manager permissions of group member.
     open class GroupChangeMemberRoleDetails: CustomStringConvertible {
         /// Is group owner.
-        public let isGroupOwner: Bool
+        open let isGroupOwner: Bool
         public init(isGroupOwner: Bool) {
             self.isGroupOwner = isGroupOwner
         }
@@ -13324,7 +13004,7 @@ open class TeamLog {
     /// The GroupChangeMemberRoleType struct
     open class GroupChangeMemberRoleType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -13355,9 +13035,9 @@ open class TeamLog {
     /// Created group.
     open class GroupCreateDetails: CustomStringConvertible {
         /// Is company managed group. Might be missing due to historical data gap.
-        public let isCompanyManaged: Bool?
+        open let isCompanyManaged: Bool?
         /// Group join policy.
-        public let joinPolicy: TeamLog.GroupJoinPolicy?
+        open let joinPolicy: TeamLog.GroupJoinPolicy?
         public init(isCompanyManaged: Bool? = nil, joinPolicy: TeamLog.GroupJoinPolicy? = nil) {
             self.isCompanyManaged = isCompanyManaged
             self.joinPolicy = joinPolicy
@@ -13390,7 +13070,7 @@ open class TeamLog {
     /// The GroupCreateType struct
     open class GroupCreateType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -13421,7 +13101,7 @@ open class TeamLog {
     /// Deleted group.
     open class GroupDeleteDetails: CustomStringConvertible {
         /// Is company managed group. Might be missing due to historical data gap.
-        public let isCompanyManaged: Bool?
+        open let isCompanyManaged: Bool?
         public init(isCompanyManaged: Bool? = nil) {
             self.isCompanyManaged = isCompanyManaged
         }
@@ -13451,7 +13131,7 @@ open class TeamLog {
     /// The GroupDeleteType struct
     open class GroupDeleteType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -13506,7 +13186,7 @@ open class TeamLog {
     /// The GroupDescriptionUpdatedType struct
     open class GroupDescriptionUpdatedType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -13588,9 +13268,9 @@ open class TeamLog {
     /// Updated group join policy.
     open class GroupJoinPolicyUpdatedDetails: CustomStringConvertible {
         /// Is company managed group. Might be missing due to historical data gap.
-        public let isCompanyManaged: Bool?
+        open let isCompanyManaged: Bool?
         /// Group join policy.
-        public let joinPolicy: TeamLog.GroupJoinPolicy?
+        open let joinPolicy: TeamLog.GroupJoinPolicy?
         public init(isCompanyManaged: Bool? = nil, joinPolicy: TeamLog.GroupJoinPolicy? = nil) {
             self.isCompanyManaged = isCompanyManaged
             self.joinPolicy = joinPolicy
@@ -13623,7 +13303,7 @@ open class TeamLog {
     /// The GroupJoinPolicyUpdatedType struct
     open class GroupJoinPolicyUpdatedType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -13654,11 +13334,11 @@ open class TeamLog {
     /// Group's logged information.
     open class GroupLogInfo: CustomStringConvertible {
         /// The unique id of this group. Might be missing due to historical data gap.
-        public let groupId: String?
+        open let groupId: String?
         /// The name of this group.
-        public let displayName: String
+        open let displayName: String
         /// External group ID. Might be missing due to historical data gap.
-        public let externalId: String?
+        open let externalId: String?
         public init(displayName: String, groupId: String? = nil, externalId: String? = nil) {
             nullableValidator(stringValidator())(groupId)
             self.groupId = groupId
@@ -13721,7 +13401,7 @@ open class TeamLog {
     /// The GroupMovedType struct
     open class GroupMovedType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -13752,7 +13432,7 @@ open class TeamLog {
     /// Removed external ID for group.
     open class GroupRemoveExternalIdDetails: CustomStringConvertible {
         /// Old external id.
-        public let previousValue: String
+        open let previousValue: String
         public init(previousValue: String) {
             stringValidator()(previousValue)
             self.previousValue = previousValue
@@ -13783,7 +13463,7 @@ open class TeamLog {
     /// The GroupRemoveExternalIdType struct
     open class GroupRemoveExternalIdType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -13838,7 +13518,7 @@ open class TeamLog {
     /// The GroupRemoveMemberType struct
     open class GroupRemoveMemberType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -13869,9 +13549,9 @@ open class TeamLog {
     /// Renamed group.
     open class GroupRenameDetails: CustomStringConvertible {
         /// Previous display name.
-        public let previousValue: String
+        open let previousValue: String
         /// New display name.
-        public let newValue: String
+        open let newValue: String
         public init(previousValue: String, newValue: String) {
             stringValidator()(previousValue)
             self.previousValue = previousValue
@@ -13906,7 +13586,7 @@ open class TeamLog {
     /// The GroupRenameType struct
     open class GroupRenameType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -13937,9 +13617,9 @@ open class TeamLog {
     /// Changed who can create groups.
     open class GroupUserManagementChangePolicyDetails: CustomStringConvertible {
         /// New group users management policy.
-        public let newValue: TeamPolicies.GroupCreation
+        open let newValue: TeamPolicies.GroupCreation
         /// Previous group users management policy. Might be missing due to historical data gap.
-        public let previousValue: TeamPolicies.GroupCreation?
+        open let previousValue: TeamPolicies.GroupCreation?
         public init(newValue: TeamPolicies.GroupCreation, previousValue: TeamPolicies.GroupCreation? = nil) {
             self.newValue = newValue
             self.previousValue = previousValue
@@ -13972,7 +13652,7 @@ open class TeamLog {
     /// The GroupUserManagementChangePolicyType struct
     open class GroupUserManagementChangePolicyType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -14054,11 +13734,11 @@ open class TeamLog {
     /// Additional information relevant when a new member joins the team.
     open class JoinTeamDetails: CustomStringConvertible {
         /// Linked applications.
-        public let linkedApps: Array<TeamLog.UserLinkedAppLogInfo>
+        open let linkedApps: Array<TeamLog.UserLinkedAppLogInfo>
         /// Linked devices.
-        public let linkedDevices: Array<TeamLog.LinkedDeviceLogInfo>
+        open let linkedDevices: Array<TeamLog.LinkedDeviceLogInfo>
         /// Linked shared folders.
-        public let linkedSharedFolders: Array<TeamLog.FolderLogInfo>
+        open let linkedSharedFolders: Array<TeamLog.FolderLogInfo>
         public init(linkedApps: Array<TeamLog.UserLinkedAppLogInfo>, linkedDevices: Array<TeamLog.LinkedDeviceLogInfo>, linkedSharedFolders: Array<TeamLog.FolderLogInfo>) {
             self.linkedApps = linkedApps
             self.linkedDevices = linkedDevices
@@ -14094,24 +13774,24 @@ open class TeamLog {
     /// Information on sessions, in legacy format
     open class LegacyDeviceSessionLogInfo: TeamLog.DeviceSessionLogInfo {
         /// Session unique id. Might be missing due to historical data gap.
-        public let sessionInfo: TeamLog.SessionLogInfo?
+        open let sessionInfo: TeamLog.SessionLogInfo?
         /// The device name. Might be missing due to historical data gap.
-        public let displayName: String?
+        open let displayName: String?
         /// Is device managed by emm. Might be missing due to historical data gap.
-        public let isEmmManaged: Bool?
+        open let isEmmManaged: Bool?
         /// Information on the hosting platform. Might be missing due to historical data gap.
-        public let platform: String?
+        open let platform: String?
         /// The mac address of the last activity from this session. Might be missing due to historical data gap.
-        public let macAddress: String?
+        open let macAddress: String?
         /// The hosting OS version. Might be missing due to historical data gap.
-        public let osVersion: String?
+        open let osVersion: String?
         /// Information on the hosting device type. Might be missing due to historical data gap.
-        public let deviceType: String?
+        open let deviceType: String?
         /// The Dropbox client version. Might be missing due to historical data gap.
-        public let clientVersion: String?
+        open let clientVersion: String?
         /// Alternative unique device session id, instead of session id field. Might be missing due to historical data
         /// gap.
-        public let legacyUniqId: String?
+        open let legacyUniqId: String?
         public init(ipAddress: String? = nil, created: Date? = nil, updated: Date? = nil, sessionInfo: TeamLog.SessionLogInfo? = nil, displayName: String? = nil, isEmmManaged: Bool? = nil, platform: String? = nil, macAddress: String? = nil, osVersion: String? = nil, deviceType: String? = nil, clientVersion: String? = nil, legacyUniqId: String? = nil) {
             self.sessionInfo = sessionInfo
             nullableValidator(stringValidator())(displayName)
@@ -14250,11 +13930,11 @@ open class TeamLog {
     /// Failed to sign in.
     open class LoginFailDetails: CustomStringConvertible {
         /// Tells if the login device is EMM managed. Might be missing due to historical data gap.
-        public let isEmmManaged: Bool?
+        open let isEmmManaged: Bool?
         /// Login method.
-        public let loginMethod: TeamLog.LoginMethod
+        open let loginMethod: TeamLog.LoginMethod
         /// Error details.
-        public let errorDetails: TeamLog.FailureDetailsLogInfo
+        open let errorDetails: TeamLog.FailureDetailsLogInfo
         public init(loginMethod: TeamLog.LoginMethod, errorDetails: TeamLog.FailureDetailsLogInfo, isEmmManaged: Bool? = nil) {
             self.isEmmManaged = isEmmManaged
             self.loginMethod = loginMethod
@@ -14290,7 +13970,7 @@ open class TeamLog {
     /// The LoginFailType struct
     open class LoginFailType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -14380,9 +14060,9 @@ open class TeamLog {
     /// Signed in.
     open class LoginSuccessDetails: CustomStringConvertible {
         /// Tells if the login device is EMM managed. Might be missing due to historical data gap.
-        public let isEmmManaged: Bool?
+        open let isEmmManaged: Bool?
         /// Login method.
-        public let loginMethod: TeamLog.LoginMethod
+        open let loginMethod: TeamLog.LoginMethod
         public init(loginMethod: TeamLog.LoginMethod, isEmmManaged: Bool? = nil) {
             self.isEmmManaged = isEmmManaged
             self.loginMethod = loginMethod
@@ -14415,7 +14095,7 @@ open class TeamLog {
     /// The LoginSuccessType struct
     open class LoginSuccessType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -14470,7 +14150,7 @@ open class TeamLog {
     /// The LogoutType struct
     open class LogoutType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -14501,7 +14181,7 @@ open class TeamLog {
     /// Added team member name.
     open class MemberAddNameDetails: CustomStringConvertible {
         /// New user's name.
-        public let newValue: TeamLog.UserNameLogInfo
+        open let newValue: TeamLog.UserNameLogInfo
         public init(newValue: TeamLog.UserNameLogInfo) {
             self.newValue = newValue
         }
@@ -14531,7 +14211,7 @@ open class TeamLog {
     /// The MemberAddNameType struct
     open class MemberAddNameType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -14563,10 +14243,10 @@ open class TeamLog {
     open class MemberChangeAdminRoleDetails: CustomStringConvertible {
         /// New admin role. This field is relevant when the admin role is changed or whenthe user role changes from no
         /// admin rights to with admin rights.
-        public let newValue: TeamLog.AdminRole?
+        open let newValue: TeamLog.AdminRole?
         /// Previous admin role. This field is relevant when the admin role is changed or when the admin role is
         /// removed.
-        public let previousValue: TeamLog.AdminRole?
+        open let previousValue: TeamLog.AdminRole?
         public init(newValue: TeamLog.AdminRole? = nil, previousValue: TeamLog.AdminRole? = nil) {
             self.newValue = newValue
             self.previousValue = previousValue
@@ -14599,7 +14279,7 @@ open class TeamLog {
     /// The MemberChangeAdminRoleType struct
     open class MemberChangeAdminRoleType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -14630,9 +14310,9 @@ open class TeamLog {
     /// Changed team member email.
     open class MemberChangeEmailDetails: CustomStringConvertible {
         /// New email.
-        public let newValue: String
+        open let newValue: String
         /// Previous email. Might be missing due to historical data gap.
-        public let previousValue: String?
+        open let previousValue: String?
         public init(newValue: String, previousValue: String? = nil) {
             stringValidator(maxLength: 255)(newValue)
             self.newValue = newValue
@@ -14667,7 +14347,7 @@ open class TeamLog {
     /// The MemberChangeEmailType struct
     open class MemberChangeEmailType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -14698,9 +14378,9 @@ open class TeamLog {
     /// Changed membership type (limited/full) of member.
     open class MemberChangeMembershipTypeDetails: CustomStringConvertible {
         /// Previous membership type.
-        public let prevValue: TeamLog.TeamMembershipType
+        open let prevValue: TeamLog.TeamMembershipType
         /// New membership type.
-        public let newValue: TeamLog.TeamMembershipType
+        open let newValue: TeamLog.TeamMembershipType
         public init(prevValue: TeamLog.TeamMembershipType, newValue: TeamLog.TeamMembershipType) {
             self.prevValue = prevValue
             self.newValue = newValue
@@ -14733,7 +14413,7 @@ open class TeamLog {
     /// The MemberChangeMembershipTypeType struct
     open class MemberChangeMembershipTypeType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -14764,9 +14444,9 @@ open class TeamLog {
     /// Changed team member name.
     open class MemberChangeNameDetails: CustomStringConvertible {
         /// New user's name.
-        public let newValue: TeamLog.UserNameLogInfo
+        open let newValue: TeamLog.UserNameLogInfo
         /// Previous user's name. Might be missing due to historical data gap.
-        public let previousValue: TeamLog.UserNameLogInfo?
+        open let previousValue: TeamLog.UserNameLogInfo?
         public init(newValue: TeamLog.UserNameLogInfo, previousValue: TeamLog.UserNameLogInfo? = nil) {
             self.newValue = newValue
             self.previousValue = previousValue
@@ -14799,7 +14479,7 @@ open class TeamLog {
     /// The MemberChangeNameType struct
     open class MemberChangeNameType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -14830,11 +14510,11 @@ open class TeamLog {
     /// Changed member status (invited, joined, suspended, etc.).
     open class MemberChangeStatusDetails: CustomStringConvertible {
         /// Previous member status. Might be missing due to historical data gap.
-        public let previousValue: TeamLog.MemberStatus?
+        open let previousValue: TeamLog.MemberStatus?
         /// New member status.
-        public let newValue: TeamLog.MemberStatus
+        open let newValue: TeamLog.MemberStatus
         /// Additional information indicating the action taken that caused status change.
-        public let action: TeamLog.ActionDetails?
+        open let action: TeamLog.ActionDetails?
         public init(newValue: TeamLog.MemberStatus, previousValue: TeamLog.MemberStatus? = nil, action: TeamLog.ActionDetails? = nil) {
             self.previousValue = previousValue
             self.newValue = newValue
@@ -14870,7 +14550,7 @@ open class TeamLog {
     /// The MemberChangeStatusType struct
     open class MemberChangeStatusType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -14892,61 +14572,6 @@ open class TeamLog {
                 case .dictionary(let dict):
                     let description_ = Serialization._StringSerializer.deserialize(dict["description"] ?? .null)
                     return MemberChangeStatusType(description_: description_)
-                default:
-                    fatalError("Type error deserializing")
-            }
-        }
-    }
-
-    /// Cleared manually added contacts.
-    open class MemberDeleteManualContactsDetails: CustomStringConvertible {
-        public init() {
-        }
-        open var description: String {
-            return "\(SerializeUtil.prepareJSONForSerialization(MemberDeleteManualContactsDetailsSerializer().serialize(self)))"
-        }
-    }
-    open class MemberDeleteManualContactsDetailsSerializer: JSONSerializer {
-        public init() { }
-        open func serialize(_ value: MemberDeleteManualContactsDetails) -> JSON {
-            let output = [String: JSON]()
-            return .dictionary(output)
-        }
-        open func deserialize(_ json: JSON) -> MemberDeleteManualContactsDetails {
-            switch json {
-                case .dictionary(_):
-                    return MemberDeleteManualContactsDetails()
-                default:
-                    fatalError("Type error deserializing")
-            }
-        }
-    }
-
-    /// The MemberDeleteManualContactsType struct
-    open class MemberDeleteManualContactsType: CustomStringConvertible {
-        /// (no description)
-        public let description_: String
-        public init(description_: String) {
-            stringValidator()(description_)
-            self.description_ = description_
-        }
-        open var description: String {
-            return "\(SerializeUtil.prepareJSONForSerialization(MemberDeleteManualContactsTypeSerializer().serialize(self)))"
-        }
-    }
-    open class MemberDeleteManualContactsTypeSerializer: JSONSerializer {
-        public init() { }
-        open func serialize(_ value: MemberDeleteManualContactsType) -> JSON {
-            let output = [ 
-            "description": Serialization._StringSerializer.serialize(value.description_),
-            ]
-            return .dictionary(output)
-        }
-        open func deserialize(_ json: JSON) -> MemberDeleteManualContactsType {
-            switch json {
-                case .dictionary(let dict):
-                    let description_ = Serialization._StringSerializer.deserialize(dict["description"] ?? .null)
-                    return MemberDeleteManualContactsType(description_: description_)
                 default:
                     fatalError("Type error deserializing")
             }
@@ -14980,7 +14605,7 @@ open class TeamLog {
     /// The MemberPermanentlyDeleteAccountContentsType struct
     open class MemberPermanentlyDeleteAccountContentsType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -15070,9 +14695,9 @@ open class TeamLog {
     /// Changed whether users can find team when not invited.
     open class MemberRequestsChangePolicyDetails: CustomStringConvertible {
         /// New member change requests policy.
-        public let newValue: TeamLog.MemberRequestsPolicy
+        open let newValue: TeamLog.MemberRequestsPolicy
         /// Previous member change requests policy. Might be missing due to historical data gap.
-        public let previousValue: TeamLog.MemberRequestsPolicy?
+        open let previousValue: TeamLog.MemberRequestsPolicy?
         public init(newValue: TeamLog.MemberRequestsPolicy, previousValue: TeamLog.MemberRequestsPolicy? = nil) {
             self.newValue = newValue
             self.previousValue = previousValue
@@ -15105,7 +14730,7 @@ open class TeamLog {
     /// The MemberRequestsChangePolicyType struct
     open class MemberRequestsChangePolicyType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -15195,7 +14820,7 @@ open class TeamLog {
     /// Set custom member space limit.
     open class MemberSpaceLimitsAddCustomQuotaDetails: CustomStringConvertible {
         /// New custom quota value in bytes.
-        public let newValue: UInt64
+        open let newValue: UInt64
         public init(newValue: UInt64) {
             comparableValidator()(newValue)
             self.newValue = newValue
@@ -15226,7 +14851,7 @@ open class TeamLog {
     /// The MemberSpaceLimitsAddCustomQuotaType struct
     open class MemberSpaceLimitsAddCustomQuotaType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -15281,7 +14906,7 @@ open class TeamLog {
     /// The MemberSpaceLimitsAddExceptionType struct
     open class MemberSpaceLimitsAddExceptionType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -15312,9 +14937,9 @@ open class TeamLog {
     /// Changed member space limit type for team.
     open class MemberSpaceLimitsChangeCapsTypePolicyDetails: CustomStringConvertible {
         /// Previous space limit type.
-        public let previousValue: TeamLog.SpaceCapsType
+        open let previousValue: TeamLog.SpaceCapsType
         /// New space limit type.
-        public let newValue: TeamLog.SpaceCapsType
+        open let newValue: TeamLog.SpaceCapsType
         public init(previousValue: TeamLog.SpaceCapsType, newValue: TeamLog.SpaceCapsType) {
             self.previousValue = previousValue
             self.newValue = newValue
@@ -15347,7 +14972,7 @@ open class TeamLog {
     /// The MemberSpaceLimitsChangeCapsTypePolicyType struct
     open class MemberSpaceLimitsChangeCapsTypePolicyType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -15378,9 +15003,9 @@ open class TeamLog {
     /// Changed custom member space limit.
     open class MemberSpaceLimitsChangeCustomQuotaDetails: CustomStringConvertible {
         /// Previous custom quota value in bytes.
-        public let previousValue: UInt64
+        open let previousValue: UInt64
         /// New custom quota value in bytes.
-        public let newValue: UInt64
+        open let newValue: UInt64
         public init(previousValue: UInt64, newValue: UInt64) {
             comparableValidator()(previousValue)
             self.previousValue = previousValue
@@ -15415,7 +15040,7 @@ open class TeamLog {
     /// The MemberSpaceLimitsChangeCustomQuotaType struct
     open class MemberSpaceLimitsChangeCustomQuotaType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -15446,9 +15071,9 @@ open class TeamLog {
     /// Changed team default member space limit.
     open class MemberSpaceLimitsChangePolicyDetails: CustomStringConvertible {
         /// Previous team default limit value in bytes. Might be missing due to historical data gap.
-        public let previousValue: UInt64?
+        open let previousValue: UInt64?
         /// New team default limit value in bytes. Might be missing due to historical data gap.
-        public let newValue: UInt64?
+        open let newValue: UInt64?
         public init(previousValue: UInt64? = nil, newValue: UInt64? = nil) {
             nullableValidator(comparableValidator())(previousValue)
             self.previousValue = previousValue
@@ -15483,7 +15108,7 @@ open class TeamLog {
     /// The MemberSpaceLimitsChangePolicyType struct
     open class MemberSpaceLimitsChangePolicyType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -15514,9 +15139,9 @@ open class TeamLog {
     /// Changed space limit status.
     open class MemberSpaceLimitsChangeStatusDetails: CustomStringConvertible {
         /// Previous storage quota status.
-        public let previousValue: TeamLog.SpaceLimitsStatus
+        open let previousValue: TeamLog.SpaceLimitsStatus
         /// New storage quota status.
-        public let newValue: TeamLog.SpaceLimitsStatus
+        open let newValue: TeamLog.SpaceLimitsStatus
         public init(previousValue: TeamLog.SpaceLimitsStatus, newValue: TeamLog.SpaceLimitsStatus) {
             self.previousValue = previousValue
             self.newValue = newValue
@@ -15549,7 +15174,7 @@ open class TeamLog {
     /// The MemberSpaceLimitsChangeStatusType struct
     open class MemberSpaceLimitsChangeStatusType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -15604,7 +15229,7 @@ open class TeamLog {
     /// The MemberSpaceLimitsRemoveCustomQuotaType struct
     open class MemberSpaceLimitsRemoveCustomQuotaType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -15659,7 +15284,7 @@ open class TeamLog {
     /// The MemberSpaceLimitsRemoveExceptionType struct
     open class MemberSpaceLimitsRemoveExceptionType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -15765,7 +15390,7 @@ open class TeamLog {
     /// Suggested person to add to team.
     open class MemberSuggestDetails: CustomStringConvertible {
         /// suggested users emails.
-        public let suggestedMembers: Array<String>
+        open let suggestedMembers: Array<String>
         public init(suggestedMembers: Array<String>) {
             arrayValidator(itemValidator: stringValidator(maxLength: 255))(suggestedMembers)
             self.suggestedMembers = suggestedMembers
@@ -15796,7 +15421,7 @@ open class TeamLog {
     /// The MemberSuggestType struct
     open class MemberSuggestType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -15827,9 +15452,9 @@ open class TeamLog {
     /// Enabled/disabled option for team members to suggest people to add to team.
     open class MemberSuggestionsChangePolicyDetails: CustomStringConvertible {
         /// New team member suggestions policy.
-        public let newValue: TeamLog.MemberSuggestionsPolicy
+        open let newValue: TeamLog.MemberSuggestionsPolicy
         /// Previous team member suggestions policy. Might be missing due to historical data gap.
-        public let previousValue: TeamLog.MemberSuggestionsPolicy?
+        open let previousValue: TeamLog.MemberSuggestionsPolicy?
         public init(newValue: TeamLog.MemberSuggestionsPolicy, previousValue: TeamLog.MemberSuggestionsPolicy? = nil) {
             self.newValue = newValue
             self.previousValue = previousValue
@@ -15862,7 +15487,7 @@ open class TeamLog {
     /// The MemberSuggestionsChangePolicyType struct
     open class MemberSuggestionsChangePolicyType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -15968,7 +15593,7 @@ open class TeamLog {
     /// The MemberTransferAccountContentsType struct
     open class MemberTransferAccountContentsType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -15999,9 +15624,9 @@ open class TeamLog {
     /// Enabled/disabled Microsoft Office add-in.
     open class MicrosoftOfficeAddinChangePolicyDetails: CustomStringConvertible {
         /// New Microsoft Office addin policy.
-        public let newValue: TeamLog.MicrosoftOfficeAddinPolicy
+        open let newValue: TeamLog.MicrosoftOfficeAddinPolicy
         /// Previous Microsoft Office addin policy. Might be missing due to historical data gap.
-        public let previousValue: TeamLog.MicrosoftOfficeAddinPolicy?
+        open let previousValue: TeamLog.MicrosoftOfficeAddinPolicy?
         public init(newValue: TeamLog.MicrosoftOfficeAddinPolicy, previousValue: TeamLog.MicrosoftOfficeAddinPolicy? = nil) {
             self.newValue = newValue
             self.previousValue = previousValue
@@ -16034,7 +15659,7 @@ open class TeamLog {
     /// The MicrosoftOfficeAddinChangePolicyType struct
     open class MicrosoftOfficeAddinChangePolicyType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -16117,7 +15742,7 @@ open class TeamLog {
     /// a result.
     open class MissingDetails: CustomStringConvertible {
         /// All the data that could be retrieved and converted from the source event.
-        public let sourceEventFields: String?
+        open let sourceEventFields: String?
         public init(sourceEventFields: String? = nil) {
             nullableValidator(stringValidator())(sourceEventFields)
             self.sourceEventFields = sourceEventFields
@@ -16148,17 +15773,17 @@ open class TeamLog {
     /// Information about linked Dropbox mobile client sessions
     open class MobileDeviceSessionLogInfo: TeamLog.DeviceSessionLogInfo {
         /// Mobile session unique id. Might be missing due to historical data gap.
-        public let sessionInfo: TeamLog.MobileSessionLogInfo?
+        open let sessionInfo: TeamLog.MobileSessionLogInfo?
         /// The device name.
-        public let deviceName: String
+        open let deviceName: String
         /// The mobile application type.
-        public let clientType: Team.MobileClientPlatform
+        open let clientType: Team.MobileClientPlatform
         /// The Dropbox client version.
-        public let clientVersion: String?
+        open let clientVersion: String?
         /// The hosting OS version.
-        public let osVersion: String?
+        open let osVersion: String?
         /// last carrier used by the device.
-        public let lastCarrier: String?
+        open let lastCarrier: String?
         public init(deviceName: String, clientType: Team.MobileClientPlatform, ipAddress: String? = nil, created: Date? = nil, updated: Date? = nil, sessionInfo: TeamLog.MobileSessionLogInfo? = nil, clientVersion: String? = nil, osVersion: String? = nil, lastCarrier: String? = nil) {
             self.sessionInfo = sessionInfo
             stringValidator()(deviceName)
@@ -16239,9 +15864,9 @@ open class TeamLog {
     /// Namespace relative path details.
     open class NamespaceRelativePathLogInfo: CustomStringConvertible {
         /// Namespace ID. Might be missing due to historical data gap.
-        public let nsId: String?
+        open let nsId: String?
         /// A path relative to the specified namespace ID. Might be missing due to historical data gap.
-        public let relativePath: String?
+        open let relativePath: String?
         public init(nsId: String? = nil, relativePath: String? = nil) {
             nullableValidator(stringValidator())(nsId)
             self.nsId = nsId
@@ -16276,9 +15901,9 @@ open class TeamLog {
     /// Enabled/disabled network control.
     open class NetworkControlChangePolicyDetails: CustomStringConvertible {
         /// New network control policy.
-        public let newValue: TeamLog.NetworkControlPolicy
+        open let newValue: TeamLog.NetworkControlPolicy
         /// Previous network control policy. Might be missing due to historical data gap.
-        public let previousValue: TeamLog.NetworkControlPolicy?
+        open let previousValue: TeamLog.NetworkControlPolicy?
         public init(newValue: TeamLog.NetworkControlPolicy, previousValue: TeamLog.NetworkControlPolicy? = nil) {
             self.newValue = newValue
             self.previousValue = previousValue
@@ -16311,7 +15936,7 @@ open class TeamLog {
     /// The NetworkControlChangePolicyType struct
     open class NetworkControlChangePolicyType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -16393,15 +16018,15 @@ open class TeamLog {
     /// User's logged information.
     open class UserLogInfo: CustomStringConvertible {
         /// User unique ID. Might be missing due to historical data gap.
-        public let accountId: String?
+        open let accountId: String?
         /// User display name. Might be missing due to historical data gap.
-        public let displayName: String?
+        open let displayName: String?
         /// User email address. Might be missing due to historical data gap.
-        public let email: String?
+        open let email: String?
         public init(accountId: String? = nil, displayName: String? = nil, email: String? = nil) {
             nullableValidator(stringValidator(minLength: 40, maxLength: 40))(accountId)
             self.accountId = accountId
-            nullableValidator(stringValidator())(displayName)
+            nullableValidator(stringValidator(minLength: 1))(displayName)
             self.displayName = displayName
             nullableValidator(stringValidator(maxLength: 255))(email)
             self.email = email
@@ -16424,11 +16049,6 @@ open class TeamLog {
                         output[k] = v
                     }
                     output[".tag"] = .str("team_member")
-                case let trustedNonTeamMember as TeamLog.TrustedNonTeamMemberLogInfo:
-                    for (k, v) in Serialization.getFields(TeamLog.TrustedNonTeamMemberLogInfoSerializer().serialize(trustedNonTeamMember)) {
-                        output[k] = v
-                    }
-                    output[".tag"] = .str("trusted_non_team_member")
                 case let nonTeamMember as TeamLog.NonTeamMemberLogInfo:
                     for (k, v) in Serialization.getFields(TeamLog.NonTeamMemberLogInfoSerializer().serialize(nonTeamMember)) {
                         output[k] = v
@@ -16445,8 +16065,6 @@ open class TeamLog {
                     switch tag {
                         case "team_member":
                             return TeamLog.TeamMemberLogInfoSerializer().deserialize(json)
-                        case "trusted_non_team_member":
-                            return TeamLog.TrustedNonTeamMemberLogInfoSerializer().deserialize(json)
                         case "non_team_member":
                             return TeamLog.NonTeamMemberLogInfoSerializer().deserialize(json)
                         default:
@@ -16517,7 +16135,7 @@ open class TeamLog {
     /// The NoteAclInviteOnlyType struct
     open class NoteAclInviteOnlyType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -16572,7 +16190,7 @@ open class TeamLog {
     /// The NoteAclLinkType struct
     open class NoteAclLinkType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -16627,7 +16245,7 @@ open class TeamLog {
     /// The NoteAclTeamLinkType struct
     open class NoteAclTeamLinkType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -16682,7 +16300,7 @@ open class TeamLog {
     /// The NoteShareReceiveType struct
     open class NoteShareReceiveType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -16737,7 +16355,7 @@ open class TeamLog {
     /// The NoteSharedType struct
     open class NoteSharedType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -16792,7 +16410,7 @@ open class TeamLog {
     /// The OpenNoteSharedType struct
     open class OpenNoteSharedType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -16823,9 +16441,9 @@ open class TeamLog {
     /// The origin from which the actor performed the action.
     open class OriginLogInfo: CustomStringConvertible {
         /// Geographic location details.
-        public let geoLocation: TeamLog.GeoLocationLogInfo?
+        open let geoLocation: TeamLog.GeoLocationLogInfo?
         /// The method that was used to perform the action.
-        public let accessMethod: TeamLog.AccessMethodLogInfo
+        open let accessMethod: TeamLog.AccessMethodLogInfo
         public init(accessMethod: TeamLog.AccessMethodLogInfo, geoLocation: TeamLog.GeoLocationLogInfo? = nil) {
             self.geoLocation = geoLocation
             self.accessMethod = accessMethod
@@ -16941,7 +16559,7 @@ open class TeamLog {
     /// The PaperAdminExportStartType struct
     open class PaperAdminExportStartType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -16972,9 +16590,9 @@ open class TeamLog {
     /// Changed whether Dropbox Paper, when enabled, is deployed to all members or to specific members.
     open class PaperChangeDeploymentPolicyDetails: CustomStringConvertible {
         /// New Dropbox Paper deployment policy.
-        public let newValue: TeamPolicies.PaperDeploymentPolicy
+        open let newValue: TeamPolicies.PaperDeploymentPolicy
         /// Previous Dropbox Paper deployment policy. Might be missing due to historical data gap.
-        public let previousValue: TeamPolicies.PaperDeploymentPolicy?
+        open let previousValue: TeamPolicies.PaperDeploymentPolicy?
         public init(newValue: TeamPolicies.PaperDeploymentPolicy, previousValue: TeamPolicies.PaperDeploymentPolicy? = nil) {
             self.newValue = newValue
             self.previousValue = previousValue
@@ -17007,7 +16625,7 @@ open class TeamLog {
     /// The PaperChangeDeploymentPolicyType struct
     open class PaperChangeDeploymentPolicyType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -17038,7 +16656,7 @@ open class TeamLog {
     /// Changed whether non-members can view Paper docs with link.
     open class PaperChangeMemberLinkPolicyDetails: CustomStringConvertible {
         /// New paper external link accessibility policy.
-        public let newValue: TeamLog.PaperMemberPolicy
+        open let newValue: TeamLog.PaperMemberPolicy
         public init(newValue: TeamLog.PaperMemberPolicy) {
             self.newValue = newValue
         }
@@ -17068,7 +16686,7 @@ open class TeamLog {
     /// The PaperChangeMemberLinkPolicyType struct
     open class PaperChangeMemberLinkPolicyType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -17100,9 +16718,9 @@ open class TeamLog {
     /// anyone by default.
     open class PaperChangeMemberPolicyDetails: CustomStringConvertible {
         /// New paper external accessibility policy.
-        public let newValue: TeamLog.PaperMemberPolicy
+        open let newValue: TeamLog.PaperMemberPolicy
         /// Previous paper external accessibility policy. Might be missing due to historical data gap.
-        public let previousValue: TeamLog.PaperMemberPolicy?
+        open let previousValue: TeamLog.PaperMemberPolicy?
         public init(newValue: TeamLog.PaperMemberPolicy, previousValue: TeamLog.PaperMemberPolicy? = nil) {
             self.newValue = newValue
             self.previousValue = previousValue
@@ -17135,7 +16753,7 @@ open class TeamLog {
     /// The PaperChangeMemberPolicyType struct
     open class PaperChangeMemberPolicyType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -17166,9 +16784,9 @@ open class TeamLog {
     /// Enabled/disabled Dropbox Paper for team.
     open class PaperChangePolicyDetails: CustomStringConvertible {
         /// New Dropbox Paper policy.
-        public let newValue: TeamPolicies.PaperEnabledPolicy
+        open let newValue: TeamPolicies.PaperEnabledPolicy
         /// Previous Dropbox Paper policy. Might be missing due to historical data gap.
-        public let previousValue: TeamPolicies.PaperEnabledPolicy?
+        open let previousValue: TeamPolicies.PaperEnabledPolicy?
         public init(newValue: TeamPolicies.PaperEnabledPolicy, previousValue: TeamPolicies.PaperEnabledPolicy? = nil) {
             self.newValue = newValue
             self.previousValue = previousValue
@@ -17201,7 +16819,7 @@ open class TeamLog {
     /// The PaperChangePolicyType struct
     open class PaperChangePolicyType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -17232,7 +16850,7 @@ open class TeamLog {
     /// Added team member to Paper doc/folder.
     open class PaperContentAddMemberDetails: CustomStringConvertible {
         /// Event unique identifier.
-        public let eventUuid: String
+        open let eventUuid: String
         public init(eventUuid: String) {
             stringValidator()(eventUuid)
             self.eventUuid = eventUuid
@@ -17263,7 +16881,7 @@ open class TeamLog {
     /// The PaperContentAddMemberType struct
     open class PaperContentAddMemberType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -17294,11 +16912,11 @@ open class TeamLog {
     /// Added Paper doc/folder to folder.
     open class PaperContentAddToFolderDetails: CustomStringConvertible {
         /// Event unique identifier.
-        public let eventUuid: String
+        open let eventUuid: String
         /// Target asset position in the Assets list.
-        public let targetAssetIndex: UInt64
+        open let targetAssetIndex: UInt64
         /// Parent asset position in the Assets list.
-        public let parentAssetIndex: UInt64
+        open let parentAssetIndex: UInt64
         public init(eventUuid: String, targetAssetIndex: UInt64, parentAssetIndex: UInt64) {
             stringValidator()(eventUuid)
             self.eventUuid = eventUuid
@@ -17337,7 +16955,7 @@ open class TeamLog {
     /// The PaperContentAddToFolderType struct
     open class PaperContentAddToFolderType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -17368,7 +16986,7 @@ open class TeamLog {
     /// Archived Paper doc/folder.
     open class PaperContentArchiveDetails: CustomStringConvertible {
         /// Event unique identifier.
-        public let eventUuid: String
+        open let eventUuid: String
         public init(eventUuid: String) {
             stringValidator()(eventUuid)
             self.eventUuid = eventUuid
@@ -17399,7 +17017,7 @@ open class TeamLog {
     /// The PaperContentArchiveType struct
     open class PaperContentArchiveType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -17430,7 +17048,7 @@ open class TeamLog {
     /// Created Paper doc/folder.
     open class PaperContentCreateDetails: CustomStringConvertible {
         /// Event unique identifier.
-        public let eventUuid: String
+        open let eventUuid: String
         public init(eventUuid: String) {
             stringValidator()(eventUuid)
             self.eventUuid = eventUuid
@@ -17461,7 +17079,7 @@ open class TeamLog {
     /// The PaperContentCreateType struct
     open class PaperContentCreateType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -17492,7 +17110,7 @@ open class TeamLog {
     /// Permanently deleted Paper doc/folder.
     open class PaperContentPermanentlyDeleteDetails: CustomStringConvertible {
         /// Event unique identifier.
-        public let eventUuid: String
+        open let eventUuid: String
         public init(eventUuid: String) {
             stringValidator()(eventUuid)
             self.eventUuid = eventUuid
@@ -17523,7 +17141,7 @@ open class TeamLog {
     /// The PaperContentPermanentlyDeleteType struct
     open class PaperContentPermanentlyDeleteType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -17554,11 +17172,11 @@ open class TeamLog {
     /// Removed Paper doc/folder from folder.
     open class PaperContentRemoveFromFolderDetails: CustomStringConvertible {
         /// Event unique identifier.
-        public let eventUuid: String
+        open let eventUuid: String
         /// Target asset position in the Assets list.
-        public let targetAssetIndex: UInt64
+        open let targetAssetIndex: UInt64
         /// Parent asset position in the Assets list.
-        public let parentAssetIndex: UInt64
+        open let parentAssetIndex: UInt64
         public init(eventUuid: String, targetAssetIndex: UInt64, parentAssetIndex: UInt64) {
             stringValidator()(eventUuid)
             self.eventUuid = eventUuid
@@ -17597,7 +17215,7 @@ open class TeamLog {
     /// The PaperContentRemoveFromFolderType struct
     open class PaperContentRemoveFromFolderType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -17628,7 +17246,7 @@ open class TeamLog {
     /// Removed team member from Paper doc/folder.
     open class PaperContentRemoveMemberDetails: CustomStringConvertible {
         /// Event unique identifier.
-        public let eventUuid: String
+        open let eventUuid: String
         public init(eventUuid: String) {
             stringValidator()(eventUuid)
             self.eventUuid = eventUuid
@@ -17659,7 +17277,7 @@ open class TeamLog {
     /// The PaperContentRemoveMemberType struct
     open class PaperContentRemoveMemberType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -17690,7 +17308,7 @@ open class TeamLog {
     /// Renamed Paper doc/folder.
     open class PaperContentRenameDetails: CustomStringConvertible {
         /// Event unique identifier.
-        public let eventUuid: String
+        open let eventUuid: String
         public init(eventUuid: String) {
             stringValidator()(eventUuid)
             self.eventUuid = eventUuid
@@ -17721,7 +17339,7 @@ open class TeamLog {
     /// The PaperContentRenameType struct
     open class PaperContentRenameType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -17752,7 +17370,7 @@ open class TeamLog {
     /// Restored archived Paper doc/folder.
     open class PaperContentRestoreDetails: CustomStringConvertible {
         /// Event unique identifier.
-        public let eventUuid: String
+        open let eventUuid: String
         public init(eventUuid: String) {
             stringValidator()(eventUuid)
             self.eventUuid = eventUuid
@@ -17783,7 +17401,7 @@ open class TeamLog {
     /// The PaperContentRestoreType struct
     open class PaperContentRestoreType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -17814,9 +17432,9 @@ open class TeamLog {
     /// Added Paper doc comment.
     open class PaperDocAddCommentDetails: CustomStringConvertible {
         /// Event unique identifier.
-        public let eventUuid: String
+        open let eventUuid: String
         /// Comment text. Might be missing due to historical data gap.
-        public let commentText: String?
+        open let commentText: String?
         public init(eventUuid: String, commentText: String? = nil) {
             stringValidator()(eventUuid)
             self.eventUuid = eventUuid
@@ -17851,7 +17469,7 @@ open class TeamLog {
     /// The PaperDocAddCommentType struct
     open class PaperDocAddCommentType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -17882,9 +17500,9 @@ open class TeamLog {
     /// Changed team member permissions for Paper doc.
     open class PaperDocChangeMemberRoleDetails: CustomStringConvertible {
         /// Event unique identifier.
-        public let eventUuid: String
+        open let eventUuid: String
         /// Paper doc access type.
-        public let accessType: TeamLog.PaperAccessType
+        open let accessType: TeamLog.PaperAccessType
         public init(eventUuid: String, accessType: TeamLog.PaperAccessType) {
             stringValidator()(eventUuid)
             self.eventUuid = eventUuid
@@ -17918,7 +17536,7 @@ open class TeamLog {
     /// The PaperDocChangeMemberRoleType struct
     open class PaperDocChangeMemberRoleType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -17949,11 +17567,11 @@ open class TeamLog {
     /// Changed sharing setting for Paper doc.
     open class PaperDocChangeSharingPolicyDetails: CustomStringConvertible {
         /// Event unique identifier.
-        public let eventUuid: String
+        open let eventUuid: String
         /// Sharing policy with external users. Might be missing due to historical data gap.
-        public let publicSharingPolicy: String?
+        open let publicSharingPolicy: String?
         /// Sharing policy with team. Might be missing due to historical data gap.
-        public let teamSharingPolicy: String?
+        open let teamSharingPolicy: String?
         public init(eventUuid: String, publicSharingPolicy: String? = nil, teamSharingPolicy: String? = nil) {
             stringValidator()(eventUuid)
             self.eventUuid = eventUuid
@@ -17992,7 +17610,7 @@ open class TeamLog {
     /// The PaperDocChangeSharingPolicyType struct
     open class PaperDocChangeSharingPolicyType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -18023,11 +17641,11 @@ open class TeamLog {
     /// Followed/unfollowed Paper doc.
     open class PaperDocChangeSubscriptionDetails: CustomStringConvertible {
         /// Event unique identifier.
-        public let eventUuid: String
+        open let eventUuid: String
         /// New doc subscription level.
-        public let newSubscriptionLevel: String
+        open let newSubscriptionLevel: String
         /// Previous doc subscription level. Might be missing due to historical data gap.
-        public let previousSubscriptionLevel: String?
+        open let previousSubscriptionLevel: String?
         public init(eventUuid: String, newSubscriptionLevel: String, previousSubscriptionLevel: String? = nil) {
             stringValidator()(eventUuid)
             self.eventUuid = eventUuid
@@ -18066,7 +17684,7 @@ open class TeamLog {
     /// The PaperDocChangeSubscriptionType struct
     open class PaperDocChangeSubscriptionType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -18097,9 +17715,9 @@ open class TeamLog {
     /// Deleted Paper doc comment.
     open class PaperDocDeleteCommentDetails: CustomStringConvertible {
         /// Event unique identifier.
-        public let eventUuid: String
+        open let eventUuid: String
         /// Comment text. Might be missing due to historical data gap.
-        public let commentText: String?
+        open let commentText: String?
         public init(eventUuid: String, commentText: String? = nil) {
             stringValidator()(eventUuid)
             self.eventUuid = eventUuid
@@ -18134,7 +17752,7 @@ open class TeamLog {
     /// The PaperDocDeleteCommentType struct
     open class PaperDocDeleteCommentType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -18165,7 +17783,7 @@ open class TeamLog {
     /// Archived Paper doc.
     open class PaperDocDeletedDetails: CustomStringConvertible {
         /// Event unique identifier.
-        public let eventUuid: String
+        open let eventUuid: String
         public init(eventUuid: String) {
             stringValidator()(eventUuid)
             self.eventUuid = eventUuid
@@ -18196,7 +17814,7 @@ open class TeamLog {
     /// The PaperDocDeletedType struct
     open class PaperDocDeletedType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -18227,9 +17845,9 @@ open class TeamLog {
     /// Downloaded Paper doc in specific format.
     open class PaperDocDownloadDetails: CustomStringConvertible {
         /// Event unique identifier.
-        public let eventUuid: String
+        open let eventUuid: String
         /// Export file format.
-        public let exportFileFormat: TeamLog.PaperDownloadFormat
+        open let exportFileFormat: TeamLog.PaperDownloadFormat
         public init(eventUuid: String, exportFileFormat: TeamLog.PaperDownloadFormat) {
             stringValidator()(eventUuid)
             self.eventUuid = eventUuid
@@ -18263,7 +17881,7 @@ open class TeamLog {
     /// The PaperDocDownloadType struct
     open class PaperDocDownloadType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -18294,9 +17912,9 @@ open class TeamLog {
     /// Edited Paper doc comment.
     open class PaperDocEditCommentDetails: CustomStringConvertible {
         /// Event unique identifier.
-        public let eventUuid: String
+        open let eventUuid: String
         /// Comment text. Might be missing due to historical data gap.
-        public let commentText: String?
+        open let commentText: String?
         public init(eventUuid: String, commentText: String? = nil) {
             stringValidator()(eventUuid)
             self.eventUuid = eventUuid
@@ -18331,7 +17949,7 @@ open class TeamLog {
     /// The PaperDocEditCommentType struct
     open class PaperDocEditCommentType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -18362,7 +17980,7 @@ open class TeamLog {
     /// Edited Paper doc.
     open class PaperDocEditDetails: CustomStringConvertible {
         /// Event unique identifier.
-        public let eventUuid: String
+        open let eventUuid: String
         public init(eventUuid: String) {
             stringValidator()(eventUuid)
             self.eventUuid = eventUuid
@@ -18393,7 +18011,7 @@ open class TeamLog {
     /// The PaperDocEditType struct
     open class PaperDocEditType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -18424,7 +18042,7 @@ open class TeamLog {
     /// Followed Paper doc.
     open class PaperDocFollowedDetails: CustomStringConvertible {
         /// Event unique identifier.
-        public let eventUuid: String
+        open let eventUuid: String
         public init(eventUuid: String) {
             stringValidator()(eventUuid)
             self.eventUuid = eventUuid
@@ -18455,7 +18073,7 @@ open class TeamLog {
     /// The PaperDocFollowedType struct
     open class PaperDocFollowedType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -18486,7 +18104,7 @@ open class TeamLog {
     /// Mentioned team member in Paper doc.
     open class PaperDocMentionDetails: CustomStringConvertible {
         /// Event unique identifier.
-        public let eventUuid: String
+        open let eventUuid: String
         public init(eventUuid: String) {
             stringValidator()(eventUuid)
             self.eventUuid = eventUuid
@@ -18517,7 +18135,7 @@ open class TeamLog {
     /// The PaperDocMentionType struct
     open class PaperDocMentionType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -18545,84 +18163,10 @@ open class TeamLog {
         }
     }
 
-    /// Transferred ownership of Paper doc.
-    open class PaperDocOwnershipChangedDetails: CustomStringConvertible {
-        /// Event unique identifier.
-        public let eventUuid: String
-        /// Previous owner.
-        public let oldOwnerUserId: String?
-        /// New owner.
-        public let newOwnerUserId: String
-        public init(eventUuid: String, newOwnerUserId: String, oldOwnerUserId: String? = nil) {
-            stringValidator()(eventUuid)
-            self.eventUuid = eventUuid
-            nullableValidator(stringValidator(minLength: 40, maxLength: 40))(oldOwnerUserId)
-            self.oldOwnerUserId = oldOwnerUserId
-            stringValidator(minLength: 40, maxLength: 40)(newOwnerUserId)
-            self.newOwnerUserId = newOwnerUserId
-        }
-        open var description: String {
-            return "\(SerializeUtil.prepareJSONForSerialization(PaperDocOwnershipChangedDetailsSerializer().serialize(self)))"
-        }
-    }
-    open class PaperDocOwnershipChangedDetailsSerializer: JSONSerializer {
-        public init() { }
-        open func serialize(_ value: PaperDocOwnershipChangedDetails) -> JSON {
-            let output = [ 
-            "event_uuid": Serialization._StringSerializer.serialize(value.eventUuid),
-            "new_owner_user_id": Serialization._StringSerializer.serialize(value.newOwnerUserId),
-            "old_owner_user_id": NullableSerializer(Serialization._StringSerializer).serialize(value.oldOwnerUserId),
-            ]
-            return .dictionary(output)
-        }
-        open func deserialize(_ json: JSON) -> PaperDocOwnershipChangedDetails {
-            switch json {
-                case .dictionary(let dict):
-                    let eventUuid = Serialization._StringSerializer.deserialize(dict["event_uuid"] ?? .null)
-                    let newOwnerUserId = Serialization._StringSerializer.deserialize(dict["new_owner_user_id"] ?? .null)
-                    let oldOwnerUserId = NullableSerializer(Serialization._StringSerializer).deserialize(dict["old_owner_user_id"] ?? .null)
-                    return PaperDocOwnershipChangedDetails(eventUuid: eventUuid, newOwnerUserId: newOwnerUserId, oldOwnerUserId: oldOwnerUserId)
-                default:
-                    fatalError("Type error deserializing")
-            }
-        }
-    }
-
-    /// The PaperDocOwnershipChangedType struct
-    open class PaperDocOwnershipChangedType: CustomStringConvertible {
-        /// (no description)
-        public let description_: String
-        public init(description_: String) {
-            stringValidator()(description_)
-            self.description_ = description_
-        }
-        open var description: String {
-            return "\(SerializeUtil.prepareJSONForSerialization(PaperDocOwnershipChangedTypeSerializer().serialize(self)))"
-        }
-    }
-    open class PaperDocOwnershipChangedTypeSerializer: JSONSerializer {
-        public init() { }
-        open func serialize(_ value: PaperDocOwnershipChangedType) -> JSON {
-            let output = [ 
-            "description": Serialization._StringSerializer.serialize(value.description_),
-            ]
-            return .dictionary(output)
-        }
-        open func deserialize(_ json: JSON) -> PaperDocOwnershipChangedType {
-            switch json {
-                case .dictionary(let dict):
-                    let description_ = Serialization._StringSerializer.deserialize(dict["description"] ?? .null)
-                    return PaperDocOwnershipChangedType(description_: description_)
-                default:
-                    fatalError("Type error deserializing")
-            }
-        }
-    }
-
     /// Requested access to Paper doc.
     open class PaperDocRequestAccessDetails: CustomStringConvertible {
         /// Event unique identifier.
-        public let eventUuid: String
+        open let eventUuid: String
         public init(eventUuid: String) {
             stringValidator()(eventUuid)
             self.eventUuid = eventUuid
@@ -18653,7 +18197,7 @@ open class TeamLog {
     /// The PaperDocRequestAccessType struct
     open class PaperDocRequestAccessType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -18684,9 +18228,9 @@ open class TeamLog {
     /// Resolved Paper doc comment.
     open class PaperDocResolveCommentDetails: CustomStringConvertible {
         /// Event unique identifier.
-        public let eventUuid: String
+        open let eventUuid: String
         /// Comment text. Might be missing due to historical data gap.
-        public let commentText: String?
+        open let commentText: String?
         public init(eventUuid: String, commentText: String? = nil) {
             stringValidator()(eventUuid)
             self.eventUuid = eventUuid
@@ -18721,7 +18265,7 @@ open class TeamLog {
     /// The PaperDocResolveCommentType struct
     open class PaperDocResolveCommentType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -18752,7 +18296,7 @@ open class TeamLog {
     /// Restored Paper doc to previous version.
     open class PaperDocRevertDetails: CustomStringConvertible {
         /// Event unique identifier.
-        public let eventUuid: String
+        open let eventUuid: String
         public init(eventUuid: String) {
             stringValidator()(eventUuid)
             self.eventUuid = eventUuid
@@ -18783,7 +18327,7 @@ open class TeamLog {
     /// The PaperDocRevertType struct
     open class PaperDocRevertType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -18814,7 +18358,7 @@ open class TeamLog {
     /// Shared Paper doc via Slack.
     open class PaperDocSlackShareDetails: CustomStringConvertible {
         /// Event unique identifier.
-        public let eventUuid: String
+        open let eventUuid: String
         public init(eventUuid: String) {
             stringValidator()(eventUuid)
             self.eventUuid = eventUuid
@@ -18845,7 +18389,7 @@ open class TeamLog {
     /// The PaperDocSlackShareType struct
     open class PaperDocSlackShareType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -18876,7 +18420,7 @@ open class TeamLog {
     /// Shared Paper doc with team member.
     open class PaperDocTeamInviteDetails: CustomStringConvertible {
         /// Event unique identifier.
-        public let eventUuid: String
+        open let eventUuid: String
         public init(eventUuid: String) {
             stringValidator()(eventUuid)
             self.eventUuid = eventUuid
@@ -18907,7 +18451,7 @@ open class TeamLog {
     /// The PaperDocTeamInviteType struct
     open class PaperDocTeamInviteType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -18938,7 +18482,7 @@ open class TeamLog {
     /// Deleted Paper doc.
     open class PaperDocTrashedDetails: CustomStringConvertible {
         /// Event unique identifier.
-        public let eventUuid: String
+        open let eventUuid: String
         public init(eventUuid: String) {
             stringValidator()(eventUuid)
             self.eventUuid = eventUuid
@@ -18969,7 +18513,7 @@ open class TeamLog {
     /// The PaperDocTrashedType struct
     open class PaperDocTrashedType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -19000,9 +18544,9 @@ open class TeamLog {
     /// Unresolved Paper doc comment.
     open class PaperDocUnresolveCommentDetails: CustomStringConvertible {
         /// Event unique identifier.
-        public let eventUuid: String
+        open let eventUuid: String
         /// Comment text. Might be missing due to historical data gap.
-        public let commentText: String?
+        open let commentText: String?
         public init(eventUuid: String, commentText: String? = nil) {
             stringValidator()(eventUuid)
             self.eventUuid = eventUuid
@@ -19037,7 +18581,7 @@ open class TeamLog {
     /// The PaperDocUnresolveCommentType struct
     open class PaperDocUnresolveCommentType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -19068,7 +18612,7 @@ open class TeamLog {
     /// Restored Paper doc.
     open class PaperDocUntrashedDetails: CustomStringConvertible {
         /// Event unique identifier.
-        public let eventUuid: String
+        open let eventUuid: String
         public init(eventUuid: String) {
             stringValidator()(eventUuid)
             self.eventUuid = eventUuid
@@ -19099,7 +18643,7 @@ open class TeamLog {
     /// The PaperDocUntrashedType struct
     open class PaperDocUntrashedType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -19130,7 +18674,7 @@ open class TeamLog {
     /// Viewed Paper doc.
     open class PaperDocViewDetails: CustomStringConvertible {
         /// Event unique identifier.
-        public let eventUuid: String
+        open let eventUuid: String
         public init(eventUuid: String) {
             stringValidator()(eventUuid)
             self.eventUuid = eventUuid
@@ -19161,7 +18705,7 @@ open class TeamLog {
     /// The PaperDocViewType struct
     open class PaperDocViewType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -19192,9 +18736,9 @@ open class TeamLog {
     /// Paper document's logged information.
     open class PaperDocumentLogInfo: CustomStringConvertible {
         /// Papers document Id.
-        public let docId: String
+        open let docId: String
         /// Paper document title.
-        public let docTitle: String
+        open let docTitle: String
         public init(docId: String, docTitle: String) {
             stringValidator()(docId)
             self.docId = docId
@@ -19235,8 +18779,6 @@ open class TeamLog {
         /// An unspecified error.
         case markdown
         /// An unspecified error.
-        case pdf
-        /// An unspecified error.
         case other
 
         public var description: String {
@@ -19259,10 +18801,6 @@ open class TeamLog {
                     var d = [String: JSON]()
                     d[".tag"] = .str("markdown")
                     return .dictionary(d)
-                case .pdf:
-                    var d = [String: JSON]()
-                    d[".tag"] = .str("pdf")
-                    return .dictionary(d)
                 case .other:
                     var d = [String: JSON]()
                     d[".tag"] = .str("other")
@@ -19280,8 +18818,6 @@ open class TeamLog {
                             return PaperDownloadFormat.html
                         case "markdown":
                             return PaperDownloadFormat.markdown
-                        case "pdf":
-                            return PaperDownloadFormat.pdf
                         case "other":
                             return PaperDownloadFormat.other
                         default:
@@ -19320,7 +18856,7 @@ open class TeamLog {
     /// The PaperEnabledUsersGroupAdditionType struct
     open class PaperEnabledUsersGroupAdditionType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -19375,7 +18911,7 @@ open class TeamLog {
     /// The PaperEnabledUsersGroupRemovalType struct
     open class PaperEnabledUsersGroupRemovalType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -19406,7 +18942,7 @@ open class TeamLog {
     /// Changed Paper external sharing setting to anyone.
     open class PaperExternalViewAllowDetails: CustomStringConvertible {
         /// Event unique identifier.
-        public let eventUuid: String
+        open let eventUuid: String
         public init(eventUuid: String) {
             stringValidator()(eventUuid)
             self.eventUuid = eventUuid
@@ -19437,7 +18973,7 @@ open class TeamLog {
     /// The PaperExternalViewAllowType struct
     open class PaperExternalViewAllowType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -19468,7 +19004,7 @@ open class TeamLog {
     /// Changed Paper external sharing setting to default team.
     open class PaperExternalViewDefaultTeamDetails: CustomStringConvertible {
         /// Event unique identifier.
-        public let eventUuid: String
+        open let eventUuid: String
         public init(eventUuid: String) {
             stringValidator()(eventUuid)
             self.eventUuid = eventUuid
@@ -19499,7 +19035,7 @@ open class TeamLog {
     /// The PaperExternalViewDefaultTeamType struct
     open class PaperExternalViewDefaultTeamType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -19530,7 +19066,7 @@ open class TeamLog {
     /// Changed Paper external sharing setting to team-only.
     open class PaperExternalViewForbidDetails: CustomStringConvertible {
         /// Event unique identifier.
-        public let eventUuid: String
+        open let eventUuid: String
         public init(eventUuid: String) {
             stringValidator()(eventUuid)
             self.eventUuid = eventUuid
@@ -19561,7 +19097,7 @@ open class TeamLog {
     /// The PaperExternalViewForbidType struct
     open class PaperExternalViewForbidType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -19592,11 +19128,11 @@ open class TeamLog {
     /// Followed/unfollowed Paper folder.
     open class PaperFolderChangeSubscriptionDetails: CustomStringConvertible {
         /// Event unique identifier.
-        public let eventUuid: String
+        open let eventUuid: String
         /// New folder subscription level.
-        public let newSubscriptionLevel: String
+        open let newSubscriptionLevel: String
         /// Previous folder subscription level. Might be missing due to historical data gap.
-        public let previousSubscriptionLevel: String?
+        open let previousSubscriptionLevel: String?
         public init(eventUuid: String, newSubscriptionLevel: String, previousSubscriptionLevel: String? = nil) {
             stringValidator()(eventUuid)
             self.eventUuid = eventUuid
@@ -19635,7 +19171,7 @@ open class TeamLog {
     /// The PaperFolderChangeSubscriptionType struct
     open class PaperFolderChangeSubscriptionType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -19666,7 +19202,7 @@ open class TeamLog {
     /// Archived Paper folder.
     open class PaperFolderDeletedDetails: CustomStringConvertible {
         /// Event unique identifier.
-        public let eventUuid: String
+        open let eventUuid: String
         public init(eventUuid: String) {
             stringValidator()(eventUuid)
             self.eventUuid = eventUuid
@@ -19697,7 +19233,7 @@ open class TeamLog {
     /// The PaperFolderDeletedType struct
     open class PaperFolderDeletedType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -19728,7 +19264,7 @@ open class TeamLog {
     /// Followed Paper folder.
     open class PaperFolderFollowedDetails: CustomStringConvertible {
         /// Event unique identifier.
-        public let eventUuid: String
+        open let eventUuid: String
         public init(eventUuid: String) {
             stringValidator()(eventUuid)
             self.eventUuid = eventUuid
@@ -19759,7 +19295,7 @@ open class TeamLog {
     /// The PaperFolderFollowedType struct
     open class PaperFolderFollowedType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -19790,9 +19326,9 @@ open class TeamLog {
     /// Paper folder's logged information.
     open class PaperFolderLogInfo: CustomStringConvertible {
         /// Papers folder Id.
-        public let folderId: String
+        open let folderId: String
         /// Paper folder name.
-        public let folderName: String
+        open let folderName: String
         public init(folderId: String, folderName: String) {
             stringValidator()(folderId)
             self.folderId = folderId
@@ -19827,7 +19363,7 @@ open class TeamLog {
     /// Shared Paper folder with member.
     open class PaperFolderTeamInviteDetails: CustomStringConvertible {
         /// Event unique identifier.
-        public let eventUuid: String
+        open let eventUuid: String
         public init(eventUuid: String) {
             stringValidator()(eventUuid)
             self.eventUuid = eventUuid
@@ -19858,7 +19394,7 @@ open class TeamLog {
     /// The PaperFolderTeamInviteType struct
     open class PaperFolderTeamInviteType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -19998,65 +19534,6 @@ open class TeamLog {
         }
     }
 
-    /// The PassPolicy union
-    public enum PassPolicy: CustomStringConvertible {
-        /// An unspecified error.
-        case enabled
-        /// An unspecified error.
-        case allow
-        /// An unspecified error.
-        case disabled
-        /// An unspecified error.
-        case other
-
-        public var description: String {
-            return "\(SerializeUtil.prepareJSONForSerialization(PassPolicySerializer().serialize(self)))"
-        }
-    }
-    open class PassPolicySerializer: JSONSerializer {
-        public init() { }
-        open func serialize(_ value: PassPolicy) -> JSON {
-            switch value {
-                case .enabled:
-                    var d = [String: JSON]()
-                    d[".tag"] = .str("enabled")
-                    return .dictionary(d)
-                case .allow:
-                    var d = [String: JSON]()
-                    d[".tag"] = .str("allow")
-                    return .dictionary(d)
-                case .disabled:
-                    var d = [String: JSON]()
-                    d[".tag"] = .str("disabled")
-                    return .dictionary(d)
-                case .other:
-                    var d = [String: JSON]()
-                    d[".tag"] = .str("other")
-                    return .dictionary(d)
-            }
-        }
-        open func deserialize(_ json: JSON) -> PassPolicy {
-            switch json {
-                case .dictionary(let d):
-                    let tag = Serialization.getTag(d)
-                    switch tag {
-                        case "enabled":
-                            return PassPolicy.enabled
-                        case "allow":
-                            return PassPolicy.allow
-                        case "disabled":
-                            return PassPolicy.disabled
-                        case "other":
-                            return PassPolicy.other
-                        default:
-                            return PassPolicy.other
-                    }
-                default:
-                    fatalError("Failed to deserialize")
-            }
-        }
-    }
-
     /// Changed password.
     open class PasswordChangeDetails: CustomStringConvertible {
         public init() {
@@ -20084,7 +19561,7 @@ open class TeamLog {
     /// The PasswordChangeType struct
     open class PasswordChangeType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -20139,7 +19616,7 @@ open class TeamLog {
     /// The PasswordResetAllType struct
     open class PasswordResetAllType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -20194,7 +19671,7 @@ open class TeamLog {
     /// The PasswordResetType struct
     open class PasswordResetType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -20225,9 +19702,9 @@ open class TeamLog {
     /// Path's details.
     open class PathLogInfo: CustomStringConvertible {
         /// Fully qualified path relative to event's context. Might be missing due to historical data gap.
-        public let contextual: String?
+        open let contextual: String?
         /// Path relative to the namespace containing the content.
-        public let namespaceRelative: TeamLog.NamespaceRelativePathLogInfo
+        open let namespaceRelative: TeamLog.NamespaceRelativePathLogInfo
         public init(namespaceRelative: TeamLog.NamespaceRelativePathLogInfo, contextual: String? = nil) {
             nullableValidator(stringValidator())(contextual)
             self.contextual = contextual
@@ -20261,9 +19738,9 @@ open class TeamLog {
     /// Enabled/disabled ability of team members to permanently delete content.
     open class PermanentDeleteChangePolicyDetails: CustomStringConvertible {
         /// New permanent delete content policy.
-        public let newValue: TeamLog.ContentPermanentDeletePolicy
+        open let newValue: TeamLog.ContentPermanentDeletePolicy
         /// Previous permanent delete content policy. Might be missing due to historical data gap.
-        public let previousValue: TeamLog.ContentPermanentDeletePolicy?
+        open let previousValue: TeamLog.ContentPermanentDeletePolicy?
         public init(newValue: TeamLog.ContentPermanentDeletePolicy, previousValue: TeamLog.ContentPermanentDeletePolicy? = nil) {
             self.newValue = newValue
             self.previousValue = previousValue
@@ -20296,7 +19773,7 @@ open class TeamLog {
     /// The PermanentDeleteChangePolicyType struct
     open class PermanentDeleteChangePolicyType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -20375,55 +19852,12 @@ open class TeamLog {
         }
     }
 
-    /// Quick action type.
-    public enum QuickActionType: CustomStringConvertible {
-        /// An unspecified error.
-        case deleteSharedLink
-        /// An unspecified error.
-        case other
-
-        public var description: String {
-            return "\(SerializeUtil.prepareJSONForSerialization(QuickActionTypeSerializer().serialize(self)))"
-        }
-    }
-    open class QuickActionTypeSerializer: JSONSerializer {
-        public init() { }
-        open func serialize(_ value: QuickActionType) -> JSON {
-            switch value {
-                case .deleteSharedLink:
-                    var d = [String: JSON]()
-                    d[".tag"] = .str("delete_shared_link")
-                    return .dictionary(d)
-                case .other:
-                    var d = [String: JSON]()
-                    d[".tag"] = .str("other")
-                    return .dictionary(d)
-            }
-        }
-        open func deserialize(_ json: JSON) -> QuickActionType {
-            switch json {
-                case .dictionary(let d):
-                    let tag = Serialization.getTag(d)
-                    switch tag {
-                        case "delete_shared_link":
-                            return QuickActionType.deleteSharedLink
-                        case "other":
-                            return QuickActionType.other
-                        default:
-                            return QuickActionType.other
-                    }
-                default:
-                    fatalError("Failed to deserialize")
-            }
-        }
-    }
-
     /// Provides the indices of the source asset and the destination asset for a relocate action.
     open class RelocateAssetReferencesLogInfo: CustomStringConvertible {
         /// Source asset position in the Assets list.
-        public let srcAssetIndex: UInt64
+        open let srcAssetIndex: UInt64
         /// Destination asset position in the Assets list.
-        public let destAssetIndex: UInt64
+        open let destAssetIndex: UInt64
         public init(srcAssetIndex: UInt64, destAssetIndex: UInt64) {
             comparableValidator()(srcAssetIndex)
             self.srcAssetIndex = srcAssetIndex
@@ -20458,9 +19892,9 @@ open class TeamLog {
     /// Reseller information.
     open class ResellerLogInfo: CustomStringConvertible {
         /// Reseller name.
-        public let resellerName: String
+        open let resellerName: String
         /// Reseller email.
-        public let resellerEmail: String
+        open let resellerEmail: String
         public init(resellerName: String, resellerEmail: String) {
             stringValidator()(resellerName)
             self.resellerName = resellerName
@@ -20519,7 +19953,7 @@ open class TeamLog {
     /// The ResellerSupportSessionEndType struct
     open class ResellerSupportSessionEndType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -20574,7 +20008,7 @@ open class TeamLog {
     /// The ResellerSupportSessionStartType struct
     open class ResellerSupportSessionStartType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -20656,9 +20090,9 @@ open class TeamLog {
     /// Secondary mails policy changed.
     open class SecondaryMailsPolicyChangedDetails: CustomStringConvertible {
         /// Previous secondary mails policy.
-        public let previousValue: TeamLog.SecondaryMailsPolicy
+        open let previousValue: TeamLog.SecondaryMailsPolicy
         /// New secondary mails policy.
-        public let newValue: TeamLog.SecondaryMailsPolicy
+        open let newValue: TeamLog.SecondaryMailsPolicy
         public init(previousValue: TeamLog.SecondaryMailsPolicy, newValue: TeamLog.SecondaryMailsPolicy) {
             self.previousValue = previousValue
             self.newValue = newValue
@@ -20691,7 +20125,7 @@ open class TeamLog {
     /// The SecondaryMailsPolicyChangedType struct
     open class SecondaryMailsPolicyChangedType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -20722,13 +20156,13 @@ open class TeamLog {
     /// Added team to shared folder.
     open class SfAddGroupDetails: CustomStringConvertible {
         /// Target asset position in the Assets list.
-        public let targetAssetIndex: UInt64
+        open let targetAssetIndex: UInt64
         /// Original shared folder name.
-        public let originalFolderName: String
+        open let originalFolderName: String
         /// Sharing permission. Might be missing due to historical data gap.
-        public let sharingPermission: String?
+        open let sharingPermission: String?
         /// Team name.
-        public let teamName: String
+        open let teamName: String
         public init(targetAssetIndex: UInt64, originalFolderName: String, teamName: String, sharingPermission: String? = nil) {
             comparableValidator()(targetAssetIndex)
             self.targetAssetIndex = targetAssetIndex
@@ -20771,7 +20205,7 @@ open class TeamLog {
     /// The SfAddGroupType struct
     open class SfAddGroupType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -20802,11 +20236,11 @@ open class TeamLog {
     /// Allowed non-collaborators to view links to files in shared folder.
     open class SfAllowNonMembersToViewSharedLinksDetails: CustomStringConvertible {
         /// Target asset position in the Assets list.
-        public let targetAssetIndex: UInt64
+        open let targetAssetIndex: UInt64
         /// Original shared folder name.
-        public let originalFolderName: String
+        open let originalFolderName: String
         /// Shared folder type. Might be missing due to historical data gap.
-        public let sharedFolderType: String?
+        open let sharedFolderType: String?
         public init(targetAssetIndex: UInt64, originalFolderName: String, sharedFolderType: String? = nil) {
             comparableValidator()(targetAssetIndex)
             self.targetAssetIndex = targetAssetIndex
@@ -20845,7 +20279,7 @@ open class TeamLog {
     /// The SfAllowNonMembersToViewSharedLinksType struct
     open class SfAllowNonMembersToViewSharedLinksType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -20876,13 +20310,13 @@ open class TeamLog {
     /// Set team members to see warning before sharing folders outside team.
     open class SfExternalInviteWarnDetails: CustomStringConvertible {
         /// Target asset position in the Assets list.
-        public let targetAssetIndex: UInt64
+        open let targetAssetIndex: UInt64
         /// Original shared folder name.
-        public let originalFolderName: String
+        open let originalFolderName: String
         /// New sharing permission. Might be missing due to historical data gap.
-        public let newSharingPermission: String?
+        open let newSharingPermission: String?
         /// Previous sharing permission. Might be missing due to historical data gap.
-        public let previousSharingPermission: String?
+        open let previousSharingPermission: String?
         public init(targetAssetIndex: UInt64, originalFolderName: String, newSharingPermission: String? = nil, previousSharingPermission: String? = nil) {
             comparableValidator()(targetAssetIndex)
             self.targetAssetIndex = targetAssetIndex
@@ -20925,7 +20359,7 @@ open class TeamLog {
     /// The SfExternalInviteWarnType struct
     open class SfExternalInviteWarnType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -20956,13 +20390,13 @@ open class TeamLog {
     /// Changed Facebook user's role in shared folder.
     open class SfFbInviteChangeRoleDetails: CustomStringConvertible {
         /// Target asset position in the Assets list.
-        public let targetAssetIndex: UInt64
+        open let targetAssetIndex: UInt64
         /// Original shared folder name.
-        public let originalFolderName: String
+        open let originalFolderName: String
         /// Previous sharing permission. Might be missing due to historical data gap.
-        public let previousSharingPermission: String?
+        open let previousSharingPermission: String?
         /// New sharing permission. Might be missing due to historical data gap.
-        public let newSharingPermission: String?
+        open let newSharingPermission: String?
         public init(targetAssetIndex: UInt64, originalFolderName: String, previousSharingPermission: String? = nil, newSharingPermission: String? = nil) {
             comparableValidator()(targetAssetIndex)
             self.targetAssetIndex = targetAssetIndex
@@ -21005,7 +20439,7 @@ open class TeamLog {
     /// The SfFbInviteChangeRoleType struct
     open class SfFbInviteChangeRoleType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -21036,11 +20470,11 @@ open class TeamLog {
     /// Invited Facebook users to shared folder.
     open class SfFbInviteDetails: CustomStringConvertible {
         /// Target asset position in the Assets list.
-        public let targetAssetIndex: UInt64
+        open let targetAssetIndex: UInt64
         /// Original shared folder name.
-        public let originalFolderName: String
+        open let originalFolderName: String
         /// Sharing permission. Might be missing due to historical data gap.
-        public let sharingPermission: String?
+        open let sharingPermission: String?
         public init(targetAssetIndex: UInt64, originalFolderName: String, sharingPermission: String? = nil) {
             comparableValidator()(targetAssetIndex)
             self.targetAssetIndex = targetAssetIndex
@@ -21079,7 +20513,7 @@ open class TeamLog {
     /// The SfFbInviteType struct
     open class SfFbInviteType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -21110,9 +20544,9 @@ open class TeamLog {
     /// Uninvited Facebook user from shared folder.
     open class SfFbUninviteDetails: CustomStringConvertible {
         /// Target asset position in the Assets list.
-        public let targetAssetIndex: UInt64
+        open let targetAssetIndex: UInt64
         /// Original shared folder name.
-        public let originalFolderName: String
+        open let originalFolderName: String
         public init(targetAssetIndex: UInt64, originalFolderName: String) {
             comparableValidator()(targetAssetIndex)
             self.targetAssetIndex = targetAssetIndex
@@ -21147,7 +20581,7 @@ open class TeamLog {
     /// The SfFbUninviteType struct
     open class SfFbUninviteType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -21178,7 +20612,7 @@ open class TeamLog {
     /// Invited group to shared folder.
     open class SfInviteGroupDetails: CustomStringConvertible {
         /// Target asset position in the Assets list.
-        public let targetAssetIndex: UInt64
+        open let targetAssetIndex: UInt64
         public init(targetAssetIndex: UInt64) {
             comparableValidator()(targetAssetIndex)
             self.targetAssetIndex = targetAssetIndex
@@ -21209,7 +20643,7 @@ open class TeamLog {
     /// The SfInviteGroupType struct
     open class SfInviteGroupType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -21240,9 +20674,9 @@ open class TeamLog {
     /// Granted access to shared folder.
     open class SfTeamGrantAccessDetails: CustomStringConvertible {
         /// Target asset position in the Assets list.
-        public let targetAssetIndex: UInt64
+        open let targetAssetIndex: UInt64
         /// Original shared folder name.
-        public let originalFolderName: String
+        open let originalFolderName: String
         public init(targetAssetIndex: UInt64, originalFolderName: String) {
             comparableValidator()(targetAssetIndex)
             self.targetAssetIndex = targetAssetIndex
@@ -21277,7 +20711,7 @@ open class TeamLog {
     /// The SfTeamGrantAccessType struct
     open class SfTeamGrantAccessType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -21308,13 +20742,13 @@ open class TeamLog {
     /// Changed team member's role in shared folder.
     open class SfTeamInviteChangeRoleDetails: CustomStringConvertible {
         /// Target asset position in the Assets list.
-        public let targetAssetIndex: UInt64
+        open let targetAssetIndex: UInt64
         /// Original shared folder name.
-        public let originalFolderName: String
+        open let originalFolderName: String
         /// New sharing permission. Might be missing due to historical data gap.
-        public let newSharingPermission: String?
+        open let newSharingPermission: String?
         /// Previous sharing permission. Might be missing due to historical data gap.
-        public let previousSharingPermission: String?
+        open let previousSharingPermission: String?
         public init(targetAssetIndex: UInt64, originalFolderName: String, newSharingPermission: String? = nil, previousSharingPermission: String? = nil) {
             comparableValidator()(targetAssetIndex)
             self.targetAssetIndex = targetAssetIndex
@@ -21357,7 +20791,7 @@ open class TeamLog {
     /// The SfTeamInviteChangeRoleType struct
     open class SfTeamInviteChangeRoleType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -21388,11 +20822,11 @@ open class TeamLog {
     /// Invited team members to shared folder.
     open class SfTeamInviteDetails: CustomStringConvertible {
         /// Target asset position in the Assets list.
-        public let targetAssetIndex: UInt64
+        open let targetAssetIndex: UInt64
         /// Original shared folder name.
-        public let originalFolderName: String
+        open let originalFolderName: String
         /// Sharing permission. Might be missing due to historical data gap.
-        public let sharingPermission: String?
+        open let sharingPermission: String?
         public init(targetAssetIndex: UInt64, originalFolderName: String, sharingPermission: String? = nil) {
             comparableValidator()(targetAssetIndex)
             self.targetAssetIndex = targetAssetIndex
@@ -21431,7 +20865,7 @@ open class TeamLog {
     /// The SfTeamInviteType struct
     open class SfTeamInviteType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -21462,9 +20896,9 @@ open class TeamLog {
     /// Joined team member's shared folder.
     open class SfTeamJoinDetails: CustomStringConvertible {
         /// Target asset position in the Assets list.
-        public let targetAssetIndex: UInt64
+        open let targetAssetIndex: UInt64
         /// Original shared folder name.
-        public let originalFolderName: String
+        open let originalFolderName: String
         public init(targetAssetIndex: UInt64, originalFolderName: String) {
             comparableValidator()(targetAssetIndex)
             self.targetAssetIndex = targetAssetIndex
@@ -21499,13 +20933,13 @@ open class TeamLog {
     /// Joined team member's shared folder from link.
     open class SfTeamJoinFromOobLinkDetails: CustomStringConvertible {
         /// Target asset position in the Assets list.
-        public let targetAssetIndex: UInt64
+        open let targetAssetIndex: UInt64
         /// Original shared folder name.
-        public let originalFolderName: String
+        open let originalFolderName: String
         /// Shared link token key.
-        public let tokenKey: String?
+        open let tokenKey: String?
         /// Sharing permission. Might be missing due to historical data gap.
-        public let sharingPermission: String?
+        open let sharingPermission: String?
         public init(targetAssetIndex: UInt64, originalFolderName: String, tokenKey: String? = nil, sharingPermission: String? = nil) {
             comparableValidator()(targetAssetIndex)
             self.targetAssetIndex = targetAssetIndex
@@ -21548,7 +20982,7 @@ open class TeamLog {
     /// The SfTeamJoinFromOobLinkType struct
     open class SfTeamJoinFromOobLinkType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -21579,7 +21013,7 @@ open class TeamLog {
     /// The SfTeamJoinType struct
     open class SfTeamJoinType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -21610,9 +21044,9 @@ open class TeamLog {
     /// Unshared folder with team member.
     open class SfTeamUninviteDetails: CustomStringConvertible {
         /// Target asset position in the Assets list.
-        public let targetAssetIndex: UInt64
+        open let targetAssetIndex: UInt64
         /// Original shared folder name.
-        public let originalFolderName: String
+        open let originalFolderName: String
         public init(targetAssetIndex: UInt64, originalFolderName: String) {
             comparableValidator()(targetAssetIndex)
             self.targetAssetIndex = targetAssetIndex
@@ -21647,7 +21081,7 @@ open class TeamLog {
     /// The SfTeamUninviteType struct
     open class SfTeamUninviteType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -21678,9 +21112,9 @@ open class TeamLog {
     /// Invited user to Dropbox and added them to shared file/folder.
     open class SharedContentAddInviteesDetails: CustomStringConvertible {
         /// Shared content access level.
-        public let sharedContentAccessLevel: Sharing.AccessLevel
+        open let sharedContentAccessLevel: Sharing.AccessLevel
         /// A list of invitees.
-        public let invitees: Array<String>
+        open let invitees: Array<String>
         public init(sharedContentAccessLevel: Sharing.AccessLevel, invitees: Array<String>) {
             self.sharedContentAccessLevel = sharedContentAccessLevel
             arrayValidator(itemValidator: stringValidator(maxLength: 255))(invitees)
@@ -21714,7 +21148,7 @@ open class TeamLog {
     /// The SharedContentAddInviteesType struct
     open class SharedContentAddInviteesType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -21745,7 +21179,7 @@ open class TeamLog {
     /// Added expiration date to link for shared file/folder.
     open class SharedContentAddLinkExpiryDetails: CustomStringConvertible {
         /// New shared content link expiration date. Might be missing due to historical data gap.
-        public let newValue: Date?
+        open let newValue: Date?
         public init(newValue: Date? = nil) {
             self.newValue = newValue
         }
@@ -21775,7 +21209,7 @@ open class TeamLog {
     /// The SharedContentAddLinkExpiryType struct
     open class SharedContentAddLinkExpiryType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -21830,7 +21264,7 @@ open class TeamLog {
     /// The SharedContentAddLinkPasswordType struct
     open class SharedContentAddLinkPasswordType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -21861,7 +21295,7 @@ open class TeamLog {
     /// Added users and/or groups to shared file/folder.
     open class SharedContentAddMemberDetails: CustomStringConvertible {
         /// Shared content access level.
-        public let sharedContentAccessLevel: Sharing.AccessLevel
+        open let sharedContentAccessLevel: Sharing.AccessLevel
         public init(sharedContentAccessLevel: Sharing.AccessLevel) {
             self.sharedContentAccessLevel = sharedContentAccessLevel
         }
@@ -21891,7 +21325,7 @@ open class TeamLog {
     /// The SharedContentAddMemberType struct
     open class SharedContentAddMemberType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -21922,9 +21356,9 @@ open class TeamLog {
     /// Changed whether members can download shared file/folder.
     open class SharedContentChangeDownloadsPolicyDetails: CustomStringConvertible {
         /// New downloads policy.
-        public let newValue: TeamLog.DownloadPolicyType
+        open let newValue: TeamLog.DownloadPolicyType
         /// Previous downloads policy. Might be missing due to historical data gap.
-        public let previousValue: TeamLog.DownloadPolicyType?
+        open let previousValue: TeamLog.DownloadPolicyType?
         public init(newValue: TeamLog.DownloadPolicyType, previousValue: TeamLog.DownloadPolicyType? = nil) {
             self.newValue = newValue
             self.previousValue = previousValue
@@ -21957,7 +21391,7 @@ open class TeamLog {
     /// The SharedContentChangeDownloadsPolicyType struct
     open class SharedContentChangeDownloadsPolicyType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -21988,11 +21422,11 @@ open class TeamLog {
     /// Changed access type of invitee to shared file/folder before invite was accepted.
     open class SharedContentChangeInviteeRoleDetails: CustomStringConvertible {
         /// Previous access level. Might be missing due to historical data gap.
-        public let previousAccessLevel: Sharing.AccessLevel?
+        open let previousAccessLevel: Sharing.AccessLevel?
         /// New access level.
-        public let newAccessLevel: Sharing.AccessLevel
+        open let newAccessLevel: Sharing.AccessLevel
         /// The invitee whose role was changed.
-        public let invitee: String
+        open let invitee: String
         public init(newAccessLevel: Sharing.AccessLevel, invitee: String, previousAccessLevel: Sharing.AccessLevel? = nil) {
             self.previousAccessLevel = previousAccessLevel
             self.newAccessLevel = newAccessLevel
@@ -22029,7 +21463,7 @@ open class TeamLog {
     /// The SharedContentChangeInviteeRoleType struct
     open class SharedContentChangeInviteeRoleType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -22060,9 +21494,9 @@ open class TeamLog {
     /// Changed link audience of shared file/folder.
     open class SharedContentChangeLinkAudienceDetails: CustomStringConvertible {
         /// New link audience value.
-        public let newValue: Sharing.LinkAudience
+        open let newValue: Sharing.LinkAudience
         /// Previous link audience value.
-        public let previousValue: Sharing.LinkAudience?
+        open let previousValue: Sharing.LinkAudience?
         public init(newValue: Sharing.LinkAudience, previousValue: Sharing.LinkAudience? = nil) {
             self.newValue = newValue
             self.previousValue = previousValue
@@ -22095,7 +21529,7 @@ open class TeamLog {
     /// The SharedContentChangeLinkAudienceType struct
     open class SharedContentChangeLinkAudienceType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -22126,9 +21560,9 @@ open class TeamLog {
     /// Changed link expiration of shared file/folder.
     open class SharedContentChangeLinkExpiryDetails: CustomStringConvertible {
         /// New shared content link expiration date. Might be missing due to historical data gap.
-        public let newValue: Date?
+        open let newValue: Date?
         /// Previous shared content link expiration date. Might be missing due to historical data gap.
-        public let previousValue: Date?
+        open let previousValue: Date?
         public init(newValue: Date? = nil, previousValue: Date? = nil) {
             self.newValue = newValue
             self.previousValue = previousValue
@@ -22161,7 +21595,7 @@ open class TeamLog {
     /// The SharedContentChangeLinkExpiryType struct
     open class SharedContentChangeLinkExpiryType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -22216,7 +21650,7 @@ open class TeamLog {
     /// The SharedContentChangeLinkPasswordType struct
     open class SharedContentChangeLinkPasswordType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -22247,9 +21681,9 @@ open class TeamLog {
     /// Changed access type of shared file/folder member.
     open class SharedContentChangeMemberRoleDetails: CustomStringConvertible {
         /// Previous access level. Might be missing due to historical data gap.
-        public let previousAccessLevel: Sharing.AccessLevel?
+        open let previousAccessLevel: Sharing.AccessLevel?
         /// New access level.
-        public let newAccessLevel: Sharing.AccessLevel
+        open let newAccessLevel: Sharing.AccessLevel
         public init(newAccessLevel: Sharing.AccessLevel, previousAccessLevel: Sharing.AccessLevel? = nil) {
             self.previousAccessLevel = previousAccessLevel
             self.newAccessLevel = newAccessLevel
@@ -22282,7 +21716,7 @@ open class TeamLog {
     /// The SharedContentChangeMemberRoleType struct
     open class SharedContentChangeMemberRoleType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -22313,9 +21747,9 @@ open class TeamLog {
     /// Changed whether members can see who viewed shared file/folder.
     open class SharedContentChangeViewerInfoPolicyDetails: CustomStringConvertible {
         /// New viewer info policy.
-        public let newValue: Sharing.ViewerInfoPolicy
+        open let newValue: Sharing.ViewerInfoPolicy
         /// Previous view info policy. Might be missing due to historical data gap.
-        public let previousValue: Sharing.ViewerInfoPolicy?
+        open let previousValue: Sharing.ViewerInfoPolicy?
         public init(newValue: Sharing.ViewerInfoPolicy, previousValue: Sharing.ViewerInfoPolicy? = nil) {
             self.newValue = newValue
             self.previousValue = previousValue
@@ -22348,7 +21782,7 @@ open class TeamLog {
     /// The SharedContentChangeViewerInfoPolicyType struct
     open class SharedContentChangeViewerInfoPolicyType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -22379,7 +21813,7 @@ open class TeamLog {
     /// Acquired membership of shared file/folder by accepting invite.
     open class SharedContentClaimInvitationDetails: CustomStringConvertible {
         /// Shared content link.
-        public let sharedContentLink: String?
+        open let sharedContentLink: String?
         public init(sharedContentLink: String? = nil) {
             nullableValidator(stringValidator())(sharedContentLink)
             self.sharedContentLink = sharedContentLink
@@ -22410,7 +21844,7 @@ open class TeamLog {
     /// The SharedContentClaimInvitationType struct
     open class SharedContentClaimInvitationType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -22441,13 +21875,13 @@ open class TeamLog {
     /// Copied shared file/folder to own Dropbox.
     open class SharedContentCopyDetails: CustomStringConvertible {
         /// Shared content link.
-        public let sharedContentLink: String
+        open let sharedContentLink: String
         /// The shared content owner.
-        public let sharedContentOwner: TeamLog.UserLogInfo?
+        open let sharedContentOwner: TeamLog.UserLogInfo?
         /// Shared content access level.
-        public let sharedContentAccessLevel: Sharing.AccessLevel
+        open let sharedContentAccessLevel: Sharing.AccessLevel
         /// The path where the member saved the content.
-        public let destinationPath: String
+        open let destinationPath: String
         public init(sharedContentLink: String, sharedContentAccessLevel: Sharing.AccessLevel, destinationPath: String, sharedContentOwner: TeamLog.UserLogInfo? = nil) {
             stringValidator()(sharedContentLink)
             self.sharedContentLink = sharedContentLink
@@ -22488,7 +21922,7 @@ open class TeamLog {
     /// The SharedContentCopyType struct
     open class SharedContentCopyType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -22519,11 +21953,11 @@ open class TeamLog {
     /// Downloaded shared file/folder.
     open class SharedContentDownloadDetails: CustomStringConvertible {
         /// Shared content link.
-        public let sharedContentLink: String
+        open let sharedContentLink: String
         /// The shared content owner.
-        public let sharedContentOwner: TeamLog.UserLogInfo?
+        open let sharedContentOwner: TeamLog.UserLogInfo?
         /// Shared content access level.
-        public let sharedContentAccessLevel: Sharing.AccessLevel
+        open let sharedContentAccessLevel: Sharing.AccessLevel
         public init(sharedContentLink: String, sharedContentAccessLevel: Sharing.AccessLevel, sharedContentOwner: TeamLog.UserLogInfo? = nil) {
             stringValidator()(sharedContentLink)
             self.sharedContentLink = sharedContentLink
@@ -22560,7 +21994,7 @@ open class TeamLog {
     /// The SharedContentDownloadType struct
     open class SharedContentDownloadType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -22615,7 +22049,7 @@ open class TeamLog {
     /// The SharedContentRelinquishMembershipType struct
     open class SharedContentRelinquishMembershipType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -22646,7 +22080,7 @@ open class TeamLog {
     /// Removed invitee from shared file/folder before invite was accepted.
     open class SharedContentRemoveInviteesDetails: CustomStringConvertible {
         /// A list of invitees.
-        public let invitees: Array<String>
+        open let invitees: Array<String>
         public init(invitees: Array<String>) {
             arrayValidator(itemValidator: stringValidator(maxLength: 255))(invitees)
             self.invitees = invitees
@@ -22677,7 +22111,7 @@ open class TeamLog {
     /// The SharedContentRemoveInviteesType struct
     open class SharedContentRemoveInviteesType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -22708,7 +22142,7 @@ open class TeamLog {
     /// Removed link expiration date of shared file/folder.
     open class SharedContentRemoveLinkExpiryDetails: CustomStringConvertible {
         /// Previous shared content link expiration date. Might be missing due to historical data gap.
-        public let previousValue: Date?
+        open let previousValue: Date?
         public init(previousValue: Date? = nil) {
             self.previousValue = previousValue
         }
@@ -22738,7 +22172,7 @@ open class TeamLog {
     /// The SharedContentRemoveLinkExpiryType struct
     open class SharedContentRemoveLinkExpiryType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -22793,7 +22227,7 @@ open class TeamLog {
     /// The SharedContentRemoveLinkPasswordType struct
     open class SharedContentRemoveLinkPasswordType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -22824,7 +22258,7 @@ open class TeamLog {
     /// Removed user/group from shared file/folder.
     open class SharedContentRemoveMemberDetails: CustomStringConvertible {
         /// Shared content access level.
-        public let sharedContentAccessLevel: Sharing.AccessLevel?
+        open let sharedContentAccessLevel: Sharing.AccessLevel?
         public init(sharedContentAccessLevel: Sharing.AccessLevel? = nil) {
             self.sharedContentAccessLevel = sharedContentAccessLevel
         }
@@ -22854,7 +22288,7 @@ open class TeamLog {
     /// The SharedContentRemoveMemberType struct
     open class SharedContentRemoveMemberType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -22885,7 +22319,7 @@ open class TeamLog {
     /// Requested access to shared file/folder.
     open class SharedContentRequestAccessDetails: CustomStringConvertible {
         /// Shared content link.
-        public let sharedContentLink: String?
+        open let sharedContentLink: String?
         public init(sharedContentLink: String? = nil) {
             nullableValidator(stringValidator())(sharedContentLink)
             self.sharedContentLink = sharedContentLink
@@ -22916,7 +22350,7 @@ open class TeamLog {
     /// The SharedContentRequestAccessType struct
     open class SharedContentRequestAccessType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -22971,7 +22405,7 @@ open class TeamLog {
     /// The SharedContentUnshareType struct
     open class SharedContentUnshareType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -23002,11 +22436,11 @@ open class TeamLog {
     /// Previewed shared file/folder.
     open class SharedContentViewDetails: CustomStringConvertible {
         /// Shared content link.
-        public let sharedContentLink: String
+        open let sharedContentLink: String
         /// The shared content owner.
-        public let sharedContentOwner: TeamLog.UserLogInfo?
+        open let sharedContentOwner: TeamLog.UserLogInfo?
         /// Shared content access level.
-        public let sharedContentAccessLevel: Sharing.AccessLevel
+        open let sharedContentAccessLevel: Sharing.AccessLevel
         public init(sharedContentLink: String, sharedContentAccessLevel: Sharing.AccessLevel, sharedContentOwner: TeamLog.UserLogInfo? = nil) {
             stringValidator()(sharedContentLink)
             self.sharedContentLink = sharedContentLink
@@ -23043,7 +22477,7 @@ open class TeamLog {
     /// The SharedContentViewType struct
     open class SharedContentViewType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -23074,9 +22508,9 @@ open class TeamLog {
     /// Changed who can access shared folder via link.
     open class SharedFolderChangeLinkPolicyDetails: CustomStringConvertible {
         /// New shared folder link policy.
-        public let newValue: Sharing.SharedLinkPolicy
+        open let newValue: Sharing.SharedLinkPolicy
         /// Previous shared folder link policy. Might be missing due to historical data gap.
-        public let previousValue: Sharing.SharedLinkPolicy?
+        open let previousValue: Sharing.SharedLinkPolicy?
         public init(newValue: Sharing.SharedLinkPolicy, previousValue: Sharing.SharedLinkPolicy? = nil) {
             self.newValue = newValue
             self.previousValue = previousValue
@@ -23109,7 +22543,7 @@ open class TeamLog {
     /// The SharedFolderChangeLinkPolicyType struct
     open class SharedFolderChangeLinkPolicyType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -23140,9 +22574,9 @@ open class TeamLog {
     /// Changed whether shared folder inherits members from parent folder.
     open class SharedFolderChangeMembersInheritancePolicyDetails: CustomStringConvertible {
         /// New member inheritance policy.
-        public let newValue: TeamLog.SharedFolderMembersInheritancePolicy
+        open let newValue: TeamLog.SharedFolderMembersInheritancePolicy
         /// Previous member inheritance policy. Might be missing due to historical data gap.
-        public let previousValue: TeamLog.SharedFolderMembersInheritancePolicy?
+        open let previousValue: TeamLog.SharedFolderMembersInheritancePolicy?
         public init(newValue: TeamLog.SharedFolderMembersInheritancePolicy, previousValue: TeamLog.SharedFolderMembersInheritancePolicy? = nil) {
             self.newValue = newValue
             self.previousValue = previousValue
@@ -23175,7 +22609,7 @@ open class TeamLog {
     /// The SharedFolderChangeMembersInheritancePolicyType struct
     open class SharedFolderChangeMembersInheritancePolicyType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -23206,9 +22640,9 @@ open class TeamLog {
     /// Changed who can add/remove members of shared folder.
     open class SharedFolderChangeMembersManagementPolicyDetails: CustomStringConvertible {
         /// New members management policy.
-        public let newValue: Sharing.AclUpdatePolicy
+        open let newValue: Sharing.AclUpdatePolicy
         /// Previous members management policy. Might be missing due to historical data gap.
-        public let previousValue: Sharing.AclUpdatePolicy?
+        open let previousValue: Sharing.AclUpdatePolicy?
         public init(newValue: Sharing.AclUpdatePolicy, previousValue: Sharing.AclUpdatePolicy? = nil) {
             self.newValue = newValue
             self.previousValue = previousValue
@@ -23241,7 +22675,7 @@ open class TeamLog {
     /// The SharedFolderChangeMembersManagementPolicyType struct
     open class SharedFolderChangeMembersManagementPolicyType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -23272,9 +22706,9 @@ open class TeamLog {
     /// Changed who can become member of shared folder.
     open class SharedFolderChangeMembersPolicyDetails: CustomStringConvertible {
         /// New external invite policy.
-        public let newValue: Sharing.MemberPolicy
+        open let newValue: Sharing.MemberPolicy
         /// Previous external invite policy. Might be missing due to historical data gap.
-        public let previousValue: Sharing.MemberPolicy?
+        open let previousValue: Sharing.MemberPolicy?
         public init(newValue: Sharing.MemberPolicy, previousValue: Sharing.MemberPolicy? = nil) {
             self.newValue = newValue
             self.previousValue = previousValue
@@ -23307,7 +22741,7 @@ open class TeamLog {
     /// The SharedFolderChangeMembersPolicyType struct
     open class SharedFolderChangeMembersPolicyType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -23338,7 +22772,7 @@ open class TeamLog {
     /// Created shared folder.
     open class SharedFolderCreateDetails: CustomStringConvertible {
         /// Target namespace ID. Might be missing due to historical data gap.
-        public let targetNsId: String?
+        open let targetNsId: String?
         public init(targetNsId: String? = nil) {
             nullableValidator(stringValidator())(targetNsId)
             self.targetNsId = targetNsId
@@ -23369,7 +22803,7 @@ open class TeamLog {
     /// The SharedFolderCreateType struct
     open class SharedFolderCreateType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -23424,7 +22858,7 @@ open class TeamLog {
     /// The SharedFolderDeclineInvitationType struct
     open class SharedFolderDeclineInvitationType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -23530,7 +22964,7 @@ open class TeamLog {
     /// The SharedFolderMountType struct
     open class SharedFolderMountType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -23561,22 +22995,14 @@ open class TeamLog {
     /// Changed parent of shared folder.
     open class SharedFolderNestDetails: CustomStringConvertible {
         /// Previous parent namespace ID. Might be missing due to historical data gap.
-        public let previousParentNsId: String?
+        open let previousParentNsId: String?
         /// New parent namespace ID. Might be missing due to historical data gap.
-        public let newParentNsId: String?
-        /// Previous namespace path. Might be missing due to historical data gap.
-        public let previousNsPath: String?
-        /// New namespace path. Might be missing due to historical data gap.
-        public let newNsPath: String?
-        public init(previousParentNsId: String? = nil, newParentNsId: String? = nil, previousNsPath: String? = nil, newNsPath: String? = nil) {
+        open let newParentNsId: String?
+        public init(previousParentNsId: String? = nil, newParentNsId: String? = nil) {
             nullableValidator(stringValidator())(previousParentNsId)
             self.previousParentNsId = previousParentNsId
             nullableValidator(stringValidator())(newParentNsId)
             self.newParentNsId = newParentNsId
-            nullableValidator(stringValidator())(previousNsPath)
-            self.previousNsPath = previousNsPath
-            nullableValidator(stringValidator())(newNsPath)
-            self.newNsPath = newNsPath
         }
         open var description: String {
             return "\(SerializeUtil.prepareJSONForSerialization(SharedFolderNestDetailsSerializer().serialize(self)))"
@@ -23588,8 +23014,6 @@ open class TeamLog {
             let output = [ 
             "previous_parent_ns_id": NullableSerializer(Serialization._StringSerializer).serialize(value.previousParentNsId),
             "new_parent_ns_id": NullableSerializer(Serialization._StringSerializer).serialize(value.newParentNsId),
-            "previous_ns_path": NullableSerializer(Serialization._StringSerializer).serialize(value.previousNsPath),
-            "new_ns_path": NullableSerializer(Serialization._StringSerializer).serialize(value.newNsPath),
             ]
             return .dictionary(output)
         }
@@ -23598,9 +23022,7 @@ open class TeamLog {
                 case .dictionary(let dict):
                     let previousParentNsId = NullableSerializer(Serialization._StringSerializer).deserialize(dict["previous_parent_ns_id"] ?? .null)
                     let newParentNsId = NullableSerializer(Serialization._StringSerializer).deserialize(dict["new_parent_ns_id"] ?? .null)
-                    let previousNsPath = NullableSerializer(Serialization._StringSerializer).deserialize(dict["previous_ns_path"] ?? .null)
-                    let newNsPath = NullableSerializer(Serialization._StringSerializer).deserialize(dict["new_ns_path"] ?? .null)
-                    return SharedFolderNestDetails(previousParentNsId: previousParentNsId, newParentNsId: newParentNsId, previousNsPath: previousNsPath, newNsPath: newNsPath)
+                    return SharedFolderNestDetails(previousParentNsId: previousParentNsId, newParentNsId: newParentNsId)
                 default:
                     fatalError("Type error deserializing")
             }
@@ -23610,7 +23032,7 @@ open class TeamLog {
     /// The SharedFolderNestType struct
     open class SharedFolderNestType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -23641,9 +23063,9 @@ open class TeamLog {
     /// Transferred ownership of shared folder to another member.
     open class SharedFolderTransferOwnershipDetails: CustomStringConvertible {
         /// The email address of the previous shared folder owner.
-        public let previousOwnerEmail: String?
+        open let previousOwnerEmail: String?
         /// The email address of the new shared folder owner.
-        public let newOwnerEmail: String
+        open let newOwnerEmail: String
         public init(newOwnerEmail: String, previousOwnerEmail: String? = nil) {
             nullableValidator(stringValidator(maxLength: 255))(previousOwnerEmail)
             self.previousOwnerEmail = previousOwnerEmail
@@ -23678,7 +23100,7 @@ open class TeamLog {
     /// The SharedFolderTransferOwnershipType struct
     open class SharedFolderTransferOwnershipType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -23733,7 +23155,7 @@ open class TeamLog {
     /// The SharedFolderUnmountType struct
     open class SharedFolderUnmountType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -23823,7 +23245,7 @@ open class TeamLog {
     /// Added shared link expiration date.
     open class SharedLinkAddExpiryDetails: CustomStringConvertible {
         /// New shared link expiration date.
-        public let newValue: Date
+        open let newValue: Date
         public init(newValue: Date) {
             self.newValue = newValue
         }
@@ -23853,7 +23275,7 @@ open class TeamLog {
     /// The SharedLinkAddExpiryType struct
     open class SharedLinkAddExpiryType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -23884,9 +23306,9 @@ open class TeamLog {
     /// Changed shared link expiration date.
     open class SharedLinkChangeExpiryDetails: CustomStringConvertible {
         /// New shared link expiration date. Might be missing due to historical data gap.
-        public let newValue: Date?
+        open let newValue: Date?
         /// Previous shared link expiration date. Might be missing due to historical data gap.
-        public let previousValue: Date?
+        open let previousValue: Date?
         public init(newValue: Date? = nil, previousValue: Date? = nil) {
             self.newValue = newValue
             self.previousValue = previousValue
@@ -23919,7 +23341,7 @@ open class TeamLog {
     /// The SharedLinkChangeExpiryType struct
     open class SharedLinkChangeExpiryType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -23950,9 +23372,9 @@ open class TeamLog {
     /// Changed visibility of shared link.
     open class SharedLinkChangeVisibilityDetails: CustomStringConvertible {
         /// New shared link visibility.
-        public let newValue: TeamLog.SharedLinkVisibility
+        open let newValue: TeamLog.SharedLinkVisibility
         /// Previous shared link visibility. Might be missing due to historical data gap.
-        public let previousValue: TeamLog.SharedLinkVisibility?
+        open let previousValue: TeamLog.SharedLinkVisibility?
         public init(newValue: TeamLog.SharedLinkVisibility, previousValue: TeamLog.SharedLinkVisibility? = nil) {
             self.newValue = newValue
             self.previousValue = previousValue
@@ -23985,7 +23407,7 @@ open class TeamLog {
     /// The SharedLinkChangeVisibilityType struct
     open class SharedLinkChangeVisibilityType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -24016,7 +23438,7 @@ open class TeamLog {
     /// Added file/folder to Dropbox from shared link.
     open class SharedLinkCopyDetails: CustomStringConvertible {
         /// Shared link owner details. Might be missing due to historical data gap.
-        public let sharedLinkOwner: TeamLog.UserLogInfo?
+        open let sharedLinkOwner: TeamLog.UserLogInfo?
         public init(sharedLinkOwner: TeamLog.UserLogInfo? = nil) {
             self.sharedLinkOwner = sharedLinkOwner
         }
@@ -24046,7 +23468,7 @@ open class TeamLog {
     /// The SharedLinkCopyType struct
     open class SharedLinkCopyType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -24077,7 +23499,7 @@ open class TeamLog {
     /// Created shared link.
     open class SharedLinkCreateDetails: CustomStringConvertible {
         /// Defines who can access the shared link. Might be missing due to historical data gap.
-        public let sharedLinkAccessLevel: TeamLog.SharedLinkAccessLevel?
+        open let sharedLinkAccessLevel: TeamLog.SharedLinkAccessLevel?
         public init(sharedLinkAccessLevel: TeamLog.SharedLinkAccessLevel? = nil) {
             self.sharedLinkAccessLevel = sharedLinkAccessLevel
         }
@@ -24107,7 +23529,7 @@ open class TeamLog {
     /// The SharedLinkCreateType struct
     open class SharedLinkCreateType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -24138,7 +23560,7 @@ open class TeamLog {
     /// Removed shared link.
     open class SharedLinkDisableDetails: CustomStringConvertible {
         /// Shared link owner details. Might be missing due to historical data gap.
-        public let sharedLinkOwner: TeamLog.UserLogInfo?
+        open let sharedLinkOwner: TeamLog.UserLogInfo?
         public init(sharedLinkOwner: TeamLog.UserLogInfo? = nil) {
             self.sharedLinkOwner = sharedLinkOwner
         }
@@ -24168,7 +23590,7 @@ open class TeamLog {
     /// The SharedLinkDisableType struct
     open class SharedLinkDisableType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -24199,7 +23621,7 @@ open class TeamLog {
     /// Downloaded file/folder from shared link.
     open class SharedLinkDownloadDetails: CustomStringConvertible {
         /// Shared link owner details. Might be missing due to historical data gap.
-        public let sharedLinkOwner: TeamLog.UserLogInfo?
+        open let sharedLinkOwner: TeamLog.UserLogInfo?
         public init(sharedLinkOwner: TeamLog.UserLogInfo? = nil) {
             self.sharedLinkOwner = sharedLinkOwner
         }
@@ -24229,7 +23651,7 @@ open class TeamLog {
     /// The SharedLinkDownloadType struct
     open class SharedLinkDownloadType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -24260,7 +23682,7 @@ open class TeamLog {
     /// Removed shared link expiration date.
     open class SharedLinkRemoveExpiryDetails: CustomStringConvertible {
         /// Previous shared link expiration date. Might be missing due to historical data gap.
-        public let previousValue: Date?
+        open let previousValue: Date?
         public init(previousValue: Date? = nil) {
             self.previousValue = previousValue
         }
@@ -24290,7 +23712,7 @@ open class TeamLog {
     /// The SharedLinkRemoveExpiryType struct
     open class SharedLinkRemoveExpiryType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -24321,9 +23743,9 @@ open class TeamLog {
     /// Added members as audience of shared link.
     open class SharedLinkShareDetails: CustomStringConvertible {
         /// Shared link owner details. Might be missing due to historical data gap.
-        public let sharedLinkOwner: TeamLog.UserLogInfo?
+        open let sharedLinkOwner: TeamLog.UserLogInfo?
         /// Users without a Dropbox account that were added as shared link audience.
-        public let externalUsers: Array<TeamLog.ExternalUserLogInfo>?
+        open let externalUsers: Array<TeamLog.ExternalUserLogInfo>?
         public init(sharedLinkOwner: TeamLog.UserLogInfo? = nil, externalUsers: Array<TeamLog.ExternalUserLogInfo>? = nil) {
             self.sharedLinkOwner = sharedLinkOwner
             self.externalUsers = externalUsers
@@ -24356,7 +23778,7 @@ open class TeamLog {
     /// The SharedLinkShareType struct
     open class SharedLinkShareType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -24387,7 +23809,7 @@ open class TeamLog {
     /// Opened shared link.
     open class SharedLinkViewDetails: CustomStringConvertible {
         /// Shared link owner details. Might be missing due to historical data gap.
-        public let sharedLinkOwner: TeamLog.UserLogInfo?
+        open let sharedLinkOwner: TeamLog.UserLogInfo?
         public init(sharedLinkOwner: TeamLog.UserLogInfo? = nil) {
             self.sharedLinkOwner = sharedLinkOwner
         }
@@ -24417,7 +23839,7 @@ open class TeamLog {
     /// The SharedLinkViewType struct
     open class SharedLinkViewType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -24531,7 +23953,7 @@ open class TeamLog {
     /// The SharedNoteOpenedType struct
     open class SharedNoteOpenedType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -24562,9 +23984,9 @@ open class TeamLog {
     /// Changed whether team members can join shared folders owned outside team.
     open class SharingChangeFolderJoinPolicyDetails: CustomStringConvertible {
         /// New external join policy.
-        public let newValue: TeamLog.SharingFolderJoinPolicy
+        open let newValue: TeamLog.SharingFolderJoinPolicy
         /// Previous external join policy. Might be missing due to historical data gap.
-        public let previousValue: TeamLog.SharingFolderJoinPolicy?
+        open let previousValue: TeamLog.SharingFolderJoinPolicy?
         public init(newValue: TeamLog.SharingFolderJoinPolicy, previousValue: TeamLog.SharingFolderJoinPolicy? = nil) {
             self.newValue = newValue
             self.previousValue = previousValue
@@ -24597,7 +24019,7 @@ open class TeamLog {
     /// The SharingChangeFolderJoinPolicyType struct
     open class SharingChangeFolderJoinPolicyType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -24629,9 +24051,9 @@ open class TeamLog {
     /// by default.
     open class SharingChangeLinkPolicyDetails: CustomStringConvertible {
         /// New external link accessibility policy.
-        public let newValue: TeamLog.SharingLinkPolicy
+        open let newValue: TeamLog.SharingLinkPolicy
         /// Previous external link accessibility policy. Might be missing due to historical data gap.
-        public let previousValue: TeamLog.SharingLinkPolicy?
+        open let previousValue: TeamLog.SharingLinkPolicy?
         public init(newValue: TeamLog.SharingLinkPolicy, previousValue: TeamLog.SharingLinkPolicy? = nil) {
             self.newValue = newValue
             self.previousValue = previousValue
@@ -24664,7 +24086,7 @@ open class TeamLog {
     /// The SharingChangeLinkPolicyType struct
     open class SharingChangeLinkPolicyType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -24695,9 +24117,9 @@ open class TeamLog {
     /// Changed whether members can share files/folders outside team.
     open class SharingChangeMemberPolicyDetails: CustomStringConvertible {
         /// New external invite policy.
-        public let newValue: TeamLog.SharingMemberPolicy
+        open let newValue: TeamLog.SharingMemberPolicy
         /// Previous external invite policy. Might be missing due to historical data gap.
-        public let previousValue: TeamLog.SharingMemberPolicy?
+        open let previousValue: TeamLog.SharingMemberPolicy?
         public init(newValue: TeamLog.SharingMemberPolicy, previousValue: TeamLog.SharingMemberPolicy? = nil) {
             self.newValue = newValue
             self.previousValue = previousValue
@@ -24730,7 +24152,7 @@ open class TeamLog {
     /// The SharingChangeMemberPolicyType struct
     open class SharingChangeMemberPolicyType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -24946,7 +24368,7 @@ open class TeamLog {
     /// The ShmodelGroupShareType struct
     open class ShmodelGroupShareType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -24977,7 +24399,7 @@ open class TeamLog {
     /// Granted access to showcase.
     open class ShowcaseAccessGrantedDetails: CustomStringConvertible {
         /// Event unique identifier.
-        public let eventUuid: String
+        open let eventUuid: String
         public init(eventUuid: String) {
             stringValidator()(eventUuid)
             self.eventUuid = eventUuid
@@ -25008,7 +24430,7 @@ open class TeamLog {
     /// The ShowcaseAccessGrantedType struct
     open class ShowcaseAccessGrantedType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -25039,7 +24461,7 @@ open class TeamLog {
     /// Added member to showcase.
     open class ShowcaseAddMemberDetails: CustomStringConvertible {
         /// Event unique identifier.
-        public let eventUuid: String
+        open let eventUuid: String
         public init(eventUuid: String) {
             stringValidator()(eventUuid)
             self.eventUuid = eventUuid
@@ -25070,7 +24492,7 @@ open class TeamLog {
     /// The ShowcaseAddMemberType struct
     open class ShowcaseAddMemberType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -25101,7 +24523,7 @@ open class TeamLog {
     /// Archived showcase.
     open class ShowcaseArchivedDetails: CustomStringConvertible {
         /// Event unique identifier.
-        public let eventUuid: String
+        open let eventUuid: String
         public init(eventUuid: String) {
             stringValidator()(eventUuid)
             self.eventUuid = eventUuid
@@ -25132,7 +24554,7 @@ open class TeamLog {
     /// The ShowcaseArchivedType struct
     open class ShowcaseArchivedType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -25163,9 +24585,9 @@ open class TeamLog {
     /// Enabled/disabled downloading files from Dropbox Showcase for team.
     open class ShowcaseChangeDownloadPolicyDetails: CustomStringConvertible {
         /// New Dropbox Showcase download policy.
-        public let newValue: TeamLog.ShowcaseDownloadPolicy
+        open let newValue: TeamLog.ShowcaseDownloadPolicy
         /// Previous Dropbox Showcase download policy.
-        public let previousValue: TeamLog.ShowcaseDownloadPolicy
+        open let previousValue: TeamLog.ShowcaseDownloadPolicy
         public init(newValue: TeamLog.ShowcaseDownloadPolicy, previousValue: TeamLog.ShowcaseDownloadPolicy) {
             self.newValue = newValue
             self.previousValue = previousValue
@@ -25198,7 +24620,7 @@ open class TeamLog {
     /// The ShowcaseChangeDownloadPolicyType struct
     open class ShowcaseChangeDownloadPolicyType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -25229,9 +24651,9 @@ open class TeamLog {
     /// Enabled/disabled Dropbox Showcase for team.
     open class ShowcaseChangeEnabledPolicyDetails: CustomStringConvertible {
         /// New Dropbox Showcase policy.
-        public let newValue: TeamLog.ShowcaseEnabledPolicy
+        open let newValue: TeamLog.ShowcaseEnabledPolicy
         /// Previous Dropbox Showcase policy.
-        public let previousValue: TeamLog.ShowcaseEnabledPolicy
+        open let previousValue: TeamLog.ShowcaseEnabledPolicy
         public init(newValue: TeamLog.ShowcaseEnabledPolicy, previousValue: TeamLog.ShowcaseEnabledPolicy) {
             self.newValue = newValue
             self.previousValue = previousValue
@@ -25264,7 +24686,7 @@ open class TeamLog {
     /// The ShowcaseChangeEnabledPolicyType struct
     open class ShowcaseChangeEnabledPolicyType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -25295,9 +24717,9 @@ open class TeamLog {
     /// Enabled/disabled sharing Dropbox Showcase externally for team.
     open class ShowcaseChangeExternalSharingPolicyDetails: CustomStringConvertible {
         /// New Dropbox Showcase external sharing policy.
-        public let newValue: TeamLog.ShowcaseExternalSharingPolicy
+        open let newValue: TeamLog.ShowcaseExternalSharingPolicy
         /// Previous Dropbox Showcase external sharing policy.
-        public let previousValue: TeamLog.ShowcaseExternalSharingPolicy
+        open let previousValue: TeamLog.ShowcaseExternalSharingPolicy
         public init(newValue: TeamLog.ShowcaseExternalSharingPolicy, previousValue: TeamLog.ShowcaseExternalSharingPolicy) {
             self.newValue = newValue
             self.previousValue = previousValue
@@ -25330,7 +24752,7 @@ open class TeamLog {
     /// The ShowcaseChangeExternalSharingPolicyType struct
     open class ShowcaseChangeExternalSharingPolicyType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -25361,7 +24783,7 @@ open class TeamLog {
     /// Created showcase.
     open class ShowcaseCreatedDetails: CustomStringConvertible {
         /// Event unique identifier.
-        public let eventUuid: String
+        open let eventUuid: String
         public init(eventUuid: String) {
             stringValidator()(eventUuid)
             self.eventUuid = eventUuid
@@ -25392,7 +24814,7 @@ open class TeamLog {
     /// The ShowcaseCreatedType struct
     open class ShowcaseCreatedType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -25423,9 +24845,9 @@ open class TeamLog {
     /// Deleted showcase comment.
     open class ShowcaseDeleteCommentDetails: CustomStringConvertible {
         /// Event unique identifier.
-        public let eventUuid: String
+        open let eventUuid: String
         /// Comment text.
-        public let commentText: String?
+        open let commentText: String?
         public init(eventUuid: String, commentText: String? = nil) {
             stringValidator()(eventUuid)
             self.eventUuid = eventUuid
@@ -25460,7 +24882,7 @@ open class TeamLog {
     /// The ShowcaseDeleteCommentType struct
     open class ShowcaseDeleteCommentType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -25491,9 +24913,9 @@ open class TeamLog {
     /// Showcase document's logged information.
     open class ShowcaseDocumentLogInfo: CustomStringConvertible {
         /// Showcase document Id.
-        public let showcaseId: String
+        open let showcaseId: String
         /// Showcase document title.
-        public let showcaseTitle: String
+        open let showcaseTitle: String
         public init(showcaseId: String, showcaseTitle: String) {
             stringValidator()(showcaseId)
             self.showcaseId = showcaseId
@@ -25579,9 +25001,9 @@ open class TeamLog {
     /// Edited showcase comment.
     open class ShowcaseEditCommentDetails: CustomStringConvertible {
         /// Event unique identifier.
-        public let eventUuid: String
+        open let eventUuid: String
         /// Comment text.
-        public let commentText: String?
+        open let commentText: String?
         public init(eventUuid: String, commentText: String? = nil) {
             stringValidator()(eventUuid)
             self.eventUuid = eventUuid
@@ -25616,7 +25038,7 @@ open class TeamLog {
     /// The ShowcaseEditCommentType struct
     open class ShowcaseEditCommentType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -25647,7 +25069,7 @@ open class TeamLog {
     /// Edited showcase.
     open class ShowcaseEditedDetails: CustomStringConvertible {
         /// Event unique identifier.
-        public let eventUuid: String
+        open let eventUuid: String
         public init(eventUuid: String) {
             stringValidator()(eventUuid)
             self.eventUuid = eventUuid
@@ -25678,7 +25100,7 @@ open class TeamLog {
     /// The ShowcaseEditedType struct
     open class ShowcaseEditedType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -25811,7 +25233,7 @@ open class TeamLog {
     /// Added file to showcase.
     open class ShowcaseFileAddedDetails: CustomStringConvertible {
         /// Event unique identifier.
-        public let eventUuid: String
+        open let eventUuid: String
         public init(eventUuid: String) {
             stringValidator()(eventUuid)
             self.eventUuid = eventUuid
@@ -25842,7 +25264,7 @@ open class TeamLog {
     /// The ShowcaseFileAddedType struct
     open class ShowcaseFileAddedType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -25873,9 +25295,9 @@ open class TeamLog {
     /// Downloaded file from showcase.
     open class ShowcaseFileDownloadDetails: CustomStringConvertible {
         /// Event unique identifier.
-        public let eventUuid: String
+        open let eventUuid: String
         /// Showcase download type.
-        public let downloadType: String
+        open let downloadType: String
         public init(eventUuid: String, downloadType: String) {
             stringValidator()(eventUuid)
             self.eventUuid = eventUuid
@@ -25910,7 +25332,7 @@ open class TeamLog {
     /// The ShowcaseFileDownloadType struct
     open class ShowcaseFileDownloadType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -25941,7 +25363,7 @@ open class TeamLog {
     /// Removed file from showcase.
     open class ShowcaseFileRemovedDetails: CustomStringConvertible {
         /// Event unique identifier.
-        public let eventUuid: String
+        open let eventUuid: String
         public init(eventUuid: String) {
             stringValidator()(eventUuid)
             self.eventUuid = eventUuid
@@ -25972,7 +25394,7 @@ open class TeamLog {
     /// The ShowcaseFileRemovedType struct
     open class ShowcaseFileRemovedType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -26003,7 +25425,7 @@ open class TeamLog {
     /// Viewed file in showcase.
     open class ShowcaseFileViewDetails: CustomStringConvertible {
         /// Event unique identifier.
-        public let eventUuid: String
+        open let eventUuid: String
         public init(eventUuid: String) {
             stringValidator()(eventUuid)
             self.eventUuid = eventUuid
@@ -26034,7 +25456,7 @@ open class TeamLog {
     /// The ShowcaseFileViewType struct
     open class ShowcaseFileViewType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -26065,7 +25487,7 @@ open class TeamLog {
     /// Permanently deleted showcase.
     open class ShowcasePermanentlyDeletedDetails: CustomStringConvertible {
         /// Event unique identifier.
-        public let eventUuid: String
+        open let eventUuid: String
         public init(eventUuid: String) {
             stringValidator()(eventUuid)
             self.eventUuid = eventUuid
@@ -26096,7 +25518,7 @@ open class TeamLog {
     /// The ShowcasePermanentlyDeletedType struct
     open class ShowcasePermanentlyDeletedType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -26127,9 +25549,9 @@ open class TeamLog {
     /// Added showcase comment.
     open class ShowcasePostCommentDetails: CustomStringConvertible {
         /// Event unique identifier.
-        public let eventUuid: String
+        open let eventUuid: String
         /// Comment text.
-        public let commentText: String?
+        open let commentText: String?
         public init(eventUuid: String, commentText: String? = nil) {
             stringValidator()(eventUuid)
             self.eventUuid = eventUuid
@@ -26164,7 +25586,7 @@ open class TeamLog {
     /// The ShowcasePostCommentType struct
     open class ShowcasePostCommentType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -26195,7 +25617,7 @@ open class TeamLog {
     /// Removed member from showcase.
     open class ShowcaseRemoveMemberDetails: CustomStringConvertible {
         /// Event unique identifier.
-        public let eventUuid: String
+        open let eventUuid: String
         public init(eventUuid: String) {
             stringValidator()(eventUuid)
             self.eventUuid = eventUuid
@@ -26226,7 +25648,7 @@ open class TeamLog {
     /// The ShowcaseRemoveMemberType struct
     open class ShowcaseRemoveMemberType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -26257,7 +25679,7 @@ open class TeamLog {
     /// Renamed showcase.
     open class ShowcaseRenamedDetails: CustomStringConvertible {
         /// Event unique identifier.
-        public let eventUuid: String
+        open let eventUuid: String
         public init(eventUuid: String) {
             stringValidator()(eventUuid)
             self.eventUuid = eventUuid
@@ -26288,7 +25710,7 @@ open class TeamLog {
     /// The ShowcaseRenamedType struct
     open class ShowcaseRenamedType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -26319,7 +25741,7 @@ open class TeamLog {
     /// Requested access to showcase.
     open class ShowcaseRequestAccessDetails: CustomStringConvertible {
         /// Event unique identifier.
-        public let eventUuid: String
+        open let eventUuid: String
         public init(eventUuid: String) {
             stringValidator()(eventUuid)
             self.eventUuid = eventUuid
@@ -26350,7 +25772,7 @@ open class TeamLog {
     /// The ShowcaseRequestAccessType struct
     open class ShowcaseRequestAccessType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -26381,9 +25803,9 @@ open class TeamLog {
     /// Resolved showcase comment.
     open class ShowcaseResolveCommentDetails: CustomStringConvertible {
         /// Event unique identifier.
-        public let eventUuid: String
+        open let eventUuid: String
         /// Comment text.
-        public let commentText: String?
+        open let commentText: String?
         public init(eventUuid: String, commentText: String? = nil) {
             stringValidator()(eventUuid)
             self.eventUuid = eventUuid
@@ -26418,7 +25840,7 @@ open class TeamLog {
     /// The ShowcaseResolveCommentType struct
     open class ShowcaseResolveCommentType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -26449,7 +25871,7 @@ open class TeamLog {
     /// Unarchived showcase.
     open class ShowcaseRestoredDetails: CustomStringConvertible {
         /// Event unique identifier.
-        public let eventUuid: String
+        open let eventUuid: String
         public init(eventUuid: String) {
             stringValidator()(eventUuid)
             self.eventUuid = eventUuid
@@ -26480,7 +25902,7 @@ open class TeamLog {
     /// The ShowcaseRestoredType struct
     open class ShowcaseRestoredType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -26511,7 +25933,7 @@ open class TeamLog {
     /// Deleted showcase (old version).
     open class ShowcaseTrashedDeprecatedDetails: CustomStringConvertible {
         /// Event unique identifier.
-        public let eventUuid: String
+        open let eventUuid: String
         public init(eventUuid: String) {
             stringValidator()(eventUuid)
             self.eventUuid = eventUuid
@@ -26542,7 +25964,7 @@ open class TeamLog {
     /// The ShowcaseTrashedDeprecatedType struct
     open class ShowcaseTrashedDeprecatedType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -26573,7 +25995,7 @@ open class TeamLog {
     /// Deleted showcase.
     open class ShowcaseTrashedDetails: CustomStringConvertible {
         /// Event unique identifier.
-        public let eventUuid: String
+        open let eventUuid: String
         public init(eventUuid: String) {
             stringValidator()(eventUuid)
             self.eventUuid = eventUuid
@@ -26604,7 +26026,7 @@ open class TeamLog {
     /// The ShowcaseTrashedType struct
     open class ShowcaseTrashedType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -26635,9 +26057,9 @@ open class TeamLog {
     /// Unresolved showcase comment.
     open class ShowcaseUnresolveCommentDetails: CustomStringConvertible {
         /// Event unique identifier.
-        public let eventUuid: String
+        open let eventUuid: String
         /// Comment text.
-        public let commentText: String?
+        open let commentText: String?
         public init(eventUuid: String, commentText: String? = nil) {
             stringValidator()(eventUuid)
             self.eventUuid = eventUuid
@@ -26672,7 +26094,7 @@ open class TeamLog {
     /// The ShowcaseUnresolveCommentType struct
     open class ShowcaseUnresolveCommentType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -26703,7 +26125,7 @@ open class TeamLog {
     /// Restored showcase (old version).
     open class ShowcaseUntrashedDeprecatedDetails: CustomStringConvertible {
         /// Event unique identifier.
-        public let eventUuid: String
+        open let eventUuid: String
         public init(eventUuid: String) {
             stringValidator()(eventUuid)
             self.eventUuid = eventUuid
@@ -26734,7 +26156,7 @@ open class TeamLog {
     /// The ShowcaseUntrashedDeprecatedType struct
     open class ShowcaseUntrashedDeprecatedType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -26765,7 +26187,7 @@ open class TeamLog {
     /// Restored showcase.
     open class ShowcaseUntrashedDetails: CustomStringConvertible {
         /// Event unique identifier.
-        public let eventUuid: String
+        open let eventUuid: String
         public init(eventUuid: String) {
             stringValidator()(eventUuid)
             self.eventUuid = eventUuid
@@ -26796,7 +26218,7 @@ open class TeamLog {
     /// The ShowcaseUntrashedType struct
     open class ShowcaseUntrashedType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -26827,7 +26249,7 @@ open class TeamLog {
     /// Viewed showcase.
     open class ShowcaseViewDetails: CustomStringConvertible {
         /// Event unique identifier.
-        public let eventUuid: String
+        open let eventUuid: String
         public init(eventUuid: String) {
             stringValidator()(eventUuid)
             self.eventUuid = eventUuid
@@ -26858,7 +26280,7 @@ open class TeamLog {
     /// The ShowcaseViewType struct
     open class ShowcaseViewType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -26913,7 +26335,7 @@ open class TeamLog {
     /// The SignInAsSessionEndType struct
     open class SignInAsSessionEndType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -26968,7 +26390,7 @@ open class TeamLog {
     /// The SignInAsSessionStartType struct
     open class SignInAsSessionStartType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -26999,9 +26421,9 @@ open class TeamLog {
     /// Changed default Smart Sync setting for team members.
     open class SmartSyncChangePolicyDetails: CustomStringConvertible {
         /// New smart sync policy.
-        public let newValue: TeamPolicies.SmartSyncPolicy?
+        open let newValue: TeamPolicies.SmartSyncPolicy?
         /// Previous smart sync policy.
-        public let previousValue: TeamPolicies.SmartSyncPolicy?
+        open let previousValue: TeamPolicies.SmartSyncPolicy?
         public init(newValue: TeamPolicies.SmartSyncPolicy? = nil, previousValue: TeamPolicies.SmartSyncPolicy? = nil) {
             self.newValue = newValue
             self.previousValue = previousValue
@@ -27034,7 +26456,7 @@ open class TeamLog {
     /// The SmartSyncChangePolicyType struct
     open class SmartSyncChangePolicyType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -27089,7 +26511,7 @@ open class TeamLog {
     /// The SmartSyncCreateAdminPrivilegeReportType struct
     open class SmartSyncCreateAdminPrivilegeReportType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -27120,9 +26542,9 @@ open class TeamLog {
     /// Opted team into Smart Sync.
     open class SmartSyncNotOptOutDetails: CustomStringConvertible {
         /// Previous Smart Sync opt out policy.
-        public let previousValue: TeamLog.SmartSyncOptOutPolicy
+        open let previousValue: TeamLog.SmartSyncOptOutPolicy
         /// New Smart Sync opt out policy.
-        public let newValue: TeamLog.SmartSyncOptOutPolicy
+        open let newValue: TeamLog.SmartSyncOptOutPolicy
         public init(previousValue: TeamLog.SmartSyncOptOutPolicy, newValue: TeamLog.SmartSyncOptOutPolicy) {
             self.previousValue = previousValue
             self.newValue = newValue
@@ -27155,7 +26577,7 @@ open class TeamLog {
     /// The SmartSyncNotOptOutType struct
     open class SmartSyncNotOptOutType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -27186,9 +26608,9 @@ open class TeamLog {
     /// Opted team out of Smart Sync.
     open class SmartSyncOptOutDetails: CustomStringConvertible {
         /// Previous Smart Sync opt out policy.
-        public let previousValue: TeamLog.SmartSyncOptOutPolicy
+        open let previousValue: TeamLog.SmartSyncOptOutPolicy
         /// New Smart Sync opt out policy.
-        public let newValue: TeamLog.SmartSyncOptOutPolicy
+        open let newValue: TeamLog.SmartSyncOptOutPolicy
         public init(previousValue: TeamLog.SmartSyncOptOutPolicy, newValue: TeamLog.SmartSyncOptOutPolicy) {
             self.previousValue = previousValue
             self.newValue = newValue
@@ -27272,7 +26694,7 @@ open class TeamLog {
     /// The SmartSyncOptOutType struct
     open class SmartSyncOptOutType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -27421,7 +26843,7 @@ open class TeamLog {
     /// Added X.509 certificate for SSO.
     open class SsoAddCertDetails: CustomStringConvertible {
         /// SSO certificate details.
-        public let certificateDetails: TeamLog.Certificate
+        open let certificateDetails: TeamLog.Certificate
         public init(certificateDetails: TeamLog.Certificate) {
             self.certificateDetails = certificateDetails
         }
@@ -27451,7 +26873,7 @@ open class TeamLog {
     /// The SsoAddCertType struct
     open class SsoAddCertType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -27482,7 +26904,7 @@ open class TeamLog {
     /// Added sign-in URL for SSO.
     open class SsoAddLoginUrlDetails: CustomStringConvertible {
         /// New single sign-on login URL.
-        public let newValue: String
+        open let newValue: String
         public init(newValue: String) {
             stringValidator()(newValue)
             self.newValue = newValue
@@ -27513,7 +26935,7 @@ open class TeamLog {
     /// The SsoAddLoginUrlType struct
     open class SsoAddLoginUrlType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -27544,7 +26966,7 @@ open class TeamLog {
     /// Added sign-out URL for SSO.
     open class SsoAddLogoutUrlDetails: CustomStringConvertible {
         /// New single sign-on logout URL. Might be missing due to historical data gap.
-        public let newValue: String?
+        open let newValue: String?
         public init(newValue: String? = nil) {
             nullableValidator(stringValidator())(newValue)
             self.newValue = newValue
@@ -27575,7 +26997,7 @@ open class TeamLog {
     /// The SsoAddLogoutUrlType struct
     open class SsoAddLogoutUrlType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -27606,9 +27028,9 @@ open class TeamLog {
     /// Changed X.509 certificate for SSO.
     open class SsoChangeCertDetails: CustomStringConvertible {
         /// Previous SSO certificate details. Might be missing due to historical data gap.
-        public let previousCertificateDetails: TeamLog.Certificate?
+        open let previousCertificateDetails: TeamLog.Certificate?
         /// New SSO certificate details.
-        public let newCertificateDetails: TeamLog.Certificate
+        open let newCertificateDetails: TeamLog.Certificate
         public init(newCertificateDetails: TeamLog.Certificate, previousCertificateDetails: TeamLog.Certificate? = nil) {
             self.previousCertificateDetails = previousCertificateDetails
             self.newCertificateDetails = newCertificateDetails
@@ -27641,7 +27063,7 @@ open class TeamLog {
     /// The SsoChangeCertType struct
     open class SsoChangeCertType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -27672,9 +27094,9 @@ open class TeamLog {
     /// Changed sign-in URL for SSO.
     open class SsoChangeLoginUrlDetails: CustomStringConvertible {
         /// Previous single sign-on login URL.
-        public let previousValue: String
+        open let previousValue: String
         /// New single sign-on login URL.
-        public let newValue: String
+        open let newValue: String
         public init(previousValue: String, newValue: String) {
             stringValidator()(previousValue)
             self.previousValue = previousValue
@@ -27709,7 +27131,7 @@ open class TeamLog {
     /// The SsoChangeLoginUrlType struct
     open class SsoChangeLoginUrlType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -27740,9 +27162,9 @@ open class TeamLog {
     /// Changed sign-out URL for SSO.
     open class SsoChangeLogoutUrlDetails: CustomStringConvertible {
         /// Previous single sign-on logout URL. Might be missing due to historical data gap.
-        public let previousValue: String?
+        open let previousValue: String?
         /// New single sign-on logout URL. Might be missing due to historical data gap.
-        public let newValue: String?
+        open let newValue: String?
         public init(previousValue: String? = nil, newValue: String? = nil) {
             nullableValidator(stringValidator())(previousValue)
             self.previousValue = previousValue
@@ -27777,7 +27199,7 @@ open class TeamLog {
     /// The SsoChangeLogoutUrlType struct
     open class SsoChangeLogoutUrlType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -27808,9 +27230,9 @@ open class TeamLog {
     /// Changed single sign-on setting for team.
     open class SsoChangePolicyDetails: CustomStringConvertible {
         /// New single sign-on policy.
-        public let newValue: TeamPolicies.SsoPolicy
+        open let newValue: TeamPolicies.SsoPolicy
         /// Previous single sign-on policy. Might be missing due to historical data gap.
-        public let previousValue: TeamPolicies.SsoPolicy?
+        open let previousValue: TeamPolicies.SsoPolicy?
         public init(newValue: TeamPolicies.SsoPolicy, previousValue: TeamPolicies.SsoPolicy? = nil) {
             self.newValue = newValue
             self.previousValue = previousValue
@@ -27843,7 +27265,7 @@ open class TeamLog {
     /// The SsoChangePolicyType struct
     open class SsoChangePolicyType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -27874,9 +27296,9 @@ open class TeamLog {
     /// Changed SAML identity mode for SSO.
     open class SsoChangeSamlIdentityModeDetails: CustomStringConvertible {
         /// Previous single sign-on identity mode.
-        public let previousValue: Int64
+        open let previousValue: Int64
         /// New single sign-on identity mode.
-        public let newValue: Int64
+        open let newValue: Int64
         public init(previousValue: Int64, newValue: Int64) {
             comparableValidator()(previousValue)
             self.previousValue = previousValue
@@ -27911,7 +27333,7 @@ open class TeamLog {
     /// The SsoChangeSamlIdentityModeType struct
     open class SsoChangeSamlIdentityModeType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -27942,7 +27364,7 @@ open class TeamLog {
     /// Failed to sign in via SSO.
     open class SsoErrorDetails: CustomStringConvertible {
         /// Error details.
-        public let errorDetails: TeamLog.FailureDetailsLogInfo
+        open let errorDetails: TeamLog.FailureDetailsLogInfo
         public init(errorDetails: TeamLog.FailureDetailsLogInfo) {
             self.errorDetails = errorDetails
         }
@@ -27972,7 +27394,7 @@ open class TeamLog {
     /// The SsoErrorType struct
     open class SsoErrorType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -28027,7 +27449,7 @@ open class TeamLog {
     /// The SsoRemoveCertType struct
     open class SsoRemoveCertType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -28058,7 +27480,7 @@ open class TeamLog {
     /// Removed sign-in URL for SSO.
     open class SsoRemoveLoginUrlDetails: CustomStringConvertible {
         /// Previous single sign-on login URL.
-        public let previousValue: String
+        open let previousValue: String
         public init(previousValue: String) {
             stringValidator()(previousValue)
             self.previousValue = previousValue
@@ -28089,7 +27511,7 @@ open class TeamLog {
     /// The SsoRemoveLoginUrlType struct
     open class SsoRemoveLoginUrlType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -28120,7 +27542,7 @@ open class TeamLog {
     /// Removed sign-out URL for SSO.
     open class SsoRemoveLogoutUrlDetails: CustomStringConvertible {
         /// Previous single sign-on logout URL.
-        public let previousValue: String
+        open let previousValue: String
         public init(previousValue: String) {
             stringValidator()(previousValue)
             self.previousValue = previousValue
@@ -28151,7 +27573,7 @@ open class TeamLog {
     /// The SsoRemoveLogoutUrlType struct
     open class SsoRemoveLogoutUrlType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -28182,9 +27604,9 @@ open class TeamLog {
     /// Created team activity report.
     open class TeamActivityCreateReportDetails: CustomStringConvertible {
         /// Report start date.
-        public let startDate: Date
+        open let startDate: Date
         /// Report end date.
-        public let endDate: Date
+        open let endDate: Date
         public init(startDate: Date, endDate: Date) {
             self.startDate = startDate
             self.endDate = endDate
@@ -28217,7 +27639,7 @@ open class TeamLog {
     /// The TeamActivityCreateReportType struct
     open class TeamActivityCreateReportType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -28248,31 +27670,31 @@ open class TeamLog {
     /// An audit log event.
     open class TeamEvent: CustomStringConvertible {
         /// The Dropbox timestamp representing when the action was taken.
-        public let timestamp_: Date
+        open let timestamp_: Date
         /// The category that this type of action belongs to.
-        public let eventCategory: TeamLog.EventCategory
+        open let eventCategory: TeamLog.EventCategory
         /// The entity who actually performed the action. Might be missing due to historical data gap.
-        public let actor: TeamLog.ActorLogInfo?
+        open let actor: TeamLog.ActorLogInfo?
         /// The origin from which the actor performed the action including information about host, ip address, location,
         /// session, etc. If the action was performed programmatically via the API the origin represents the API client.
-        public let origin: TeamLog.OriginLogInfo?
+        open let origin: TeamLog.OriginLogInfo?
         /// True if the action involved a non team member either as the actor or as one of the affected users. Might be
         /// missing due to historical data gap.
-        public let involveNonTeamMember: Bool?
+        open let involveNonTeamMember: Bool?
         /// The user or team on whose behalf the actor performed the action. Might be missing due to historical data
         /// gap.
-        public let context: TeamLog.ContextLogInfo?
+        open let context: TeamLog.ContextLogInfo?
         /// Zero or more users and/or groups that are affected by the action. Note that this list doesn't include any
         /// actors or users in context.
-        public let participants: Array<TeamLog.ParticipantLogInfo>?
+        open let participants: Array<TeamLog.ParticipantLogInfo>?
         /// Zero or more content assets involved in the action. Currently these include Dropbox files and folders but in
         /// the future we might add other asset types such as Paper documents, folders, projects, etc.
-        public let assets: Array<TeamLog.AssetLogInfo>?
+        open let assets: Array<TeamLog.AssetLogInfo>?
         /// The particular type of action taken.
-        public let eventType: TeamLog.EventType
+        open let eventType: TeamLog.EventType
         /// The variable event schema applicable to this type of action, instantiated with respect to this particular
         /// action.
-        public let details: TeamLog.EventDetails
+        open let details: TeamLog.EventDetails
         public init(timestamp_: Date, eventCategory: TeamLog.EventCategory, eventType: TeamLog.EventType, details: TeamLog.EventDetails, actor: TeamLog.ActorLogInfo? = nil, origin: TeamLog.OriginLogInfo? = nil, involveNonTeamMember: Bool? = nil, context: TeamLog.ContextLogInfo? = nil, participants: Array<TeamLog.ParticipantLogInfo>? = nil, assets: Array<TeamLog.AssetLogInfo>? = nil) {
             self.timestamp_ = timestamp_
             self.eventCategory = eventCategory
@@ -28329,9 +27751,9 @@ open class TeamLog {
     /// Changed archival status of team folder.
     open class TeamFolderChangeStatusDetails: CustomStringConvertible {
         /// New team folder status.
-        public let newValue: Team.TeamFolderStatus
+        open let newValue: Team.TeamFolderStatus
         /// Previous team folder status. Might be missing due to historical data gap.
-        public let previousValue: Team.TeamFolderStatus?
+        open let previousValue: Team.TeamFolderStatus?
         public init(newValue: Team.TeamFolderStatus, previousValue: Team.TeamFolderStatus? = nil) {
             self.newValue = newValue
             self.previousValue = previousValue
@@ -28364,7 +27786,7 @@ open class TeamLog {
     /// The TeamFolderChangeStatusType struct
     open class TeamFolderChangeStatusType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -28419,7 +27841,7 @@ open class TeamLog {
     /// The TeamFolderCreateType struct
     open class TeamFolderCreateType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -28450,7 +27872,7 @@ open class TeamLog {
     /// Downgraded team folder to regular shared folder.
     open class TeamFolderDowngradeDetails: CustomStringConvertible {
         /// Target asset position in the Assets list.
-        public let targetAssetIndex: UInt64
+        open let targetAssetIndex: UInt64
         public init(targetAssetIndex: UInt64) {
             comparableValidator()(targetAssetIndex)
             self.targetAssetIndex = targetAssetIndex
@@ -28481,7 +27903,7 @@ open class TeamLog {
     /// The TeamFolderDowngradeType struct
     open class TeamFolderDowngradeType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -28536,7 +27958,7 @@ open class TeamLog {
     /// The TeamFolderPermanentlyDeleteType struct
     open class TeamFolderPermanentlyDeleteType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -28567,9 +27989,9 @@ open class TeamLog {
     /// Renamed active/archived team folder.
     open class TeamFolderRenameDetails: CustomStringConvertible {
         /// Previous folder name.
-        public let previousFolderName: String
+        open let previousFolderName: String
         /// New folder name.
-        public let newFolderName: String
+        open let newFolderName: String
         public init(previousFolderName: String, newFolderName: String) {
             stringValidator()(previousFolderName)
             self.previousFolderName = previousFolderName
@@ -28604,7 +28026,7 @@ open class TeamLog {
     /// The TeamFolderRenameType struct
     open class TeamFolderRenameType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -28662,9 +28084,9 @@ open class TeamLog {
     /// Team member's logged information.
     open class TeamMemberLogInfo: TeamLog.UserLogInfo {
         /// Team member ID. Might be missing due to historical data gap.
-        public let teamMemberId: String?
+        open let teamMemberId: String?
         /// Team member external ID.
-        public let memberExternalId: String?
+        open let memberExternalId: String?
         public init(accountId: String? = nil, displayName: String? = nil, email: String? = nil, teamMemberId: String? = nil, memberExternalId: String? = nil) {
             nullableValidator(stringValidator())(teamMemberId)
             self.teamMemberId = teamMemberId
@@ -28757,7 +28179,7 @@ open class TeamLog {
     /// Merged another team into this team.
     open class TeamMergeFromDetails: CustomStringConvertible {
         /// The name of the team that was merged into this team.
-        public let teamName: String
+        open let teamName: String
         public init(teamName: String) {
             stringValidator()(teamName)
             self.teamName = teamName
@@ -28788,7 +28210,7 @@ open class TeamLog {
     /// The TeamMergeFromType struct
     open class TeamMergeFromType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -28819,7 +28241,7 @@ open class TeamLog {
     /// Merged this team into another team.
     open class TeamMergeToDetails: CustomStringConvertible {
         /// The name of the team that this team was merged into.
-        public let teamName: String
+        open let teamName: String
         public init(teamName: String) {
             stringValidator()(teamName)
             self.teamName = teamName
@@ -28850,7 +28272,7 @@ open class TeamLog {
     /// The TeamMergeToType struct
     open class TeamMergeToType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -28881,9 +28303,9 @@ open class TeamLog {
     /// Team name details
     open class TeamName: CustomStringConvertible {
         /// Team's display name.
-        public let teamDisplayName: String
+        open let teamDisplayName: String
         /// Team's legal name.
-        public let teamLegalName: String
+        open let teamLegalName: String
         public init(teamDisplayName: String, teamLegalName: String) {
             stringValidator()(teamDisplayName)
             self.teamDisplayName = teamDisplayName
@@ -28942,7 +28364,7 @@ open class TeamLog {
     /// The TeamProfileAddLogoType struct
     open class TeamProfileAddLogoType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -28973,9 +28395,9 @@ open class TeamLog {
     /// Changed default language for team.
     open class TeamProfileChangeDefaultLanguageDetails: CustomStringConvertible {
         /// New team's default language.
-        public let newValue: String
+        open let newValue: String
         /// Previous team's default language.
-        public let previousValue: String
+        open let previousValue: String
         public init(newValue: String, previousValue: String) {
             stringValidator(minLength: 2)(newValue)
             self.newValue = newValue
@@ -29010,7 +28432,7 @@ open class TeamLog {
     /// The TeamProfileChangeDefaultLanguageType struct
     open class TeamProfileChangeDefaultLanguageType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -29065,7 +28487,7 @@ open class TeamLog {
     /// The TeamProfileChangeLogoType struct
     open class TeamProfileChangeLogoType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -29096,9 +28518,9 @@ open class TeamLog {
     /// Changed team name.
     open class TeamProfileChangeNameDetails: CustomStringConvertible {
         /// Previous teams name. Might be missing due to historical data gap.
-        public let previousValue: TeamLog.TeamName?
+        open let previousValue: TeamLog.TeamName?
         /// New team name.
-        public let newValue: TeamLog.TeamName
+        open let newValue: TeamLog.TeamName
         public init(newValue: TeamLog.TeamName, previousValue: TeamLog.TeamName? = nil) {
             self.previousValue = previousValue
             self.newValue = newValue
@@ -29131,7 +28553,7 @@ open class TeamLog {
     /// The TeamProfileChangeNameType struct
     open class TeamProfileChangeNameType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -29186,7 +28608,7 @@ open class TeamLog {
     /// The TeamProfileRemoveLogoType struct
     open class TeamProfileRemoveLogoType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -29214,129 +28636,12 @@ open class TeamLog {
         }
     }
 
-    /// Policy for controlling whether team selective sync is enabled for team.
-    public enum TeamSelectiveSyncPolicy: CustomStringConvertible {
-        /// An unspecified error.
-        case disabled
-        /// An unspecified error.
-        case enabled
-        /// An unspecified error.
-        case other
-
-        public var description: String {
-            return "\(SerializeUtil.prepareJSONForSerialization(TeamSelectiveSyncPolicySerializer().serialize(self)))"
-        }
-    }
-    open class TeamSelectiveSyncPolicySerializer: JSONSerializer {
-        public init() { }
-        open func serialize(_ value: TeamSelectiveSyncPolicy) -> JSON {
-            switch value {
-                case .disabled:
-                    var d = [String: JSON]()
-                    d[".tag"] = .str("disabled")
-                    return .dictionary(d)
-                case .enabled:
-                    var d = [String: JSON]()
-                    d[".tag"] = .str("enabled")
-                    return .dictionary(d)
-                case .other:
-                    var d = [String: JSON]()
-                    d[".tag"] = .str("other")
-                    return .dictionary(d)
-            }
-        }
-        open func deserialize(_ json: JSON) -> TeamSelectiveSyncPolicy {
-            switch json {
-                case .dictionary(let d):
-                    let tag = Serialization.getTag(d)
-                    switch tag {
-                        case "disabled":
-                            return TeamSelectiveSyncPolicy.disabled
-                        case "enabled":
-                            return TeamSelectiveSyncPolicy.enabled
-                        case "other":
-                            return TeamSelectiveSyncPolicy.other
-                        default:
-                            return TeamSelectiveSyncPolicy.other
-                    }
-                default:
-                    fatalError("Failed to deserialize")
-            }
-        }
-    }
-
-    /// Enabled/disabled Team Selective Sync for team.
-    open class TeamSelectiveSyncPolicyChangedDetails: CustomStringConvertible {
-        /// New Team Selective Sync policy.
-        public let newValue: TeamLog.TeamSelectiveSyncPolicy
-        /// Previous Team Selective Sync policy.
-        public let previousValue: TeamLog.TeamSelectiveSyncPolicy
-        public init(newValue: TeamLog.TeamSelectiveSyncPolicy, previousValue: TeamLog.TeamSelectiveSyncPolicy) {
-            self.newValue = newValue
-            self.previousValue = previousValue
-        }
-        open var description: String {
-            return "\(SerializeUtil.prepareJSONForSerialization(TeamSelectiveSyncPolicyChangedDetailsSerializer().serialize(self)))"
-        }
-    }
-    open class TeamSelectiveSyncPolicyChangedDetailsSerializer: JSONSerializer {
-        public init() { }
-        open func serialize(_ value: TeamSelectiveSyncPolicyChangedDetails) -> JSON {
-            let output = [ 
-            "new_value": TeamLog.TeamSelectiveSyncPolicySerializer().serialize(value.newValue),
-            "previous_value": TeamLog.TeamSelectiveSyncPolicySerializer().serialize(value.previousValue),
-            ]
-            return .dictionary(output)
-        }
-        open func deserialize(_ json: JSON) -> TeamSelectiveSyncPolicyChangedDetails {
-            switch json {
-                case .dictionary(let dict):
-                    let newValue = TeamLog.TeamSelectiveSyncPolicySerializer().deserialize(dict["new_value"] ?? .null)
-                    let previousValue = TeamLog.TeamSelectiveSyncPolicySerializer().deserialize(dict["previous_value"] ?? .null)
-                    return TeamSelectiveSyncPolicyChangedDetails(newValue: newValue, previousValue: previousValue)
-                default:
-                    fatalError("Type error deserializing")
-            }
-        }
-    }
-
-    /// The TeamSelectiveSyncPolicyChangedType struct
-    open class TeamSelectiveSyncPolicyChangedType: CustomStringConvertible {
-        /// (no description)
-        public let description_: String
-        public init(description_: String) {
-            stringValidator()(description_)
-            self.description_ = description_
-        }
-        open var description: String {
-            return "\(SerializeUtil.prepareJSONForSerialization(TeamSelectiveSyncPolicyChangedTypeSerializer().serialize(self)))"
-        }
-    }
-    open class TeamSelectiveSyncPolicyChangedTypeSerializer: JSONSerializer {
-        public init() { }
-        open func serialize(_ value: TeamSelectiveSyncPolicyChangedType) -> JSON {
-            let output = [ 
-            "description": Serialization._StringSerializer.serialize(value.description_),
-            ]
-            return .dictionary(output)
-        }
-        open func deserialize(_ json: JSON) -> TeamSelectiveSyncPolicyChangedType {
-            switch json {
-                case .dictionary(let dict):
-                    let description_ = Serialization._StringSerializer.deserialize(dict["description"] ?? .null)
-                    return TeamSelectiveSyncPolicyChangedType(description_: description_)
-                default:
-                    fatalError("Type error deserializing")
-            }
-        }
-    }
-
     /// Changed sync default.
     open class TeamSelectiveSyncSettingsChangedDetails: CustomStringConvertible {
         /// Previous value.
-        public let previousValue: Files.SyncSetting
+        open let previousValue: Files.SyncSetting
         /// New value.
-        public let newValue: Files.SyncSetting
+        open let newValue: Files.SyncSetting
         public init(previousValue: Files.SyncSetting, newValue: Files.SyncSetting) {
             self.previousValue = previousValue
             self.newValue = newValue
@@ -29369,7 +28674,7 @@ open class TeamLog {
     /// The TeamSelectiveSyncSettingsChangedType struct
     open class TeamSelectiveSyncSettingsChangedType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -29424,7 +28729,7 @@ open class TeamLog {
     /// The TfaAddBackupPhoneType struct
     open class TfaAddBackupPhoneType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -29479,7 +28784,7 @@ open class TeamLog {
     /// The TfaAddSecurityKeyType struct
     open class TfaAddSecurityKeyType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -29534,7 +28839,7 @@ open class TeamLog {
     /// The TfaChangeBackupPhoneType struct
     open class TfaChangeBackupPhoneType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -29565,9 +28870,9 @@ open class TeamLog {
     /// Changed two-step verification setting for team.
     open class TfaChangePolicyDetails: CustomStringConvertible {
         /// New change policy.
-        public let newValue: TeamPolicies.TwoStepVerificationPolicy
+        open let newValue: TeamPolicies.TwoStepVerificationPolicy
         /// Previous change policy. Might be missing due to historical data gap.
-        public let previousValue: TeamPolicies.TwoStepVerificationPolicy?
+        open let previousValue: TeamPolicies.TwoStepVerificationPolicy?
         public init(newValue: TeamPolicies.TwoStepVerificationPolicy, previousValue: TeamPolicies.TwoStepVerificationPolicy? = nil) {
             self.newValue = newValue
             self.previousValue = previousValue
@@ -29600,7 +28905,7 @@ open class TeamLog {
     /// The TfaChangePolicyType struct
     open class TfaChangePolicyType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -29631,12 +28936,12 @@ open class TeamLog {
     /// Enabled/disabled/changed two-step verification setting.
     open class TfaChangeStatusDetails: CustomStringConvertible {
         /// The new two factor authentication configuration.
-        public let newValue: TeamLog.TfaConfiguration
+        open let newValue: TeamLog.TfaConfiguration
         /// The previous two factor authentication configuration. Might be missing due to historical data gap.
-        public let previousValue: TeamLog.TfaConfiguration?
+        open let previousValue: TeamLog.TfaConfiguration?
         /// Used two factor authentication rescue code. This flag is relevant when the two factor authentication
         /// configuration is disabled.
-        public let usedRescueCode: Bool?
+        open let usedRescueCode: Bool?
         public init(newValue: TeamLog.TfaConfiguration, previousValue: TeamLog.TfaConfiguration? = nil, usedRescueCode: Bool? = nil) {
             self.newValue = newValue
             self.previousValue = previousValue
@@ -29672,7 +28977,7 @@ open class TeamLog {
     /// The TfaChangeStatusType struct
     open class TfaChangeStatusType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -29794,7 +29099,7 @@ open class TeamLog {
     /// The TfaRemoveBackupPhoneType struct
     open class TfaRemoveBackupPhoneType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -29849,7 +29154,7 @@ open class TeamLog {
     /// The TfaRemoveSecurityKeyType struct
     open class TfaRemoveSecurityKeyType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -29904,7 +29209,7 @@ open class TeamLog {
     /// The TfaResetType struct
     open class TfaResetType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -30031,92 +29336,12 @@ open class TeamLog {
         }
     }
 
-    /// User that is not a member of the team but considered trusted.
-    open class TrustedNonTeamMemberLogInfo: TeamLog.UserLogInfo {
-        /// Indicates the type of the trusted non team member user.
-        public let trustedNonTeamMemberType: TeamLog.TrustedNonTeamMemberType
-        public init(trustedNonTeamMemberType: TeamLog.TrustedNonTeamMemberType, accountId: String? = nil, displayName: String? = nil, email: String? = nil) {
-            self.trustedNonTeamMemberType = trustedNonTeamMemberType
-            super.init(accountId: accountId, displayName: displayName, email: email)
-        }
-        open override var description: String {
-            return "\(SerializeUtil.prepareJSONForSerialization(TrustedNonTeamMemberLogInfoSerializer().serialize(self)))"
-        }
-    }
-    open class TrustedNonTeamMemberLogInfoSerializer: JSONSerializer {
-        public init() { }
-        open func serialize(_ value: TrustedNonTeamMemberLogInfo) -> JSON {
-            let output = [ 
-            "trusted_non_team_member_type": TeamLog.TrustedNonTeamMemberTypeSerializer().serialize(value.trustedNonTeamMemberType),
-            "account_id": NullableSerializer(Serialization._StringSerializer).serialize(value.accountId),
-            "display_name": NullableSerializer(Serialization._StringSerializer).serialize(value.displayName),
-            "email": NullableSerializer(Serialization._StringSerializer).serialize(value.email),
-            ]
-            return .dictionary(output)
-        }
-        open func deserialize(_ json: JSON) -> TrustedNonTeamMemberLogInfo {
-            switch json {
-                case .dictionary(let dict):
-                    let trustedNonTeamMemberType = TeamLog.TrustedNonTeamMemberTypeSerializer().deserialize(dict["trusted_non_team_member_type"] ?? .null)
-                    let accountId = NullableSerializer(Serialization._StringSerializer).deserialize(dict["account_id"] ?? .null)
-                    let displayName = NullableSerializer(Serialization._StringSerializer).deserialize(dict["display_name"] ?? .null)
-                    let email = NullableSerializer(Serialization._StringSerializer).deserialize(dict["email"] ?? .null)
-                    return TrustedNonTeamMemberLogInfo(trustedNonTeamMemberType: trustedNonTeamMemberType, accountId: accountId, displayName: displayName, email: email)
-                default:
-                    fatalError("Type error deserializing")
-            }
-        }
-    }
-
-    /// The TrustedNonTeamMemberType union
-    public enum TrustedNonTeamMemberType: CustomStringConvertible {
-        /// An unspecified error.
-        case multiInstanceAdmin
-        /// An unspecified error.
-        case other
-
-        public var description: String {
-            return "\(SerializeUtil.prepareJSONForSerialization(TrustedNonTeamMemberTypeSerializer().serialize(self)))"
-        }
-    }
-    open class TrustedNonTeamMemberTypeSerializer: JSONSerializer {
-        public init() { }
-        open func serialize(_ value: TrustedNonTeamMemberType) -> JSON {
-            switch value {
-                case .multiInstanceAdmin:
-                    var d = [String: JSON]()
-                    d[".tag"] = .str("multi_instance_admin")
-                    return .dictionary(d)
-                case .other:
-                    var d = [String: JSON]()
-                    d[".tag"] = .str("other")
-                    return .dictionary(d)
-            }
-        }
-        open func deserialize(_ json: JSON) -> TrustedNonTeamMemberType {
-            switch json {
-                case .dictionary(let d):
-                    let tag = Serialization.getTag(d)
-                    switch tag {
-                        case "multi_instance_admin":
-                            return TrustedNonTeamMemberType.multiInstanceAdmin
-                        case "other":
-                            return TrustedNonTeamMemberType.other
-                        default:
-                            return TrustedNonTeamMemberType.other
-                    }
-                default:
-                    fatalError("Failed to deserialize")
-            }
-        }
-    }
-
     /// Enabled/disabled option for members to link personal Dropbox account and team account to same computer.
     open class TwoAccountChangePolicyDetails: CustomStringConvertible {
         /// New two account policy.
-        public let newValue: TeamLog.TwoAccountPolicy
+        open let newValue: TeamLog.TwoAccountPolicy
         /// Previous two account policy. Might be missing due to historical data gap.
-        public let previousValue: TeamLog.TwoAccountPolicy?
+        open let previousValue: TeamLog.TwoAccountPolicy?
         public init(newValue: TeamLog.TwoAccountPolicy, previousValue: TeamLog.TwoAccountPolicy? = nil) {
             self.newValue = newValue
             self.previousValue = previousValue
@@ -30149,7 +29374,7 @@ open class TeamLog {
     /// The TwoAccountChangePolicyType struct
     open class TwoAccountChangePolicyType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -30258,11 +29483,11 @@ open class TeamLog {
     /// User's name logged information
     open class UserNameLogInfo: CustomStringConvertible {
         /// Given name.
-        public let givenName: String
+        open let givenName: String
         /// Surname.
-        public let surname: String
+        open let surname: String
         /// Locale. Might be missing due to historical data gap.
-        public let locale: String?
+        open let locale: String?
         public init(givenName: String, surname: String, locale: String? = nil) {
             stringValidator()(givenName)
             self.givenName = givenName
@@ -30325,82 +29550,16 @@ open class TeamLog {
         }
     }
 
-    /// Changed team policy for viewer info.
-    open class ViewerInfoPolicyChangedDetails: CustomStringConvertible {
-        /// Previous Viewer Info policy.
-        public let previousValue: TeamLog.PassPolicy
-        /// New Viewer Info policy.
-        public let newValue: TeamLog.PassPolicy
-        public init(previousValue: TeamLog.PassPolicy, newValue: TeamLog.PassPolicy) {
-            self.previousValue = previousValue
-            self.newValue = newValue
-        }
-        open var description: String {
-            return "\(SerializeUtil.prepareJSONForSerialization(ViewerInfoPolicyChangedDetailsSerializer().serialize(self)))"
-        }
-    }
-    open class ViewerInfoPolicyChangedDetailsSerializer: JSONSerializer {
-        public init() { }
-        open func serialize(_ value: ViewerInfoPolicyChangedDetails) -> JSON {
-            let output = [ 
-            "previous_value": TeamLog.PassPolicySerializer().serialize(value.previousValue),
-            "new_value": TeamLog.PassPolicySerializer().serialize(value.newValue),
-            ]
-            return .dictionary(output)
-        }
-        open func deserialize(_ json: JSON) -> ViewerInfoPolicyChangedDetails {
-            switch json {
-                case .dictionary(let dict):
-                    let previousValue = TeamLog.PassPolicySerializer().deserialize(dict["previous_value"] ?? .null)
-                    let newValue = TeamLog.PassPolicySerializer().deserialize(dict["new_value"] ?? .null)
-                    return ViewerInfoPolicyChangedDetails(previousValue: previousValue, newValue: newValue)
-                default:
-                    fatalError("Type error deserializing")
-            }
-        }
-    }
-
-    /// The ViewerInfoPolicyChangedType struct
-    open class ViewerInfoPolicyChangedType: CustomStringConvertible {
-        /// (no description)
-        public let description_: String
-        public init(description_: String) {
-            stringValidator()(description_)
-            self.description_ = description_
-        }
-        open var description: String {
-            return "\(SerializeUtil.prepareJSONForSerialization(ViewerInfoPolicyChangedTypeSerializer().serialize(self)))"
-        }
-    }
-    open class ViewerInfoPolicyChangedTypeSerializer: JSONSerializer {
-        public init() { }
-        open func serialize(_ value: ViewerInfoPolicyChangedType) -> JSON {
-            let output = [ 
-            "description": Serialization._StringSerializer.serialize(value.description_),
-            ]
-            return .dictionary(output)
-        }
-        open func deserialize(_ json: JSON) -> ViewerInfoPolicyChangedType {
-            switch json {
-                case .dictionary(let dict):
-                    let description_ = Serialization._StringSerializer.deserialize(dict["description"] ?? .null)
-                    return ViewerInfoPolicyChangedType(description_: description_)
-                default:
-                    fatalError("Type error deserializing")
-            }
-        }
-    }
-
     /// Information on active web sessions
     open class WebDeviceSessionLogInfo: TeamLog.DeviceSessionLogInfo {
         /// Web session unique id. Might be missing due to historical data gap.
-        public let sessionInfo: TeamLog.WebSessionLogInfo?
+        open let sessionInfo: TeamLog.WebSessionLogInfo?
         /// Information on the hosting device.
-        public let userAgent: String
+        open let userAgent: String
         /// Information on the hosting operating system.
-        public let os: String
+        open let os: String
         /// Information on the browser used for this web session.
-        public let browser: String
+        open let browser: String
         public init(userAgent: String, os: String, browser: String, ipAddress: String? = nil, created: Date? = nil, updated: Date? = nil, sessionInfo: TeamLog.WebSessionLogInfo? = nil) {
             self.sessionInfo = sessionInfo
             stringValidator()(userAgent)
@@ -30474,9 +29633,9 @@ open class TeamLog {
     /// Changed how long members can stay signed in to Dropbox.com.
     open class WebSessionsChangeFixedLengthPolicyDetails: CustomStringConvertible {
         /// New session length policy. Might be missing due to historical data gap.
-        public let newValue: TeamLog.WebSessionsFixedLengthPolicy?
+        open let newValue: TeamLog.WebSessionsFixedLengthPolicy?
         /// Previous session length policy. Might be missing due to historical data gap.
-        public let previousValue: TeamLog.WebSessionsFixedLengthPolicy?
+        open let previousValue: TeamLog.WebSessionsFixedLengthPolicy?
         public init(newValue: TeamLog.WebSessionsFixedLengthPolicy? = nil, previousValue: TeamLog.WebSessionsFixedLengthPolicy? = nil) {
             self.newValue = newValue
             self.previousValue = previousValue
@@ -30509,7 +29668,7 @@ open class TeamLog {
     /// The WebSessionsChangeFixedLengthPolicyType struct
     open class WebSessionsChangeFixedLengthPolicyType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -30540,9 +29699,9 @@ open class TeamLog {
     /// Changed how long team members can be idle while signed in to Dropbox.com.
     open class WebSessionsChangeIdleLengthPolicyDetails: CustomStringConvertible {
         /// New idle length policy. Might be missing due to historical data gap.
-        public let newValue: TeamLog.WebSessionsIdleLengthPolicy?
+        open let newValue: TeamLog.WebSessionsIdleLengthPolicy?
         /// Previous idle length policy. Might be missing due to historical data gap.
-        public let previousValue: TeamLog.WebSessionsIdleLengthPolicy?
+        open let previousValue: TeamLog.WebSessionsIdleLengthPolicy?
         public init(newValue: TeamLog.WebSessionsIdleLengthPolicy? = nil, previousValue: TeamLog.WebSessionsIdleLengthPolicy? = nil) {
             self.newValue = newValue
             self.previousValue = previousValue
@@ -30575,7 +29734,7 @@ open class TeamLog {
     /// The WebSessionsChangeIdleLengthPolicyType struct
     open class WebSessionsChangeIdleLengthPolicyType: CustomStringConvertible {
         /// (no description)
-        public let description_: String
+        open let description_: String
         public init(description_: String) {
             stringValidator()(description_)
             self.description_ = description_
@@ -30712,7 +29871,6 @@ open class TeamLog {
 
     static let getEvents = Route(
         name: "get_events",
-        version: 1,
         namespace: "team_log",
         deprecated: false,
         argSerializer: TeamLog.GetTeamEventsArgSerializer(),
@@ -30723,7 +29881,6 @@ open class TeamLog {
     )
     static let getEventsContinue = Route(
         name: "get_events/continue",
-        version: 1,
         namespace: "team_log",
         deprecated: false,
         argSerializer: TeamLog.GetTeamEventsContinueArgSerializer(),

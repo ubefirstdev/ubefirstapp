@@ -21,7 +21,7 @@ public protocol SharedApplication {
 /// @note OAuth flow webviews localize to enviroment locale.
 ///
 open class DropboxOAuthManager {
-    public let locale: Locale?
+    open let locale: Locale?
     let appKey: String
     let redirectURL: URL
     let host: String
@@ -29,7 +29,7 @@ open class DropboxOAuthManager {
 
     // MARK: Shared instance
     /// A shared instance of a `DropboxOAuthManager` for convenience
-    public static var sharedOAuthManager: DropboxOAuthManager!
+    open static var sharedOAuthManager: DropboxOAuthManager!
 
     // MARK: Functions
     public init(appKey: String, host: String) {
@@ -298,10 +298,10 @@ open class DropboxOAuthManager {
 open class DropboxAccessToken: CustomStringConvertible {
 
     /// The access token string
-    public let accessToken: String
+    open let accessToken: String
 
     /// The associated user
-    public let uid: String
+    open let uid: String
 
     public init(accessToken: String, uid: String) {
         self.accessToken = accessToken

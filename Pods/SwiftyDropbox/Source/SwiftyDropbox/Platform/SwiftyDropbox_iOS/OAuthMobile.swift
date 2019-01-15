@@ -149,7 +149,7 @@ open class DropboxMobileOAuthManager: DropboxOAuthManager {
 }
 
 open class MobileSharedApplication: SharedApplication {
-    public static var sharedMobileApplication: MobileSharedApplication?
+    open static var sharedMobileApplication: MobileSharedApplication?
 
     let sharedApplication: UIApplication
     let controller: UIViewController?

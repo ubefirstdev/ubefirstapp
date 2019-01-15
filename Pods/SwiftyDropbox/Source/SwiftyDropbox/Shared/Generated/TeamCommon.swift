@@ -70,15 +70,15 @@ open class TeamCommon {
     /// Information about a group.
     open class GroupSummary: CustomStringConvertible {
         /// (no description)
-        public let groupName: String
+        open let groupName: String
         /// (no description)
-        public let groupId: String
+        open let groupId: String
         /// External ID of group. This is an arbitrary ID that an admin can attach to a group.
-        public let groupExternalId: String?
+        open let groupExternalId: String?
         /// The number of members in the group.
-        public let memberCount: UInt32?
+        open let memberCount: UInt32?
         /// Who is allowed to manage the group.
-        public let groupManagementType: TeamCommon.GroupManagementType
+        open let groupManagementType: TeamCommon.GroupManagementType
         public init(groupName: String, groupId: String, groupManagementType: TeamCommon.GroupManagementType, groupExternalId: String? = nil, memberCount: UInt32? = nil) {
             stringValidator()(groupName)
             self.groupName = groupName
@@ -235,9 +235,9 @@ open class TeamCommon {
     /// Time range.
     open class TimeRange: CustomStringConvertible {
         /// Optional starting time (inclusive).
-        public let startTime: Date?
+        open let startTime: Date?
         /// Optional ending time (exclusive).
-        public let endTime: Date?
+        open let endTime: Date?
         public init(startTime: Date? = nil, endTime: Date? = nil) {
             self.startTime = startTime
             self.endTime = endTime

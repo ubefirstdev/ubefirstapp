@@ -6,7 +6,7 @@
 
 /// Routes for the sharing namespace
 open class SharingRoutes {
-    public let client: DropboxTransportClient
+    open let client: DropboxTransportClient
     init(client: DropboxTransportClient) {
         self.client = client
     }
@@ -31,7 +31,7 @@ open class SharingRoutes {
 
     /// Allows an owner or editor (if the ACL update policy allows) of a shared folder to add another member. For the
     /// new member to get access to all the functionality for this folder, you will need to call mountFolder on their
-    /// behalf.
+    /// behalf. Apps must have full Dropbox access to use this endpoint.
     ///
     /// - parameter sharedFolderId: The ID for the shared folder.
     /// - parameter members: The intended list of members to add.  Added members will receive invites to join the shared
@@ -55,14 +55,14 @@ open class SharingRoutes {
     ///
     ///  - returns: Through the response callback, the caller will receive a `Sharing.FileMemberActionResult` object on
     /// success or a `Sharing.FileMemberActionError` object on failure.
-    @available(*, unavailable, message:"changeFileMemberAccess is deprecated. Use updateFileMember.")
+    @available(*, unavailable, message:"change_file_member_access is deprecated. Use update_file_member.")
     @discardableResult open func changeFileMemberAccess(file: String, member: Sharing.MemberSelector, accessLevel: Sharing.AccessLevel) -> RpcRequest<Sharing.FileMemberActionResultSerializer, Sharing.FileMemberActionErrorSerializer> {
         let route = Sharing.changeFileMemberAccess
         let serverArgs = Sharing.ChangeFileMemberAccessArgs(file: file, member: member, accessLevel: accessLevel)
         return client.request(route, serverArgs: serverArgs)
     }
 
-    /// Returns the status of an asynchronous job.
+    /// Returns the status of an asynchronous job. Apps must have full Dropbox access to use this endpoint.
     ///
     /// - parameter asyncJobId: Id of the asynchronous job. This is the value of a response returned from the method
     /// that launched the job.
@@ -75,7 +75,8 @@ open class SharingRoutes {
         return client.request(route, serverArgs: serverArgs)
     }
 
-    /// Returns the status of an asynchronous job for sharing a folder.
+    /// Returns the status of an asynchronous job for sharing a folder. Apps must have full Dropbox access to use this
+    /// endpoint.
     ///
     /// - parameter asyncJobId: Id of the asynchronous job. This is the value of a response returned from the method
     /// that launched the job.
@@ -88,7 +89,8 @@ open class SharingRoutes {
         return client.request(route, serverArgs: serverArgs)
     }
 
-    /// Returns the status of an asynchronous job for sharing a folder.
+    /// Returns the status of an asynchronous job for sharing a folder. Apps must have full Dropbox access to use this
+    /// endpoint.
     ///
     /// - parameter asyncJobId: Id of the asynchronous job. This is the value of a response returned from the method
     /// that launched the job.
@@ -114,7 +116,7 @@ open class SharingRoutes {
     ///
     ///  - returns: Through the response callback, the caller will receive a `Sharing.PathLinkMetadata` object on
     /// success or a `Sharing.CreateSharedLinkError` object on failure.
-    @available(*, unavailable, message:"createSharedLink is deprecated. Use createSharedLinkWithSettings.")
+    @available(*, unavailable, message:"create_shared_link is deprecated. Use create_shared_link_with_settings.")
     @discardableResult open func createSharedLink(path: String, shortUrl: Bool = false, pendingUpload: Sharing.PendingUploadMode? = nil) -> RpcRequest<Sharing.PathLinkMetadataSerializer, Sharing.CreateSharedLinkErrorSerializer> {
         let route = Sharing.createSharedLink
         let serverArgs = Sharing.CreateSharedLinkArg(path: path, shortUrl: shortUrl, pendingUpload: pendingUpload)
@@ -166,7 +168,7 @@ open class SharingRoutes {
         return client.request(route, serverArgs: serverArgs)
     }
 
-    /// Returns shared folder metadata by its folder ID.
+    /// Returns shared folder metadata by its folder ID. Apps must have full Dropbox access to use this endpoint.
     ///
     /// - parameter sharedFolderId: The ID for the shared folder.
     /// - parameter actions: A list of `FolderAction`s corresponding to `FolderPermission`s that should appear in the
@@ -240,7 +242,7 @@ open class SharingRoutes {
     ///
     ///  - returns: Through the response callback, the caller will receive a `Sharing.GetSharedLinksResult` object on
     /// success or a `Sharing.GetSharedLinksError` object on failure.
-    @available(*, unavailable, message:"getSharedLinks is deprecated. Use listSharedLinks.")
+    @available(*, unavailable, message:"get_shared_links is deprecated. Use list_shared_links.")
     @discardableResult open func getSharedLinks(path: String? = nil) -> RpcRequest<Sharing.GetSharedLinksResultSerializer, Sharing.GetSharedLinksErrorSerializer> {
         let route = Sharing.getSharedLinks
         let serverArgs = Sharing.GetSharedLinksArg(path: path)
@@ -291,7 +293,7 @@ open class SharingRoutes {
         return client.request(route, serverArgs: serverArgs)
     }
 
-    /// Returns shared folder membership by its folder ID.
+    /// Returns shared folder membership by its folder ID. Apps must have full Dropbox access to use this endpoint.
     ///
     /// - parameter sharedFolderId: The ID for the shared folder.
     ///
@@ -304,6 +306,7 @@ open class SharingRoutes {
     }
 
     /// Once a cursor has been retrieved from listFolderMembers, use this to paginate through all shared folder members.
+    /// Apps must have full Dropbox access to use this endpoint.
     ///
     /// - parameter cursor: The cursor returned by your last call to listFolderMembers or listFolderMembersContinue.
     ///
@@ -315,7 +318,8 @@ open class SharingRoutes {
         return client.request(route, serverArgs: serverArgs)
     }
 
-    /// Return the list of all shared folders the current user has access to.
+    /// Return the list of all shared folders the current user has access to. Apps must have full Dropbox access to use
+    /// this endpoint.
     ///
     /// - parameter limit: The maximum number of results to return per request.
     /// - parameter actions: A list of `FolderAction`s corresponding to `FolderPermission`s that should appear in the
@@ -331,7 +335,8 @@ open class SharingRoutes {
     }
 
     /// Once a cursor has been retrieved from listFolders, use this to paginate through all shared folders. The cursor
-    /// must come from a previous call to listFolders or listFoldersContinue.
+    /// must come from a previous call to listFolders or listFoldersContinue. Apps must have full Dropbox access to use
+    /// this endpoint.
     ///
     /// - parameter cursor: The cursor returned by the previous API call specified in the endpoint description.
     ///
@@ -343,7 +348,8 @@ open class SharingRoutes {
         return client.request(route, serverArgs: serverArgs)
     }
 
-    /// Return the list of all shared folders the current user can mount or unmount.
+    /// Return the list of all shared folders the current user can mount or unmount. Apps must have full Dropbox access
+    /// to use this endpoint.
     ///
     /// - parameter limit: The maximum number of results to return per request.
     /// - parameter actions: A list of `FolderAction`s corresponding to `FolderPermission`s that should appear in the
@@ -359,7 +365,8 @@ open class SharingRoutes {
     }
 
     /// Once a cursor has been retrieved from listMountableFolders, use this to paginate through all mountable shared
-    /// folders. The cursor must come from a previous call to listMountableFolders or listMountableFoldersContinue.
+    /// folders. The cursor must come from a previous call to listMountableFolders or listMountableFoldersContinue. Apps
+    /// must have full Dropbox access to use this endpoint.
     ///
     /// - parameter cursor: The cursor returned by the previous API call specified in the endpoint description.
     ///
@@ -434,7 +441,8 @@ open class SharingRoutes {
     }
 
     /// The current user mounts the designated folder. Mount a shared folder for a user after they have been added as a
-    /// member. Once mounted, the shared folder will appear in their Dropbox.
+    /// member. Once mounted, the shared folder will appear in their Dropbox. Apps must have full Dropbox access to use
+    /// this endpoint.
     ///
     /// - parameter sharedFolderId: The ID of the shared folder to mount.
     ///
@@ -447,7 +455,8 @@ open class SharingRoutes {
     }
 
     /// The current user relinquishes their membership in the designated file. Note that the current user may still have
-    /// inherited access to this file through the parent folder.
+    /// inherited access to this file through the parent folder. Apps must have full Dropbox access to use this
+    /// endpoint.
     ///
     /// - parameter file: The path or id for the file.
     ///
@@ -461,7 +470,8 @@ open class SharingRoutes {
 
     /// The current user relinquishes their membership in the designated shared folder and will no longer have access to
     /// the folder.  A folder owner cannot relinquish membership in their own folder. This will run synchronously if
-    /// leave_a_copy is false, and asynchronously if leave_a_copy is true.
+    /// leave_a_copy is false, and asynchronously if leave_a_copy is true. Apps must have full Dropbox access to use
+    /// this endpoint.
     ///
     /// - parameter sharedFolderId: The ID for the shared folder.
     /// - parameter leaveACopy: Keep a copy of the folder's contents upon relinquishing membership.
@@ -482,7 +492,7 @@ open class SharingRoutes {
     ///
     ///  - returns: Through the response callback, the caller will receive a `Sharing.FileMemberActionIndividualResult`
     /// object on success or a `Sharing.RemoveFileMemberError` object on failure.
-    @available(*, unavailable, message:"removeFileMember is deprecated. Use removeFileMember2.")
+    @available(*, unavailable, message:"remove_file_member is deprecated. Use remove_file_member_2.")
     @discardableResult open func removeFileMember(file: String, member: Sharing.MemberSelector) -> RpcRequest<Sharing.FileMemberActionIndividualResultSerializer, Sharing.RemoveFileMemberErrorSerializer> {
         let route = Sharing.removeFileMember
         let serverArgs = Sharing.RemoveFileMemberArg(file: file, member: member)
@@ -503,7 +513,8 @@ open class SharingRoutes {
         return client.request(route, serverArgs: serverArgs)
     }
 
-    /// Allows an owner or editor (if the ACL update policy allows) of a shared folder to remove another member.
+    /// Allows an owner or editor (if the ACL update policy allows) of a shared folder to remove another member. Apps
+    /// must have full Dropbox access to use this endpoint.
     ///
     /// - parameter sharedFolderId: The ID for the shared folder.
     /// - parameter member: The member to remove from the folder.
@@ -551,7 +562,7 @@ open class SharingRoutes {
     /// Share a folder with collaborators. Most sharing will be completed synchronously. Large folders will be completed
     /// asynchronously. To make testing the async case repeatable, set `ShareFolderArg.force_async`. If a asyncJobId in
     /// ShareFolderLaunch is returned, you'll need to call checkShareJobStatus until the action completes to get the
-    /// metadata for the folder.
+    /// metadata for the folder. Apps must have full Dropbox access to use this endpoint.
     ///
     /// - parameter actions: A list of `FolderAction`s corresponding to `FolderPermission`s that should appear in the
     /// response's permissions in SharedFolderMetadata field describing the actions the  authenticated user can perform
@@ -560,14 +571,14 @@ open class SharingRoutes {
     ///
     ///  - returns: Through the response callback, the caller will receive a `Sharing.ShareFolderLaunch` object on
     /// success or a `Sharing.ShareFolderError` object on failure.
-    @discardableResult open func shareFolder(path: String, aclUpdatePolicy: Sharing.AclUpdatePolicy? = nil, forceAsync: Bool = false, memberPolicy: Sharing.MemberPolicy? = nil, sharedLinkPolicy: Sharing.SharedLinkPolicy? = nil, viewerInfoPolicy: Sharing.ViewerInfoPolicy? = nil, accessInheritance: Sharing.AccessInheritance = .inherit, actions: Array<Sharing.FolderAction>? = nil, linkSettings: Sharing.LinkSettings? = nil) -> RpcRequest<Sharing.ShareFolderLaunchSerializer, Sharing.ShareFolderErrorSerializer> {
+    @discardableResult open func shareFolder(path: String, aclUpdatePolicy: Sharing.AclUpdatePolicy? = nil, forceAsync: Bool = false, memberPolicy: Sharing.MemberPolicy? = nil, sharedLinkPolicy: Sharing.SharedLinkPolicy? = nil, viewerInfoPolicy: Sharing.ViewerInfoPolicy? = nil, actions: Array<Sharing.FolderAction>? = nil, linkSettings: Sharing.LinkSettings? = nil) -> RpcRequest<Sharing.ShareFolderLaunchSerializer, Sharing.ShareFolderErrorSerializer> {
         let route = Sharing.shareFolder
-        let serverArgs = Sharing.ShareFolderArg(path: path, aclUpdatePolicy: aclUpdatePolicy, forceAsync: forceAsync, memberPolicy: memberPolicy, sharedLinkPolicy: sharedLinkPolicy, viewerInfoPolicy: viewerInfoPolicy, accessInheritance: accessInheritance, actions: actions, linkSettings: linkSettings)
+        let serverArgs = Sharing.ShareFolderArg(path: path, aclUpdatePolicy: aclUpdatePolicy, forceAsync: forceAsync, memberPolicy: memberPolicy, sharedLinkPolicy: sharedLinkPolicy, viewerInfoPolicy: viewerInfoPolicy, actions: actions, linkSettings: linkSettings)
         return client.request(route, serverArgs: serverArgs)
     }
 
     /// Transfer ownership of a shared folder to a member of the shared folder. User must have owner in AccessLevel
-    /// access to the shared folder to perform a transfer.
+    /// access to the shared folder to perform a transfer. Apps must have full Dropbox access to use this endpoint.
     ///
     /// - parameter sharedFolderId: The ID for the shared folder.
     /// - parameter toDropboxId: A account or team member ID to transfer ownership to.
@@ -581,6 +592,7 @@ open class SharingRoutes {
     }
 
     /// The current user unmounts the designated folder. They can re-mount the folder at a later time using mountFolder.
+    /// Apps must have full Dropbox access to use this endpoint.
     ///
     /// - parameter sharedFolderId: The ID for the shared folder.
     ///
@@ -605,7 +617,7 @@ open class SharingRoutes {
     }
 
     /// Allows a shared folder owner to unshare the folder. You'll need to call checkJobStatus to determine if the
-    /// action has completed successfully.
+    /// action has completed successfully. Apps must have full Dropbox access to use this endpoint.
     ///
     /// - parameter sharedFolderId: The ID for the shared folder.
     /// - parameter leaveACopy: If true, members of this shared folder will get a copy of this folder after it's
@@ -631,7 +643,8 @@ open class SharingRoutes {
         return client.request(route, serverArgs: serverArgs)
     }
 
-    /// Allows an owner or editor of a shared folder to update another member's permissions.
+    /// Allows an owner or editor of a shared folder to update another member's permissions. Apps must have full Dropbox
+    /// access to use this endpoint.
     ///
     /// - parameter sharedFolderId: The ID for the shared folder.
     /// - parameter member: The member of the shared folder to update.  Only the dropboxId in MemberSelector may be set
@@ -647,7 +660,7 @@ open class SharingRoutes {
     }
 
     /// Update the sharing policies for a shared folder. User must have owner in AccessLevel access to the shared folder
-    /// to update its policies.
+    /// to update its policies. Apps must have full Dropbox access to use this endpoint.
     ///
     /// - parameter sharedFolderId: The ID for the shared folder.
     /// - parameter memberPolicy: Who can be a member of this shared folder. Only applicable if the current user is on a

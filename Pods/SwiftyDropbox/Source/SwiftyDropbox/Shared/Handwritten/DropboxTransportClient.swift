@@ -6,9 +6,9 @@ import Foundation
 import Alamofire
 
 open class DropboxTransportClient {
-    public let manager: SessionManager
-    public let backgroundManager: SessionManager
-    public let longpollManager: SessionManager
+    open let manager: SessionManager
+    open let backgroundManager: SessionManager
+    open let longpollManager: SessionManager
     open var accessToken: String
     open var selectUser: String?
     open var pathRoot: Common.PathRoot?
@@ -72,12 +72,7 @@ open class DropboxTransportClient {
     open func request<ASerial, RSerial, ESerial>(_ route: Route<ASerial, RSerial, ESerial>,
                         serverArgs: ASerial.ValueType? = nil) -> RpcRequest<RSerial, ESerial> {
         let host = route.attrs["host"]! ?? "api"
-        var routeName = route.name
-        if route.version > 1 {
-            routeName = String(format: "%@_v%d", route.name, route.version)
-        }
-        let url = "\(self.baseHosts[host]!)/\(route.namespace)/\(routeName)"
-        
+        let url = "\(self.baseHosts[host]!)/\(route.namespace)/\(route.name)"
         let routeStyle: RouteStyle = RouteStyle(rawValue: route.attrs["style"]!!)!
 
         var rawJsonRequest: Data?
@@ -130,11 +125,7 @@ open class DropboxTransportClient {
     open func request<ASerial, RSerial, ESerial>(_ route: Route<ASerial, RSerial, ESerial>,
                         serverArgs: ASerial.ValueType, input: UploadBody) -> UploadRequest<RSerial, ESerial> {
         let host = route.attrs["host"]! ?? "api"
-        var routeName = route.name
-        if route.version > 1 {
-            routeName = String(format: "%@_v%d", route.name, route.version)
-        }
-        let url = "\(self.baseHosts[host]!)/\(route.namespace)/\(routeName)"
+        let url = "\(self.baseHosts[host]!)/\(route.namespace)/\(route.name)"
         let routeStyle: RouteStyle = RouteStyle(rawValue: route.attrs["style"]!!)!
 
         let jsonRequestObj = route.argSerializer.serialize(serverArgs)
@@ -161,11 +152,7 @@ open class DropboxTransportClient {
     open func request<ASerial, RSerial, ESerial>(_ route: Route<ASerial, RSerial, ESerial>,
                         serverArgs: ASerial.ValueType, overwrite: Bool, destination: @escaping (URL, HTTPURLResponse) -> URL) -> DownloadRequestFile<RSerial, ESerial> {
         let host = route.attrs["host"]! ?? "api"
-        var routeName = route.name
-        if route.version > 1 {
-            routeName = String(format: "%@_v%d", route.name, route.version)
-        }
-        let url = "\(self.baseHosts[host]!)/\(route.namespace)/\(routeName)"
+        let url = "\(self.baseHosts[host]!)/\(route.namespace)/\(route.name)"
         let routeStyle: RouteStyle = RouteStyle(rawValue: route.attrs["style"]!!)!
 
         let jsonRequestObj = route.argSerializer.serialize(serverArgs)
@@ -267,7 +254,7 @@ open class DropboxTransportClient {
 }
 
 open class Box<T> {
-    public let unboxed: T
+    open let unboxed: T
     init (_ v: T) { self.unboxed = v }
 }
 
@@ -478,7 +465,7 @@ open class Request<RSerial: JSONSerializer, ESerial: JSONSerializer> {
 
 /// An "rpc-style" request
 open class RpcRequest<RSerial: JSONSerializer, ESerial: JSONSerializer>: Request<RSerial, ESerial> {
-    public let request: Alamofire.DataRequest
+    open let request: Alamofire.DataRequest
 
     public init(request: Alamofire.DataRequest, responseSerializer: RSerial, errorSerializer: ESerial) {
         self.request = request
@@ -503,7 +490,7 @@ open class RpcRequest<RSerial: JSONSerializer, ESerial: JSONSerializer>: Request
 
 /// An "upload-style" request
 open class UploadRequest<RSerial: JSONSerializer, ESerial: JSONSerializer>: Request<RSerial, ESerial> {
-    public let request: Alamofire.UploadRequest
+    open let request: Alamofire.UploadRequest
 
     public init(request: Alamofire.UploadRequest, responseSerializer: RSerial, errorSerializer: ESerial) {
         self.request = request
@@ -536,7 +523,7 @@ open class UploadRequest<RSerial: JSONSerializer, ESerial: JSONSerializer>: Requ
 
 /// A "download-style" request to a file
 open class DownloadRequestFile<RSerial: JSONSerializer, ESerial: JSONSerializer>: Request<RSerial, ESerial> {
-    public let request: Alamofire.DownloadRequest
+    open let request: Alamofire.DownloadRequest
     open var urlPath: URL?
     open var errorMessage: Data
 
@@ -577,7 +564,7 @@ open class DownloadRequestFile<RSerial: JSONSerializer, ESerial: JSONSerializer>
 
 /// A "download-style" request to memory
 open class DownloadRequestMemory<RSerial: JSONSerializer, ESerial: JSONSerializer>: Request<RSerial, ESerial> {
-    public let request: Alamofire.DataRequest
+    open let request: Alamofire.DataRequest
 
     public init(request: Alamofire.DataRequest, responseSerializer: RSerial, errorSerializer: ESerial) {
         self.request = request

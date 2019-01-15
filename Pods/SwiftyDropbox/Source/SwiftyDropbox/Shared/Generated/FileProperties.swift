@@ -11,9 +11,9 @@ open class FileProperties {
     /// The AddPropertiesArg struct
     open class AddPropertiesArg: CustomStringConvertible {
         /// A unique identifier for the file or folder.
-        public let path: String
+        open let path: String
         /// The property groups which are to be added to a Dropbox file.
-        public let propertyGroups: Array<FileProperties.PropertyGroup>
+        open let propertyGroups: Array<FileProperties.PropertyGroup>
         public init(path: String, propertyGroups: Array<FileProperties.PropertyGroup>) {
             stringValidator(pattern: "/(.|[\\r\\n])*|id:.*|(ns:[0-9]+(/.*)?)")(path)
             self.path = path
@@ -346,12 +346,12 @@ open class FileProperties {
     /// Defines how a property group may be structured.
     open class PropertyGroupTemplate: CustomStringConvertible {
         /// Display name for the template. Template names can be up to 256 bytes.
-        public let name: String
+        open let name: String
         /// Description for the template. Template descriptions can be up to 1024 bytes.
-        public let description_: String
+        open let description_: String
         /// Definitions of the property fields associated with this template. There can be up to 32 properties in a
         /// single template.
-        public let fields: Array<FileProperties.PropertyFieldTemplate>
+        open let fields: Array<FileProperties.PropertyFieldTemplate>
         public init(name: String, description_: String, fields: Array<FileProperties.PropertyFieldTemplate>) {
             stringValidator()(name)
             self.name = name
@@ -418,7 +418,7 @@ open class FileProperties {
     /// The AddTemplateResult struct
     open class AddTemplateResult: CustomStringConvertible {
         /// An identifier for template added by  See templatesAddForUser or templatesAddForTeam.
-        public let templateId: String
+        open let templateId: String
         public init(templateId: String) {
             stringValidator(minLength: 1, pattern: "(/|ptid:).*")(templateId)
             self.templateId = templateId
@@ -449,7 +449,7 @@ open class FileProperties {
     /// The GetTemplateArg struct
     open class GetTemplateArg: CustomStringConvertible {
         /// An identifier for template added by route  See templatesAddForUser or templatesAddForTeam.
-        public let templateId: String
+        open let templateId: String
         public init(templateId: String) {
             stringValidator(minLength: 1, pattern: "(/|ptid:).*")(templateId)
             self.templateId = templateId
@@ -509,7 +509,7 @@ open class FileProperties {
     /// The ListTemplateResult struct
     open class ListTemplateResult: CustomStringConvertible {
         /// List of identifiers for templates added by  See templatesAddForUser or templatesAddForTeam.
-        public let templateIds: Array<String>
+        open let templateIds: Array<String>
         public init(templateIds: Array<String>) {
             arrayValidator(itemValidator: stringValidator(minLength: 1, pattern: "(/|ptid:).*"))(templateIds)
             self.templateIds = templateIds
@@ -787,9 +787,9 @@ open class FileProperties {
     /// The OverwritePropertyGroupArg struct
     open class OverwritePropertyGroupArg: CustomStringConvertible {
         /// A unique identifier for the file or folder.
-        public let path: String
+        open let path: String
         /// The property groups "snapshot" updates to force apply.
-        public let propertyGroups: Array<FileProperties.PropertyGroup>
+        open let propertyGroups: Array<FileProperties.PropertyGroup>
         public init(path: String, propertyGroups: Array<FileProperties.PropertyGroup>) {
             stringValidator(pattern: "/(.|[\\r\\n])*|id:.*|(ns:[0-9]+(/.*)?)")(path)
             self.path = path
@@ -823,9 +823,9 @@ open class FileProperties {
     /// The PropertiesSearchArg struct
     open class PropertiesSearchArg: CustomStringConvertible {
         /// Queries to search.
-        public let queries: Array<FileProperties.PropertiesSearchQuery>
+        open let queries: Array<FileProperties.PropertiesSearchQuery>
         /// Filter results to contain only properties associated with these template IDs.
-        public let templateFilter: FileProperties.TemplateFilter
+        open let templateFilter: FileProperties.TemplateFilter
         public init(queries: Array<FileProperties.PropertiesSearchQuery>, templateFilter: FileProperties.TemplateFilter = .filterNone) {
             self.queries = queries
             self.templateFilter = templateFilter
@@ -858,7 +858,7 @@ open class FileProperties {
     /// The PropertiesSearchContinueArg struct
     open class PropertiesSearchContinueArg: CustomStringConvertible {
         /// The cursor returned by your last call to propertiesSearch or propertiesSearchContinue.
-        public let cursor: String
+        open let cursor: String
         public init(cursor: String) {
             stringValidator(minLength: 1)(cursor)
             self.cursor = cursor
@@ -976,13 +976,13 @@ open class FileProperties {
     /// The PropertiesSearchMatch struct
     open class PropertiesSearchMatch: CustomStringConvertible {
         /// The ID for the matched file or folder.
-        public let id: String
+        open let id: String
         /// The path for the matched file or folder.
-        public let path: String
+        open let path: String
         /// Whether the file or folder is deleted.
-        public let isDeleted: Bool
+        open let isDeleted: Bool
         /// List of custom property groups associated with the file.
-        public let propertyGroups: Array<FileProperties.PropertyGroup>
+        open let propertyGroups: Array<FileProperties.PropertyGroup>
         public init(id: String, path: String, isDeleted: Bool, propertyGroups: Array<FileProperties.PropertyGroup>) {
             stringValidator(minLength: 1)(id)
             self.id = id
@@ -1067,11 +1067,11 @@ open class FileProperties {
     /// The PropertiesSearchQuery struct
     open class PropertiesSearchQuery: CustomStringConvertible {
         /// The property field value for which to search across templates.
-        public let query: String
+        open let query: String
         /// The mode with which to perform the search.
-        public let mode: FileProperties.PropertiesSearchMode
+        open let mode: FileProperties.PropertiesSearchMode
         /// The logical operator with which to append the query.
-        public let logicalOperator: FileProperties.LogicalOperator
+        open let logicalOperator: FileProperties.LogicalOperator
         public init(query: String, mode: FileProperties.PropertiesSearchMode, logicalOperator: FileProperties.LogicalOperator = .orOperator) {
             stringValidator()(query)
             self.query = query
@@ -1108,10 +1108,10 @@ open class FileProperties {
     /// The PropertiesSearchResult struct
     open class PropertiesSearchResult: CustomStringConvertible {
         /// A list (possibly empty) of matches for the query.
-        public let matches: Array<FileProperties.PropertiesSearchMatch>
+        open let matches: Array<FileProperties.PropertiesSearchMatch>
         /// Pass the cursor into propertiesSearchContinue to continue to receive search results. Cursor will be null
         /// when there are no more results.
-        public let cursor: String?
+        open let cursor: String?
         public init(matches: Array<FileProperties.PropertiesSearchMatch>, cursor: String? = nil) {
             self.matches = matches
             nullableValidator(stringValidator(minLength: 1))(cursor)
@@ -1146,9 +1146,9 @@ open class FileProperties {
     /// PropertyGroup.
     open class PropertyField: CustomStringConvertible {
         /// Key of the property field associated with a file and template. Keys can be up to 256 bytes.
-        public let name: String
+        open let name: String
         /// Value of the property field associated with a file and template. Values can be up to 1024 bytes.
-        public let value: String
+        open let value: String
         public init(name: String, value: String) {
             stringValidator()(name)
             self.name = name
@@ -1183,12 +1183,12 @@ open class FileProperties {
     /// Defines how a single property field may be structured. Used exclusively by PropertyGroupTemplate.
     open class PropertyFieldTemplate: CustomStringConvertible {
         /// Key of the property field being described. Property field keys can be up to 256 bytes.
-        public let name: String
+        open let name: String
         /// Description of the property field. Property field descriptions can be up to 1024 bytes.
-        public let description_: String
+        open let description_: String
         /// Data type of the value of this property field. This type will be enforced upon property creation and
         /// modifications.
-        public let type: FileProperties.PropertyType
+        open let type: FileProperties.PropertyType
         public init(name: String, description_: String, type: FileProperties.PropertyType) {
             stringValidator()(name)
             self.name = name
@@ -1228,9 +1228,9 @@ open class FileProperties {
     /// the corresponding PropertyGroupTemplate.
     open class PropertyGroup: CustomStringConvertible {
         /// A unique identifier for the associated template.
-        public let templateId: String
+        open let templateId: String
         /// The actual properties associated with the template. There can be up to 32 property types per template.
-        public let fields: Array<FileProperties.PropertyField>
+        open let fields: Array<FileProperties.PropertyField>
         public init(templateId: String, fields: Array<FileProperties.PropertyField>) {
             stringValidator(minLength: 1, pattern: "(/|ptid:).*")(templateId)
             self.templateId = templateId
@@ -1264,12 +1264,12 @@ open class FileProperties {
     /// The PropertyGroupUpdate struct
     open class PropertyGroupUpdate: CustomStringConvertible {
         /// A unique identifier for a property template.
-        public let templateId: String
+        open let templateId: String
         /// Property fields to update. If the property field already exists, it is updated. If the property field
         /// doesn't exist, the property group is added.
-        public let addOrUpdateFields: Array<FileProperties.PropertyField>?
+        open let addOrUpdateFields: Array<FileProperties.PropertyField>?
         /// Property fields to remove (by name), provided they exist.
-        public let removeFields: Array<String>?
+        open let removeFields: Array<String>?
         public init(templateId: String, addOrUpdateFields: Array<FileProperties.PropertyField>? = nil, removeFields: Array<String>? = nil) {
             stringValidator(minLength: 1, pattern: "(/|ptid:).*")(templateId)
             self.templateId = templateId
@@ -1350,9 +1350,9 @@ open class FileProperties {
     /// The RemovePropertiesArg struct
     open class RemovePropertiesArg: CustomStringConvertible {
         /// A unique identifier for the file or folder.
-        public let path: String
+        open let path: String
         /// A list of identifiers for a template created by templatesAddForUser or templatesAddForTeam.
-        public let propertyTemplateIds: Array<String>
+        open let propertyTemplateIds: Array<String>
         public init(path: String, propertyTemplateIds: Array<String>) {
             stringValidator(pattern: "/(.|[\\r\\n])*|id:.*|(ns:[0-9]+(/.*)?)")(path)
             self.path = path
@@ -1465,7 +1465,7 @@ open class FileProperties {
     /// The RemoveTemplateArg struct
     open class RemoveTemplateArg: CustomStringConvertible {
         /// An identifier for a template created by templatesAddForUser or templatesAddForTeam.
-        public let templateId: String
+        open let templateId: String
         public init(templateId: String) {
             stringValidator(minLength: 1, pattern: "(/|ptid:).*")(templateId)
             self.templateId = templateId
@@ -1643,9 +1643,9 @@ open class FileProperties {
     /// The UpdatePropertiesArg struct
     open class UpdatePropertiesArg: CustomStringConvertible {
         /// A unique identifier for the file or folder.
-        public let path: String
+        open let path: String
         /// The property groups "delta" updates to apply.
-        public let updatePropertyGroups: Array<FileProperties.PropertyGroupUpdate>
+        open let updatePropertyGroups: Array<FileProperties.PropertyGroupUpdate>
         public init(path: String, updatePropertyGroups: Array<FileProperties.PropertyGroupUpdate>) {
             stringValidator(pattern: "/(.|[\\r\\n])*|id:.*|(ns:[0-9]+(/.*)?)")(path)
             self.path = path
@@ -1773,14 +1773,14 @@ open class FileProperties {
     /// The UpdateTemplateArg struct
     open class UpdateTemplateArg: CustomStringConvertible {
         /// An identifier for template added by  See templatesAddForUser or templatesAddForTeam.
-        public let templateId: String
+        open let templateId: String
         /// A display name for the template. template names can be up to 256 bytes.
-        public let name: String?
+        open let name: String?
         /// Description for the new template. Template descriptions can be up to 1024 bytes.
-        public let description_: String?
+        open let description_: String?
         /// Property field templates to be added to the group template. There can be up to 32 properties in a single
         /// template.
-        public let addFields: Array<FileProperties.PropertyFieldTemplate>?
+        open let addFields: Array<FileProperties.PropertyFieldTemplate>?
         public init(templateId: String, name: String? = nil, description_: String? = nil, addFields: Array<FileProperties.PropertyFieldTemplate>? = nil) {
             stringValidator(minLength: 1, pattern: "(/|ptid:).*")(templateId)
             self.templateId = templateId
@@ -1822,7 +1822,7 @@ open class FileProperties {
     /// The UpdateTemplateResult struct
     open class UpdateTemplateResult: CustomStringConvertible {
         /// An identifier for template added by route  See templatesAddForUser or templatesAddForTeam.
-        public let templateId: String
+        open let templateId: String
         public init(templateId: String) {
             stringValidator(minLength: 1, pattern: "(/|ptid:).*")(templateId)
             self.templateId = templateId
@@ -1855,7 +1855,6 @@ open class FileProperties {
 
     static let propertiesAdd = Route(
         name: "properties/add",
-        version: 1,
         namespace: "file_properties",
         deprecated: false,
         argSerializer: FileProperties.AddPropertiesArgSerializer(),
@@ -1866,7 +1865,6 @@ open class FileProperties {
     )
     static let propertiesOverwrite = Route(
         name: "properties/overwrite",
-        version: 1,
         namespace: "file_properties",
         deprecated: false,
         argSerializer: FileProperties.OverwritePropertyGroupArgSerializer(),
@@ -1877,7 +1875,6 @@ open class FileProperties {
     )
     static let propertiesRemove = Route(
         name: "properties/remove",
-        version: 1,
         namespace: "file_properties",
         deprecated: false,
         argSerializer: FileProperties.RemovePropertiesArgSerializer(),
@@ -1888,7 +1885,6 @@ open class FileProperties {
     )
     static let propertiesSearch = Route(
         name: "properties/search",
-        version: 1,
         namespace: "file_properties",
         deprecated: false,
         argSerializer: FileProperties.PropertiesSearchArgSerializer(),
@@ -1899,7 +1895,6 @@ open class FileProperties {
     )
     static let propertiesSearchContinue = Route(
         name: "properties/search/continue",
-        version: 1,
         namespace: "file_properties",
         deprecated: false,
         argSerializer: FileProperties.PropertiesSearchContinueArgSerializer(),
@@ -1910,7 +1905,6 @@ open class FileProperties {
     )
     static let propertiesUpdate = Route(
         name: "properties/update",
-        version: 1,
         namespace: "file_properties",
         deprecated: false,
         argSerializer: FileProperties.UpdatePropertiesArgSerializer(),
@@ -1921,7 +1915,6 @@ open class FileProperties {
     )
     static let templatesAddForTeam = Route(
         name: "templates/add_for_team",
-        version: 1,
         namespace: "file_properties",
         deprecated: false,
         argSerializer: FileProperties.AddTemplateArgSerializer(),
@@ -1932,7 +1925,6 @@ open class FileProperties {
     )
     static let templatesAddForUser = Route(
         name: "templates/add_for_user",
-        version: 1,
         namespace: "file_properties",
         deprecated: false,
         argSerializer: FileProperties.AddTemplateArgSerializer(),
@@ -1943,7 +1935,6 @@ open class FileProperties {
     )
     static let templatesGetForTeam = Route(
         name: "templates/get_for_team",
-        version: 1,
         namespace: "file_properties",
         deprecated: false,
         argSerializer: FileProperties.GetTemplateArgSerializer(),
@@ -1954,7 +1945,6 @@ open class FileProperties {
     )
     static let templatesGetForUser = Route(
         name: "templates/get_for_user",
-        version: 1,
         namespace: "file_properties",
         deprecated: false,
         argSerializer: FileProperties.GetTemplateArgSerializer(),
@@ -1965,7 +1955,6 @@ open class FileProperties {
     )
     static let templatesListForTeam = Route(
         name: "templates/list_for_team",
-        version: 1,
         namespace: "file_properties",
         deprecated: false,
         argSerializer: Serialization._VoidSerializer,
@@ -1976,7 +1965,6 @@ open class FileProperties {
     )
     static let templatesListForUser = Route(
         name: "templates/list_for_user",
-        version: 1,
         namespace: "file_properties",
         deprecated: false,
         argSerializer: Serialization._VoidSerializer,
@@ -1987,7 +1975,6 @@ open class FileProperties {
     )
     static let templatesRemoveForTeam = Route(
         name: "templates/remove_for_team",
-        version: 1,
         namespace: "file_properties",
         deprecated: false,
         argSerializer: FileProperties.RemoveTemplateArgSerializer(),
@@ -1998,7 +1985,6 @@ open class FileProperties {
     )
     static let templatesRemoveForUser = Route(
         name: "templates/remove_for_user",
-        version: 1,
         namespace: "file_properties",
         deprecated: false,
         argSerializer: FileProperties.RemoveTemplateArgSerializer(),
@@ -2009,7 +1995,6 @@ open class FileProperties {
     )
     static let templatesUpdateForTeam = Route(
         name: "templates/update_for_team",
-        version: 1,
         namespace: "file_properties",
         deprecated: false,
         argSerializer: FileProperties.UpdateTemplateArgSerializer(),
@@ -2020,7 +2005,6 @@ open class FileProperties {
     )
     static let templatesUpdateForUser = Route(
         name: "templates/update_for_user",
-        version: 1,
         namespace: "file_properties",
         deprecated: false,
         argSerializer: FileProperties.UpdateTemplateArgSerializer(),

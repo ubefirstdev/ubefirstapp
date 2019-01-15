@@ -12,6 +12,7 @@ import FirebaseAuth
 import FirebaseFirestore
 import GoogleSignIn
 import SwiftyDropbox
+import SideMenu
 
 var imagenRecuerdoBuffer = UIImage()
 var segueSender = ""
@@ -34,12 +35,12 @@ class HomeViewController: UIViewController {
          self.present(alertController, animated: true, completion: nil)
          } else {
          
-         }*/
+         }
         
         //Aqui se logea con Dropbox de manera provicional
         DropboxClientsManager.authorizeFromController(UIApplication.shared,controller: self,openURL: {
             (url: URL) -> Void in UIApplication.shared.openURL(url)
-        })
+        })*/
     }
     
     @IBAction func btnPressed_mejoresMomentos(_ sender: Any) {
@@ -94,6 +95,12 @@ class HomeViewController: UIViewController {
             self.lbl_username.text="Cuenta gratuita"
             self.lbl_username.textColor = UIColor.red
         }
+        SideMenuManager.default.menuFadeStatusBar = false
+        //var menuWidth: CGFloat = max(round(min((appScreenRect.width), (appScreenRect.height)) * 0.75), 240)
+        SideMenuManager.default.menuWidth = 300
+
+
+
       
     }
     

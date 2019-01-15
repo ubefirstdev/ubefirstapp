@@ -96,7 +96,7 @@ open class Async {
     /// Arguments for methods that poll the status of an asynchronous job.
     open class PollArg: CustomStringConvertible {
         /// Id of the asynchronous job. This is the value of a response returned from the method that launched the job.
-        public let asyncJobId: String
+        open let asyncJobId: String
         public init(asyncJobId: String) {
             stringValidator(minLength: 1)(asyncJobId)
             self.asyncJobId = asyncJobId

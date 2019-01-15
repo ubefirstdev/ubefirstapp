@@ -6,7 +6,7 @@
 
 /// Routes for the paper namespace
 open class PaperRoutes {
-    public let client: DropboxTransportClient
+    open let client: DropboxTransportClient
     init(client: DropboxTransportClient) {
         self.client = client
     }

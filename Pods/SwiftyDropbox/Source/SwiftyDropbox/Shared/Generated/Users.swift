@@ -11,18 +11,18 @@ open class Users {
     /// The amount of detail revealed about an account depends on the user being queried and the user making the query.
     open class Account: CustomStringConvertible {
         /// The user's unique Dropbox ID.
-        public let accountId: String
+        open let accountId: String
         /// Details of a user's name.
-        public let name: Users.Name
+        open let name: Users.Name
         /// The user's e-mail address. Do not rely on this without checking the emailVerified field. Even then, it's
         /// possible that the user has since lost access to their e-mail.
-        public let email: String
+        open let email: String
         /// Whether the user has verified their e-mail address.
-        public let emailVerified: Bool
+        open let emailVerified: Bool
         /// URL for the photo representing the user, if one is set.
-        public let profilePhotoUrl: String?
+        open let profilePhotoUrl: String?
         /// Whether the user has been disabled.
-        public let disabled: Bool
+        open let disabled: Bool
         public init(accountId: String, name: Users.Name, email: String, emailVerified: Bool, disabled: Bool, profilePhotoUrl: String? = nil) {
             stringValidator(minLength: 40, maxLength: 40)(accountId)
             self.accountId = accountId
@@ -71,10 +71,10 @@ open class Users {
     open class BasicAccount: Users.Account {
         /// Whether this user is a teammate of the current user. If this account is the current user's account, then
         /// this will be true.
-        public let isTeammate: Bool
+        open let isTeammate: Bool
         /// The user's unique team member id. This field will only be present if the user is part of a team and
         /// isTeammate is true.
-        public let teamMemberId: String?
+        open let teamMemberId: String?
         public init(accountId: String, name: Users.Name, email: String, emailVerified: Bool, disabled: Bool, isTeammate: Bool, profilePhotoUrl: String? = nil, teamMemberId: String? = nil) {
             self.isTeammate = isTeammate
             nullableValidator(stringValidator())(teamMemberId)
@@ -122,23 +122,23 @@ open class Users {
     open class FullAccount: Users.Account {
         /// The user's two-letter country code, if available. Country codes are based on ISO 3166-1
         /// http://en.wikipedia.org/wiki/ISO_3166-1.
-        public let country: String?
+        open let country: String?
         /// The language that the user specified. Locale tags will be IETF language tags
         /// http://en.wikipedia.org/wiki/IETF_language_tag.
-        public let locale: String
+        open let locale: String
         /// The user's referral link https://www.dropbox.com/referrals.
-        public let referralLink: String
+        open let referralLink: String
         /// If this account is a member of a team, information about that team.
-        public let team: Users.FullTeam?
+        open let team: Users.FullTeam?
         /// This account's unique team member id. This field will only be present if team is present.
-        public let teamMemberId: String?
+        open let teamMemberId: String?
         /// Whether the user has a personal and work account. If the current account is personal, then team will always
         /// be null, but isPaired will indicate if a work account is linked.
-        public let isPaired: Bool
+        open let isPaired: Bool
         /// What type of account this user has.
-        public let accountType: UsersCommon.AccountType
+        open let accountType: UsersCommon.AccountType
         /// The root info for this account.
-        public let rootInfo: Common.RootInfo
+        open let rootInfo: Common.RootInfo
         public init(accountId: String, name: Users.Name, email: String, emailVerified: Bool, disabled: Bool, locale: String, referralLink: String, isPaired: Bool, accountType: UsersCommon.AccountType, rootInfo: Common.RootInfo, profilePhotoUrl: String? = nil, country: String? = nil, team: Users.FullTeam? = nil, teamMemberId: String? = nil) {
             nullableValidator(stringValidator(minLength: 2, maxLength: 2))(country)
             self.country = country
@@ -206,9 +206,9 @@ open class Users {
     /// Information about a team.
     open class Team: CustomStringConvertible {
         /// The team's unique ID.
-        public let id: String
+        open let id: String
         /// The name of the team.
-        public let name: String
+        open let name: String
         public init(id: String, name: String) {
             stringValidator()(id)
             self.id = id
@@ -243,9 +243,9 @@ open class Users {
     /// Detailed information about a team.
     open class FullTeam: Users.Team {
         /// Team policies governing sharing.
-        public let sharingPolicies: TeamPolicies.TeamSharingPolicies
+        open let sharingPolicies: TeamPolicies.TeamSharingPolicies
         /// Team policy governing the use of the Office Add-In.
-        public let officeAddinPolicy: TeamPolicies.OfficeAddInPolicy
+        open let officeAddinPolicy: TeamPolicies.OfficeAddInPolicy
         public init(id: String, name: String, sharingPolicies: TeamPolicies.TeamSharingPolicies, officeAddinPolicy: TeamPolicies.OfficeAddInPolicy) {
             self.sharingPolicies = sharingPolicies
             self.officeAddinPolicy = officeAddinPolicy
@@ -283,7 +283,7 @@ open class Users {
     /// The GetAccountArg struct
     open class GetAccountArg: CustomStringConvertible {
         /// A user's account identifier.
-        public let accountId: String
+        open let accountId: String
         public init(accountId: String) {
             stringValidator(minLength: 40, maxLength: 40)(accountId)
             self.accountId = accountId
@@ -314,7 +314,7 @@ open class Users {
     /// The GetAccountBatchArg struct
     open class GetAccountBatchArg: CustomStringConvertible {
         /// List of user account identifiers.  Should not contain any duplicate account IDs.
-        public let accountIds: Array<String>
+        open let accountIds: Array<String>
         public init(accountIds: Array<String>) {
             arrayValidator(minItems: 1, itemValidator: stringValidator(minLength: 40, maxLength: 40))(accountIds)
             self.accountIds = accountIds
@@ -432,7 +432,7 @@ open class Users {
     /// The IndividualSpaceAllocation struct
     open class IndividualSpaceAllocation: CustomStringConvertible {
         /// The total space allocated to the user's account (bytes).
-        public let allocated: UInt64
+        open let allocated: UInt64
         public init(allocated: UInt64) {
             comparableValidator()(allocated)
             self.allocated = allocated
@@ -463,16 +463,16 @@ open class Users {
     /// Representations for a person's name to assist with internationalization.
     open class Name: CustomStringConvertible {
         /// Also known as a first name.
-        public let givenName: String
+        open let givenName: String
         /// Also known as a last name or family name.
-        public let surname: String
+        open let surname: String
         /// Locale-dependent name. In the US, a person's familiar name is their givenName, but elsewhere, it could be
         /// any combination of a person's givenName and surname.
-        public let familiarName: String
+        open let familiarName: String
         /// A name that can be used directly to represent the name of a user's Dropbox account.
-        public let displayName: String
+        open let displayName: String
         /// An abbreviated form of the person's name. Their initials in most locales.
-        public let abbreviatedName: String
+        open let abbreviatedName: String
         public init(givenName: String, surname: String, familiarName: String, displayName: String, abbreviatedName: String) {
             stringValidator()(givenName)
             self.givenName = givenName
@@ -572,9 +572,9 @@ open class Users {
     /// Information about a user's space usage and quota.
     open class SpaceUsage: CustomStringConvertible {
         /// The user's total space usage (bytes).
-        public let used: UInt64
+        open let used: UInt64
         /// The user's space allocation.
-        public let allocation: Users.SpaceAllocation
+        open let allocation: Users.SpaceAllocation
         public init(used: UInt64, allocation: Users.SpaceAllocation) {
             comparableValidator()(used)
             self.used = used
@@ -608,14 +608,14 @@ open class Users {
     /// The TeamSpaceAllocation struct
     open class TeamSpaceAllocation: CustomStringConvertible {
         /// The total space currently used by the user's team (bytes).
-        public let used: UInt64
+        open let used: UInt64
         /// The total space allocated to the user's team (bytes).
-        public let allocated: UInt64
+        open let allocated: UInt64
         /// The total space allocated to the user within its team allocated space (0 means that no restriction is
         /// imposed on the user's quota within its team).
-        public let userWithinTeamSpaceAllocated: UInt64
+        open let userWithinTeamSpaceAllocated: UInt64
         /// The type of the space limit imposed on the team member (off, alert_only, stop_sync).
-        public let userWithinTeamSpaceLimitType: TeamCommon.MemberSpaceLimitType
+        open let userWithinTeamSpaceLimitType: TeamCommon.MemberSpaceLimitType
         public init(used: UInt64, allocated: UInt64, userWithinTeamSpaceAllocated: UInt64, userWithinTeamSpaceLimitType: TeamCommon.MemberSpaceLimitType) {
             comparableValidator()(used)
             self.used = used
@@ -659,7 +659,6 @@ open class Users {
 
     static let getAccount = Route(
         name: "get_account",
-        version: 1,
         namespace: "users",
         deprecated: false,
         argSerializer: Users.GetAccountArgSerializer(),
@@ -670,7 +669,6 @@ open class Users {
     )
     static let getAccountBatch = Route(
         name: "get_account_batch",
-        version: 1,
         namespace: "users",
         deprecated: false,
         argSerializer: Users.GetAccountBatchArgSerializer(),
@@ -681,7 +679,6 @@ open class Users {
     )
     static let getCurrentAccount = Route(
         name: "get_current_account",
-        version: 1,
         namespace: "users",
         deprecated: false,
         argSerializer: Serialization._VoidSerializer,
@@ -692,7 +689,6 @@ open class Users {
     )
     static let getSpaceUsage = Route(
         name: "get_space_usage",
-        version: 1,
         namespace: "users",
         deprecated: false,
         argSerializer: Serialization._VoidSerializer,
