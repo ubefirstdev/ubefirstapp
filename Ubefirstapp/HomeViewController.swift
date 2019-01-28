@@ -34,7 +34,7 @@ class HomeViewController: UIViewController {
          })
          self.present(alertController, animated: true, completion: nil)
          } else {
-         
+
          }
         
         //Aqui se logea con Dropbox de manera provicional
@@ -96,11 +96,14 @@ class HomeViewController: UIViewController {
             self.lbl_username.textColor = UIColor.red
         }
         SideMenuManager.default.menuFadeStatusBar = false
+        let menuLeftNavigationController = storyboard!.instantiateViewController(withIdentifier: "LeftMenuNavigationController") as! UISideMenuNavigationController
+        SideMenuManager.default.menuLeftNavigationController = menuLeftNavigationController
         SideMenuManager.default.menuWidth = 320
-
-
-
       
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
     }
     
     override func didReceiveMemoryWarning() {
