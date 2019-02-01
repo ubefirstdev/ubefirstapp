@@ -234,4 +234,31 @@ class LoadDataToFirestore {
         
         db.collection("users").document(uid).setData(docDataUser)
     }
+    
+    func eliminarReferenciaHijo()  {
+        
+        var docData: [String: Any] = [:]
+        
+        if userData.hijosref.count == 1{
+            docData = [
+                "hijosref": [userData.hijosref[0]]
+            ]
+        } else if userData.hijosref.count == 2{
+            docData = [
+                "hijosref": [userData.hijosref[0], userData.hijosref[1]]
+            ]
+        } else if userData.hijosref.count == 3{
+            docData = [
+                "hijosref": [userData.hijosref[0], userData.hijosref[1], userData.hijosref[2]]
+            ]
+        } else if userData.hijos.count == 4{
+            docData = [
+                "hijosref": [userData.hijosref[0], userData.hijosref[1], userData.hijosref[2],userData.hijosref[3]]
+            ]
+        }
+        
+        db.collection("users").document(userData.uid).setData(docData, merge: true)
+
+        
+    }
 }

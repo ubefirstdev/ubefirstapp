@@ -12,12 +12,37 @@ var lastHijoConfigPersonTap: Int!
 class HijosListaConfigViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableViewhijos: UITableView!
+    @IBOutlet weak var btn_agregarPersona: UIBarButtonItem!
     
+    @IBAction func btnPressed_agregarPersonas(_ sender: Any) {
+        if (userData.premium==true){
+            OperationQueue.main.addOperation {
+                [weak self] in
+                self?.performSegue(withIdentifier: "PersonasToAgregarPersonas", sender: self)
+            }
+        } else if (userData.hijos.count<1){
+            OperationQueue.main.addOperation {
+                [weak self] in
+                self?.performSegue(withIdentifier: "PersonasToAgregarPersonas", sender: self)
+            }
+        }else {
+            let alertController = UIAlertController(title: "Funcionalidad limitada", message: "Obtenga una cuenta ubefirst Premium para agregar más Personas", preferredStyle: UIAlertController.Style.alert)
+            alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default) {
+                UIAlertAction in
+            })
+            self.present(alertController, animated: true, completion: nil)
+            
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupTableView()
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tableViewhijos.reloadData()
     }
     
     func setupTableView(){
