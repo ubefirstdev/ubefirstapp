@@ -261,4 +261,101 @@ class LoadDataToFirestore {
 
         
     }
+    
+    func deleteDimension(hijoID: String, dimensionID: String, dimensionIndex: Int, hijoIndex:Int, RecuerdosCount:Int){
+        
+        //obtengo snapshot de todos los documentos de esa coleccion
+        db.collection("users").document(userData.uid).collection("hijos").document(hijoID).collection("dimensiones").document(dimensionID).collection("recuerdos").getDocuments(){ (querySnapshot, err) in
+            if err != nil {
+                print(err)
+            } else {
+                var i = 0
+                if (querySnapshot?.documents.count as! Int == 0){
+                    userData.hijos[hijoIndex].dimensionesref.remove(at: dimensionIndex)
+                    db.collection("users").document(userData.uid).collection("hijos").document(hijoID).collection("dimensiones").document(dimensionID).delete() { err in
+                        if let err = err {
+                            print("Error removing document: \(err)")
+                        } else {
+                            print("Document successfully removed!")
+                            self.deleteReferenceDimension(hijoIndex:hijoIndex)
+                        }
+                    }
+
+                }
+                
+                for document in querySnapshot!.documents {
+                    //elimino cada documento de ese snapshot osea cada recuerdo
+                    db.collection("users").document(userData.uid).collection("hijos").document(hijoID).collection("dimensiones").document(dimensionID).collection("recuerdos").document(document.documentID).delete(){ err in
+                        if let err = err {
+                            print("Error removing document: \(err)")
+                        } else {
+                            i = i + 1
+                            print("Document successfully removed!")
+                            if (i == RecuerdosCount){
+                                //elimino el documento que contiene a la coleccion borrada, es decir el doc con el nombre de la dimension
+                                db.collection("users").document(userData.uid).collection("hijos").document(hijoID).collection("dimensiones").document(dimensionID).delete() { err in
+                                    if let err = err {
+                                        print("Error removing document: \(err)")
+                                    } else {
+                                        print("Document successfully removed!")
+                                        userData.hijos[hijoIndex].dimensionesref.remove(at: dimensionIndex)
+                                        self.deleteReferenceDimension(hijoIndex:hijoIndex)
+                                        //alertController2.dismiss(animated: true, completion: nil)
+                                        //self.navigationController?.popViewController(animated: true)
+                                        
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+    
+    func deleteReferenceDimension(hijoIndex:Int){
+        var doc: [String: [Any]]=[:]
+        
+        if userData.hijos[hijoIndex].dimensiones.count == 0{
+            //falta implementar que hacer al momento de quedarse sin dimensiones
+        }else if userData.hijos[hijoIndex].dimensiones.count == 1{
+            doc = [
+                "dimensionesref": [userData.hijos[hijoIndex].dimensionesref[0]]
+            ]
+        } else if userData.hijos[hijoIndex].dimensiones.count == 2{
+            doc = [
+                "dimensionesref":[userData.hijos[hijoIndex].dimensionesref[0], userData.hijos[hijoIndex].dimensionesref[1]]
+            ]
+        } else if userData.hijos[hijoIndex].dimensiones.count == 3{
+            doc = [
+                "dimensionesref": [userData.hijos[hijoIndex].dimensionesref[0], userData.hijos[hijoIndex].dimensionesref[1], userData.hijos[hijoIndex].dimensionesref[2]]
+            ]
+        }else if userData.hijos[hijoIndex].dimensiones.count == 4{
+            doc = [
+                "dimensionesref": [userData.hijos[hijoIndex].dimensionesref[0], userData.hijos[hijoIndex].dimensionesref[1], userData.hijos[hijoIndex].dimensionesref[2],userData.hijos[hijoIndex].dimensionesref[3]]
+            ]
+        }else if userData.hijos[hijoIndex].dimensiones.count == 5{
+            doc = [
+                "dimensionesref":[userData.hijos[hijoIndex].dimensionesref[0], userData.hijos[hijoIndex].dimensionesref[1], userData.hijos[hijoIndex].dimensionesref[2],userData.hijos[hijoIndex].dimensionesref[3], userData.hijos[hijoIndex].dimensionesref[4]]
+            ]
+        }else if userData.hijos[hijoIndex].dimensiones.count == 6{
+            doc = [
+                "dimensionesref": [userData.hijos[hijoIndex].dimensionesref[0], userData.hijos[hijoIndex].dimensionesref[1], userData.hijos[hijoIndex].dimensionesref[2],userData.hijos[hijoIndex].dimensionesref[3], userData.hijos[hijoIndex].dimensionesref[4],userData.hijos[hijoIndex].dimensionesref[5]]
+            ]
+        }else if userData.hijos[hijoIndex].dimensiones.count == 7{
+            doc = [
+                "dimensionesref": [userData.hijos[hijoIndex].dimensionesref[0], userData.hijos[hijoIndex].dimensionesref[1], userData.hijos[hijoIndex].dimensionesref[2],userData.hijos[hijoIndex].dimensionesref[3], userData.hijos[hijoIndex].dimensionesref[4],userData.hijos[hijoIndex].dimensionesref[5],userData.hijos[hijoIndex].dimensionesref[6]]
+            ]
+        }else if userData.hijos[hijoIndex].dimensiones.count == 8{
+            doc = [
+                "dimensionesref": [userData.hijos[hijoIndex].dimensionesref[0], userData.hijos[hijoIndex].dimensionesref[1], userData.hijos[hijoIndex].dimensionesref[2],userData.hijos[hijoIndex].dimensionesref[3], userData.hijos[hijoIndex].dimensionesref[4],userData.hijos[hijoIndex].dimensionesref[5],userData.hijos[hijoIndex].dimensionesref[6],userData.hijos[hijoIndex].dimensionesref[7]]
+            ]
+        }
+        
+        db.collection("users").document(userData.uid).collection("hijos").document(userData.hijosref[hijoIndex]).setData(doc, merge: true)
+
+        
+        
+    }
 }

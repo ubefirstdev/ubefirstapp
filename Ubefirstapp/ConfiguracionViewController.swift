@@ -15,6 +15,7 @@ import GoogleSignIn
 
 class ConfiguracionViewController: UIViewController {
     
+    @IBOutlet weak var btn_cambiatePremium: UIButton!
     
     @IBAction func btnPressed_informacionUsuario(_ sender: Any) {
     }
@@ -64,6 +65,9 @@ class ConfiguracionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if (userData.premium == true){
+            self.btn_cambiatePremium.isHidden = true
+        }
         // Do any additional setup after loading the view.
     }
     

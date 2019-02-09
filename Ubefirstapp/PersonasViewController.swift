@@ -16,27 +16,6 @@ class PersonasViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var btn_agregarPersona: UIBarButtonItem!
     @IBOutlet weak var personasTableView: UITableView!
     
-    @IBAction func btnPressed_agregarPersonas(_ sender: Any) {
-        if (userData.premium==true){
-            OperationQueue.main.addOperation {
-                [weak self] in
-                self?.performSegue(withIdentifier: "PersonasToAgregarPersonas", sender: self)
-            }
-        } else if (userData.hijos.count<1){
-            OperationQueue.main.addOperation {
-                [weak self] in
-                self?.performSegue(withIdentifier: "PersonasToAgregarPersonas", sender: self)
-            }
-        }else {
-            let alertController = UIAlertController(title: "Funcionalidad limitada", message: "Obtenga una cuenta ubefirst Premium para agregar más Personas", preferredStyle: UIAlertController.Style.alert)
-            alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default) {
-                UIAlertAction in
-            })
-            self.present(alertController, animated: true, completion: nil)
-            
-        }
-    }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -60,7 +60,7 @@ class HijosConfigViewController: UIViewController, UITableViewDataSource, UITabl
                 self.present(alertController2, animated: true, completion: nil)
                 db.collection("users").document(userData.uid).collection("hijos").document(userData.hijosref[lastHijoConfigPersonTap]).collection("dimensiones").getDocuments(){ (querySnapshot, err) in
                     if err != nil {
-                        print(err)
+                        print(err!)
                     } else {
                         var i = 0
                         
@@ -159,6 +159,99 @@ class HijosConfigViewController: UIViewController, UITableViewDataSource, UITabl
         })
         self.present(alertController3, animated: true, completion: nil)
 
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath){
+        let alert = UIAlertController(title: "¿Eliminar dimensión " + userData.hijos[lastHijoConfigPersonTap].dimensiones[indexPath.row].nombre + "?", message: "Está acción borrara permanentemente la dimensión y todos sus recuerdos contenidos", preferredStyle: UIAlertController.Style.alert)
+        alert.addTextField(configurationHandler: self.usernameTextField)
+
+        alert.addAction(UIAlertAction(title: "Yes", style: UIAlertAction.Style.destructive, handler: {(ACTION) in alert.dismiss(animated: true, completion: nil)
+            
+            if editingStyle == .delete{
+                if (userData.nombre == self.usernameTextField?.text){
+                    self.deleteDimension(hijoID: userData.hijosref[lastHijoConfigPersonTap], dimensionID: userData.hijos[lastHijoConfigPersonTap].dimensionesref[indexPath.row], dimensionIndex: indexPath.row, hijoIndex: lastHijoConfigPersonTap, RecuerdosCount:userData.hijos[lastHijoConfigPersonTap].dimensiones[indexPath.row].recuerdos.count, indexPath: indexPath)
+                }else{
+                    let alertController5 = UIAlertController(title: "Nombre de usuario incorrecto", message: "La acción no se puede completar", preferredStyle: UIAlertController.Style.alert)
+                    alertController5.addAction(UIAlertAction(title: "Reintentar", style: UIAlertAction.Style.default) { UIAlertAction in
+                        self.tableView(tableView, commit: editingStyle, forRowAt: indexPath)
+                    })
+                    alertController5.addAction(UIAlertAction(title: "Cancelar", style: UIAlertAction.Style.default) { UIAlertAction in
+                    })
+                    self.present(alertController5, animated: true, completion: nil)
+                    
+                }
+            }
+        }))
+        
+        alert.addAction(UIAlertAction(title: "No", style: UIAlertAction.Style.cancel, handler: { (ACTION) in alert.dismiss(animated: true, completion: nil)
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func deleteDimension(hijoID: String, dimensionID: String, dimensionIndex: Int, hijoIndex:Int, RecuerdosCount:Int, indexPath: IndexPath){
+        let database = LoadDataToFirestore()
+        let alertController4 = UIAlertController(title: "Borrando dimensión " + userData.hijos[lastHijoConfigPersonTap].dimensiones[indexPath.row].nombre , message: "Espere un momento porfavor", preferredStyle: UIAlertController.Style.alert)
+        self.present(alertController4, animated: true, completion: nil)
+        
+        //obtengo snapshot de todos los documentos de esa coleccion
+        db.collection("users").document(userData.uid).collection("hijos").document(hijoID).collection("dimensiones").document(dimensionID).collection("recuerdos").getDocuments(){ (querySnapshot, err) in
+            if err != nil {
+                print(err)
+            } else {
+                var i = 0
+                if (querySnapshot?.documents.count as! Int == 0){
+                    db.collection("users").document(userData.uid).collection("hijos").document(hijoID).collection("dimensiones").document(dimensionID).delete() { err in
+                        if let err = err {
+                            print("Error removing document: \(err)")
+                        } else {
+                            print("Document successfully removed!")
+                            userData.hijos[hijoIndex].dimensionesref.remove(at: indexPath.row)
+                            userData.hijos[lastHijoConfigPersonTap].dimensiones.remove(at: indexPath.row)
+                            database.deleteReferenceDimension(hijoIndex:hijoIndex)
+                            self.tableView_dimensiones.beginUpdates()
+                            self.tableView_dimensiones.deleteRows(at: [indexPath], with: .fade)
+                            self.tableView_dimensiones.endUpdates()
+                            alertController4.dismiss(animated: true, completion: nil)
+                        }
+                    }
+                    
+                }
+                
+                for document in querySnapshot!.documents {
+                    //elimino cada documento de ese snapshot osea cada recuerdo
+                    db.collection("users").document(userData.uid).collection("hijos").document(hijoID).collection("dimensiones").document(dimensionID).collection("recuerdos").document(document.documentID).delete(){ err in
+                        if let err = err {
+                            print("Error removing document: \(err)")
+                        } else {
+                            i = i + 1
+                            print("Document successfully removed!")
+                            if (i == RecuerdosCount){
+                                //elimino el documento que contiene a la coleccion borrada, es decir el doc con el nombre de la dimension
+                                db.collection("users").document(userData.uid).collection("hijos").document(hijoID).collection("dimensiones").document(dimensionID).delete() { err in
+                                    if let err = err {
+                                        print("Error removing document: \(err)")
+                                    } else {
+                                        print("Document successfully removed!")
+                                        userData.hijos[hijoIndex].dimensionesref.remove(at: indexPath.row)
+                                        userData.hijos[lastHijoConfigPersonTap].dimensiones.remove(at: indexPath.row)
+                                        database.deleteReferenceDimension(hijoIndex:hijoIndex)
+                                        self.tableView_dimensiones.beginUpdates()
+                                        self.tableView_dimensiones.deleteRows(at: [indexPath], with: .fade)
+                                        self.tableView_dimensiones.endUpdates()
+                                        alertController4.dismiss(animated: true, completion: nil)
+                                        //alertController2.dismiss(animated: true, completion: nil)
+                                        //self.navigationController?.popViewController(animated: true)
+                                        
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
     }
     
     /*

@@ -35,5 +35,165 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ubefirstapp/LoadDataToFirestore.swift"
+            timestampString = "571391357.1388021"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "273"
+            endingLineNumber = "273"
+            landmarkName = "deleteDimension(hijoID:dimensionID:dimensionIndex:hijoIndex:RecuerdosCount:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Ubefirstapp.LoadDataToFirestore.deleteDimension(hijoID: Swift.String, dimensionID: Swift.String, dimensionIndex: Swift.Int, hijoIndex: Swift.Int, RecuerdosCount: Swift.Int) -&gt; ()"
+                  moduleName = "Ubefirstapp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/luisoliva/Documents/Proyectos%20Swift/ubefirstapp/Ubefirstapp/LoadDataToFirestore.swift"
+                  timestampString = "571391357.994121"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "273"
+                  endingLineNumber = "273"
+                  offsetFromSymbolStart = "585">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Ubefirstapp.LoadDataToFirestore.deleteDimension(hijoID: Swift.String, dimensionID: Swift.String, dimensionIndex: Swift.Int, hijoIndex: Swift.Int, RecuerdosCount: Swift.Int) -&gt; ()"
+                  moduleName = "Ubefirstapp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/luisoliva/Documents/Proyectos%20Swift/ubefirstapp/Ubefirstapp/LoadDataToFirestore.swift"
+                  timestampString = "571391358.0038249"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "273"
+                  endingLineNumber = "273"
+                  offsetFromSymbolStart = "5316">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ubefirstapp/LoadDataToFirestore.swift"
+            timestampString = "571391357.139604"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "289"
+            endingLineNumber = "289"
+            landmarkName = "deleteDimension(hijoID:dimensionID:dimensionIndex:hijoIndex:RecuerdosCount:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ubefirstapp/LoadDataToFirestore.swift"
+            timestampString = "571391357.140185"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "280"
+            endingLineNumber = "280"
+            landmarkName = "deleteDimension(hijoID:dimensionID:dimensionIndex:hijoIndex:RecuerdosCount:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ubefirstapp/LoadDataToFirestore.swift"
+            timestampString = "571391357.1407599"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "300"
+            endingLineNumber = "300"
+            landmarkName = "deleteDimension(hijoID:dimensionID:dimensionIndex:hijoIndex:RecuerdosCount:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ubefirstapp/HijosConfigViewController.swift"
+            timestampString = "571391357.141337"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "199"
+            endingLineNumber = "199"
+            landmarkName = "deleteDimension(hijoID:dimensionID:dimensionIndex:hijoIndex:RecuerdosCount:indexPath:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ubefirstapp/HijosConfigViewController.swift"
+            timestampString = "571391357.141448"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "205"
+            endingLineNumber = "205"
+            landmarkName = "deleteDimension(hijoID:dimensionID:dimensionIndex:hijoIndex:RecuerdosCount:indexPath:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ubefirstapp/HijosConfigViewController.swift"
+            timestampString = "571391357.141562"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "224"
+            endingLineNumber = "224"
+            landmarkName = "deleteDimension(hijoID:dimensionID:dimensionIndex:hijoIndex:RecuerdosCount:indexPath:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ubefirstapp/HijosConfigViewController.swift"
+            timestampString = "571391357.141668"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "232"
+            endingLineNumber = "232"
+            landmarkName = "deleteDimension(hijoID:dimensionID:dimensionIndex:hijoIndex:RecuerdosCount:indexPath:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
