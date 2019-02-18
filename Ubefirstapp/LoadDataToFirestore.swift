@@ -239,7 +239,11 @@ class LoadDataToFirestore {
         
         var docData: [String: Any] = [:]
         
-        if userData.hijosref.count == 1{
+        if userData.hijosref.count == 0{
+            docData = [
+                "hijosref": []
+            ]
+        }else if userData.hijosref.count == 1{
             docData = [
                 "hijosref": [userData.hijosref[0]]
             ]
@@ -318,7 +322,9 @@ class LoadDataToFirestore {
         var doc: [String: [Any]]=[:]
         
         if userData.hijos[hijoIndex].dimensiones.count == 0{
-            //falta implementar que hacer al momento de quedarse sin dimensiones
+            doc = [
+                "dimensionesref": []
+            ]
         }else if userData.hijos[hijoIndex].dimensiones.count == 1{
             doc = [
                 "dimensionesref": [userData.hijos[hijoIndex].dimensionesref[0]]

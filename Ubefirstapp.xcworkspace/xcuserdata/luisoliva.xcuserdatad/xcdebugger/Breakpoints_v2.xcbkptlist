@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ubefirstapp/LoadDataToFirestore.swift"
-            timestampString = "571391357.1388021"
+            timestampString = "572217578.156749"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "273"
-            endingLineNumber = "273"
+            startingLineNumber = "277"
+            endingLineNumber = "277"
             landmarkName = "deleteDimension(hijoID:dimensionID:dimensionIndex:hijoIndex:RecuerdosCount:)"
             landmarkType = "7">
             <Locations>
@@ -58,11 +58,11 @@
                   moduleName = "Ubefirstapp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/luisoliva/Documents/Proyectos%20Swift/ubefirstapp/Ubefirstapp/LoadDataToFirestore.swift"
-                  timestampString = "571391357.994121"
+                  timestampString = "572217926.217417"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "273"
-                  endingLineNumber = "273"
+                  startingLineNumber = "277"
+                  endingLineNumber = "277"
                   offsetFromSymbolStart = "585">
                </Location>
                <Location
@@ -73,11 +73,11 @@
                   moduleName = "Ubefirstapp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/luisoliva/Documents/Proyectos%20Swift/ubefirstapp/Ubefirstapp/LoadDataToFirestore.swift"
-                  timestampString = "571391358.0038249"
+                  timestampString = "572217926.2211829"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "273"
-                  endingLineNumber = "273"
+                  startingLineNumber = "277"
+                  endingLineNumber = "277"
                   offsetFromSymbolStart = "5316">
                </Location>
             </Locations>
@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ubefirstapp/LoadDataToFirestore.swift"
-            timestampString = "571391357.139604"
+            timestampString = "572217578.156894"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "289"
-            endingLineNumber = "289"
+            startingLineNumber = "293"
+            endingLineNumber = "293"
             landmarkName = "deleteDimension(hijoID:dimensionID:dimensionIndex:hijoIndex:RecuerdosCount:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -106,11 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ubefirstapp/LoadDataToFirestore.swift"
-            timestampString = "571391357.140185"
+            timestampString = "572217578.156988"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "280"
-            endingLineNumber = "280"
+            startingLineNumber = "284"
+            endingLineNumber = "284"
             landmarkName = "deleteDimension(hijoID:dimensionID:dimensionIndex:hijoIndex:RecuerdosCount:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -122,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ubefirstapp/LoadDataToFirestore.swift"
-            timestampString = "571391357.1407599"
+            timestampString = "572217578.1570801"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "300"
-            endingLineNumber = "300"
+            startingLineNumber = "304"
+            endingLineNumber = "304"
             landmarkName = "deleteDimension(hijoID:dimensionID:dimensionIndex:hijoIndex:RecuerdosCount:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -134,15 +134,399 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ubefirstapp/HijosConfigViewController.swift"
+            timestampString = "572217578.157195"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "btnPressed_eliminar(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ubefirstapp/HijosConfigViewController.swift"
+            timestampString = "572217578.158114"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "btnPressed_eliminar(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.UIAlertAction) -&gt; () in Ubefirstapp.HijosConfigViewController.btnPressed_eliminar(Any) -&gt; ()"
+                  moduleName = "Ubefirstapp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/luisoliva/Documents/Proyectos%20Swift/ubefirstapp/Ubefirstapp/HijosConfigViewController.swift"
+                  timestampString = "572061891.178152"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "1755">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (__C.UIAlertAction) -&gt; () in Ubefirstapp.HijosConfigViewController.btnPressed_eliminar(Any) -&gt; ()"
+                  moduleName = "Ubefirstapp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/luisoliva/Documents/Proyectos%20Swift/ubefirstapp/Ubefirstapp/HijosConfigViewController.swift"
+                  timestampString = "572061891.186944"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "68"
+                  endingLineNumber = "68"
+                  offsetFromSymbolStart = "93">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ubefirstapp/HijosConfigViewController.swift"
+            timestampString = "572217578.158726"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "btnPressed_eliminar(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ubefirstapp/HijosConfigViewController.swift"
+            timestampString = "572217578.159281"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "btnPressed_eliminar(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (__C.UIAlertAction) -&gt; () in Ubefirstapp.HijosConfigViewController.btnPressed_eliminar(Any) -&gt; ()"
+                  moduleName = "Ubefirstapp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/luisoliva/Documents/Proyectos%20Swift/ubefirstapp/Ubefirstapp/HijosConfigViewController.swift"
+                  timestampString = "572061891.219849"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "932">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (__C.UIAlertAction) -&gt; () in Ubefirstapp.HijosConfigViewController.btnPressed_eliminar(Any) -&gt; ()"
+                  moduleName = "Ubefirstapp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/luisoliva/Documents/Proyectos%20Swift/ubefirstapp/Ubefirstapp/HijosConfigViewController.swift"
+                  timestampString = "572061891.224107"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "74"
+                  endingLineNumber = "74"
+                  offsetFromSymbolStart = "68">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ubefirstapp/HijosConfigViewController.swift"
+            timestampString = "572217578.1598589"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "btnPressed_eliminar(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ubefirstapp/HijosConfigViewController.swift"
+            timestampString = "572217578.160422"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "btnPressed_eliminar(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (__C.UIAlertAction) -&gt; () in Ubefirstapp.HijosConfigViewController.btnPressed_eliminar(Any) -&gt; ()"
+                  moduleName = "Ubefirstapp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/luisoliva/Documents/Proyectos%20Swift/ubefirstapp/Ubefirstapp/HijosConfigViewController.swift"
+                  timestampString = "572061891.243986"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "893">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (__C.UIAlertAction) -&gt; () in Ubefirstapp.HijosConfigViewController.btnPressed_eliminar(Any) -&gt; ()"
+                  moduleName = "Ubefirstapp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/luisoliva/Documents/Proyectos%20Swift/ubefirstapp/Ubefirstapp/HijosConfigViewController.swift"
+                  timestampString = "572061891.248094"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "31">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ubefirstapp/HijosConfigViewController.swift"
+            timestampString = "572217578.1609581"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "btnPressed_eliminar(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ubefirstapp/HijosConfigViewController.swift"
+            timestampString = "572217578.161528"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "btnPressed_eliminar(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (__C.UIAlertAction) -&gt; () in Ubefirstapp.HijosConfigViewController.btnPressed_eliminar(Any) -&gt; ()"
+                  moduleName = "Ubefirstapp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/luisoliva/Documents/Proyectos%20Swift/ubefirstapp/Ubefirstapp/HijosConfigViewController.swift"
+                  timestampString = "572061891.269657"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "90"
+                  endingLineNumber = "90"
+                  offsetFromSymbolStart = "3089">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (__C.UIAlertAction) -&gt; () in Ubefirstapp.HijosConfigViewController.btnPressed_eliminar(Any) -&gt; ()"
+                  moduleName = "Ubefirstapp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/luisoliva/Documents/Proyectos%20Swift/ubefirstapp/Ubefirstapp/HijosConfigViewController.swift"
+                  timestampString = "572061891.276881"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "91"
+                  endingLineNumber = "91"
+                  offsetFromSymbolStart = "31">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ubefirstapp/HijosConfigViewController.swift"
+            timestampString = "572217578.162145"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "btnPressed_eliminar(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ubefirstapp/HijosConfigViewController.swift"
+            timestampString = "572217578.1627541"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "btnPressed_eliminar(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (__C.UIAlertAction) -&gt; () in Ubefirstapp.HijosConfigViewController.btnPressed_eliminar(Any) -&gt; ()"
+                  moduleName = "Ubefirstapp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/luisoliva/Documents/Proyectos%20Swift/ubefirstapp/Ubefirstapp/HijosConfigViewController.swift"
+                  timestampString = "572061891.309587"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "100"
+                  endingLineNumber = "100"
+                  offsetFromSymbolStart = "3008">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (__C.UIAlertAction) -&gt; () in Ubefirstapp.HijosConfigViewController.btnPressed_eliminar(Any) -&gt; ()"
+                  moduleName = "Ubefirstapp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/luisoliva/Documents/Proyectos%20Swift/ubefirstapp/Ubefirstapp/HijosConfigViewController.swift"
+                  timestampString = "572061891.313886"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "101"
+                  endingLineNumber = "101"
+                  offsetFromSymbolStart = "72">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ubefirstapp/HijosConfigViewController.swift"
+            timestampString = "572217578.163334"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
+            landmarkName = "btnPressed_eliminar(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ubefirstapp/HijosConfigViewController.swift"
-            timestampString = "571391357.141337"
+            timestampString = "572217578.163905"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "199"
-            endingLineNumber = "199"
+            startingLineNumber = "230"
+            endingLineNumber = "230"
+            landmarkName = "deleteDimension(hijoID:dimensionID:dimensionIndex:hijoIndex:RecuerdosCount:indexPath:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Ubefirstapp.HijosConfigViewController.deleteDimension(hijoID: Swift.String, dimensionID: Swift.String, dimensionIndex: Swift.Int, hijoIndex: Swift.Int, RecuerdosCount: Swift.Int, indexPath: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "Ubefirstapp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/luisoliva/Documents/Proyectos%20Swift/ubefirstapp/Ubefirstapp/HijosConfigViewController.swift"
+                  timestampString = "572217926.2580889"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "230"
+                  endingLineNumber = "230"
+                  offsetFromSymbolStart = "681">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Ubefirstapp.HijosConfigViewController.deleteDimension(hijoID: Swift.String, dimensionID: Swift.String, dimensionIndex: Swift.Int, hijoIndex: Swift.Int, RecuerdosCount: Swift.Int, indexPath: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "Ubefirstapp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/luisoliva/Documents/Proyectos%20Swift/ubefirstapp/Ubefirstapp/HijosConfigViewController.swift"
+                  timestampString = "572217926.261739"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "230"
+                  endingLineNumber = "230"
+                  offsetFromSymbolStart = "5900">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ubefirstapp/HijosConfigViewController.swift"
+            timestampString = "572217578.164484"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "261"
+            endingLineNumber = "261"
             landmarkName = "deleteDimension(hijoID:dimensionID:dimensionIndex:hijoIndex:RecuerdosCount:indexPath:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -154,12 +538,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ubefirstapp/HijosConfigViewController.swift"
-            timestampString = "571391357.141448"
+            timestampString = "572217578.1650389"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "205"
-            endingLineNumber = "205"
-            landmarkName = "deleteDimension(hijoID:dimensionID:dimensionIndex:hijoIndex:RecuerdosCount:indexPath:)"
+            startingLineNumber = "294"
+            endingLineNumber = "294"
+            landmarkName = "lastDimensionAction(indexPath:alertController:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -170,12 +554,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ubefirstapp/HijosConfigViewController.swift"
-            timestampString = "571391357.141562"
+            timestampString = "572217578.1655411"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "224"
-            endingLineNumber = "224"
-            landmarkName = "deleteDimension(hijoID:dimensionID:dimensionIndex:hijoIndex:RecuerdosCount:indexPath:)"
+            startingLineNumber = "299"
+            endingLineNumber = "299"
+            landmarkName = "lastDimensionAction(indexPath:alertController:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -186,12 +570,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ubefirstapp/HijosConfigViewController.swift"
-            timestampString = "571391357.141668"
+            timestampString = "572217578.166086"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "232"
-            endingLineNumber = "232"
-            landmarkName = "deleteDimension(hijoID:dimensionID:dimensionIndex:hijoIndex:RecuerdosCount:indexPath:)"
+            startingLineNumber = "185"
+            endingLineNumber = "185"
+            landmarkName = "tableView(_:commit:forRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ubefirstapp/HijosConfigViewController.swift"
+            timestampString = "572217578.166626"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "301"
+            endingLineNumber = "301"
+            landmarkName = "lastDimensionAction(indexPath:alertController:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
