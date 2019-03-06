@@ -23,9 +23,6 @@ class ConfiguracionViewController: UIViewController {
     @IBAction func btnPressed_hijos(_ sender: Any) {
     }
     
-    @IBAction func btnPressed_dimensiones(_ sender: Any) {
-    }
-    
     @IBAction func btnPresssed_cuentaDropbox(_ sender: Any) {
     DropboxClientsManager.authorizeFromController(UIApplication.shared,controller: self,openURL: {
             (url: URL) -> Void in UIApplication.shared.openURL(url)
