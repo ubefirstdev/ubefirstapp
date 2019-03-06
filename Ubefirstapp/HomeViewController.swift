@@ -11,7 +11,6 @@ import FBSDKLoginKit
 import FirebaseAuth
 import FirebaseFirestore
 import GoogleSignIn
-import SwiftyDropbox
 import SideMenu
 
 var imagenRecuerdoBuffer = UIImage()
