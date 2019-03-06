@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SwiftyDropbox
 
 class FormularioRecuerdoViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     @IBOutlet weak var imageview_previaImagen: UIImageView!
@@ -28,7 +27,9 @@ class FormularioRecuerdoViewController: UIViewController, UIPickerViewDelegate, 
         dateFormatter.locale = Locale(identifier: "es")
         dateFormatter.dateFormat = "dd MMM yyyy"
         let selectedDate = dateFormatter.string(from: self.picker_fecha.date)
-        CrearCarpetaRecuerdo()
+        
+        //CrearCarpetaRecuerdo()
+        
         docData = [
             "titulo": self.textField_nombreRecuerdo.text!,
             "hijo": userData.hijos[self.indexPersona].nombre,
@@ -41,7 +42,8 @@ class FormularioRecuerdoViewController: UIViewController, UIPickerViewDelegate, 
         
         //aqui iria el codigo para poder subir elementos a dropbox, en esta parte del codigo es donde se realiza la creacion de un nuevo recuerdo
         //Se debe crear la carpeta y luego se debe subir la imagen en esa carpeta
-        SubirImagenACarpeta()
+        
+        //SubirImagenACarpeta()
         
         //se agrega el recuerdo al objeto padre
         let recuerdoNuevo  = Recuerdo()
@@ -115,7 +117,7 @@ class FormularioRecuerdoViewController: UIViewController, UIPickerViewDelegate, 
         self.picker_dimension.reloadAllComponents()
     }
     
-    func CrearCarpetaRecuerdo(){
+    /*func CrearCarpetaRecuerdo(){
         if let client = DropboxClientsManager.authorizedClient {
             let hijo = userData.hijos[self.indexPersona].nombre!
             let dimension = userData.hijos[self.indexPersona].dimensiones[self.indexDimension].nombre!
@@ -147,7 +149,8 @@ class FormularioRecuerdoViewController: UIViewController, UIPickerViewDelegate, 
                     print(progressData)
             }
         }
-    }
+
+    }*/
 }
 
 

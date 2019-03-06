@@ -11,7 +11,6 @@ import Firebase
 import FBSDKCoreKit
 import GoogleSignIn
 import IQKeyboardManager
-import SwiftyDropbox
 
 
 @UIApplicationMain
@@ -26,10 +25,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
-        //Configuracion para linkear DropboxDev con la app
-        DropboxClientsManager.setupWithAppKey("q65la2idkz20yg2")
-        
-        
         return true
     }
     
@@ -37,19 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let handled = FBSDKApplicationDelegate.sharedInstance().application(app, open: url, options: options)
         
-        GIDSignIn.sharedInstance().handle(url,sourceApplication:options[UIApplication.OpenURLOptionsKey.sourceApplication] as! String,annotation: [:])
-        
-        if let authResult = DropboxClientsManager.handleRedirectURL(url) {
-            switch authResult {
-            case .success(let token):
-                print("Success! User is logged into Dropbox with token: \(token)")
-            case .cancel:
-                print("User canceld OAuth flow.")
-            case .error(let error, let description):
-                print("Error \(error): \(description)")
-            }
-        }
-        
+        GIDSignIn.sharedInstance().handle(url,sourceApplication:(options[UIApplication.OpenURLOptionsKey.sourceApplication] as! String),annotation: [:])
         return handled
     }
     

@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import SwiftyDropbox
-
 class RecuerdosDetallesViewController: UIViewController {
 
     @IBOutlet var imageView: UIImageView!
@@ -39,6 +37,7 @@ class RecuerdosDetallesViewController: UIViewController {
         //MOSTARLAIMAGEN QUE ESTE EN SU PATH
         self.filenames = []
         //Aqui carga la imagen pero deberian ser thumbnails y por lo pronto solo aguanta una que ya luego nos permita ver en pantalla completa
+        /*
         if let client = DropboxClientsManager.authorizedClient {
             client.files.listFolder(path: folderPath).response { response, error in
                 if let result = response {
@@ -94,10 +93,10 @@ class RecuerdosDetallesViewController: UIViewController {
                 println(error!)
             }
  */
+ */
         }
     }
-    
-}
+
     /*
     // MARK: - Navigation
 

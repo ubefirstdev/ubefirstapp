@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SwiftyDropbox
 import FBSDKLoginKit
 import FirebaseAuth
 import FirebaseFirestore
@@ -24,9 +23,9 @@ class ConfiguracionViewController: UIViewController {
     }
     
     @IBAction func btnPresssed_cuentaDropbox(_ sender: Any) {
-    DropboxClientsManager.authorizeFromController(UIApplication.shared,controller: self,openURL: {
+    /*DropboxClientsManager.authorizeFromController(UIApplication.shared,controller: self,openURL: {
             (url: URL) -> Void in UIApplication.shared.openURL(url)
-        })
+        })*/
     }
     
     @IBAction func btnPressed_avisoDePrivacidad(_ sender: Any) {

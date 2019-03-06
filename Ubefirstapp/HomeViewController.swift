@@ -11,7 +11,6 @@ import FBSDKLoginKit
 import FirebaseAuth
 import FirebaseFirestore
 import GoogleSignIn
-import SwiftyDropbox
 import SideMenu
 
 var imagenRecuerdoBuffer = UIImage()
@@ -27,7 +26,7 @@ class HomeViewController: UIViewController {
     
     
     @IBAction func btnPressed_configuracion(_ sender: Any) {
-        if (userData.premium==false){
+        /*if (userData.premium==false){
          let alertController = UIAlertController(title: "Funcionalidad limitada", message: "Obtenga una cuenta ubefirst Premium para gestionar hijos, dimensiones y más.", preferredStyle: UIAlertController.Style.alert)
          alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default) {
          UIAlertAction in
@@ -41,7 +40,7 @@ class HomeViewController: UIViewController {
         /*DropboxClientsManager.authorizeFromController(UIApplication.shared,controller: self,openURL: {
             (url: URL) -> Void in UIApplication.shared.openURL(url)
         })*/
-    }
+*/    }
     
     @IBAction func btnPressed_mejoresMomentos(_ sender: Any) {
         if (userData.premium==false){
