@@ -25,6 +25,9 @@
 		FC2E6E6B21F946EC00EB30E9 /* HijosListaConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2E6E6A21F946EC00EB30E9 /* HijosListaConfigViewController.swift */; };
 		FC588B1A21DC04D50065622A /* RecuerdosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC588B1921DC04D50065622A /* RecuerdosViewController.swift */; };
 		FC6706B421DD7D8900BEE2B1 /* PersonasTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6706B321DD7D8900BEE2B1 /* PersonasTableViewCell.swift */; };
+		FC72514922304E4300A9293C /* GestionColaboradoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC72514822304E4300A9293C /* GestionColaboradoresViewController.swift */; };
+		FC72514B22309DEE00A9293C /* Colaboradores.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC72514A22309DEE00A9293C /* Colaboradores.swift */; };
+		FC72514D2231790000A9293C /* AgregarColaboradorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC72514C2231790000A9293C /* AgregarColaboradorViewController.swift */; };
 		FCA4CF7E21750C97009FD4E0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA4CF7D21750C97009FD4E0 /* HomeViewController.swift */; };
 		FCA4CF80217511C8009FD4E0 /* InicialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA4CF7F217511C8009FD4E0 /* InicialViewController.swift */; };
 		FCA4CF84217611A1009FD4E0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FCA4CF83217611A0009FD4E0 /* GoogleService-Info.plist */; };
@@ -61,6 +64,9 @@
 		FC2E6E6A21F946EC00EB30E9 /* HijosListaConfigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HijosListaConfigViewController.swift; sourceTree = "<group>"; };
 		FC588B1921DC04D50065622A /* RecuerdosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecuerdosViewController.swift; sourceTree = "<group>"; };
 		FC6706B321DD7D8900BEE2B1 /* PersonasTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonasTableViewCell.swift; sourceTree = "<group>"; };
+		FC72514822304E4300A9293C /* GestionColaboradoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestionColaboradoresViewController.swift; sourceTree = "<group>"; };
+		FC72514A22309DEE00A9293C /* Colaboradores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colaboradores.swift; sourceTree = "<group>"; };
+		FC72514C2231790000A9293C /* AgregarColaboradorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgregarColaboradorViewController.swift; sourceTree = "<group>"; };
 		FCA4CF7D21750C97009FD4E0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FCA4CF7F217511C8009FD4E0 /* InicialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InicialViewController.swift; sourceTree = "<group>"; };
 		FCA4CF83217611A0009FD4E0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -144,6 +150,7 @@
 				EC8FED57216F9BDB00D76752 /* LaunchScreen.storyboard */,
 				EC8FED62216FB37A00D76752 /* Media.xcassets */,
 				FCA9896121D598B80071748E /* Padre.swift */,
+				FC72514A22309DEE00A9293C /* Colaboradores.swift */,
 				FCA9896321D59A2B0071748E /* Hijo.swift */,
 				FC001EAA21D8340A001B033B /* Dimension.swift */,
 				FC001EAC21D84207001B033B /* Recuerdo.swift */,
@@ -153,6 +160,8 @@
 				FCBAC4F521F02BA600D4B0F5 /* GestionUsuariosViewController.swift */,
 				FC2E6E6A21F946EC00EB30E9 /* HijosListaConfigViewController.swift */,
 				FC03F72921FFB5410060AA61 /* HijosConfigViewController.swift */,
+				FC72514822304E4300A9293C /* GestionColaboradoresViewController.swift */,
+				FC72514C2231790000A9293C /* AgregarColaboradorViewController.swift */,
 			);
 			path = Ubefirstapp;
 			sourceTree = "<group>";
@@ -336,12 +345,15 @@
 				FCA9896221D598B80071748E /* Padre.swift in Sources */,
 				FC001EAB21D8340A001B033B /* Dimension.swift in Sources */,
 				FCB1302B21EE644700FBCA24 /* ConfiguracionViewController.swift in Sources */,
+				FC72514922304E4300A9293C /* GestionColaboradoresViewController.swift in Sources */,
 				FC001EAD21D84207001B033B /* Recuerdo.swift in Sources */,
 				FC03F72A21FFB5410060AA61 /* HijosConfigViewController.swift in Sources */,
 				FCBAC4F621F02BA600D4B0F5 /* GestionUsuariosViewController.swift in Sources */,
 				FCA9895C21D426630071748E /* DimensionesViewController.swift in Sources */,
+				FC72514D2231790000A9293C /* AgregarColaboradorViewController.swift in Sources */,
 				FC001EA321D7D278001B033B /* RegistroViewController.swift in Sources */,
 				FC6706B421DD7D8900BEE2B1 /* PersonasTableViewCell.swift in Sources */,
+				FC72514B22309DEE00A9293C /* Colaboradores.swift in Sources */,
 				EC8FED4F216F9BD900D76752 /* AppDelegate.swift in Sources */,
 				FCA4CF7E21750C97009FD4E0 /* HomeViewController.swift in Sources */,
 				FC001EA721D7DAC3001B033B /* FormularioRecuerdoViewController.swift in Sources */,

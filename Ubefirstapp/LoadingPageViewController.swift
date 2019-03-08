@@ -41,15 +41,6 @@ class LoadingPageViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     public func userExists() -> Bool{
         var r = false
@@ -88,7 +79,13 @@ class LoadingPageViewController: UIViewController {
                 userData.correo = document?.data()!["correo"] as? String
                 userData.hijosref = document?.data()!["hijosref"] as? [String]
                 userData.premium = document?.data()!["premium"] as? Bool
+                userData.colaboradoresref = document?.data()!["colaboradoresref"] as? [String]
                 userData.colaborador = document?.data()!["colaborador"] as? Bool
+                
+                if (userData.colaboradoresref.isEmpty != true){
+                    self.loadColaboradoresData()
+                }
+
                 
                 if (userData.hijosref.isEmpty){
                     self.activityIndicator.stopAnimating()
@@ -98,13 +95,30 @@ class LoadingPageViewController: UIViewController {
                         self?.performSegue(withIdentifier: "LoadingPageToHome", sender: self)
                     }
                 } else {
-                    self.progressBar.progress=0.25
+                    self.progressBar.progress=0.20
                     self.loadDataHijos()
                 }
             }
         }
         
     }
+    
+    public func loadColaboradoresData(){
+        db.collection("users").document(userData.uid).collection("colaboradores").getDocuments(){ (querySnapshot1, err) in
+            if err != nil {
+                print(err)
+            } else {
+                for document in querySnapshot1!.documents {
+                    let colaborador = Colaborador()
+                    colaborador.nombre = document.data()["nombre"] as? String
+                    colaborador.statusInvitacion = document.data()["status"] as? String
+                    userData.colaboradores.append(colaborador)
+                }
+                self.progressBar.progress = 0.40
+            }
+        }
+    }
+    
     //inician modificaciones
     public func loadDataHijos(){
         db.collection("users").document(userData.uid).collection("hijos").document(userData.hijosref[self.indexHijos]).getDocument(completion: {(document, error) in
@@ -122,7 +136,7 @@ class LoadingPageViewController: UIViewController {
                     self.loadDataHijos()
                 }else{
                     self.indexHijos=0
-                    self.progressBar.progress=0.50
+                    self.progressBar.progress=0.60
                     self.loadDimensionesData()
                 }
             }
@@ -151,7 +165,7 @@ class LoadingPageViewController: UIViewController {
                     }else{
                         self.indexDimension=0
                         self.indexHijos=0
-                        self.progressBar.progress=0.75
+                        self.progressBar.progress=0.80
                         self.loadRecuerdosData()
                     }
                 }
