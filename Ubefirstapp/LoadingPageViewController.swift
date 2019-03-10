@@ -81,6 +81,7 @@ class LoadingPageViewController: UIViewController {
                 userData.premium = document?.data()!["premium"] as? Bool
                 userData.colaboradoresref = document?.data()!["colaboradoresref"] as? [String]
                 userData.colaborador = document?.data()!["colaborador"] as? Bool
+                userData.invitaciones_colaborador = document?.data()!["invitaciones_colaborador"] as? Bool
                 
                 if (userData.colaboradoresref.isEmpty != true){
                     self.loadColaboradoresData()
