@@ -230,7 +230,8 @@ class LoadDataToFirestore {
             "nombre": nombre,
             "correo": correo,
             "hijosref": [],
-            "colaboradoresref":[]
+            "colaboradoresref":[],
+            "invitaciones_colaborador": false
         ]
         
         db.collection("users").document(uid).setData(docDataUser)

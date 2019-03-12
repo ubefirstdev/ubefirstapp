@@ -16,6 +16,8 @@ class Padre{
     var hijos: [Hijo]!
     var colaboradoresref: [String]!
     var colaboradores: [Colaborador]!
+    var invitaciones_colaborador: Bool!
+    var invitacionNombre: String!
     
     init() {
         self.nombre=""
@@ -27,6 +29,8 @@ class Padre{
         self.colaborador=nil
         self.colaboradoresref=[String]()
         self.colaboradores=[Colaborador]()
+        self.invitaciones_colaborador=nil
+        self.invitacionNombre=nil
     }
 }
 

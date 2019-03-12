@@ -8,6 +8,16 @@
 
 import UIKit
 
+struct colaboradorBusqueda {
+    var nombre: String!
+    var correo: String!
+    var nHijos: Int!
+    var suscripcion: Bool!
+    var uid: String!
+}
+
+var dataPerfil: colaboradorBusqueda!
+
 class AgregarColaboradorViewController: UIViewController {
     @IBOutlet weak var txtField_correo: UITextField!
     
@@ -30,8 +40,18 @@ class AgregarColaboradorViewController: UIViewController {
                     
             }else {
                 print("usuario existe")
+                for document in querySnapshot!.documents {
+                    let nombre = document.data()["nombre"] as? String
+                    let correo = document.data()["correo"] as? String
+                    let nHijos = document.data()["hijosref"] as? [String]
+                    let suscripcion = document.data()["premium"] as? Bool
+                    let uid = document.data()["uid"] as? String
+                    
+                    dataPerfil = colaboradorBusqueda.init(nombre: nombre, correo: correo, nHijos: nHijos?.count, suscripcion: suscripcion, uid: uid)
+                }
                 alertController.dismiss(animated: true, completion: nil)
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) { //funcion callback despues de 0.4 segundos
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) { //funcion callback despues de 0.4 segundos
+                    invitacionSegue = false
                     OperationQueue.main.addOperation {
                         [weak self] in
                         self?.performSegue(withIdentifier: "AgregarColaboradorToColaboradorInfo", sender: self)
