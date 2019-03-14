@@ -13,7 +13,6 @@ var lastPersonIndexTap: Int!
 class PersonasViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     let cellReuseIdentifier = "PersonasCell"
-    @IBOutlet weak var btn_agregarPersona: UIButton!
     @IBOutlet weak var personasTableView: UITableView!
     
     
