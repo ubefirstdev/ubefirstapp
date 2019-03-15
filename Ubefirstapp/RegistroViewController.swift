@@ -93,6 +93,7 @@ class RegistroViewController: UIViewController {
         let pred = NSPredicate(format:"SELF MATCHES %@", regEx)
         if(pred.evaluate(with: email))
         {
+            //REVISAR SI NO EXISTE YA UNA CUENTA CON ESE CORREO
             return true
         }
         else

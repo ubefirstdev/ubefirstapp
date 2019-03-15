@@ -15,7 +15,6 @@ import GoogleSignIn
 //variables globales
 
 class InicialViewController: UIViewController, FBSDKLoginButtonDelegate {
-
     override func viewDidLoad() {
         super.viewDidLoad()
         if FBSDKAccessToken.current() != nil{

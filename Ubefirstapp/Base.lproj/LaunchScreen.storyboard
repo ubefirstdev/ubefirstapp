@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,29 +15,35 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Logo Temporal" translatesAutoresizingMaskIntoConstraints="NO" id="qcZ-Te-0UH">
-                                <rect key="frame" x="98" y="117" width="178" height="178"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoNombre" translatesAutoresizingMaskIntoConstraints="NO" id="qcZ-Te-0UH">
+                                <rect key="frame" x="-43" y="118" width="500" height="500"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="500" id="0ja-cq-1IQ"/>
+                                    <constraint firstAttribute="width" constant="500" id="QwL-Nr-BIe"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ubefirst" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bID-LD-YID">
-                                <rect key="frame" x="140" y="389" width="96" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                <color key="textColor" red="0.043249210165169055" green="0.26756999511619722" blue="0.50678186761546251" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Copyright © 2019 Ubefirst. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vK9-wI-bbL">
-                                <rect key="frame" x="3" y="635" width="371" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright © 2019 Ubefirst. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vK9-wI-bbL">
+                                <rect key="frame" x="48" y="692" width="318" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="vK9-wI-bbL" secondAttribute="height" multiplier="317:24" id="FOQ-Ip-8Sy"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.028597084805369377" green="0.2148396372795105" blue="0.40574115514755249" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="vK9-wI-bbL" secondAttribute="bottom" constant="20" symbolic="YES" id="7Ds-jx-Oee"/>
+                            <constraint firstItem="vK9-wI-bbL" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="AXI-26-7eU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="vK9-wI-bbL" secondAttribute="trailing" id="RlC-VF-evC"/>
+                            <constraint firstItem="qcZ-Te-0UH" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="gSS-Gp-WV2"/>
+                            <constraint firstItem="vK9-wI-bbL" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hWo-7p-0gM"/>
+                            <constraint firstItem="qcZ-Te-0UH" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="vhC-sF-BYw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -47,6 +53,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Logo Temporal" width="328" height="306"/>
+        <image name="LogoNombre" width="750" height="499.92001342773438"/>
     </resources>
 </document>

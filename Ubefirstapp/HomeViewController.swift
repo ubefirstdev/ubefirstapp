@@ -19,10 +19,8 @@ var segueSender = ""
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var lbl_username: UILabel!
-    @IBOutlet weak var imageUserPicture: UIImageView!
     @IBOutlet weak var btn_configuracion: UIButton!
     @IBOutlet weak var btn_mejoresMomentos: UIButton!
-    @IBOutlet weak var lbl_mejoresMomentos: UILabel!
     
     
     @IBAction func btnPressed_configuracion(_ sender: Any) {
@@ -44,6 +42,7 @@ class HomeViewController: UIViewController {
     
     @IBAction func btnPressed_mejoresMomentos(_ sender: Any) {
         if (userData.premium==false){
+            NSLog("Hola")
             let alertController = UIAlertController(title: "Funcionalidad limitada", message: "Obtenga una cuenta ubefirst Premium para acceder al resumen de los mejores momentos", preferredStyle: UIAlertController.Style.alert)
             alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default) {
                 UIAlertAction in
@@ -60,24 +59,6 @@ class HomeViewController: UIViewController {
     @IBAction func button_addPhoto(_ sender: Any) {
         segueSender = "HomeToAgregarRecuerdo"
         CameraHandler.shared.showActionSheet(vc: self)
-    }
-    
-    @IBAction func btn_pressed(_ sender: Any) {
-        let firebaseAuth = Auth.auth()
-        do {
-            try firebaseAuth.signOut()
-        } catch let signOutError as NSError {
-            print ("Error signing out: %@", signOutError)
-        }
-        FBSDKAccessToken.setCurrent(nil)
-        UserDefaults.standard.removeObject(forKey: "accessTokenUID")
-        GIDSignIn.sharedInstance().signOut()
-        userData = Padre()
-        OperationQueue.main.addOperation {
-            [weak self] in
-            self?.performSegue(withIdentifier: "HomeToLogin", sender: self)
-        }
-        //DropboxClientsManager.unlinkClients()
     }
     
     override func viewDidLoad() {
@@ -109,15 +90,4 @@ class HomeViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
