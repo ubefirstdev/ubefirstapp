@@ -42,6 +42,9 @@ class RegistroViewController: UIViewController {
                     //Si la contraseña tiene menos de 6 caracteres
                     //Si el correo ya esta registrado
                     //Si validamos los dos primeros puntos antes podemos enviar un mensaje asegurando que es el punto 3
+                    let alertController = UIAlertController(title: "Error en registro", message: "Este correo electronico ya esta registrado", preferredStyle: UIAlertController.Style.alert)
+                    alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+                    self.present(alertController, animated: true, completion: nil)
                     print("mal")
                     return
             }
@@ -93,7 +96,6 @@ class RegistroViewController: UIViewController {
         let pred = NSPredicate(format:"SELF MATCHES %@", regEx)
         if(pred.evaluate(with: email))
         {
-            //REVISAR SI NO EXISTE YA UNA CUENTA CON ESE CORREO
             return true
         }
         else
