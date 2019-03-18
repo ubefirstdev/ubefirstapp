@@ -110,45 +110,45 @@ class LoadDataToFirestore {
         }
     
         let docData0: [String: Any] = [
-            "nombre": "Deportes"
-        ]
-        dimensionesDefault[0].nombre="Deportes"
-        
-        let docData1: [String: Any] = [
             "nombre": "Académica"
         ]
+        dimensionesDefault[0].nombre="Académica"
         
-        dimensionesDefault[1].nombre="Académica"
-        
-        let docData2: [String: Any] = [
+        let docData1: [String: Any] = [
             "nombre": "Cultural"
         ]
-        dimensionesDefault[2].nombre="Cultural"
         
-        let docData3: [String: Any] = [
-            "nombre": "Musical"
-        ]
-        dimensionesDefault[3].nombre="Musical"
+        dimensionesDefault[1].nombre="Cultural"
         
-        let docData4: [String: Any] = [
+        let docData2: [String: Any] = [
             "nombre": "Espiritual"
         ]
-        dimensionesDefault[4].nombre="Espiritual"
+        dimensionesDefault[2].nombre="Espiritual"
+        
+        let docData3: [String: Any] = [
+            "nombre": "Ayuda Social"
+        ]
+        dimensionesDefault[3].nombre="Ayuda Social"
+        
+        let docData4: [String: Any] = [
+            "nombre": "Humana"
+        ]
+        dimensionesDefault[4].nombre="Humana"
         
         let docData5: [String: Any] = [
-            "nombre": "Cívico"
+            "nombre": "Emprendimiento"
         ]
-        dimensionesDefault[5].nombre="Cívico"
+        dimensionesDefault[5].nombre="Emprendimiento"
         
         let docData6: [String: Any] = [
-            "nombre": "Viajero"
+            "nombre": "Deportiva"
         ]
-        dimensionesDefault[6].nombre="Viajero"
+        dimensionesDefault[6].nombre="Deportiva"
         
         let docData7: [String: Any] = [
-            "nombre": "Otros"
+            "nombre": "Extra"
         ]
-        dimensionesDefault[7].nombre="Otros"
+        dimensionesDefault[7].nombre="Extra"
         
         db.collection("users").document(userData.uid).collection("hijos").document(hijosref).collection("dimensiones").document(docid[0]).setData(docData0) { err in
             if let err=err {

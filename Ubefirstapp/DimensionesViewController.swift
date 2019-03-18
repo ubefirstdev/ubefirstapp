@@ -39,7 +39,6 @@ class DimensionesViewController: UIViewController {
         }
         
     }
-    
     @IBAction func btnPressed_dimension2(_ sender: Any) {
         if (userData.premium==true){
             lastIndexDimensionTap = 1
@@ -144,6 +143,14 @@ class DimensionesViewController: UIViewController {
         clearButtonsTitles()
         self.label_nombrePersona.text=userData.hijos[lastPersonIndexTap].alias
         loadDimensionesFromMemory()
+        
+        if (userData.premium==false){
+            button_dimension1.isEnabled = false
+            button_dimension2.isEnabled = false
+            button_dimension3.isEnabled = false
+            button_dimension4.isEnabled = false
+            button_dimension8.isEnabled = false
+        }
 
         // Do any additional setup after loading the view.
     }
