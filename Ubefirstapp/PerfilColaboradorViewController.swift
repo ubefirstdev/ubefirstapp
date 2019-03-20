@@ -36,13 +36,34 @@ class PerfilColaboradorViewController: UIViewController {
                 "nhijos":userData.hijos.count,
                 "suscripcion": userData.premium
             ]
-            db.collection("users").document(dataPerfil.uid).collection("titular").addDocument(data: docData)
+            db.collection("users").document(dataPerfil.uid).collection("invitaciones").addDocument(data: docData)
             
         }else{
             //codigo para aceptar la invitacion
-            print("invitacion aceptada")
+            /*print("invitacion aceptada")
+             let docDataUpdate1: [String:Any] = [
+             "colaborador":true
+             ]
+             db.collection("users").document(dataPerfil.uid).setData(docDataUpdate1, merge: true)*/
+            
+           /* db.collection("users").document(dataPerfil.uid).getDocument{(document, error) in
+                if error != nil {
+                    print(error!)
+                }else{
+                    let hijosref = document?.data()!["hijosref"] as? [String]
+                    for element in hijosref!{
+                        userData.hijosref.append(element)
+                    }
+                    let instance = LoadDataToFirestore()
+                    instance.agregarReferenciaNuevoHijo()
+                    OperationQueue.main.addOperation {
+                        [weak self] in
+                        self?.performSegue(withIdentifier: "PerfilDeUsuarioToLogin", sender: self)
+                    }
+                }
+            }*/
         }
-       }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

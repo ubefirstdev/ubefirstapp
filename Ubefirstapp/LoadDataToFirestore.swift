@@ -11,7 +11,7 @@ import Foundation
 class LoadDataToFirestore {
     
     func agregarHijoNuevoAndReturnHijoref(alias: String, nombre: String){
-        let docIDhijo = db.collection("users").document(userData.uid).collection("hijos").document().documentID
+        let docIDhijo = db.collection("hijos").document().documentID
         var i = 0
         /*var recuerdoref=[String]()
         
@@ -29,7 +29,7 @@ class LoadDataToFirestore {
             "dimensionesref": [dimensionesref[0],dimensionesref[1],dimensionesref[2],dimensionesref[3],dimensionesref[4],dimensionesref[5],dimensionesref[6],dimensionesref[7]]
         ]
         
-        db.collection("users").document(userData.uid).collection("hijos").document(docIDhijo).setData(docData) { err in
+        db.collection("hijos").document(docIDhijo).setData(docData) { err in
             if let err=err {
                 print("Error writing document: \(err)")
             } else {
@@ -103,7 +103,7 @@ class LoadDataToFirestore {
         var dimensionesDefault = [Dimension]()
 
         while i<8 {
-            docid.append(db.collection("users").document(userData.uid).collection("hijos").document(hijosref).collection("dimensiones").document().documentID)
+            docid.append(db.collection("hijos").document(hijosref).collection("dimensiones").document().documentID)
             dimensionesDefault.append(Dimension())
             i = i + 1
 
@@ -150,7 +150,7 @@ class LoadDataToFirestore {
         ]
         dimensionesDefault[7].nombre="Extra"
         
-        db.collection("users").document(userData.uid).collection("hijos").document(hijosref).collection("dimensiones").document(docid[0]).setData(docData0) { err in
+        db.collection("hijos").document(hijosref).collection("dimensiones").document(docid[0]).setData(docData0) { err in
             if let err=err {
                 print("Error writing document: \(err)")
             } else {
@@ -158,7 +158,7 @@ class LoadDataToFirestore {
             }
         }
         
-        db.collection("users").document(userData.uid).collection("hijos").document(hijosref).collection("dimensiones").document(docid[1]).setData(docData1) { err in
+        db.collection("hijos").document(hijosref).collection("dimensiones").document(docid[1]).setData(docData1) { err in
             if let err=err {
                 print("Error writing document: \(err)")
             } else {
@@ -166,7 +166,7 @@ class LoadDataToFirestore {
             }
         }
         
-        db.collection("users").document(userData.uid).collection("hijos").document(hijosref).collection("dimensiones").document(docid[2]).setData(docData2) { err in
+        db.collection("hijos").document(hijosref).collection("dimensiones").document(docid[2]).setData(docData2) { err in
             if let err=err {
                 print("Error writing document: \(err)")
             } else {
@@ -174,7 +174,7 @@ class LoadDataToFirestore {
             }
         }
         
-        db.collection("users").document(userData.uid).collection("hijos").document(hijosref).collection("dimensiones").document(docid[3]).setData(docData3) { err in
+        db.collection("hijos").document(hijosref).collection("dimensiones").document(docid[3]).setData(docData3) { err in
             if let err=err {
                 print("Error writing document: \(err)")
             } else {
@@ -182,7 +182,7 @@ class LoadDataToFirestore {
             }
         }
         
-        db.collection("users").document(userData.uid).collection("hijos").document(hijosref).collection("dimensiones").document(docid[4]).setData(docData4) { err in
+        db.collection("hijos").document(hijosref).collection("dimensiones").document(docid[4]).setData(docData4) { err in
             if let err=err {
                 print("Error writing document: \(err)")
             } else {
@@ -190,7 +190,7 @@ class LoadDataToFirestore {
             }
         }
         
-        db.collection("users").document(userData.uid).collection("hijos").document(hijosref).collection("dimensiones").document(docid[5]).setData(docData5) { err in
+        db.collection("hijos").document(hijosref).collection("dimensiones").document(docid[5]).setData(docData5) { err in
             if let err=err {
                 print("Error writing document: \(err)")
             } else {
@@ -198,7 +198,7 @@ class LoadDataToFirestore {
             }
         }
         
-        db.collection("users").document(userData.uid).collection("hijos").document(hijosref).collection("dimensiones").document(docid[6]).setData(docData6) { err in
+        db.collection("hijos").document(hijosref).collection("dimensiones").document(docid[6]).setData(docData6) { err in
             if let err=err {
                 print("Error writing document: \(err)")
             } else {
@@ -206,7 +206,7 @@ class LoadDataToFirestore {
             }
         }
         
-        db.collection("users").document(userData.uid).collection("hijos").document(hijosref).collection("dimensiones").document(docid[7]).setData(docData7) { err in
+        db.collection("hijos").document(hijosref).collection("dimensiones").document(docid[7]).setData(docData7) { err in
             if let err=err {
                 print("Error writing document: \(err)")
             } else {
@@ -271,14 +271,14 @@ class LoadDataToFirestore {
     func deleteDimension(hijoID: String, dimensionID: String, dimensionIndex: Int, hijoIndex:Int, RecuerdosCount:Int){
         
         //obtengo snapshot de todos los documentos de esa coleccion
-        db.collection("users").document(userData.uid).collection("hijos").document(hijoID).collection("dimensiones").document(dimensionID).collection("recuerdos").getDocuments(){ (querySnapshot, err) in
+        db.collection("hijos").document(hijoID).collection("dimensiones").document(dimensionID).collection("recuerdos").getDocuments(){ (querySnapshot, err) in
             if err != nil {
                 print(err)
             } else {
                 var i = 0
                 if (querySnapshot?.documents.count as! Int == 0){
                     userData.hijos[hijoIndex].dimensionesref.remove(at: dimensionIndex)
-                    db.collection("users").document(userData.uid).collection("hijos").document(hijoID).collection("dimensiones").document(dimensionID).delete() { err in
+                    db.collection("hijos").document(hijoID).collection("dimensiones").document(dimensionID).delete() { err in
                         if let err = err {
                             print("Error removing document: \(err)")
                         } else {
@@ -291,7 +291,7 @@ class LoadDataToFirestore {
                 
                 for document in querySnapshot!.documents {
                     //elimino cada documento de ese snapshot osea cada recuerdo
-                    db.collection("users").document(userData.uid).collection("hijos").document(hijoID).collection("dimensiones").document(dimensionID).collection("recuerdos").document(document.documentID).delete(){ err in
+                    db.collection("hijos").document(hijoID).collection("dimensiones").document(dimensionID).collection("recuerdos").document(document.documentID).delete(){ err in
                         if let err = err {
                             print("Error removing document: \(err)")
                         } else {
@@ -299,7 +299,7 @@ class LoadDataToFirestore {
                             print("Document successfully removed!")
                             if (i == RecuerdosCount){
                                 //elimino el documento que contiene a la coleccion borrada, es decir el doc con el nombre de la dimension
-                                db.collection("users").document(userData.uid).collection("hijos").document(hijoID).collection("dimensiones").document(dimensionID).delete() { err in
+                                db.collection("hijos").document(hijoID).collection("dimensiones").document(dimensionID).delete() { err in
                                     if let err = err {
                                         print("Error removing document: \(err)")
                                     } else {
@@ -361,7 +361,7 @@ class LoadDataToFirestore {
             ]
         }
         
-        db.collection("users").document(userData.uid).collection("hijos").document(userData.hijosref[hijoIndex]).setData(doc, merge: true)
+        db.collection("hijos").document(userData.hijosref[hijoIndex]).setData(doc, merge: true)
 
         
         

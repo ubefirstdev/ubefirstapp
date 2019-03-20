@@ -122,7 +122,7 @@ class LoadingPageViewController: UIViewController {
     
     //inician modificaciones
     public func loadDataHijos(){
-        db.collection("users").document(userData.uid).collection("hijos").document(userData.hijosref[self.indexHijos]).getDocument(completion: {(document, error) in
+        db.collection("hijos").document(userData.hijosref[self.indexHijos]).getDocument(completion: {(document, error) in
             if error != nil {
                 print(error)
             } else {
@@ -147,7 +147,7 @@ class LoadingPageViewController: UIViewController {
     }
     
     public func loadDimensionesData(){
-    db.collection("users").document(userData.uid).collection("hijos").document(userData.hijosref[self.indexHijos]).collection("dimensiones").document(userData.hijos[self.indexHijos].dimensionesref[self.indexDimension]).getDocument(completion: {(document, error) in
+    db.collection("hijos").document(userData.hijosref[self.indexHijos]).collection("dimensiones").document(userData.hijos[self.indexHijos].dimensionesref[self.indexDimension]).getDocument(completion: {(document, error) in
             if error != nil {
                 print(error)
             } else {
@@ -177,7 +177,7 @@ class LoadingPageViewController: UIViewController {
     }
     
     public func loadRecuerdosData(){
-        db.collection("users").document(userData.uid).collection("hijos").document(userData.hijosref[self.indexHijos]).collection("dimensiones").document(userData.hijos[self.indexHijos].dimensionesref[self.indexDimension]).collection("recuerdos").getDocuments(){ (querySnapshot, err) in
+        db.collection("hijos").document(userData.hijosref[self.indexHijos]).collection("dimensiones").document(userData.hijos[self.indexHijos].dimensionesref[self.indexDimension]).collection("recuerdos").getDocuments(){ (querySnapshot, err) in
             if err != nil {
                 print(err)
             } else {

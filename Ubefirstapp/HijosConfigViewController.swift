@@ -37,7 +37,7 @@ class HijosConfigViewController: UIViewController, UITableViewDataSource, UITabl
                 "alias": self.textField_alias.text!
             ]
             
-            db.collection("users").document(userData.uid).collection("hijos").document(userData.hijosref[lastHijoConfigPersonTap]).setData(docDataUpdate, merge: true)
+            db.collection("hijos").document(userData.hijosref[lastHijoConfigPersonTap]).setData(docDataUpdate, merge: true)
             
             let alertController = UIAlertController(title: "Guardado", message: "Los datos se actualizaron correctamente", preferredStyle: UIAlertController.Style.alert)
             alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default) {
@@ -62,19 +62,19 @@ class HijosConfigViewController: UIViewController, UITableViewDataSource, UITabl
                 self.present(alertController2, animated: true, completion: nil)
                 
                 //obtengo todas las dimensiones del hijo
-                db.collection("users").document(userData.uid).collection("hijos").document(userData.hijosref[lastHijoConfigPersonTap]).collection("dimensiones").getDocuments(){ (querySnapshot1, err) in
+                db.collection("hijos").document(userData.hijosref[lastHijoConfigPersonTap]).collection("dimensiones").getDocuments(){ (querySnapshot1, err) in
                     if err != nil {
                         print(err)
                     } else {
                         for document1 in querySnapshot1!.documents {
                             //elimino cada recuerdo de cada dimension
-                            db.collection("users").document(userData.uid).collection("hijos").document(userData.hijosref[lastHijoConfigPersonTap]).collection("dimensiones").document(document1.documentID).collection("recuerdos").getDocuments(){ (querySnapshot2, err) in
+                            db.collection("hijos").document(userData.hijosref[lastHijoConfigPersonTap]).collection("dimensiones").document(document1.documentID).collection("recuerdos").getDocuments(){ (querySnapshot2, err) in
                                 if err != nil {
                                     print(err)
                                 } else {
                                     for document2 in querySnapshot2!.documents{
                                         //si la dimension tiene recuerdos, aqui se elimina cada uno de los recuerdos
-                                        db.collection("users").document(userData.uid).collection("hijos").document(userData.hijosref[lastHijoConfigPersonTap]).collection("dimensiones").document(document1.documentID).collection("recuerdos").document(document2.documentID).delete(){ err in
+                                        db.collection("hijos").document(userData.hijosref[lastHijoConfigPersonTap]).collection("dimensiones").document(document1.documentID).collection("recuerdos").document(document2.documentID).delete(){ err in
                                             if let err = err {
                                                 print("Error removing document: \(err)")
                                             } else {
@@ -85,7 +85,7 @@ class HijosConfigViewController: UIViewController, UITableViewDataSource, UITabl
                                 }
                                     
                                     //si no existen recuerdos en el snapshot entonces borro la dimension, aqui entra cuando se eliminar todos los recuerdos o cuando no tiene recuerdos la dimension
-                                    db.collection("users").document(userData.uid).collection("hijos").document(userData.hijosref[lastHijoConfigPersonTap]).collection("dimensiones").document(document1.documentID).delete() { err in
+                                    db.collection("hijos").document(userData.hijosref[lastHijoConfigPersonTap]).collection("dimensiones").document(document1.documentID).delete() { err in
                                         if let err = err {
                                             print("Error removing document: \(err)")
                                         } else {
@@ -95,7 +95,7 @@ class HijosConfigViewController: UIViewController, UITableViewDataSource, UITabl
                                 }
                             }
                             //aqui se elimina al hijo
-                            db.collection("users").document(userData.uid).collection("hijos").document(userData.hijosref[lastHijoConfigPersonTap]).delete(){ err in
+                            db.collection("hijos").document(userData.hijosref[lastHijoConfigPersonTap]).delete(){ err in
                                 if let err = err {
                                     print("Error removing document: \(err)")
                                 } else {
@@ -222,7 +222,7 @@ class HijosConfigViewController: UIViewController, UITableViewDataSource, UITabl
         self.present(alertController4, animated: true, completion: nil)
         
         //obtengo snapshot de todos los documentos de esa coleccion
-        db.collection("users").document(userData.uid).collection("hijos").document(hijoID).collection("dimensiones").document(dimensionID).collection("recuerdos").getDocuments(){ (querySnapshot, err) in
+        db.collection("hijos").document(hijoID).collection("dimensiones").document(dimensionID).collection("recuerdos").getDocuments(){ (querySnapshot, err) in
             if err != nil {
                 print(err)
             } else {
@@ -232,7 +232,7 @@ class HijosConfigViewController: UIViewController, UITableViewDataSource, UITabl
                         //alertController4.dismiss(animated: true, completion: nil)
                         self.lastDimensionAction(indexPath: indexPath, alertController: alertController4)
                     }else{
-                        db.collection("users").document(userData.uid).collection("hijos").document(hijoID).collection("dimensiones").document(dimensionID).delete() { err in
+                        db.collection("hijos").document(hijoID).collection("dimensiones").document(dimensionID).delete() { err in
                             if let err = err {
                                 print("Error removing document: \(err)")
                             } else {
@@ -252,7 +252,7 @@ class HijosConfigViewController: UIViewController, UITableViewDataSource, UITabl
                 
                 for document in querySnapshot!.documents {
                     //elimino cada documento de ese snapshot osea cada recuerdo
-                    db.collection("users").document(userData.uid).collection("hijos").document(hijoID).collection("dimensiones").document(dimensionID).collection("recuerdos").document(document.documentID).delete(){ err in
+                    db.collection("hijos").document(hijoID).collection("dimensiones").document(dimensionID).collection("recuerdos").document(document.documentID).delete(){ err in
                         if let err = err {
                             print("Error removing document: \(err)")
                         } else {
@@ -264,7 +264,7 @@ class HijosConfigViewController: UIViewController, UITableViewDataSource, UITabl
                                     alertController4.dismiss(animated: true, completion: nil)
                                     self.lastDimensionAction(indexPath: indexPath, alertController: alertController4)
                                 }else{
-                                    db.collection("users").document(userData.uid).collection("hijos").document(hijoID).collection("dimensiones").document(dimensionID).delete() { err in
+                                    db.collection("hijos").document(hijoID).collection("dimensiones").document(dimensionID).delete() { err in
                                         if let err = err {
                                             print("Error removing document: \(err)")
                                         } else {
@@ -290,12 +290,12 @@ class HijosConfigViewController: UIViewController, UITableViewDataSource, UITabl
     
     func lastDimensionAction(indexPath: IndexPath, alertController: UIAlertController) {
         let dbtemp = LoadDataToFirestore()
-        db.collection("users").document(userData.uid).collection("hijos").document(userData.hijosref[lastHijoConfigPersonTap]).collection("dimensiones").document(userData.hijos[lastHijoConfigPersonTap].dimensionesref[indexPath.row]).delete() { err in
+        db.collection("hijos").document(userData.hijosref[lastHijoConfigPersonTap]).collection("dimensiones").document(userData.hijos[lastHijoConfigPersonTap].dimensionesref[indexPath.row]).delete() { err in
             if let err = err {
                 print("Error removing document: \(err)")
             } else {
                 print("Document successfully removed!")
-                db.collection("users").document(userData.uid).collection("hijos").document(userData.hijosref[lastHijoConfigPersonTap]).delete() { err in
+                db.collection("hijos").document(userData.hijosref[lastHijoConfigPersonTap]).delete() { err in
                     if let err = err {
                         print("Error removing document: \(err)")
                     } else {

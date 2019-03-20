@@ -57,7 +57,7 @@ class FormularioRecuerdoViewController: UIViewController, UIPickerViewDelegate, 
         
         userData.hijos[self.indexPersona].dimensiones[self.indexDimension].recuerdos.append(recuerdoNuevo)
         
-        db.collection("users").document(userData.uid).collection("hijos").document(userData.hijosref[self.indexPersona]).collection("dimensiones").document(userData.hijos[self.indexPersona].dimensionesref[self.indexDimension]).collection("recuerdos").document().setData(docData)
+        db.collection("hijos").document(userData.hijosref[self.indexPersona]).collection("dimensiones").document(userData.hijos[self.indexPersona].dimensionesref[self.indexDimension]).collection("recuerdos").document().setData(docData)
         self.navigationController?.popViewController(animated: true)
         
     }

@@ -26,7 +26,7 @@ class ConfiguracionViewController: UIViewController {
         })
         self.present(alertController, animated: true, completion: nil)
         
-        db.collection("users").document(userData.uid).collection("titular").getDocuments(){ (querySnapshot, err) in
+        db.collection("users").document(userData.uid).collection("invitaciones").getDocuments(){ (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
             } else if ((querySnapshot?.isEmpty)!){
