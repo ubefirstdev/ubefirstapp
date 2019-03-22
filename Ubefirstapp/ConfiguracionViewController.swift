@@ -96,11 +96,12 @@ class ConfiguracionViewController: UIViewController {
         UserDefaults.standard.removeObject(forKey: "accessTokenUID")
         GIDSignIn.sharedInstance().signOut()
         userData = Padre()
-        OperationQueue.main.addOperation {
-            [weak self] in
-            self?.performSegue(withIdentifier: "ConfiguracionToLogin", sender: self)
-        }
+        let newViewController = storyboard!.instantiateViewController(withIdentifier: "login")
         
+        self.dismiss(animated: true) { () -> Void in
+            //Perform segue or push some view with your code
+            UIApplication.shared.keyWindow?.rootViewController = newViewController
+        }
     }
     
     
@@ -114,6 +115,9 @@ class ConfiguracionViewController: UIViewController {
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
     }
 
     /*
