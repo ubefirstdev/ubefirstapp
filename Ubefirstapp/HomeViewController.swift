@@ -18,8 +18,6 @@ var segueSender = ""
 
 class HomeViewController: UIViewController {
     
-    @IBOutlet weak var lbl_username: UILabel!
-    @IBOutlet weak var btn_configuracion: UIButton!
     @IBOutlet weak var btn_mejoresMomentos: UIButton!
     
     
@@ -63,18 +61,6 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if (userData.premium==true){
-            self.lbl_username.text=self.lbl_username.text! + "\n" + userData.nombre
-            if (userData.colaborador==true){
-                self.btn_configuracion.isHidden = true
-                self.lbl_username.text = self.lbl_username.text! + "\n(Colaborador)"
-            }
-
-        } else {
-            self.lbl_username.font = UIFont(name:self.lbl_username.font.fontName,size: 16)
-            self.lbl_username.text="Cuenta gratuita"
-            self.lbl_username.textColor = UIColor.red
-        }
         SideMenuManager.default.menuFadeStatusBar = false
         let menuLeftNavigationController = storyboard!.instantiateViewController(withIdentifier: "LeftMenuNavigationController") as! UISideMenuNavigationController
         SideMenuManager.default.menuLeftNavigationController = menuLeftNavigationController
