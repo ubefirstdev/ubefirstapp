@@ -23,6 +23,12 @@ class FormularioAgregarHijoViewController: UIViewController {
 
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        
+        return true
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
