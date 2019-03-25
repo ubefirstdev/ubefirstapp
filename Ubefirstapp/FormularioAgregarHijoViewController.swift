@@ -14,6 +14,7 @@ class FormularioAgregarHijoViewController: UIViewController {
     
     @IBOutlet weak var textfield_nombre: UITextField!
     @IBOutlet weak var textfield_alias: UITextField!
+    @IBOutlet weak var textfield_relacion: UITextField!
     
     @IBAction func btnGuardar_pressed(_ sender: Any) {
         let update = LoadDataToFirestore()
@@ -23,11 +24,20 @@ class FormularioAgregarHijoViewController: UIViewController {
 
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
-        
+    }
+    
+    //metodo para que al presionar "intro" en el teclado, el teclado se oculte
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.textfield_nombre.resignFirstResponder()
+        self.textfield_alias.resignFirstResponder()
+
+        self.textfield_relacion.resignFirstResponder()
         return true
     }
+    
     
     
     override func viewDidLoad() {
