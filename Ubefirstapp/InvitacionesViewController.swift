@@ -32,14 +32,14 @@ class InvitacionesViewController: UIViewController, UITableViewDataSource, UITab
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell4 = UITableViewCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: "cell4")
         cell4.textLabel?.text  = invitacionBusqueda[indexPath.row].nombre
-        cell4.detailTextLabel?.text = "Invitación pendiente por aceptar"
+        cell4.detailTextLabel?.text = invitacionBusqueda[indexPath.row].status
         
         return cell4
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         lastInvitacionConfigPersonTap = indexPath.row
-        dataPerfil = invitacionBusqueda[indexPath.row]
+        busquedaColaboradorData = invitacionBusqueda[indexPath.row]
         self.InvitacionesTableView.deselectRow(at: indexPath, animated: true)
         OperationQueue.main.addOperation {
             [weak self] in

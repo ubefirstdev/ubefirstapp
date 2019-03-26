@@ -21,32 +21,42 @@ class PerfilColaboradorViewController: UIViewController {
             let docDataUpdate: [String:Any] = [
                 "invitaciones_colaborador": true
             ]
-            db.collection("users").document(dataPerfil.uid).setData(docDataUpdate, merge: true)
-            let alertController = UIAlertController(title: "Invitación enviada correctamente", message: "Ahora " + dataPerfil.nombre + " deberá aceptar la invitación para que puedan empezar a colaborar", preferredStyle:UIAlertController.Style.alert)
+            db.collection("users").document(busquedaColaboradorData.uid).setData(docDataUpdate, merge: true)
+            let alertController = UIAlertController(title: "Invitación enviada correctamente", message: "Ahora " + busquedaColaboradorData.nombre + " deberá aceptar la invitación para que puedan empezar a colaborar", preferredStyle:UIAlertController.Style.alert)
             alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default) { UIAlertAction in
                 alertController.dismiss(animated: true, completion: nil)
                 self.navigationController?.popViewController(animated: true)
             })
             self.present(alertController, animated: true, completion: nil)
+            let id = db.collection("users").document().documentID
             
             let docData: [String:Any] = [
                 "uid": userData.uid,
                 "nombre": userData.nombre,
                 "correo": userData.correo,
                 "nhijos":userData.hijos.count,
-                "suscripcion": userData.premium
+                "suscripcion": userData.premium,
+                "status": "Invitacion pendiente por aceptar",
+                "idInvitacion": id
             ]
-            db.collection("users").document(dataPerfil.uid).collection("invitaciones").addDocument(data: docData)
+            
+            db.collection("users").document(busquedaColaboradorData.uid).collection("invitaciones").document(id).setData(docData)
             
         }else{
             //codigo para aceptar la invitacion
-            /*print("invitacion aceptada")
+            print("invitacion aceptada")
              let docDataUpdate1: [String:Any] = [
              "colaborador":true
              ]
-             db.collection("users").document(dataPerfil.uid).setData(docDataUpdate1, merge: true)*/
             
-           /* db.collection("users").document(dataPerfil.uid).getDocument{(document, error) in
+             db.collection("users").document(userData.uid).setData(docDataUpdate1, merge: true)
+            
+            let docDataUpdate2: [String:Any] = [
+                "status":"Colaborando"
+            ]
+        db.collection("users").document(userData.uid).collection("invitaciones").document(busquedaColaboradorData.idInvitacion).setData(docDataUpdate2, merge: true)
+            
+           db.collection("users").document(busquedaColaboradorData.uid).getDocument{(document, error) in
                 if error != nil {
                     print(error!)
                 }else{
@@ -61,7 +71,7 @@ class PerfilColaboradorViewController: UIViewController {
                         self?.performSegue(withIdentifier: "PerfilDeUsuarioToLogin", sender: self)
                     }
                 }
-            }*/
+            }
         }
     }
     
@@ -70,16 +80,25 @@ class PerfilColaboradorViewController: UIViewController {
         if (invitacionSegue==true){
             btnConfirmacion.setTitle("Aceptar invitación",for: .normal)
         }
-        self.lbl_nombre.text=self.lbl_nombre.text! + dataPerfil.nombre
-        self.lbl_correo.text=self.lbl_correo.text! + dataPerfil.correo
-        self.lbl_nHijos.text=self.lbl_nHijos.text! + String(dataPerfil.nHijos)
-        if (dataPerfil.suscripcion==true){
+        self.lbl_nombre.text=self.lbl_nombre.text! + busquedaColaboradorData.nombre
+        self.lbl_correo.text=self.lbl_correo.text! + busquedaColaboradorData.correo
+        self.lbl_nHijos.text=self.lbl_nHijos.text! + String(busquedaColaboradorData.nHijos)
+        if (busquedaColaboradorData.suscripcion==true){
             self.lbl_suscripcion.text=self.lbl_suscripcion.text! + "Premium"
         }else{
              self.lbl_suscripcion.text=self.lbl_suscripcion.text! + "Gratis"
         }
        
-        
+       /* if(invitacionBusqueda[lastInvitacionConfigPersonTap].status == "Colaborando" && invitacionSegue==true){
+            //cambio etiqueta al boton y cambio el color del boton
+            self.btnConfirmacion.layer.cornerRadius = 5
+            self.btnConfirmacion.layer.borderWidth = 1
+            self.btnConfirmacion.layer.borderColor = UIColor.red.cgColor
+            self.btnConfirmacion.setTitle("Eliminar colaboración",for: .normal)
+            self.btnConfirmacion.setTitleColor(UIColor.red, for: UIControl.State.normal)
+
+
+        }*/
         // Do any additional setup after loading the view.
     }
     

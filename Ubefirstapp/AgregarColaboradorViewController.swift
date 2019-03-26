@@ -8,15 +8,17 @@
 
 import UIKit
 
-struct colaboradorBusqueda {
+struct invitacionData {
     var nombre: String!
     var correo: String!
     var nHijos: Int!
     var suscripcion: Bool!
     var uid: String!
+    var status: String!
+    var idInvitacion: String!
 }
 
-var dataPerfil: colaboradorBusqueda!
+var busquedaColaboradorData: invitacionData!
 
 class AgregarColaboradorViewController: UIViewController {
     @IBOutlet weak var txtField_correo: UITextField!
@@ -46,11 +48,12 @@ class AgregarColaboradorViewController: UIViewController {
                     let nHijos = document.data()["hijosref"] as? [String]
                     let suscripcion = document.data()["premium"] as? Bool
                     let uid = document.data()["uid"] as? String
-                    
-                    dataPerfil = colaboradorBusqueda.init(nombre: nombre, correo: correo, nHijos: nHijos?.count, suscripcion: suscripcion, uid: uid)
+                    let status = document.data()["status"] as? String
+                    let idInvitacion = document.data()["idInvitacion"] as? String
+                    busquedaColaboradorData = invitacionData.init(nombre: nombre, correo: correo, nHijos: nHijos?.count, suscripcion: suscripcion, uid: uid, status:status, idInvitacion: idInvitacion)
                 }
                 alertController.dismiss(animated: true, completion: nil)
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) { //funcion callback despues de 0.4 segundos
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { //funcion callback despues de 0.4 segundos
                     invitacionSegue = false
                     OperationQueue.main.addOperation {
                         [weak self] in

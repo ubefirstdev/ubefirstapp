@@ -1384,46 +1384,47 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="otL-Nt-Ro9">
-                                <rect key="frame" x="44" y="270" width="287" height="34"/>
+                                <rect key="frame" x="31" y="316" width="350" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Correo: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uOA-hX-tcZ">
-                                <rect key="frame" x="44" y="327" width="287" height="34"/>
+                                <rect key="frame" x="31" y="373" width="350" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Número de hijos:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SGA-7U-MVx">
-                                <rect key="frame" x="44" y="385" width="287" height="34"/>
+                                <rect key="frame" x="31" y="431" width="350" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tipo de suscripción:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rXx-TR-Mpx">
-                                <rect key="frame" x="44" y="444" width="287" height="34"/>
+                                <rect key="frame" x="31" y="490" width="350" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PDS-zO-mVg">
-                                <rect key="frame" x="118" y="544" width="138" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e0c-zl-3bY">
+                                <rect key="frame" x="122" y="102" width="170" height="160"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PDS-zO-mVg">
+                                <rect key="frame" x="66" y="592" width="281" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Confirmar invitación"/>
                                 <connections>
                                     <action selector="btn_confirmarPressed:" destination="kNk-nU-WHU" eventType="touchUpInside" id="xB5-ck-v6Y"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e0c-zl-3bY">
-                                <rect key="frame" x="67" y="102" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="nWC-or-O7u"/>
@@ -1438,7 +1439,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NV5-tC-qq3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3114.4000000000001" y="2669.4152923538231"/>
+            <point key="canvasLocation" x="-3114.4927536231885" y="2669.021739130435"/>
         </scene>
         <!--Agregar recuerdo-->
         <scene sceneID="XLS-At-Uz1">
@@ -1469,7 +1470,7 @@
                                 <rect key="frame" x="31" y="413" width="353" height="85"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <date key="date" timeIntervalSinceReferenceDate="567760743.22443199">
-                                    <!--2018-12-29 07:19:03 +0000-->
+                                    <!--2018-12-29 7:19:03 a. m. +0000-->
                                 </date>
                                 <locale key="locale" localeIdentifier="es_MX"/>
                             </datePicker>
@@ -1608,10 +1609,10 @@
             </objects>
             <point key="canvasLocation" x="-3114.4927536231885" y="1115.217391304348"/>
         </scene>
-        <!--Invitaciones View Controller-->
+        <!--Invitaciones-->
         <scene sceneID="kjM-5f-FtE">
             <objects>
-                <viewController id="Lyv-cp-goP" customClass="InvitacionesViewController" customModule="Ubefirstapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Invitaciones" id="Lyv-cp-goP" customClass="InvitacionesViewController" customModule="Ubefirstapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pnn-wZ-gFG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1711,39 +1712,39 @@
         <image name="Boton Ajustes" width="50" height="50"/>
         <image name="Boton Personas" width="2433" height="1876"/>
         <image name="Boton mejores momentos" width="133.67999267578125" height="139"/>
-        <image name="Boton-1" width="113.76000213623047" height="28.319999694824219"/>
-        <image name="BotonAcademico" width="125" height="54.583541870117188"/>
-        <image name="BotonAyudaSocial" width="125" height="54.583541870117188"/>
-        <image name="BotonCultural" width="125" height="54.583541870117188"/>
-        <image name="BotonDeportiva" width="125" height="54.583541870117188"/>
-        <image name="BotonEmprendimiento" width="125" height="54.583541870117188"/>
-        <image name="BotonEspiritual" width="125" height="54.583541870117188"/>
-        <image name="BotonExtra" width="125" height="54.583541870117188"/>
-        <image name="BotonFamiliar" width="125" height="54.583541870117188"/>
-        <image name="Facebook" width="151.67999267578125" height="144"/>
-        <image name="Fondo iniciar sesion" width="180" height="320.16000366210938"/>
+        <image name="Boton-1" width="474" height="118"/>
+        <image name="BotonAcademico" width="696" height="304"/>
+        <image name="BotonAyudaSocial" width="696" height="304"/>
+        <image name="BotonCultural" width="696" height="304"/>
+        <image name="BotonDeportiva" width="696" height="304"/>
+        <image name="BotonEmprendimiento" width="696" height="304"/>
+        <image name="BotonEspiritual" width="696" height="304"/>
+        <image name="BotonExtra" width="696" height="304"/>
+        <image name="BotonFamiliar" width="696" height="304"/>
+        <image name="Facebook" width="632" height="600"/>
+        <image name="Fondo iniciar sesion" width="750" height="1334"/>
         <image name="Fotos" width="90" height="81"/>
-        <image name="Google" width="121.68000030517578" height="116.63999938964844"/>
+        <image name="Google" width="507" height="486"/>
         <image name="HolderAgregarPersona" width="258" height="259"/>
-        <image name="Logo Temporal" width="78.720001220703125" height="73.44000244140625"/>
+        <image name="Logo Temporal" width="328" height="306"/>
         <image name="NinoNull" width="672" height="684"/>
-        <image name="Pantalla Recuerdo" width="134.66334533691406" height="239.52119445800781"/>
-        <image name="Pantalla Recuerdos" width="134.66334533691406" height="239.52119445800781"/>
-        <image name="Pelota" width="51" height="51"/>
-        <image name="PlaceHolderNino" width="127" height="127"/>
+        <image name="Pantalla Recuerdo" width="750" height="1334"/>
+        <image name="Pantalla Recuerdos" width="750" height="1334"/>
+        <image name="Pelota" width="284" height="284"/>
+        <image name="PlaceHolderNino" width="529" height="529"/>
         <image name="Placeholder" width="527" height="128"/>
-        <image name="Ventana Datos" width="180" height="320.16000366210938"/>
-        <image name="Ventana Datos registro" width="180" height="320.16000366210938"/>
-        <image name="icono iniciar sesion" width="57.599998474121094" height="57.599998474121094"/>
+        <image name="Ventana Datos" width="750" height="1334"/>
+        <image name="Ventana Datos registro" width="750" height="1334"/>
+        <image name="icono iniciar sesion" width="240" height="240"/>
         <image name="pdf" width="70" height="87"/>
         <image name="pug" width="1200" height="650"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="tPu-P9-ELw"/>
-        <segue reference="nXz-4b-dSB"/>
+        <segue reference="0M7-0r-Rh0"/>
         <segue reference="pfa-pS-IEg"/>
         <segue reference="UfX-hk-dME"/>
-        <segue reference="pyH-xy-Leh"/>
+        <segue reference="WiJ-dJ-LZq"/>
         <segue reference="Nlc-3U-gNL"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -12,7 +12,7 @@ import FirebaseAuth
 import FirebaseFirestore
 import GoogleSignIn
 
-var invitacionBusqueda: [colaboradorBusqueda] = []
+var invitacionBusqueda: [invitacionData] = []
 
 class ConfiguracionViewController: UIViewController {
     
@@ -45,7 +45,9 @@ class ConfiguracionViewController: UIViewController {
                     let correo = document.data()["correo"] as? String
                     let nHijos = document.data()["nhijos"] as? Int
                     let suscripcion = document.data()["suscripcion"] as? Bool
-                     invitacionBusqueda.append(colaboradorBusqueda.init(nombre: nombre, correo: correo, nHijos: nHijos, suscripcion: suscripcion, uid: uid))
+                    let status = document.data()["status"] as? String
+                    let idInvitacion = document.data()["idInvitacion"] as? String
+                    invitacionBusqueda.append(invitacionData.init(nombre: nombre, correo: correo, nHijos: nHijos, suscripcion: suscripcion, uid: uid, status:status, idInvitacion:idInvitacion))
 
                 }
                 alertController.dismiss(animated: false, completion: nil)

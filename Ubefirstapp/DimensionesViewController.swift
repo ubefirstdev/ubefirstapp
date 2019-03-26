@@ -144,13 +144,13 @@ class DimensionesViewController: UIViewController {
         self.label_nombrePersona.text=userData.hijos[lastPersonIndexTap].alias
         loadDimensionesFromMemory()
         
-        if (userData.premium==false){
+        /*if (userData.premium==false){
             button_dimension1.isEnabled = false
             button_dimension2.isEnabled = false
             button_dimension3.isEnabled = false
             button_dimension4.isEnabled = false
             button_dimension8.isEnabled = false
-        }
+        }*/
 
         // Do any additional setup after loading the view.
     }
