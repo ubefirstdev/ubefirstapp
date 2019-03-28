@@ -41,9 +41,17 @@ class InvitacionesViewController: UIViewController, UITableViewDataSource, UITab
         lastInvitacionConfigPersonTap = indexPath.row
         busquedaColaboradorData = invitacionBusqueda[indexPath.row]
         self.InvitacionesTableView.deselectRow(at: indexPath, animated: true)
-        OperationQueue.main.addOperation {
-            [weak self] in
-            self?.performSegue(withIdentifier: "InvitacionesToPerfilInvitacion", sender: self)
+        
+        if (busquedaColaboradorData.status=="Colaborando"){
+            OperationQueue.main.addOperation {
+                [weak self] in
+                self?.performSegue(withIdentifier: "InvitacionesToDeletePerfil", sender: self)
+            }
+        }else{
+            OperationQueue.main.addOperation {
+                [weak self] in
+                self?.performSegue(withIdentifier: "InvitacionesToPerfilInvitacion", sender: self)
+            }
         }
         
     }

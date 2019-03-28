@@ -14,8 +14,8 @@ class Padre{
     var colaborador: Bool!
     var hijosref: [String]!
     var hijos: [Hijo]!
-    var colaboradoresref: [String]!
     var colaboradores: [Colaborador]!
+    var colaboradoresactivos: Bool!
     var invitaciones_colaborador: Bool!
     var invitacionNombre: String!
     
@@ -27,7 +27,7 @@ class Padre{
         self.uid=""
         self.premium=nil
         self.colaborador=nil
-        self.colaboradoresref=[String]()
+        self.colaboradoresactivos=false
         self.colaboradores=[Colaborador]()
         self.invitaciones_colaborador=nil
         self.invitacionNombre=nil

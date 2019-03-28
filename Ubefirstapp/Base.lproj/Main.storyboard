@@ -1435,11 +1435,12 @@
                         <outlet property="lbl_nHijos" destination="SGA-7U-MVx" id="KfR-aM-rIM"/>
                         <outlet property="lbl_nombre" destination="otL-Nt-Ro9" id="Rtt-1D-rQW"/>
                         <outlet property="lbl_suscripcion" destination="rXx-TR-Mpx" id="OOZ-E8-nR7"/>
+                        <segue destination="pHw-CQ-OQJ" kind="showDetail" identifier="PerfilDeUsuarioToLogin" id="1ba-OQ-9GI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NV5-tC-qq3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3114.4927536231885" y="2669.021739130435"/>
+            <point key="canvasLocation" x="-3135" y="2672"/>
         </scene>
         <!--Agregar recuerdo-->
         <scene sceneID="XLS-At-Uz1">
@@ -1603,6 +1604,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="ColaboradoresTableView" destination="xMO-Ci-kvK" id="utb-6f-1i3"/>
+                        <segue destination="vY9-bY-RSX" kind="show" identifier="ColaboradoresToDeletePerfil" id="1fk-Xs-Kyd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E41-tU-kxf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1639,6 +1641,7 @@
                     <connections>
                         <outlet property="InvitacionesTableView" destination="tLr-mo-hzF" id="GGh-NR-NTc"/>
                         <segue destination="kNk-nU-WHU" kind="show" identifier="InvitacionesToPerfilInvitacion" id="pfa-pS-IEg"/>
+                        <segue destination="vY9-bY-RSX" kind="show" identifier="InvitacionesToDeletePerfil" id="Vdw-Pn-Q6X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qGB-Oa-qEg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1702,6 +1705,64 @@
             </objects>
             <point key="canvasLocation" x="-5194" y="-284"/>
         </scene>
+        <!--Perfil de usuario-->
+        <scene sceneID="CCh-DT-kmT">
+            <objects>
+                <viewController title="Perfil de usuario" id="vY9-bY-RSX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uIm-an-HXa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PH5-jN-rmg">
+                                <rect key="frame" x="31" y="316" width="350" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Correo: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Im1-bd-ukT">
+                                <rect key="frame" x="31" y="373" width="350" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Número de hijos:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qn7-CT-yz9">
+                                <rect key="frame" x="31" y="431" width="350" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tipo de suscripción:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rrJ-JM-s2e">
+                                <rect key="frame" x="31" y="490" width="350" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0p5-u1-XXQ">
+                                <rect key="frame" x="122" y="102" width="170" height="160"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mgZ-9I-R3r">
+                                <rect key="frame" x="66" y="592" width="281" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Eliminar Colaboración">
+                                    <color key="titleColor" red="0.85720935880000004" green="0.0" blue="0.0099821227339999992" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="CKG-Rd-XnD"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5eg-q9-LIt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1706" y="1890"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Agregar" width="551" height="104"/>
@@ -1740,7 +1801,8 @@
         <image name="pug" width="1200" height="650"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tPu-P9-ELw"/>
+        <segue reference="Vdw-Pn-Q6X"/>
+        <segue reference="1ba-OQ-9GI"/>
         <segue reference="0M7-0r-Rh0"/>
         <segue reference="pfa-pS-IEg"/>
         <segue reference="UfX-hk-dME"/>

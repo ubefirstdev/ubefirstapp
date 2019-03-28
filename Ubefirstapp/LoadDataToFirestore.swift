@@ -230,7 +230,7 @@ class LoadDataToFirestore {
             "nombre": nombre,
             "correo": correo,
             "hijosref": [],
-            "colaboradoresref":[],
+            "colaboradoresactivos": false,
             "invitaciones_colaborador": false
         ]
         

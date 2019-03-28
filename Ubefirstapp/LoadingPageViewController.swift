@@ -79,14 +79,13 @@ class LoadingPageViewController: UIViewController {
                 userData.correo = document?.data()!["correo"] as? String
                 userData.hijosref = document?.data()!["hijosref"] as? [String]
                 userData.premium = document?.data()!["premium"] as? Bool
-                userData.colaboradoresref = document?.data()!["colaboradoresref"] as? [String]
+                userData.colaboradoresactivos = document?.data()!["colaboradoresactivos"] as? Bool
                 userData.colaborador = document?.data()!["colaborador"] as? Bool
                 userData.invitaciones_colaborador = document?.data()!["invitaciones_colaborador"] as? Bool
                 
-                if (userData.colaboradoresref.isEmpty != true){
+                if (userData.colaboradoresactivos == true){
                     self.loadColaboradoresData()
                 }
-
                 
                 if (userData.hijosref.isEmpty){
                     self.activityIndicator.stopAnimating()
@@ -104,6 +103,17 @@ class LoadingPageViewController: UIViewController {
         
     }
     
+    public func loadInvitacionesData(){
+        db.collection("users").document(userData.uid).collection("invitaciones").getDocuments(){ (querySnapshot1, err) in
+            if err != nil {
+                print(err)
+            } else {
+                for document in querySnapshot1!.documents {
+                }
+            }
+        }
+    }
+    
     public func loadColaboradoresData(){
         db.collection("users").document(userData.uid).collection("colaboradores").getDocuments(){ (querySnapshot1, err) in
             if err != nil {
@@ -112,7 +122,17 @@ class LoadingPageViewController: UIViewController {
                 for document in querySnapshot1!.documents {
                     let colaborador = Colaborador()
                     colaborador.nombre = document.data()["nombre"] as? String
+                    colaborador.correo = document.data()["correo"] as? String
+                    colaborador.id = document.data()["docid"] as? String
+                    colaborador.nhijos = document.data()["nhijos"] as? Int
                     colaborador.statusInvitacion = document.data()["status"] as? String
+                    if (document.data()["suscripcion"] as? Bool == true){
+                        colaborador.suscripcion = "Premium"
+                    }else{
+                        colaborador.suscripcion = "Gratis"
+
+                    }
+                    
                     userData.colaboradores.append(colaborador)
                 }
                 self.progressBar.progress = 0.40

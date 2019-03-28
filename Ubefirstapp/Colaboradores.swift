@@ -9,9 +9,17 @@
 class Colaborador {
     var nombre: String!
     var statusInvitacion: String!
+    var correo: String!
+    var nhijos: Int!
+    var suscripcion: String!
+    var id:String!
     
     init() {
         self.nombre=""
         self.statusInvitacion=""
+        self.correo=""
+        self.nhijos=0
+        self.suscripcion=""
+        self.id=""
     }
 }

@@ -29,8 +29,9 @@ class GestionColaboradoresViewController: UIViewController, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell3 = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "cell3")
+        let cell3 = UITableViewCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: "cell3")
         cell3.textLabel?.text  = userData.colaboradores[indexPath.row].nombre
+        cell3.detailTextLabel?.text = userData.colaboradores[indexPath.row].statusInvitacion
         
         return cell3
     }
@@ -38,11 +39,18 @@ class GestionColaboradoresViewController: UIViewController, UITableViewDataSourc
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         lastColaboradorConfigPersonTap = indexPath.row
         self.ColaboradoresTableView.deselectRow(at: indexPath, animated: true)
-        OperationQueue.main.addOperation {
-            [weak self] in
-            self?.performSegue(withIdentifier: "HijosConfigTableToHijosData", sender: self)
-        }
         
+        if (userData.colaboradores[indexPath.row].statusInvitacion=="Invitación aceptada. En colaboración"){
+            OperationQueue.main.addOperation {
+                [weak self] in
+                self?.performSegue(withIdentifier: "ColaboradoresToDeletePerfil", sender: self)
+            }
+        }else{
+            OperationQueue.main.addOperation {
+                [weak self] in
+                self?.performSegue(withIdentifier: "HijosConfigTableToHijosData", sender: self)
+            }
+        }
     }
     
 
