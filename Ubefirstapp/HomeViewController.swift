@@ -19,6 +19,7 @@ var segueSender = ""
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var btn_mejoresMomentos: UIButton!
+    @IBOutlet weak var btn_personas: UIButton!
     
     
     @IBAction func btnPressed_configuracion(_ sender: Any) {
@@ -65,7 +66,7 @@ class HomeViewController: UIViewController {
         let menuLeftNavigationController = storyboard!.instantiateViewController(withIdentifier: "LeftMenuNavigationController") as! UISideMenuNavigationController
         SideMenuManager.default.menuLeftNavigationController = menuLeftNavigationController
         SideMenuManager.default.menuWidth = 320
-      
+
     }
     
     override func viewDidAppear(_ animated: Bool) {

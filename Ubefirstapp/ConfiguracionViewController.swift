@@ -69,11 +69,6 @@ class ConfiguracionViewController: UIViewController {
     @IBAction func btnPressed_hijos(_ sender: Any) {
     }
     
-    @IBAction func btnPresssed_cuentaDropbox(_ sender: Any) {
-    /*DropboxClientsManager.authorizeFromController(UIApplication.shared,controller: self,openURL: {
-            (url: URL) -> Void in UIApplication.shared.openURL(url)
-        })*/
-    }
     
     @IBAction func btnPressed_avisoDePrivacidad(_ sender: Any) {
     }
@@ -83,10 +78,7 @@ class ConfiguracionViewController: UIViewController {
     
     @IBAction func btnPressed_comoUsarUbefirst(_ sender: Any) {
     }
-    
-    @IBAction func btnPressed_cambiatePremium(_ sender: Any) {
-    }
-    
+        
     @IBAction func btnPressed_cerrarSesion(_ sender: Any) {
         let firebaseAuth = Auth.auth()
         do {
@@ -109,9 +101,6 @@ class ConfiguracionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if (userData.premium == true){
-            self.btn_cambiatePremium.isHidden = true
-        }
         // Do any additional setup after loading the view.
     }
     

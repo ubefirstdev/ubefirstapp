@@ -13,13 +13,50 @@ var lastRecuerdoIndexTap: Int!
 class RecuerdosViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableViewRecuerdos: UITableView!
+    @IBOutlet weak var imgDimension: UIImageView!
+    
+    @IBOutlet weak var labelPersona: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
         self.title = userData.hijos[lastPersonIndexTap].dimensiones[lastIndexDimensionTap].nombre
-
+        self.labelPersona.text=userData.hijos[lastPersonIndexTap].alias
+        imagenDimension()
         // Do any additional setup after loading the view.
+    }
+    
+    func imagenDimension()
+    {
+        switch      userData.hijos[lastPersonIndexTap].dimensiones[lastIndexDimensionTap].nombre
+        {
+        case "Académica":
+            imgDimension.image = UIImage(named:"BotonAcademico.png")
+            break
+        case "Cultural":
+            imgDimension.image = UIImage(named:"BotonCultural.png")
+            break
+        case "Espiritual":
+            imgDimension.image = UIImage(named:"BotonEspiritual.png")
+            break
+        case "Ayuda Social":
+            imgDimension.image = UIImage(named:"BotonAyudaSocial.png")
+            break
+        case "Humana":
+            imgDimension.image = UIImage(named:"BotonFamiliar.png")
+            break
+        case "Emprendimiento":
+            imgDimension.image = UIImage(named:"BotonEmprendimiento.png")
+            break
+        case "Deportiva":
+            imgDimension.image = UIImage(named:"BotonDeportiva.png")
+            break
+        case "Extra":
+            imgDimension.image = UIImage(named:"BotonExtra.png")
+            break
+        default:
+            break
+        }
     }
     
     func setupTableView(){

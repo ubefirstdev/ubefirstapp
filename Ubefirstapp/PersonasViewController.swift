@@ -14,7 +14,15 @@ class PersonasViewController: UIViewController, UITableViewDelegate, UITableView
     
     let cellReuseIdentifier = "PersonasCell"
     @IBOutlet weak var personasTableView: UITableView!
+    @IBOutlet weak var agregarPersona: UIButton!
     
+    
+    @IBAction func agregarPressed(_ sender: Any) {
+        OperationQueue.main.addOperation {
+            [weak self] in
+            self?.performSegue(withIdentifier: "PersonasHomeToAgregarPersonas", sender: self)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

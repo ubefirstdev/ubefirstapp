@@ -225,7 +225,8 @@ class LoadDataToFirestore {
         
         let docDataUser: [String: Any] = [
             "uid": uid,
-            "premium": false,
+            //Para el demo todos son premium
+            "premium": true,
             "colaborador": false,
             "nombre": nombre,
             "correo": correo,
