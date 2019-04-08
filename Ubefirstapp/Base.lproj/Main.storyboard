@@ -173,14 +173,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="he9-zB-7U0">
-                                <rect key="frame" x="282" y="610" width="112" height="106"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="Boton Agregar Recuerdo"/>
-                                <connections>
-                                    <action selector="button_addPhoto:" destination="kcT-vT-O7F" eventType="touchUpInside" id="kF2-Fs-5ub"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CYD-Ik-wTe">
                                 <rect key="frame" x="21" y="84" width="372" height="268"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -198,7 +190,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="29"/>
                                 <inset key="titleEdgeInsets" minX="20" minY="-30" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="Mejores momentos" backgroundImage="pug">
+                                <state key="normal">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
@@ -212,6 +204,18 @@
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="he9-zB-7U0">
+                                <rect key="frame" x="274" y="596" width="120" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Boton Agregar Recuerdo"/>
+                                <connections>
+                                    <action selector="button_addPhoto:" destination="kcT-vT-O7F" eventType="touchUpInside" id="kF2-Fs-5ub"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LogoNombre" translatesAutoresizingMaskIntoConstraints="NO" id="pdE-aQ-bqk">
+                                <rect key="frame" x="60" y="407" width="295" height="188"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="RYZ-nK-qjS"/>
@@ -274,15 +278,15 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre de hijo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9n7-gW-DQq">
                                                     <rect key="frame" x="51" y="19" width="312" height="36"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hijo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="osw-ks-5b1">
                                                     <rect key="frame" x="51" y="63" width="312" height="25"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
-                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PlaceHolderNino" translatesAutoresizingMaskIntoConstraints="NO" id="RJo-lE-1Mn">
@@ -304,7 +308,7 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qeR-sq-ghq">
-                                <rect key="frame" x="334" y="656" width="80" height="80"/>
+                                <rect key="frame" x="274" y="596" width="120" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="agregar persona" image="Boton Agregar"/>
                                 <connections>
@@ -431,27 +435,27 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre de hijo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HvV-Z2-VWf">
                                 <rect key="frame" x="48" y="74" width="312" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hijo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ar2-t7-Kfu">
                                 <rect key="frame" x="48" y="118" width="312" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
-                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Pelota" translatesAutoresizingMaskIntoConstraints="NO" id="fod-xL-H3B">
                                 <rect key="frame" x="78" y="151" width="252" height="246"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PlaceHolderNino" translatesAutoresizingMaskIntoConstraints="NO" id="89q-wi-UGA">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PlaceHolderNino" translatesAutoresizingMaskIntoConstraints="NO" id="89q-wi-UGA">
                                 <rect key="frame" x="-8" y="92" width="430" height="364"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pOu-a9-RI1">
-                                <rect key="frame" x="68" y="628" width="120" height="50"/>
+                                <rect key="frame" x="82" y="630" width="120" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <inset key="titleEdgeInsets" minX="0.0" minY="-20" maxX="0.0" maxY="0.0"/>
@@ -463,7 +467,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mHQ-o3-cql">
-                                <rect key="frame" x="228" y="628" width="120" height="50"/>
+                                <rect key="frame" x="212" y="630" width="120" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <inset key="titleEdgeInsets" minX="0.0" minY="-20" maxX="0.0" maxY="0.0"/>
@@ -505,7 +509,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="65" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aIT-LZ-suh">
-                                <rect key="frame" x="0.0" y="214" width="414" height="522"/>
+                                <rect key="frame" x="0.0" y="214" width="414" height="374"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -563,23 +567,31 @@
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recuerdos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FCg-9j-U6B">
-                                <rect key="frame" x="51" y="170" width="312" height="36"/>
+                                <rect key="frame" x="51" y="162" width="312" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre de hijo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8gG-pz-Cjz">
-                                <rect key="frame" x="36" y="105" width="201" height="36"/>
+                                <rect key="frame" x="44" y="96" width="201" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BotonFamiliar" translatesAutoresizingMaskIntoConstraints="NO" id="sU5-iD-sFh">
-                                <rect key="frame" x="273" y="95" width="106" height="57"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="prevAcademico" translatesAutoresizingMaskIntoConstraints="NO" id="sU5-iD-sFh">
+                                <rect key="frame" x="290" y="74" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BEb-IN-Re6">
+                                <rect key="frame" x="274" y="596" width="120" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Boton Agregar Recuerdo"/>
+                                <connections>
+                                    <action selector="button_addPhoto:" destination="kcT-vT-O7F" eventType="touchUpInside" id="4sL-f0-NAR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="CfY-De-Uj0"/>
@@ -1773,6 +1785,7 @@
         <image name="Google" width="121.68000030517578" height="116.63999938964844"/>
         <image name="HolderAgregarPersona" width="258" height="259"/>
         <image name="Logo Temporal" width="78.720001220703125" height="73.44000244140625"/>
+        <image name="LogoNombre" width="750" height="499.92001342773438"/>
         <image name="NinoNull" width="672" height="684"/>
         <image name="Pantalla Recuerdo" width="134.66334533691406" height="239.52119445800781"/>
         <image name="Pelota" width="51" height="51"/>
@@ -1782,15 +1795,14 @@
         <image name="Ventana Datos registro" width="180" height="320.16000366210938"/>
         <image name="icono iniciar sesion" width="57.599998474121094" height="57.599998474121094"/>
         <image name="pdf" width="70" height="87"/>
-        <image name="pug" width="1200" height="650"/>
+        <image name="prevAcademico" width="304" height="304"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="R2T-ZR-HnZ"/>
         <segue reference="Vdw-Pn-Q6X"/>
         <segue reference="1ba-OQ-9GI"/>
-        <segue reference="0M7-0r-Rh0"/>
+        <segue reference="nXz-4b-dSB"/>
         <segue reference="pfa-pS-IEg"/>
-        <segue reference="UfX-hk-dME"/>
+        <segue reference="2yu-48-KYZ"/>
         <segue reference="mrf-Oa-VHt"/>
         <segue reference="79p-y8-NMS"/>
     </inferredMetricsTieBreakers>

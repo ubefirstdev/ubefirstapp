@@ -31,28 +31,28 @@ class RecuerdosViewController: UIViewController, UITableViewDataSource, UITableV
         switch      userData.hijos[lastPersonIndexTap].dimensiones[lastIndexDimensionTap].nombre
         {
         case "Académica":
-            imgDimension.image = UIImage(named:"BotonAcademico.png")
+            imgDimension.image = UIImage(named:"prevAcademico.png")
             break
         case "Cultural":
-            imgDimension.image = UIImage(named:"BotonCultural.png")
+            imgDimension.image = UIImage(named:"prevCultural.png")
             break
         case "Espiritual":
-            imgDimension.image = UIImage(named:"BotonEspiritual.png")
+            imgDimension.image = UIImage(named:"prevEspiritual.png")
             break
         case "Ayuda Social":
-            imgDimension.image = UIImage(named:"BotonAyudaSocial.png")
+            imgDimension.image = UIImage(named:"prevAyuda.png")
             break
         case "Humana":
-            imgDimension.image = UIImage(named:"BotonFamiliar.png")
+            imgDimension.image = UIImage(named:"prevFamiliar.png")
             break
         case "Emprendimiento":
-            imgDimension.image = UIImage(named:"BotonEmprendimiento.png")
+            imgDimension.image = UIImage(named:"prevEmprendimiento.png")
             break
         case "Deportiva":
-            imgDimension.image = UIImage(named:"BotonDeportiva.png")
+            imgDimension.image = UIImage(named:"prevDeportiva.png")
             break
         case "Extra":
-            imgDimension.image = UIImage(named:"BotonExtra.png")
+            imgDimension.image = UIImage(named:"prevExtra.png")
             break
         default:
             break
