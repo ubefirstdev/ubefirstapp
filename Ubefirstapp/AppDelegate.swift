@@ -11,6 +11,9 @@ import Firebase
 import FBSDKCoreKit
 import GoogleSignIn
 import IQKeyboardManager
+import AWSCognito
+import AWSCore
+import AWSS3
 
 
 @UIApplicationMain
@@ -25,6 +28,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
+        let credentialsProvider = AWSCognitoCredentialsProvider(regionType:.USEast2,
+                                                                identityPoolId:"us-east-2:bb07c57b-0e55-4408-bdfd-67092c53fe9f")
+        let configuration = AWSServiceConfiguration(region:.USEast2, credentialsProvider:credentialsProvider)
+        
+        AWSServiceManager.default().defaultServiceConfiguration = configuration
         return true
     }
     

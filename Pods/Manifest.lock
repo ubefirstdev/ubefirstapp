@@ -1,4 +1,9 @@
 PODS:
+  - AWSCognito (2.9.1):
+    - AWSCore (= 2.9.1)
+  - AWSCore (2.9.1)
+  - AWSS3 (2.9.1):
+    - AWSCore (= 2.9.1)
   - Bolts (1.9.0):
     - Bolts/AppLinks (= 1.9.0)
     - Bolts/Tasks (= 1.9.0)
@@ -163,6 +168,9 @@ PODS:
   - SideMenu (5.0.1)
 
 DEPENDENCIES:
+  - AWSCognito
+  - AWSCore
+  - AWSS3
   - FBSDKCoreKit
   - FBSDKLoginKit
   - FBSDKShareKit
@@ -177,6 +185,9 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - AWSCognito
+    - AWSCore
+    - AWSS3
     - Bolts
     - BoringSSL
     - FBSDKCoreKit
@@ -209,6 +220,9 @@ SPEC REPOS:
     - SideMenu
 
 SPEC CHECKSUMS:
+  AWSCognito: 2670dd216e5c352c27f29cf6d4bc32e8e1c58124
+  AWSCore: de39c337b7cb32c7a2c6402f45ecf4e50498000e
+  AWSS3: 1feca899851eb4d45ca16860e441da658e1b852d
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   BoringSSL: e10f92a27043805c01071fe815a5cd98ae8212e7
   FBSDKCoreKit: fe5f3474499a81963e11e3f3a5c753d0a95ca2b4
@@ -240,6 +254,6 @@ SPEC CHECKSUMS:
   Protobuf: 1eb9700044745f00181c136ef21b8ff3ad5a0fd5
   SideMenu: 87efd943737bb83aedf0358884d09fcf5576636d
 
-PODFILE CHECKSUM: 23a2f0baacc84b50aa51aac8c9a4ea634b3dcaa8
+PODFILE CHECKSUM: c86c5c8a919fde07144e0c965fef3a972ed32011
 
 COCOAPODS: 1.6.1

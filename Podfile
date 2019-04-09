@@ -17,6 +17,8 @@ pod 'GoogleSignIn'
 pod 'Firebase/Firestore'
 pod 'IQKeyboardManager'
 pod 'SideMenu'
-
+pod 'AWSCognito'
+pod 'AWSCore'
+pod 'AWSS3'
 
 end

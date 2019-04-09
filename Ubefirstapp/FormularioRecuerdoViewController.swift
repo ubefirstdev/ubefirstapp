@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AWSS3
 
 class FormularioRecuerdoViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     @IBOutlet weak var imageview_previaImagen: UIImageView!
@@ -18,7 +19,7 @@ class FormularioRecuerdoViewController: UIViewController, UIPickerViewDelegate, 
     @IBOutlet weak var picker_fecha: UIDatePicker!
     var indexPersona = 0
     var indexDimension = 0
-    var folderPath = "/path/path/path"
+    var folderPath = ""
 
     @IBAction func btnPressed_agregarRecuerdo(_ sender: Any) {
         var docData: [String: Any] = [:]
@@ -28,7 +29,8 @@ class FormularioRecuerdoViewController: UIViewController, UIPickerViewDelegate, 
         dateFormatter.dateFormat = "dd MMM yyyy"
         let selectedDate = dateFormatter.string(from: self.picker_fecha.date)
         
-        //CrearCarpetaRecuerdo()
+        //Se inicia la estructura en donde sera guardara en aws y se sobreescribe en folderPath que es donde se tendra la informacion de acceso de la imagen en firebase hacia aws
+        CrearCarpetaRecuerdo()
         
         docData = [
             "titulo": self.textField_nombreRecuerdo.text!,
@@ -43,7 +45,7 @@ class FormularioRecuerdoViewController: UIViewController, UIPickerViewDelegate, 
         //aqui iria el codigo para poder subir elementos a dropbox, en esta parte del codigo es donde se realiza la creacion de un nuevo recuerdo
         //Se debe crear la carpeta y luego se debe subir la imagen en esa carpeta
         
-        //SubirImagenACarpeta()
+        SubirImagenACarpeta()
         
         //se agrega el recuerdo al objeto padre
         let recuerdoNuevo  = Recuerdo()
@@ -117,40 +119,36 @@ class FormularioRecuerdoViewController: UIViewController, UIPickerViewDelegate, 
         self.picker_dimension.reloadAllComponents()
     }
     
-    /*func CrearCarpetaRecuerdo(){
-        if let client = DropboxClientsManager.authorizedClient {
+    
+    func CrearCarpetaRecuerdo(){
             let hijo = userData.hijos[self.indexPersona].nombre!
             let dimension = userData.hijos[self.indexPersona].dimensiones[self.indexDimension].nombre!
             let recuerdo = self.textField_nombreRecuerdo.text!
-            
-            folderPath = "/"+hijo+"/"+dimension+"/"+recuerdo
-            client.files.createFolderV2(path: folderPath).response { response, error in
-                if let response = response {
-                    print(response)
-                } else if let error = error {
-                    print(error)
-                }
-            }
+            let user = userData.uid!
+            folderPath = user+"/"+hijo+"/"+dimension+"/"+recuerdo+".png"
         }
-    }
     
     func SubirImagenACarpeta(){
-        if let client = DropboxClientsManager.authorizedClient {
-            let image = imageview_previaImagen.image!.pngData()
-            _ = client.files.upload(path: folderPath+"/"+(image?.description)!+".png", input: image!)
-                .response { response, error in
-                    if let response = response {
-                        print(response)
-                    } else if let error = error {
-                        print(error)
+        
+        guard let image = imageview_previaImagen.image else {return}
+        if let data = image.pngData(){
+            DispatchQueue.main.async(execute: {
+                let transferUtility = AWSS3TransferUtility.default()
+                let S3BucketName = "innomakers.ubefirst"
+                let expression = AWSS3TransferUtilityUploadExpression()
+                
+                transferUtility.uploadData(data, bucket: S3BucketName, key: self.folderPath, contentType: "image/png", expression: expression) { (task, error) in
+                    if let error = error{
+                        print(error.localizedDescription)
+                        return
                     }
+                    //MENSAJE COMO EN CUENTA CREADA CON EXITOself.statusLabel.text = "uploaded successfully"
+                    
+                    
                 }
-                .progress { progressData in
-                    print(progressData)
-            }
+            })
         }
-
-    }*/
+    }
 }
 
 

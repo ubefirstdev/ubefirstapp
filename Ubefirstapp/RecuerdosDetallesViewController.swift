@@ -7,35 +7,59 @@
 //
 
 import UIKit
+import AWSS3
+
 class RecuerdosDetallesViewController: UIViewController {
 
     @IBOutlet var imageView: UIImageView!
     @IBOutlet weak var lbl_titulo: UILabel!
-    @IBOutlet weak var lbl_hijo: UILabel!
     @IBOutlet weak var lbl_dimension: UILabel!
     @IBOutlet weak var lbl_fecha: UILabel!
-    @IBOutlet weak var lbl_ubicacion: UILabel!
     @IBOutlet weak var txtView_descripcion: UITextView!
-    var filenames: Array<String>?
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var progressBar: UIProgressView!
+    
+    let s3Bucket = "innomakers.ubefirst"
+    var s3Key = "KidSample.jpeg"
     var folderPath = ""
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = userData.hijos[lastPersonIndexTap].dimensiones[lastIndexDimensionTap].recuerdos[lastRecuerdoIndexTap].titulo
-        self.lbl_titulo.text = userData.hijos[lastPersonIndexTap].dimensiones[lastIndexDimensionTap].recuerdos[lastRecuerdoIndexTap].titulo
-        self.lbl_hijo.text = userData.hijos[lastPersonIndexTap].dimensiones[lastIndexDimensionTap].recuerdos[lastRecuerdoIndexTap].hijo
-
-        self.lbl_dimension.text = userData.hijos[lastPersonIndexTap].dimensiones[lastIndexDimensionTap].recuerdos[lastRecuerdoIndexTap].dimension
-        self.lbl_fecha.text = userData.hijos[lastPersonIndexTap].dimensiones[lastIndexDimensionTap].recuerdos[lastRecuerdoIndexTap].fecha
-        self.lbl_ubicacion.text = userData.hijos[lastPersonIndexTap].dimensiones[lastIndexDimensionTap].recuerdos[lastRecuerdoIndexTap].ubicacion
-        self.txtView_descripcion.text = userData.hijos[lastPersonIndexTap].dimensiones[lastIndexDimensionTap].recuerdos[lastRecuerdoIndexTap].descripcion
+        
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.startAnimating()
+        
         folderPath = userData.hijos[lastPersonIndexTap].dimensiones[lastIndexDimensionTap].recuerdos[lastRecuerdoIndexTap].elementospath
-
-        // Do any additional setup after loading the view.
+        print(folderPath)
+        s3Key=folderPath
         
         //MOSTARLAIMAGEN QUE ESTE EN SU PATH
-        self.filenames = []
+        
+        
+        
+        let transferUtility = AWSS3TransferUtility.default()
+        let expression = AWSS3TransferUtilityDownloadExpression()
+        expression.progressBlock = {(task, progress) in DispatchQueue.main.async(execute: {
+        })
+        }
+        transferUtility.downloadData(fromBucket: s3Bucket, key: s3Key, expression: expression) { (task, url, data, error) in
+            if let error = error{
+                print(error)
+            }
+            DispatchQueue.main.async(execute: {
+                self.imageView.image = UIImage(data: data!)!
+                self.activityIndicator.stopAnimating()
+            })
+        }
+        
+        self.title = userData.hijos[lastPersonIndexTap].dimensiones[lastIndexDimensionTap].recuerdos[lastRecuerdoIndexTap].titulo
+        self.lbl_titulo.text = userData.hijos[lastPersonIndexTap].dimensiones[lastIndexDimensionTap].recuerdos[lastRecuerdoIndexTap].titulo
+        self.txtView_descripcion.text = userData.hijos[lastPersonIndexTap].dimensiones[lastIndexDimensionTap].recuerdos[lastRecuerdoIndexTap].hijo + " en " + userData.hijos[lastPersonIndexTap].dimensiones[lastIndexDimensionTap].recuerdos[lastRecuerdoIndexTap].ubicacion + "\n" + userData.hijos[lastPersonIndexTap].dimensiones[lastIndexDimensionTap].recuerdos[lastRecuerdoIndexTap].descripcion
+        self.lbl_dimension.text = userData.hijos[lastPersonIndexTap].dimensiones[lastIndexDimensionTap].recuerdos[lastRecuerdoIndexTap].dimension
+        self.lbl_fecha.text = userData.hijos[lastPersonIndexTap].dimensiones[lastIndexDimensionTap].recuerdos[lastRecuerdoIndexTap].fecha
+
+        
         //Aqui carga la imagen pero deberian ser thumbnails y por lo pronto solo aguanta una que ya luego nos permita ver en pantalla completa
         /*
         if let client = DropboxClientsManager.authorizedClient {
