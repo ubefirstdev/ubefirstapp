@@ -10,11 +10,10 @@ import UIKit
 
 var lastRecuerdoIndexTap: Int!
 
-class RecuerdosViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+class RecuerdosViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var tableViewRecuerdos: UITableView!
     @IBOutlet weak var imgDimension: UIImageView!
-    
     @IBOutlet weak var labelPersona: UILabel!
     
     override func viewDidLoad() {
@@ -85,15 +84,9 @@ class RecuerdosViewController: UIViewController, UITableViewDataSource, UITableV
         
     }
     
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func agregarRecuerdo(_ sender: Any) {
+        segueSender = "RecuerdosToAgregarRecuerdo"
+        CameraHandler.shared.showActionSheet(vc: self)
     }
-    */
-
+    
 }

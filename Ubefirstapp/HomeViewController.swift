@@ -21,24 +21,6 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var btn_mejoresMomentos: UIButton!
     @IBOutlet weak var btn_personas: UIButton!
     
-    
-    @IBAction func btnPressed_configuracion(_ sender: Any) {
-        /*if (userData.premium==false){
-         let alertController = UIAlertController(title: "Funcionalidad limitada", message: "Obtenga una cuenta ubefirst Premium para gestionar hijos, dimensiones y más.", preferredStyle: UIAlertController.Style.alert)
-         alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default) {
-         UIAlertAction in
-         })
-         self.present(alertController, animated: true, completion: nil)
-         } else {
-
-         }
-        
-        //Aqui se logea con Dropbox de manera provicional
-        /*DropboxClientsManager.authorizeFromController(UIApplication.shared,controller: self,openURL: {
-            (url: URL) -> Void in UIApplication.shared.openURL(url)
-        })*/
-*/    }
-    
     @IBAction func btnPressed_mejoresMomentos(_ sender: Any) {
         if (userData.premium==false){
             NSLog("Hola")
