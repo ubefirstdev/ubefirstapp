@@ -693,7 +693,7 @@
         <!--RegistroViewController-->
         <scene sceneID="DQh-Us-gwW">
             <objects>
-                <viewController storyboardIdentifier="registro" title="RegistroViewController" modalTransitionStyle="partialCurl" id="aMy-E6-jp8" customClass="RegistroViewController" customModule="Ubefirstapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="registro" title="RegistroViewController" modalTransitionStyle="coverVertical" id="aMy-E6-jp8" customClass="RegistroViewController" customModule="Ubefirstapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0DS-dN-Uzr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1752,12 +1752,13 @@
         <image name="prevAcademico" width="304" height="304"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="mFs-h3-eub"/>
         <segue reference="Vdw-Pn-Q6X"/>
         <segue reference="tPu-P9-ELw"/>
         <segue reference="nXz-4b-dSB"/>
         <segue reference="pfa-pS-IEg"/>
         <segue reference="2yu-48-KYZ"/>
         <segue reference="mrf-Oa-VHt"/>
-        <segue reference="79p-y8-NMS"/>
+        <segue reference="Nlc-3U-gNL"/>
     </inferredMetricsTieBreakers>
 </document>
