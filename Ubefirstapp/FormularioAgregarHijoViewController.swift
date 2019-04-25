@@ -18,6 +18,8 @@ class FormularioAgregarHijoViewController: UIViewController {
     
     @IBAction func btnGuardar_pressed(_ sender: Any) {
         
+        
+        //Revisar que no haya otro hijo con el mismo nombre o alias?!
         if(validar(str: self.textfield_nombre.text!)&&validar(str: self.textfield_alias.text!)&&validar(str: self.textfield_relacion.text!)){
             let update = LoadDataToFirestore()
             update.agregarHijoNuevoAndReturnHijoref(alias: self.textfield_alias.text!, nombre: self.textfield_nombre.text!,parent: self.textfield_relacion.text!)

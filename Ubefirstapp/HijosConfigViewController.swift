@@ -37,7 +37,7 @@ class HijosConfigViewController: UIViewController, UITableViewDataSource, UITabl
                 "alias": self.textField_alias.text!
             ]
             
-            db.collection("hijos").document(userData.hijosref[lastHijoConfigPersonTap]).setData(docDataUpdate, merge: true)
+        db.collection("hijos").document(userData.hijosref[lastHijoConfigPersonTap]).setData(docDataUpdate, merge: true)
             
             let alertController = UIAlertController(title: "Guardado", message: "Los datos se actualizaron correctamente", preferredStyle: UIAlertController.Style.alert)
             alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default) {

@@ -137,6 +137,9 @@ class FormularioRecuerdoViewController: UIViewController, UIPickerViewDelegate, 
             let dimension = userData.hijos[self.indexPersona].dimensiones[self.indexDimension].nombre!
             let recuerdo = self.textField_nombreRecuerdo.text!
             let user = userData.uid!
+        
+        //Revisar que no haya otro recuerdo con el mismo nombre en la carpeta de la dimension del hijo
+        //Quiza un query filtrado por folderpath
             folderPath = user+"/"+hijo+"/"+dimension+"/"+recuerdo+".png"
         }
     

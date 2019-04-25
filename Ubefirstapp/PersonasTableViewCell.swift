@@ -11,6 +11,7 @@ import UIKit
 class PersonasTableViewCell: UITableViewCell {
     
     @IBOutlet weak var lbl_nombreHijo: UILabel!
+    @IBOutlet weak var lbl_parentesco: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

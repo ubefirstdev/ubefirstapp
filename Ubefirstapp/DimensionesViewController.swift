@@ -13,6 +13,7 @@ var lastIndexDimensionTap: Int!
 class DimensionesViewController: UIViewController {
 
     @IBOutlet weak var label_nombrePersona: UILabel!
+    @IBOutlet weak var label_parentesco: UILabel!
     @IBOutlet weak var button_dimension1: UIButton!
     @IBOutlet weak var button_dimension2: UIButton!
     @IBOutlet weak var button_dimension3: UIButton!
@@ -142,6 +143,7 @@ class DimensionesViewController: UIViewController {
         super.viewDidLoad()
         clearButtonsTitles()
         self.label_nombrePersona.text=userData.hijos[lastPersonIndexTap].alias
+        self.label_parentesco.text=userData.hijos[lastPersonIndexTap].parentesco
         loadDimensionesFromMemory()
         
         /*if (userData.premium==false){
