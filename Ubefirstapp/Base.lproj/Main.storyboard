@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SXh-2S-ZrU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SXh-2S-ZrU">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -693,7 +693,7 @@
         <!--RegistroViewController-->
         <scene sceneID="DQh-Us-gwW">
             <objects>
-                <viewController storyboardIdentifier="registro" title="RegistroViewController" modalTransitionStyle="coverVertical" id="aMy-E6-jp8" customClass="RegistroViewController" customModule="Ubefirstapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="registro" title="RegistroViewController" id="aMy-E6-jp8" customClass="RegistroViewController" customModule="Ubefirstapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0DS-dN-Uzr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1724,35 +1724,34 @@
         <image name="Boton Agregar Recuerdo" width="700" height="700"/>
         <image name="Boton Ajustes" width="50" height="50"/>
         <image name="Boton Personas" width="2433" height="1876"/>
-        <image name="Boton-1" width="113.76000213623047" height="28.319999694824219"/>
-        <image name="BotonAcademico" width="125" height="54.583541870117188"/>
-        <image name="BotonAyudaSocial" width="125" height="54.583541870117188"/>
-        <image name="BotonCultural" width="125" height="54.583541870117188"/>
-        <image name="BotonDeportiva" width="125" height="54.583541870117188"/>
-        <image name="BotonEmprendimiento" width="125" height="54.583541870117188"/>
-        <image name="BotonEspiritual" width="125" height="54.583541870117188"/>
-        <image name="BotonExtra" width="125" height="54.583541870117188"/>
-        <image name="BotonFamiliar" width="125" height="54.583541870117188"/>
-        <image name="Facebook" width="151.67999267578125" height="144"/>
+        <image name="Boton-1" width="474" height="118"/>
+        <image name="BotonAcademico" width="696" height="304"/>
+        <image name="BotonAyudaSocial" width="696" height="304"/>
+        <image name="BotonCultural" width="696" height="304"/>
+        <image name="BotonDeportiva" width="696" height="304"/>
+        <image name="BotonEmprendimiento" width="696" height="304"/>
+        <image name="BotonEspiritual" width="696" height="304"/>
+        <image name="BotonExtra" width="696" height="304"/>
+        <image name="BotonFamiliar" width="696" height="304"/>
+        <image name="Facebook" width="632" height="600"/>
         <image name="Fotos" width="90" height="81"/>
-        <image name="Google" width="121.68000030517578" height="116.63999938964844"/>
+        <image name="Google" width="507" height="486"/>
         <image name="HolderAgregarPersona" width="258" height="259"/>
-        <image name="Logo Temporal" width="78.720001220703125" height="73.44000244140625"/>
-        <image name="LogoNombre" width="750" height="499.92001342773438"/>
+        <image name="Logo Temporal" width="328" height="306"/>
+        <image name="LogoNombre" width="3125" height="2083"/>
         <image name="NinoNull" width="672" height="684"/>
-        <image name="Pelota" width="51" height="51"/>
-        <image name="PlaceHolderNino" width="127" height="127"/>
-        <image name="PlaceHolderRecuerdo" width="134.66334533691406" height="239.52119445800781"/>
-        <image name="Ventana Datos" width="180" height="320.16000366210938"/>
-        <image name="Ventana Datos registro" width="180" height="320.16000366210938"/>
-        <image name="fav" width="159.75" height="159.75"/>
-        <image name="icono iniciar sesion" width="57.599998474121094" height="57.599998474121094"/>
-        <image name="location" width="153.60000610351562" height="153.60000610351562"/>
+        <image name="Pelota" width="284" height="284"/>
+        <image name="PlaceHolderNino" width="529" height="529"/>
+        <image name="PlaceHolderRecuerdo" width="750" height="1334"/>
+        <image name="Ventana Datos" width="750" height="1334"/>
+        <image name="Ventana Datos registro" width="750" height="1334"/>
+        <image name="fav" width="213" height="213"/>
+        <image name="icono iniciar sesion" width="240" height="240"/>
+        <image name="location" width="96" height="96"/>
         <image name="pdf" width="70" height="87"/>
         <image name="prevAcademico" width="304" height="304"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="mFs-h3-eub"/>
         <segue reference="Vdw-Pn-Q6X"/>
         <segue reference="tPu-P9-ELw"/>
         <segue reference="nXz-4b-dSB"/>

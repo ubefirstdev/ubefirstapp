@@ -10,7 +10,7 @@ import Foundation
 
 class LoadDataToFirestore {
     
-    func agregarHijoNuevoAndReturnHijoref(alias: String, nombre: String){
+    func agregarHijoNuevoAndReturnHijoref(alias: String, nombre: String, parent: String){
         let docIDhijo = db.collection("hijos").document().documentID
         var i = 0
         /*var recuerdoref=[String]()
@@ -26,6 +26,7 @@ class LoadDataToFirestore {
         let docData: [String: Any] = [
             "nombre": nombre,
             "alias": alias,
+            "parentesco": parent,
             "dimensionesref": [dimensionesref[0],dimensionesref[1],dimensionesref[2],dimensionesref[3],dimensionesref[4],dimensionesref[5],dimensionesref[6],dimensionesref[7]]
         ]
         
@@ -40,6 +41,7 @@ class LoadDataToFirestore {
         userData.hijosref.append(docIDhijo)
         userData.hijos[userData.hijos.count-1].nombre=nombre
         userData.hijos[userData.hijos.count-1].alias=alias
+        userData.hijos[userData.hijos.count-1].parentesco=parent
         userData.hijos[userData.hijos.count-1].dimensionesref=dimensionesref
         agregarReferenciaNuevoHijo()
         

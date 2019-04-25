@@ -17,10 +17,19 @@ class FormularioAgregarHijoViewController: UIViewController {
     @IBOutlet weak var textfield_relacion: UITextField!
     
     @IBAction func btnGuardar_pressed(_ sender: Any) {
-        let update = LoadDataToFirestore()
-        update.agregarHijoNuevoAndReturnHijoref(alias: self.textfield_alias.text!, nombre: self.textfield_nombre.text!)
-        self.navigationController?.popViewController(animated: true)
-        flagNuevoHijo=1
+        
+        if(validar(str: self.textfield_nombre.text!)&&validar(str: self.textfield_alias.text!)&&validar(str: self.textfield_relacion.text!)){
+            let update = LoadDataToFirestore()
+            update.agregarHijoNuevoAndReturnHijoref(alias: self.textfield_alias.text!, nombre: self.textfield_nombre.text!,parent: self.textfield_relacion.text!)
+            self.navigationController?.popViewController(animated: true)
+            flagNuevoHijo=1
+        }
+        else{
+            //Se indica que el campo esta incompleto
+            let alertController = UIAlertController(title: "Error en registro", message: "Favor de llenar todos los campos", preferredStyle: UIAlertController.Style.alert)
+            alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+        }
 
     }
     
@@ -45,15 +54,5 @@ class FormularioAgregarHijoViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    func validar(str: String) -> Bool{return !(str=="")}
 }

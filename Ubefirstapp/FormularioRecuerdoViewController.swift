@@ -22,45 +22,57 @@ class FormularioRecuerdoViewController: UIViewController, UIPickerViewDelegate, 
     var folderPath = ""
 
     @IBAction func btnPressed_agregarRecuerdo(_ sender: Any) {
-        var docData: [String: Any] = [:]
-        self.picker_fecha.datePickerMode = UIDatePicker.Mode.date
-        let dateFormatter = DateFormatter()
-        dateFormatter.locale = Locale(identifier: "es")
-        dateFormatter.dateFormat = "dd MMM yyyy"
-        let selectedDate = dateFormatter.string(from: self.picker_fecha.date)
         
-        //Se inicia la estructura en donde sera guardara en aws y se sobreescribe en folderPath que es donde se tendra la informacion de acceso de la imagen en firebase hacia aws
-        CrearCarpetaRecuerdo()
-        
-        docData = [
-            "titulo": self.textField_nombreRecuerdo.text!,
-            "hijo": userData.hijos[self.indexPersona].nombre,
-            "dimension": userData.hijos[self.indexPersona].dimensiones[self.indexDimension].nombre,
-            "fecha": selectedDate,
-            "ubicacion": self.textField_ubicacionRecuerdo.text!,
-            "descripcion": self.textField_descripcionRecuerdo.text,
-            "elementospath": folderPath
-        ]
-        
-        //aqui iria el codigo para poder subir elementos a dropbox, en esta parte del codigo es donde se realiza la creacion de un nuevo recuerdo
-        //Se debe crear la carpeta y luego se debe subir la imagen en esa carpeta
-        
-        SubirImagenACarpeta()
-        
-        //se agrega el recuerdo al objeto padre
-        let recuerdoNuevo  = Recuerdo()
-        recuerdoNuevo.titulo = self.textField_nombreRecuerdo.text
-        recuerdoNuevo.hijo = userData.hijos[self.indexPersona].nombre
-        recuerdoNuevo.dimension = userData.hijos[self.indexPersona].dimensiones[self.indexDimension].nombre
-        recuerdoNuevo.fecha = selectedDate
-        recuerdoNuevo.ubicacion = self.textField_ubicacionRecuerdo.text!
-        recuerdoNuevo.descripcion = self.textField_descripcionRecuerdo.text
-        recuerdoNuevo.elementospath = folderPath
-        
-        userData.hijos[self.indexPersona].dimensiones[self.indexDimension].recuerdos.append(recuerdoNuevo)
-        
-        db.collection("hijos").document(userData.hijosref[self.indexPersona]).collection("dimensiones").document(userData.hijos[self.indexPersona].dimensionesref[self.indexDimension]).collection("recuerdos").document().setData(docData)
-        self.navigationController?.popViewController(animated: true)
+        if(validar(str: self.textField_nombreRecuerdo.text!)&&validar(str: self.textField_ubicacionRecuerdo.text!)&&validar(str: self.textField_descripcionRecuerdo.text!)){
+            
+            
+            var docData: [String: Any] = [:]
+            self.picker_fecha.datePickerMode = UIDatePicker.Mode.date
+            let dateFormatter = DateFormatter()
+            dateFormatter.locale = Locale(identifier: "es")
+            dateFormatter.dateFormat = "dd MMM yyyy"
+            let selectedDate = dateFormatter.string(from: self.picker_fecha.date)
+            
+            //Se inicia la estructura en donde sera guardara en aws y se sobreescribe en folderPath que es donde se tendra la informacion de acceso de la imagen en firebase hacia aws
+            CrearCarpetaRecuerdo()
+            
+            docData = [
+                "titulo": self.textField_nombreRecuerdo.text!,
+                "hijo": userData.hijos[self.indexPersona].nombre,
+                "dimension": userData.hijos[self.indexPersona].dimensiones[self.indexDimension].nombre,
+                "fecha": selectedDate,
+                "ubicacion": self.textField_ubicacionRecuerdo.text!,
+                "descripcion": self.textField_descripcionRecuerdo.text,
+                "elementospath": folderPath
+            ]
+            
+            //aqui iria el codigo para poder subir elementos a dropbox, en esta parte del codigo es donde se realiza la creacion de un nuevo recuerdo
+            //Se debe crear la carpeta y luego se debe subir la imagen en esa carpeta
+            
+            SubirImagenACarpeta()
+            
+            //se agrega el recuerdo al objeto padre
+            let recuerdoNuevo  = Recuerdo()
+            recuerdoNuevo.titulo = self.textField_nombreRecuerdo.text
+            recuerdoNuevo.hijo = userData.hijos[self.indexPersona].nombre
+            recuerdoNuevo.dimension = userData.hijos[self.indexPersona].dimensiones[self.indexDimension].nombre
+            recuerdoNuevo.fecha = selectedDate
+            recuerdoNuevo.ubicacion = self.textField_ubicacionRecuerdo.text!
+            recuerdoNuevo.descripcion = self.textField_descripcionRecuerdo.text
+            recuerdoNuevo.elementospath = folderPath
+            
+            userData.hijos[self.indexPersona].dimensiones[self.indexDimension].recuerdos.append(recuerdoNuevo)
+            
+            db.collection("hijos").document(userData.hijosref[self.indexPersona]).collection("dimensiones").document(userData.hijos[self.indexPersona].dimensionesref[self.indexDimension]).collection("recuerdos").document().setData(docData)
+            self.navigationController?.popViewController(animated: true)
+            
+        }
+        else{
+            //Se indica que el campo esta incompleto
+            let alertController = UIAlertController(title: "Error en registro", message: "Favor de llenar todos los campos", preferredStyle: UIAlertController.Style.alert)
+            alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+        }
         
     }
     
@@ -149,6 +161,8 @@ class FormularioRecuerdoViewController: UIViewController, UIPickerViewDelegate, 
             })
         }
     }
+    
+    func validar(str: String) -> Bool{return !(str=="")}
 }
 
 
