@@ -149,6 +149,7 @@ class LoadingPageViewController: UIViewController {
                 let hijotemp = Hijo()
                 hijotemp.nombre = document?.data()!["nombre"] as? String
                 hijotemp.alias = document?.data()!["alias"] as? String
+                hijotemp.parentesco = document?.data()!["parentesco"] as? String
                 hijotemp.dimensionesref = document?.data()!["dimensionesref"] as? [String]
                 userData.hijos.append(hijotemp)
                 self.indexHijos=self.indexHijos+1

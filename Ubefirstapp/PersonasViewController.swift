@@ -53,6 +53,7 @@ class PersonasViewController: UIViewController, UITableViewDelegate, UITableView
         let cell:PersonasTableViewCell = self.personasTableView.dequeueReusableCell(withIdentifier: self.cellReuseIdentifier) as! PersonasTableViewCell
         cell.lbl_nombreHijo.text=userData.hijos[indexPath.row].alias
         cell.lbl_parentesco.text=userData.hijos[indexPath.row].parentesco
+        print(userData.hijos[indexPath.row].parentesco)
         return cell
     }
     

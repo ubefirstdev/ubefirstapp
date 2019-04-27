@@ -144,6 +144,7 @@ class DimensionesViewController: UIViewController {
         clearButtonsTitles()
         self.label_nombrePersona.text=userData.hijos[lastPersonIndexTap].alias
         self.label_parentesco.text=userData.hijos[lastPersonIndexTap].parentesco
+        print(userData.hijos[lastPersonIndexTap].parentesco)
         loadDimensionesFromMemory()
         
         /*if (userData.premium==false){

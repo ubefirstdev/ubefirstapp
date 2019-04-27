@@ -489,7 +489,7 @@
                         <outlet property="button_dimension7" destination="pOu-a9-RI1" id="eRe-b9-53R"/>
                         <outlet property="button_dimension8" destination="mHQ-o3-cql" id="uYr-lv-0Qy"/>
                         <outlet property="label_nombrePersona" destination="HvV-Z2-VWf" id="vl2-1H-Odh"/>
-                        <outlet property="label_paretensco" destination="Ar2-t7-Kfu" id="jVA-6G-Npm"/>
+                        <outlet property="label_parentesco" destination="Ar2-t7-Kfu" id="vbi-Dh-6DT"/>
                         <segue destination="bn6-xo-tQN" kind="show" identifier="DimensionesToAgregarRecuerdo" id="0M7-0r-Rh0"/>
                         <segue destination="JFj-Mm-mh8" kind="show" identifier="DimensionToRecuerdos" id="vZT-6v-NSd"/>
                     </connections>
@@ -1757,7 +1757,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="Vdw-Pn-Q6X"/>
         <segue reference="tPu-P9-ELw"/>
-        <segue reference="XDK-53-rzb"/>
+        <segue reference="0M7-0r-Rh0"/>
         <segue reference="pfa-pS-IEg"/>
         <segue reference="2yu-48-KYZ"/>
         <segue reference="mrf-Oa-VHt"/>
