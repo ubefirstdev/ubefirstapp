@@ -16,9 +16,7 @@ var invitacionBusqueda: [invitacionData] = []
 
 class ConfiguracionViewController: UIViewController {
     
-    @IBOutlet weak var btn_cambiatePremium: UIButton!
-    
-    @IBAction func btn_invitacionesColaboracion(_ sender: Any) {
+    @IBAction func btn_invitacionesPressed(_ sender: Any) {
         let alertController = UIAlertController(title: "Buscando invitaciones", message: "Un momento porfavor", preferredStyle: UIAlertController.Style.alert)
         let alertController1 = UIAlertController(title: "Ninguna invitación", message: "No se han encontrado invitaciones a su cuenta", preferredStyle:UIAlertController.Style.alert)
         alertController1.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default) { UIAlertAction in
@@ -48,7 +46,7 @@ class ConfiguracionViewController: UIViewController {
                     let status = document.data()["status"] as? String
                     let idInvitacion = document.data()["idInvitacion"] as? String
                     invitacionBusqueda.append(invitacionData.init(nombre: nombre, correo: correo, nHijos: nHijos, suscripcion: suscripcion, uid: uid, status:status, idInvitacion:idInvitacion))
-
+                    
                 }
                 alertController.dismiss(animated: false, completion: nil)
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { //funcion callback despues de 0.4 segundos
@@ -61,23 +59,7 @@ class ConfiguracionViewController: UIViewController {
             
         }
     }
-        
     
-    @IBAction func btnPressed_informacionUsuario(_ sender: Any) {
-    }
-    
-    @IBAction func btnPressed_hijos(_ sender: Any) {
-    }
-    
-    
-    @IBAction func btnPressed_avisoDePrivacidad(_ sender: Any) {
-    }
-    
-    @IBAction func btnPressed_conocenos(_ sender: Any) {
-    }
-    
-    @IBAction func btnPressed_comoUsarUbefirst(_ sender: Any) {
-    }
         
     @IBAction func btnPressed_cerrarSesion(_ sender: Any) {
         let firebaseAuth = Auth.auth()

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SXh-2S-ZrU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SXh-2S-ZrU">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -260,7 +260,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="PersonasCell" rowHeight="275" id="OhN-ee-EXa" customClass="PersonasTableViewCell" customModule="Ubefirstapp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="blue" indentationWidth="10" reuseIdentifier="PersonasCell" rowHeight="275" id="OhN-ee-EXa" customClass="PersonasTableViewCell" customModule="Ubefirstapp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="275"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OhN-ee-EXa" id="0Nx-WZ-dAq">
@@ -942,32 +942,29 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="btnPressed_informacionUsuario:" destination="pFr-Qb-2ji" eventType="touchUpInside" id="Sqs-cg-VaV"/>
-                                    <segue destination="Pdn-vw-8Fb" kind="show" id="Oqx-WF-6sV"/>
+                                    <segue destination="Pdn-vw-8Fb" kind="show" id="8Br-Xw-QMD"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rb4-ex-NXG">
-                                <rect key="frame" x="16" y="150" width="250" height="48"/>
+                                <rect key="frame" x="16" y="136" width="250" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="Hijos y dimensiones">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="btnPressed_hijos:" destination="pFr-Qb-2ji" eventType="touchUpInside" id="OE0-ai-GMD"/>
-                                    <segue destination="LRs-gg-vm8" kind="show" id="fM0-6a-kJF"/>
+                                    <segue destination="LRs-gg-vm8" kind="show" id="QNC-4N-je3"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJE-xm-4zP">
-                                <rect key="frame" x="16" y="310" width="250" height="48"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJE-xm-4zP">
+                                <rect key="frame" x="16" y="192" width="250" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="Colaboradores">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="btnPressed_conocenos:" destination="pFr-Qb-2ji" eventType="touchUpInside" id="6aS-6x-Bhd"/>
-                                    <segue destination="TFd-r4-Nh1" kind="show" id="PNF-Xh-zRm"/>
+                                    <segue destination="TFd-r4-Nh1" kind="show" id="KYV-X6-BW5"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kQM-K6-aSh">
@@ -982,8 +979,19 @@
                                     <segue destination="BYZ-38-t0r" kind="showDetail" id="79p-y8-NMS"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ew-AU-ihs">
+                                <rect key="frame" x="16" y="248" width="250" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <state key="normal" title="Invitaciones de colaboración">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="btn_invitacionesPressed:" destination="pFr-Qb-2ji" eventType="touchUpInside" id="DIt-Nb-s8N"/>
+                                </connections>
+                            </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="coG-FF-t6W">
-                                <rect key="frame" x="16" y="230" width="250" height="48"/>
+                                <rect key="frame" x="16" y="304" width="250" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="¿Como usar ubefirst?">
@@ -992,18 +1000,6 @@
                                 <connections>
                                     <action selector="btnPressed_comoUsarUbefirst:" destination="pFr-Qb-2ji" eventType="touchUpInside" id="Fio-n6-2Rj"/>
                                     <segue destination="b6F-Os-a4y" kind="show" id="A33-cH-Cb0"/>
-                                </connections>
-                            </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j9E-W1-S9l">
-                                <rect key="frame" x="16" y="390" width="250" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                <state key="normal" title="Invitaciones de colaboración">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="btnPressed_cambiatePremium:" destination="pFr-Qb-2ji" eventType="touchUpInside" id="gaz-ET-ofC"/>
-                                    <action selector="btn_invitacionesColaboracion:" destination="pFr-Qb-2ji" eventType="touchUpInside" id="G0E-rZ-ynC"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1366,9 +1362,10 @@
                                 <rect key="frame" x="66" y="592" width="281" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Confirmar invitación"/>
+                                <state key="normal" title="Elegir Usuario"/>
                                 <connections>
                                     <action selector="btn_confirmarPressed:" destination="kNk-nU-WHU" eventType="touchUpInside" id="xB5-ck-v6Y"/>
+                                    <segue destination="cfw-X9-yaz" kind="show" id="JAE-GC-ID7"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1387,6 +1384,102 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NV5-tC-qq3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3135" y="2672"/>
+        </scene>
+        <!--Seleccionar hijos-->
+        <scene sceneID="uf5-NE-h7f">
+            <objects>
+                <viewController title="Seleccionar hijos" id="cfw-X9-yaz" customClass="SeleccionarHijoViewController" customModule="Ubefirstapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="shO-Hk-bnK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelectionDuringEditing="YES" allowsMultipleSelection="YES" allowsMultipleSelectionDuringEditing="YES" rowHeight="275" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="c90-8F-pHS">
+                                <rect key="frame" x="0.0" y="136" width="414" height="503"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" indentationWidth="10" reuseIdentifier="PersonasCell2" rowHeight="275" id="VB2-yL-6kj" customClass="PersonasTableViewCell" customModule="Ubefirstapp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="275"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VB2-yL-6kj" id="mLa-g8-Zus">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="275"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Pelota" translatesAutoresizingMaskIntoConstraints="NO" id="m0T-HL-mhf">
+                                                    <rect key="frame" x="104" y="78" width="207" height="175"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre de hijo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nkj-tg-QkY">
+                                                    <rect key="frame" x="51" y="19" width="312" height="36"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    <color key="textColor" red="0.08235294118" green="0.25882352939999997" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hijo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aFy-0y-gTA">
+                                                    <rect key="frame" x="51" y="63" width="312" height="25"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="22"/>
+                                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PlaceHolderNino" translatesAutoresizingMaskIntoConstraints="NO" id="Xc5-vR-gGh">
+                                                    <rect key="frame" x="100" y="69" width="214" height="184"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="lbl_nombreHijo" destination="nkj-tg-QkY" id="7oU-Yv-GeE"/>
+                                            <outlet property="lbl_parentesco" destination="aFy-0y-gTA" id="cSm-Pk-GXB"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="cfw-X9-yaz" id="wBS-vz-0yv"/>
+                                    <outlet property="delegate" destination="cfw-X9-yaz" id="Xjc-IE-7i9"/>
+                                </connections>
+                            </tableView>
+                            <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mRT-pL-a37">
+                                <rect key="frame" x="102" y="667" width="210" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.018731452524662018" green="0.21177127957344055" blue="0.49266660213470459" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <state key="normal" title="Elegir hijo(s)">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btn_elegirPressed:" destination="cfw-X9-yaz" eventType="touchUpInside" id="xor-zn-Gs6"/>
+                                    <segue destination="BAo-fU-qwg" kind="show" id="WNm-I8-BQb"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d9l-x1-jpt">
+                                <rect key="frame" x="13" y="65" width="381" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Selecciona los hijos que quieras compartir con el colaborador, los hijos seleccionados son los sombreados en color gris">
+                                        <attributes>
+                                            <color key="NSColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="MlK-ui-MVk"/>
+                    </view>
+                    <connections>
+                        <outlet property="btn_elegirHijo" destination="mRT-pL-a37" id="4bH-ea-P0E"/>
+                        <outlet property="tableViewHijos" destination="c90-8F-pHS" id="k8e-Wi-HQP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Yb-SC-12K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2220.289855072464" y="2675.54347826087"/>
         </scene>
         <!--Agregar recuerdo-->
         <scene sceneID="XLS-At-Uz1">
@@ -1718,6 +1811,85 @@
             </objects>
             <point key="canvasLocation" x="-1706" y="1890"/>
         </scene>
+        <!--Confirmar invitación-->
+        <scene sceneID="ga5-Ou-xme">
+            <objects>
+                <viewController title="Confirmar invitación" id="BAo-fU-qwg" customClass="ConfirmarInvitacionViewController" customModule="Ubefirstapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Eg-rr-y3v">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Información del colaborador:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZk-fF-Z8r">
+                                <rect key="frame" x="31" y="313" width="350" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hijos a compartir:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FRd-I1-ey5">
+                                <rect key="frame" x="31" y="449" width="350" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YfE-FE-6H3">
+                                <rect key="frame" x="122" y="116" width="170" height="160"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Luis Alberto Oliva Medina" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="umg-Kf-tSc">
+                                <rect key="frame" x="66" y="347" width="315" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="luisalbertolivamedina@hotmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edF-4L-zj4">
+                                <rect key="frame" x="66" y="381" width="315" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nmv-eY-MnM">
+                                <rect key="frame" x="62" y="475" width="315" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="ascsascascascascascacascascascascascascascascascascascascascacascascascasc">
+                                        <attributes>
+                                            <color key="NSColor" red="0.42348980903625488" green="0.42355474829673767" blue="0.42347562313079834" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" metaFont="system" size="17"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.5" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h9w-0M-kUL">
+                                <rect key="frame" x="149" y="632" width="121" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Enviar invitación"/>
+                                <connections>
+                                    <action selector="btn_enviarInvitacionPressed:" destination="BAo-fU-qwg" eventType="touchUpInside" id="a2z-lW-H72"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="RIi-vL-PFV"/>
+                    </view>
+                    <connections>
+                        <outlet property="txtArea_hijos" destination="Nmv-eY-MnM" id="WHS-qS-kRj"/>
+                        <outlet property="txt_correo" destination="edF-4L-zj4" id="Dgx-bv-iQ3"/>
+                        <outlet property="txt_nombre" destination="umg-Kf-tSc" id="7uB-qw-QIR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LV2-6O-hZI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1375.3623188405797" y="2675.54347826087"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Agregar" width="551" height="104"/>
@@ -1727,40 +1899,40 @@
         <image name="Boton Agregar Recuerdo" width="700" height="700"/>
         <image name="Boton Ajustes" width="50" height="50"/>
         <image name="Boton Personas" width="2433" height="1876"/>
-        <image name="Boton-1" width="474" height="118"/>
-        <image name="BotonAcademico" width="696" height="304"/>
-        <image name="BotonAyudaSocial" width="696" height="304"/>
-        <image name="BotonCultural" width="696" height="304"/>
-        <image name="BotonDeportiva" width="696" height="304"/>
-        <image name="BotonEmprendimiento" width="696" height="304"/>
-        <image name="BotonEspiritual" width="696" height="304"/>
-        <image name="BotonExtra" width="696" height="304"/>
-        <image name="BotonFamiliar" width="696" height="304"/>
-        <image name="Facebook" width="632" height="600"/>
+        <image name="Boton-1" width="113.76000213623047" height="28.319999694824219"/>
+        <image name="BotonAcademico" width="125" height="54.583541870117188"/>
+        <image name="BotonAyudaSocial" width="125" height="54.583541870117188"/>
+        <image name="BotonCultural" width="125" height="54.583541870117188"/>
+        <image name="BotonDeportiva" width="125" height="54.583541870117188"/>
+        <image name="BotonEmprendimiento" width="125" height="54.583541870117188"/>
+        <image name="BotonEspiritual" width="125" height="54.583541870117188"/>
+        <image name="BotonExtra" width="125" height="54.583541870117188"/>
+        <image name="BotonFamiliar" width="125" height="54.583541870117188"/>
+        <image name="Facebook" width="151.67999267578125" height="144"/>
         <image name="Fotos" width="90" height="81"/>
-        <image name="Google" width="507" height="486"/>
+        <image name="Google" width="121.68000030517578" height="116.63999938964844"/>
         <image name="HolderAgregarPersona" width="258" height="259"/>
-        <image name="Logo Temporal" width="328" height="306"/>
-        <image name="LogoNombre" width="3125" height="2083"/>
+        <image name="Logo Temporal" width="78.720001220703125" height="73.44000244140625"/>
+        <image name="LogoNombre" width="750" height="499.92001342773438"/>
         <image name="NinoNull" width="672" height="684"/>
-        <image name="Pelota" width="284" height="284"/>
-        <image name="PlaceHolderNino" width="529" height="529"/>
-        <image name="PlaceHolderRecuerdo" width="750" height="1334"/>
-        <image name="Ventana Datos" width="750" height="1334"/>
-        <image name="Ventana Datos registro" width="750" height="1334"/>
-        <image name="fav" width="213" height="213"/>
-        <image name="icono iniciar sesion" width="240" height="240"/>
-        <image name="location" width="96" height="96"/>
+        <image name="Pelota" width="51" height="51"/>
+        <image name="PlaceHolderNino" width="127" height="127"/>
+        <image name="PlaceHolderRecuerdo" width="134.66334533691406" height="239.52119445800781"/>
+        <image name="Ventana Datos" width="180" height="320.16000366210938"/>
+        <image name="Ventana Datos registro" width="180" height="320.16000366210938"/>
+        <image name="fav" width="159.75" height="159.75"/>
+        <image name="icono iniciar sesion" width="57.599998474121094" height="57.599998474121094"/>
+        <image name="location" width="153.60000610351562" height="153.60000610351562"/>
         <image name="pdf" width="70" height="87"/>
         <image name="prevAcademico" width="304" height="304"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Vdw-Pn-Q6X"/>
-        <segue reference="tPu-P9-ELw"/>
+        <segue reference="1ba-OQ-9GI"/>
         <segue reference="0M7-0r-Rh0"/>
         <segue reference="pfa-pS-IEg"/>
         <segue reference="2yu-48-KYZ"/>
-        <segue reference="mrf-Oa-VHt"/>
-        <segue reference="Nlc-3U-gNL"/>
+        <segue reference="WiJ-dJ-LZq"/>
+        <segue reference="79p-y8-NMS"/>
     </inferredMetricsTieBreakers>
 </document>

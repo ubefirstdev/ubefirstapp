@@ -49,38 +49,6 @@
             endingLineNumber = "279"
             landmarkName = "deleteDimension(hijoID:dimensionID:dimensionIndex:hijoIndex:RecuerdosCount:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Ubefirstapp.LoadDataToFirestore.deleteDimension(hijoID: Swift.String, dimensionID: Swift.String, dimensionIndex: Swift.Int, hijoIndex: Swift.Int, RecuerdosCount: Swift.Int) -&gt; ()"
-                  moduleName = "Ubefirstapp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/luisoliva/Documents/Proyectos%20Swift/ubefirstapp/Ubefirstapp/LoadDataToFirestore.swift"
-                  timestampString = "575490026.927587"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "279"
-                  endingLineNumber = "279"
-                  offsetFromSymbolStart = "585">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Ubefirstapp.LoadDataToFirestore.deleteDimension(hijoID: Swift.String, dimensionID: Swift.String, dimensionIndex: Swift.Int, hijoIndex: Swift.Int, RecuerdosCount: Swift.Int) -&gt; ()"
-                  moduleName = "Ubefirstapp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/luisoliva/Documents/Proyectos%20Swift/ubefirstapp/Ubefirstapp/LoadDataToFirestore.swift"
-                  timestampString = "575490026.9866689"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "279"
-                  endingLineNumber = "279"
-                  offsetFromSymbolStart = "4185">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -490,7 +458,7 @@
                   moduleName = "Ubefirstapp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/luisoliva/Documents/Proyectos%20Swift/ubefirstapp/Ubefirstapp/HijosConfigViewController.swift"
-                  timestampString = "575490027.082206"
+                  timestampString = "581035405.978001"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "230"
@@ -505,7 +473,7 @@
                   moduleName = "Ubefirstapp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/luisoliva/Documents/Proyectos%20Swift/ubefirstapp/Ubefirstapp/HijosConfigViewController.swift"
-                  timestampString = "575490027.099717"
+                  timestampString = "581035405.982626"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "230"
@@ -601,30 +569,14 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Ubefirstapp/PerfilColaboradorViewController.swift"
-            timestampString = "575490026.171429"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "btn_confirmarPressed(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "Ubefirstapp/LoadingPageViewController.swift"
             timestampString = "575490026.171528"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "123"
             endingLineNumber = "123"
-            landmarkName = "loadColaboradoresData()"
-            landmarkType = "7">
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -639,8 +591,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "86"
             endingLineNumber = "86"
-            landmarkName = "loadDataPadre()"
-            landmarkType = "7">
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
