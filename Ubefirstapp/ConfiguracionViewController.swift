@@ -45,7 +45,8 @@ class ConfiguracionViewController: UIViewController {
                     let suscripcion = document.data()["suscripcion"] as? Bool
                     let status = document.data()["status"] as? String
                     let idInvitacion = document.data()["idInvitacion"] as? String
-                    invitacionBusqueda.append(invitacionData.init(nombre: nombre, correo: correo, nHijos: nHijos, suscripcion: suscripcion, uid: uid, status:status, idInvitacion:idInvitacion))
+                    let hijosCompartidosNombres = document.data()["hijos_compartidos_nombre"] as? [String]
+                    invitacionBusqueda.append(invitacionData.init(nombre: nombre, correo: correo, nHijos: nHijos, suscripcion: suscripcion, uid: uid, status:status, idInvitacion:idInvitacion, hijosCompartidosNombres: hijosCompartidosNombres!))
                     
                 }
                 alertController.dismiss(animated: false, completion: nil)

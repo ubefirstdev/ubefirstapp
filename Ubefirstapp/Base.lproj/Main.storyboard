@@ -1688,8 +1688,8 @@
                     </view>
                     <connections>
                         <outlet property="InvitacionesTableView" destination="tLr-mo-hzF" id="GGh-NR-NTc"/>
-                        <segue destination="kNk-nU-WHU" kind="show" identifier="InvitacionesToPerfilInvitacion" id="pfa-pS-IEg"/>
                         <segue destination="vY9-bY-RSX" kind="show" identifier="InvitacionesToDeletePerfil" id="Vdw-Pn-Q6X"/>
+                        <segue destination="lhZ-7r-NgO" kind="show" identifier="InvitacionesToPerfilInvitacion" id="Xqf-rq-1uJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qGB-Oa-qEg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1873,7 +1873,7 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Enviar invitación"/>
                                 <connections>
-                                    <action selector="btn_enviarInvitacionPressed:" destination="BAo-fU-qwg" eventType="touchUpInside" id="a2z-lW-H72"/>
+                                    <action selector="btn_enviarInvitacionPressed:" destination="BAo-fU-qwg" eventType="touchUpInside" id="vXH-Ow-BMl"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1881,14 +1881,93 @@
                         <viewLayoutGuide key="safeArea" id="RIi-vL-PFV"/>
                     </view>
                     <connections>
-                        <outlet property="txtArea_hijos" destination="Nmv-eY-MnM" id="WHS-qS-kRj"/>
-                        <outlet property="txt_correo" destination="edF-4L-zj4" id="Dgx-bv-iQ3"/>
-                        <outlet property="txt_nombre" destination="umg-Kf-tSc" id="7uB-qw-QIR"/>
+                        <outlet property="txtArea_hijos" destination="Nmv-eY-MnM" id="LTp-OP-p7D"/>
+                        <outlet property="txt_correo" destination="edF-4L-zj4" id="i0U-rx-RiR"/>
+                        <outlet property="txt_nombre" destination="umg-Kf-tSc" id="khK-JL-r19"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LV2-6O-hZI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1375.3623188405797" y="2675.54347826087"/>
+        </scene>
+        <!--Aceptar invitación-->
+        <scene sceneID="y9o-BE-esW">
+            <objects>
+                <viewController title="Aceptar invitación" id="lhZ-7r-NgO" customClass="AceptarInvitacionViewController" customModule="Ubefirstapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7Oe-rh-5VU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Información del usuario:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jCL-cb-nBx">
+                                <rect key="frame" x="31" y="313" width="350" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hijos compartidos:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UmK-BG-Mp9">
+                                <rect key="frame" x="31" y="449" width="350" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TER-b3-ZKZ">
+                                <rect key="frame" x="122" y="116" width="170" height="160"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Luis Alberto Oliva Medina" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CtV-fd-leJ">
+                                <rect key="frame" x="66" y="347" width="315" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="luisalbertolivamedina@hotmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T08-jM-coR">
+                                <rect key="frame" x="66" y="381" width="315" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sZp-2y-jHO">
+                                <rect key="frame" x="62" y="475" width="315" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="ascsascascascascascacascascascascascascascascascascascascascacascascascasc">
+                                        <attributes>
+                                            <color key="NSColor" red="0.42348980903625488" green="0.42355474829673767" blue="0.42347562313079834" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" metaFont="system" size="17"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.5" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="coU-E6-TFq">
+                                <rect key="frame" x="143" y="632" width="133" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Aceptar invitación"/>
+                                <connections>
+                                    <action selector="btn_aceptarInvitacionPressed:" destination="lhZ-7r-NgO" eventType="touchUpInside" id="9nR-aH-3fe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="EeD-6E-5M0"/>
+                    </view>
+                    <connections>
+                        <outlet property="txtArea_hijos" destination="sZp-2y-jHO" id="omK-cF-F8V"/>
+                        <outlet property="txt_correo" destination="T08-jM-coR" id="MWX-hg-edx"/>
+                        <outlet property="txt_nombre" destination="CtV-fd-leJ" id="Ws3-88-9eZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CR8-fH-u1e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1265" y="1127"/>
         </scene>
     </scenes>
     <resources>
@@ -1928,9 +2007,8 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Vdw-Pn-Q6X"/>
-        <segue reference="1ba-OQ-9GI"/>
+        <segue reference="UDg-GL-jXu"/>
         <segue reference="0M7-0r-Rh0"/>
-        <segue reference="pfa-pS-IEg"/>
         <segue reference="2yu-48-KYZ"/>
         <segue reference="WiJ-dJ-LZq"/>
         <segue reference="79p-y8-NMS"/>

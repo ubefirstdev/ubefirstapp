@@ -16,6 +16,7 @@ struct invitacionData {
     var uid: String!
     var status: String!
     var idInvitacion: String!
+    var hijosCompartidosNombres: [String?]
 }
 
 var busquedaColaboradorData: invitacionData!
@@ -48,9 +49,7 @@ class AgregarColaboradorViewController: UIViewController {
                     let nHijos = document.data()["hijosref"] as? [String]
                     let suscripcion = document.data()["premium"] as? Bool
                     let uid = document.data()["uid"] as? String
-                    let status = document.data()["status"] as? String
-                    let idInvitacion = document.data()["idInvitacion"] as? String
-                    busquedaColaboradorData = invitacionData.init(nombre: nombre, correo: correo, nHijos: nHijos?.count, suscripcion: suscripcion, uid: uid, status:status, idInvitacion: idInvitacion)
+                    busquedaColaboradorData = invitacionData.init(nombre: nombre, correo: correo, nHijos: nHijos?.count, suscripcion: suscripcion, uid: uid, status:nil, idInvitacion: nil, hijosCompartidosNombres: [nil])
                 }
                 alertController.dismiss(animated: true, completion: nil)
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { //funcion callback despues de 0.4 segundos

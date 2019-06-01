@@ -23,6 +23,8 @@
 		FC05171121DED90700BEBA3F /* LoadDataToFirestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC05171021DED90700BEBA3F /* LoadDataToFirestore.swift */; };
 		FC05171321DEDE2300BEBA3F /* FormularioAgregarHijoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC05171221DEDE2300BEBA3F /* FormularioAgregarHijoViewController.swift */; };
 		FC2E6E6B21F946EC00EB30E9 /* HijosListaConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2E6E6A21F946EC00EB30E9 /* HijosListaConfigViewController.swift */; };
+		FC327CC122A2FC100031CEF7 /* ConfirmarInvitacionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC327CC022A2FC100031CEF7 /* ConfirmarInvitacionViewController.swift */; };
+		FC327CC322A31DF50031CEF7 /* AceptarInvitacionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC327CC222A31DF50031CEF7 /* AceptarInvitacionViewController.swift */; };
 		FC588B1A21DC04D50065622A /* RecuerdosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC588B1921DC04D50065622A /* RecuerdosViewController.swift */; };
 		FC6706B421DD7D8900BEE2B1 /* PersonasTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6706B321DD7D8900BEE2B1 /* PersonasTableViewCell.swift */; };
 		FC72514922304E4300A9293C /* GestionColaboradoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC72514822304E4300A9293C /* GestionColaboradoresViewController.swift */; };
@@ -31,7 +33,6 @@
 		FC7BD0022232F80E005D0245 /* PerfilColaboradorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7BD0012232F80E005D0245 /* PerfilColaboradorViewController.swift */; };
 		FC7BD0042234AC6D005D0245 /* InvitacionesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7BD0032234AC6D005D0245 /* InvitacionesViewController.swift */; };
 		FC8F40A922A1AC63008B98AA /* SeleccionarHijoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8F40A822A1AC63008B98AA /* SeleccionarHijoViewController.swift */; };
-		FC8F40AB22A1D98B008B98AA /* ConfirmarInvitacionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8F40AA22A1D98B008B98AA /* ConfirmarInvitacionViewController.swift */; };
 		FCA4CF7E21750C97009FD4E0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA4CF7D21750C97009FD4E0 /* HomeViewController.swift */; };
 		FCA4CF80217511C8009FD4E0 /* InicialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA4CF7F217511C8009FD4E0 /* InicialViewController.swift */; };
 		FCA4CF84217611A1009FD4E0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FCA4CF83217611A0009FD4E0 /* GoogleService-Info.plist */; };
@@ -66,6 +67,8 @@
 		FC05171021DED90700BEBA3F /* LoadDataToFirestore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadDataToFirestore.swift; sourceTree = "<group>"; };
 		FC05171221DEDE2300BEBA3F /* FormularioAgregarHijoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormularioAgregarHijoViewController.swift; sourceTree = "<group>"; };
 		FC2E6E6A21F946EC00EB30E9 /* HijosListaConfigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HijosListaConfigViewController.swift; sourceTree = "<group>"; };
+		FC327CC022A2FC100031CEF7 /* ConfirmarInvitacionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmarInvitacionViewController.swift; sourceTree = "<group>"; };
+		FC327CC222A31DF50031CEF7 /* AceptarInvitacionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AceptarInvitacionViewController.swift; sourceTree = "<group>"; };
 		FC588B1921DC04D50065622A /* RecuerdosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecuerdosViewController.swift; sourceTree = "<group>"; };
 		FC6706B321DD7D8900BEE2B1 /* PersonasTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonasTableViewCell.swift; sourceTree = "<group>"; };
 		FC72514822304E4300A9293C /* GestionColaboradoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestionColaboradoresViewController.swift; sourceTree = "<group>"; };
@@ -74,7 +77,6 @@
 		FC7BD0012232F80E005D0245 /* PerfilColaboradorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilColaboradorViewController.swift; sourceTree = "<group>"; };
 		FC7BD0032234AC6D005D0245 /* InvitacionesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitacionesViewController.swift; sourceTree = "<group>"; };
 		FC8F40A822A1AC63008B98AA /* SeleccionarHijoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeleccionarHijoViewController.swift; sourceTree = "<group>"; };
-		FC8F40AA22A1D98B008B98AA /* ConfirmarInvitacionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmarInvitacionViewController.swift; sourceTree = "<group>"; };
 		FCA4CF7D21750C97009FD4E0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FCA4CF7F217511C8009FD4E0 /* InicialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InicialViewController.swift; sourceTree = "<group>"; };
 		FCA4CF83217611A0009FD4E0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -173,7 +175,8 @@
 				FC7BD0012232F80E005D0245 /* PerfilColaboradorViewController.swift */,
 				FC7BD0032234AC6D005D0245 /* InvitacionesViewController.swift */,
 				FC8F40A822A1AC63008B98AA /* SeleccionarHijoViewController.swift */,
-				FC8F40AA22A1D98B008B98AA /* ConfirmarInvitacionViewController.swift */,
+				FC327CC022A2FC100031CEF7 /* ConfirmarInvitacionViewController.swift */,
+				FC327CC222A31DF50031CEF7 /* AceptarInvitacionViewController.swift */,
 			);
 			path = Ubefirstapp;
 			sourceTree = "<group>";
@@ -361,7 +364,7 @@
 				EC8FED51216F9BD900D76752 /* LoginViewController.swift in Sources */,
 				FCA9895E21D42CD60071748E /* TutorialViewController.swift in Sources */,
 				FC7BD0042234AC6D005D0245 /* InvitacionesViewController.swift in Sources */,
-				FC8F40AB22A1D98B008B98AA /* ConfirmarInvitacionViewController.swift in Sources */,
+				FC327CC122A2FC100031CEF7 /* ConfirmarInvitacionViewController.swift in Sources */,
 				FCA9896221D598B80071748E /* Padre.swift in Sources */,
 				FC001EAB21D8340A001B033B /* Dimension.swift in Sources */,
 				FCB1302B21EE644700FBCA24 /* ConfiguracionViewController.swift in Sources */,
@@ -371,6 +374,7 @@
 				FC8F40A922A1AC63008B98AA /* SeleccionarHijoViewController.swift in Sources */,
 				FC03F72A21FFB5410060AA61 /* HijosConfigViewController.swift in Sources */,
 				FCBAC4F621F02BA600D4B0F5 /* GestionUsuariosViewController.swift in Sources */,
+				FC327CC322A31DF50031CEF7 /* AceptarInvitacionViewController.swift in Sources */,
 				FCA9895C21D426630071748E /* DimensionesViewController.swift in Sources */,
 				FC72514D2231790000A9293C /* AgregarColaboradorViewController.swift in Sources */,
 				FC001EA321D7D278001B033B /* RegistroViewController.swift in Sources */,

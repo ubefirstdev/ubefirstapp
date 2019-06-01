@@ -12,7 +12,8 @@ class Colaborador {
     var correo: String!
     var nhijos: Int!
     var suscripcion: String!
-    var id:String!
+    var usuarioUID:String!
+    var hijosCompartidos: [Int?]
     
     init() {
         self.nombre=""
@@ -20,6 +21,7 @@ class Colaborador {
         self.correo=""
         self.nhijos=0
         self.suscripcion=""
-        self.id=""
+        self.usuarioUID=""
+        self.hijosCompartidos=[]
     }
 }
