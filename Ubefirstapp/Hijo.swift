@@ -12,6 +12,7 @@ class Hijo{
     var parentesco: String!
     var dimensionesref: [String]!
     var dimensiones: [Dimension]!
+    var owner: Bool!
     
     init() {
         self.nombre=""
@@ -19,6 +20,7 @@ class Hijo{
         self.parentesco=""
         self.dimensiones=[Dimension]()
         self.dimensionesref=[String]()
+        self.owner = true
     }
     
     init (nombre: String, alias: String,parent: String, dimensionesref: [String], dimensiones: [Dimension]){

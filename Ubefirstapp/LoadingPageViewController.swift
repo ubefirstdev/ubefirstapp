@@ -103,17 +103,6 @@ class LoadingPageViewController: UIViewController {
         
     }
     
-    public func loadInvitacionesData(){
-        db.collection("users").document(userData.uid).collection("invitaciones").getDocuments(){ (querySnapshot1, err) in
-            if err != nil {
-                print(err)
-            } else {
-                for document in querySnapshot1!.documents {
-                }
-            }
-        }
-    }
-    
     public func loadColaboradoresData(){
         db.collection("users").document(userData.uid).collection("colaboradores").getDocuments(){ (querySnapshot1, err) in
             if err != nil {
@@ -230,15 +219,41 @@ class LoadingPageViewController: UIViewController {
                     self.indexHijos=0
                     self.indexRecuerdo=0
                     self.activityIndicator.stopAnimating()
-                    self.progressBar.progress=1
-                    OperationQueue.main.addOperation {
-                        [weak self] in
-                        self?.performSegue(withIdentifier: "LoadingPageToHome", sender: self)
-                    }
+                    self.progressBar.progress=0.90
+                    self.loadInvitacionesData()
                 }
             }
         }
     }
+    
+    public func loadInvitacionesData(){
+        db.collection("users").document(userData.uid).collection("invitaciones").getDocuments(){ (querySnapshot1, err) in
+            if err != nil {
+                print(err)
+            } else {
+                for document in querySnapshot1!.documents {
+                    let status = document.data()["status"] as? String
+                    
+                    if (status == "Colaborando"){
+                        let hijosref = document.data()["hijos_compartidos_ref"] as? [String]
+                        for i in (0...hijosref!.count-1){
+                            for ii in (0...userData.hijosref.count-1){
+                                if (userData.hijosref[i]==hijosref![ii]){
+                                    userData.hijos[i].owner = false
+                                }
+                            }
+                        }
+                    }
+                }
+                self.progressBar.progress=1.0
+                OperationQueue.main.addOperation {
+                    [weak self] in
+                    self?.performSegue(withIdentifier: "LoadingPageToHome", sender: self)
+                }
+            }
+        }
+    }
+    
     
     
 }

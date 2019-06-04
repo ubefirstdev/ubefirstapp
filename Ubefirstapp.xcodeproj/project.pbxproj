@@ -25,6 +25,7 @@
 		FC2E6E6B21F946EC00EB30E9 /* HijosListaConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2E6E6A21F946EC00EB30E9 /* HijosListaConfigViewController.swift */; };
 		FC327CC122A2FC100031CEF7 /* ConfirmarInvitacionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC327CC022A2FC100031CEF7 /* ConfirmarInvitacionViewController.swift */; };
 		FC327CC322A31DF50031CEF7 /* AceptarInvitacionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC327CC222A31DF50031CEF7 /* AceptarInvitacionViewController.swift */; };
+		FC327CC522A60DC80031CEF7 /* EliminarColaboracionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC327CC422A60DC80031CEF7 /* EliminarColaboracionViewController.swift */; };
 		FC588B1A21DC04D50065622A /* RecuerdosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC588B1921DC04D50065622A /* RecuerdosViewController.swift */; };
 		FC6706B421DD7D8900BEE2B1 /* PersonasTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6706B321DD7D8900BEE2B1 /* PersonasTableViewCell.swift */; };
 		FC72514922304E4300A9293C /* GestionColaboradoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC72514822304E4300A9293C /* GestionColaboradoresViewController.swift */; };
@@ -69,6 +70,7 @@
 		FC2E6E6A21F946EC00EB30E9 /* HijosListaConfigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HijosListaConfigViewController.swift; sourceTree = "<group>"; };
 		FC327CC022A2FC100031CEF7 /* ConfirmarInvitacionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmarInvitacionViewController.swift; sourceTree = "<group>"; };
 		FC327CC222A31DF50031CEF7 /* AceptarInvitacionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AceptarInvitacionViewController.swift; sourceTree = "<group>"; };
+		FC327CC422A60DC80031CEF7 /* EliminarColaboracionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EliminarColaboracionViewController.swift; sourceTree = "<group>"; };
 		FC588B1921DC04D50065622A /* RecuerdosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecuerdosViewController.swift; sourceTree = "<group>"; };
 		FC6706B321DD7D8900BEE2B1 /* PersonasTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonasTableViewCell.swift; sourceTree = "<group>"; };
 		FC72514822304E4300A9293C /* GestionColaboradoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestionColaboradoresViewController.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				FC8F40A822A1AC63008B98AA /* SeleccionarHijoViewController.swift */,
 				FC327CC022A2FC100031CEF7 /* ConfirmarInvitacionViewController.swift */,
 				FC327CC222A31DF50031CEF7 /* AceptarInvitacionViewController.swift */,
+				FC327CC422A60DC80031CEF7 /* EliminarColaboracionViewController.swift */,
 			);
 			path = Ubefirstapp;
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 				FCA9896221D598B80071748E /* Padre.swift in Sources */,
 				FC001EAB21D8340A001B033B /* Dimension.swift in Sources */,
 				FCB1302B21EE644700FBCA24 /* ConfiguracionViewController.swift in Sources */,
+				FC327CC522A60DC80031CEF7 /* EliminarColaboracionViewController.swift in Sources */,
 				FC72514922304E4300A9293C /* GestionColaboradoresViewController.swift in Sources */,
 				FC001EAD21D84207001B033B /* Recuerdo.swift in Sources */,
 				FC7BD0022232F80E005D0245 /* PerfilColaboradorViewController.swift in Sources */,

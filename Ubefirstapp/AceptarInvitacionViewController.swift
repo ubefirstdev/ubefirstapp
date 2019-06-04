@@ -27,7 +27,38 @@ class AceptarInvitacionViewController: UIViewController {
     }
     
     @IBAction func btn_aceptarInvitacionPressed(_ sender: Any) {
-        print("invitacion aceptada")
+        let alert = UIAlertController(title: "Vinculacion de cuentas", message: "La cuentas han sido vinculadas exitosamente, ahora tendras disponibles las personas que se te compartieron en la sección 'Personas' de tu aplicación", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default) { UIAlertAction in
+            OperationQueue.main.addOperation {
+                [weak self] in
+                self?.performSegue(withIdentifier: "AceptarInvitacionToLoading", sender: self)
+            }
+        })
+        
+        let array = busquedaColaboradorData.hijosCompartidosRef
+        let docUpdate=[
+            "colaborador": true,
+            "hijosref": array
+            ] as [String : Any]
+        
+        db.collection("users").document(userData.uid).setData(docUpdate, merge: true)
+        
+        let invitacionUpdate = [
+            "status": "Colaborando"
+        ] as [String:Any]
+        
+        db.collection("users").document(userData.uid).collection("invitaciones").document(busquedaColaboradorData.idInvitacion).setData(invitacionUpdate, merge: true)
+        
+        let colaboradoresUpdate = [
+            "status": "Colaborando"
+            ] as [String:Any]
+        
+    db.collection("users").document(busquedaColaboradorData.uid).collection("colaboradores").document(busquedaColaboradorData.idInvitacionTitular).setData(colaboradoresUpdate, merge: true)
+        
+        userData = Padre.init()
+        
+        self.present(alert, animated: true)
+
     }
     
     

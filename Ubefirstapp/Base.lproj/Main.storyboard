@@ -1378,7 +1378,6 @@
                         <outlet property="lbl_nHijos" destination="SGA-7U-MVx" id="KfR-aM-rIM"/>
                         <outlet property="lbl_nombre" destination="otL-Nt-Ro9" id="Rtt-1D-rQW"/>
                         <outlet property="lbl_suscripcion" destination="rXx-TR-Mpx" id="OOZ-E8-nR7"/>
-                        <segue destination="pHw-CQ-OQJ" kind="showDetail" identifier="PerfilDeUsuarioToLogin" id="1ba-OQ-9GI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NV5-tC-qq3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1756,36 +1755,29 @@
         <!--Perfil de usuario-->
         <scene sceneID="CCh-DT-kmT">
             <objects>
-                <viewController title="Perfil de usuario" id="vY9-bY-RSX" sceneMemberID="viewController">
+                <viewController title="Perfil de usuario" id="vY9-bY-RSX" customClass="EliminarColaboracionViewController" customModule="Ubefirstapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uIm-an-HXa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PH5-jN-rmg">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Información del usuario:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PH5-jN-rmg">
                                 <rect key="frame" x="31" y="316" width="350" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Correo: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Im1-bd-ukT">
-                                <rect key="frame" x="31" y="373" width="350" height="34"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Luis Oliva" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qAi-ku-4OJ">
+                                <rect key="frame" x="66" y="358" width="315" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Número de hijos:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qn7-CT-yz9">
-                                <rect key="frame" x="31" y="431" width="350" height="34"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hijos compartidos:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qn7-CT-yz9">
+                                <rect key="frame" x="31" y="471" width="350" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tipo de suscripción:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rrJ-JM-s2e">
-                                <rect key="frame" x="31" y="490" width="350" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1795,21 +1787,51 @@
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mgZ-9I-R3r">
-                                <rect key="frame" x="66" y="592" width="281" height="45"/>
+                                <rect key="frame" x="66" y="637" width="281" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <state key="normal" title="Eliminar Colaboración">
                                     <color key="titleColor" red="0.85720935880000004" green="0.0" blue="0.0099821227339999992" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="btn_eliminarVinculacionPressed:" destination="vY9-bY-RSX" eventType="touchUpInside" id="Hzd-lz-HBS"/>
+                                </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hbz-Va-cd0">
+                                <rect key="frame" x="59" y="513" width="315" height="89"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Jose oliva asadasdasda  asd asd asd ddasdasd asd asd asd asd">
+                                        <attributes>
+                                            <color key="NSColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="18" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="12" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="luisalbertolivamedina@hotmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vy2-R0-xno">
+                                <rect key="frame" x="66" y="392" width="315" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="CKG-Rd-XnD"/>
                     </view>
+                    <connections>
+                        <outlet property="txtArea_hijos" destination="hbz-Va-cd0" id="jWF-Lv-U4e"/>
+                        <outlet property="txt_correo" destination="Vy2-R0-xno" id="2mI-Pg-bIr"/>
+                        <outlet property="txt_nombre" destination="qAi-ku-4OJ" id="uFu-5y-QOn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5eg-q9-LIt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1706" y="1890"/>
+            <point key="canvasLocation" x="-1707.2463768115942" y="1889.6739130434785"/>
         </scene>
         <!--Confirmar invitación-->
         <scene sceneID="ga5-Ou-xme">
@@ -1963,6 +1985,7 @@
                         <outlet property="txtArea_hijos" destination="sZp-2y-jHO" id="omK-cF-F8V"/>
                         <outlet property="txt_correo" destination="T08-jM-coR" id="MWX-hg-edx"/>
                         <outlet property="txt_nombre" destination="CtV-fd-leJ" id="Ws3-88-9eZ"/>
+                        <segue destination="pHw-CQ-OQJ" kind="showDetail" identifier="AceptarInvitacionToLoading" id="Dqd-S6-TLe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CR8-fH-u1e" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2007,7 +2030,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Vdw-Pn-Q6X"/>
-        <segue reference="UDg-GL-jXu"/>
+        <segue reference="Dqd-S6-TLe"/>
         <segue reference="0M7-0r-Rh0"/>
         <segue reference="2yu-48-KYZ"/>
         <segue reference="WiJ-dJ-LZq"/>

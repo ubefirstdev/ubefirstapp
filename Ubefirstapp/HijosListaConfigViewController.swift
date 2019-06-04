@@ -64,10 +64,17 @@ class HijosListaConfigViewController: UIViewController, UITableViewDataSource, U
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         lastHijoConfigPersonTap = indexPath.row
         self.tableViewhijos.deselectRow(at: indexPath, animated: true)
-        OperationQueue.main.addOperation {
-            [weak self] in
-            self?.performSegue(withIdentifier: "HijosConfigTableToHijosData", sender: self)
+        if (userData.hijos[indexPath.row].owner == true){
+            OperationQueue.main.addOperation {
+                [weak self] in
+                self?.performSegue(withIdentifier: "HijosConfigTableToHijosData", sender: self)
+            }
+        }else{
+            let alert = UIAlertController(title: "Acción no permitida", message: "Esta persona pertenece a otra cuenta, solo la cuenta propietaria puede editar atributos de la persona", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            self.present(alert, animated: true)
         }
+        
         
     }
     

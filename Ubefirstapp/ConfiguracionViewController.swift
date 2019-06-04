@@ -38,7 +38,7 @@ class ConfiguracionViewController: UIViewController {
                 //invitacion existente
                 invitacionBusqueda = []
                 for document in querySnapshot!.documents {
-                    let uid = document.data()["uid"] as? String
+                    let uid = document.data()["userUID"] as? String
                     let nombre = document.data()["nombre"] as? String
                     let correo = document.data()["correo"] as? String
                     let nHijos = document.data()["nhijos"] as? Int
@@ -46,7 +46,10 @@ class ConfiguracionViewController: UIViewController {
                     let status = document.data()["status"] as? String
                     let idInvitacion = document.data()["idInvitacion"] as? String
                     let hijosCompartidosNombres = document.data()["hijos_compartidos_nombre"] as? [String]
-                    invitacionBusqueda.append(invitacionData.init(nombre: nombre, correo: correo, nHijos: nHijos, suscripcion: suscripcion, uid: uid, status:status, idInvitacion:idInvitacion, hijosCompartidosNombres: hijosCompartidosNombres!))
+                    let hijosCompartidosRef = document.data()["hijos_compartidos_ref"] as? [String]
+                    let idInvitacionTitular = document.data()["idInvitacionTitular"] as? String
+
+                    invitacionBusqueda.append(invitacionData.init(nombre: nombre, correo: correo, nHijos: nHijos, suscripcion: suscripcion, uid: uid, status:status, idInvitacion:idInvitacion, idInvitacionTitular: idInvitacionTitular, hijosCompartidosNombres: hijosCompartidosNombres!, hijosCompartidosRef: hijosCompartidosRef!))
                     
                 }
                 alertController.dismiss(animated: false, completion: nil)
