@@ -116,6 +116,7 @@ class LoadingPageViewController: UIViewController {
                     colaborador.statusInvitacion = document.data()["status"] as? String
                     colaborador.usuarioUID = document.data()["usuarioUID"] as? String
                     colaborador.hijosCompartidos = (document.data()["hijos_compartidos"] as? [Int])!
+                    colaborador.idInvitacion = document.data()["idInvitacion"] as? String
                     if (document.data()["suscripcion"] as? Bool == true){
                         colaborador.suscripcion = "Premium"
                     }else{

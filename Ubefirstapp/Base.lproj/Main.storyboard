@@ -1790,7 +1790,7 @@
                                 <rect key="frame" x="66" y="637" width="281" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <state key="normal" title="Eliminar Colaboración">
+                                <state key="normal" title="Eliminar Vinculación">
                                     <color key="titleColor" red="0.85720935880000004" green="0.0" blue="0.0099821227339999992" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -1827,6 +1827,7 @@
                         <outlet property="txtArea_hijos" destination="hbz-Va-cd0" id="jWF-Lv-U4e"/>
                         <outlet property="txt_correo" destination="Vy2-R0-xno" id="2mI-Pg-bIr"/>
                         <outlet property="txt_nombre" destination="qAi-ku-4OJ" id="uFu-5y-QOn"/>
+                        <segue destination="pHw-CQ-OQJ" kind="showDetail" identifier="DeleteInvitacionToLoadingPage" id="m50-pA-PUS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5eg-q9-LIt" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2029,8 +2030,8 @@
         <image name="prevAcademico" width="304" height="304"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Vdw-Pn-Q6X"/>
-        <segue reference="Dqd-S6-TLe"/>
+        <segue reference="1fk-Xs-Kyd"/>
+        <segue reference="m50-pA-PUS"/>
         <segue reference="0M7-0r-Rh0"/>
         <segue reference="2yu-48-KYZ"/>
         <segue reference="WiJ-dJ-LZq"/>

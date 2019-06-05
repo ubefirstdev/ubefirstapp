@@ -14,6 +14,7 @@ class Colaborador {
     var suscripcion: String!
     var usuarioUID:String!
     var hijosCompartidos: [Int?]
+    var idInvitacion: String!
     
     init() {
         self.nombre=""
@@ -23,5 +24,6 @@ class Colaborador {
         self.suscripcion=""
         self.usuarioUID=""
         self.hijosCompartidos=[]
+        self.idInvitacion=""
     }
 }

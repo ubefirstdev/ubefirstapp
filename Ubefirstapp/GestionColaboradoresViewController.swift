@@ -55,5 +55,34 @@ class GestionColaboradoresViewController: UIViewController, UITableViewDataSourc
                 self?.performSegue(withIdentifier: "HijosConfigTableToHijosData", sender: self)
             }
         }*/
+        
+        if (userData.colaboradores[indexPath.row].statusInvitacion=="Colaboración terminada"){
+            let alertController = UIAlertController(title: "El usuario ha desvinvulado su cuenta", message: "A cotinuación se eliminará esta colaboración, si desea volver a vincular las cuentas tendra que enviar nuevamente una invitacion de colaboración", preferredStyle: UIAlertController.Style.alert)
+            alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default) { UIAlertAction in
+                 let alertController2 = UIAlertController(title: "Eliminando invitación", message: "Un momento porfavor", preferredStyle: UIAlertController.Style.alert)
+                self.present(alertController2, animated: true)
+                
+                if (userData.colaboradores.count == 1){
+                    let docUpdate = [
+                        "colaboradoresactivos": false
+                        ] as [String : Any]
+                    
+                    db.collection("users").document(userData.uid).setData(docUpdate, merge: true)
+
+                }
+                
+            db.collection("users").document(userData.uid).collection("colaboradores").document(userData.colaboradores[indexPath.row].idInvitacion).delete() { err in
+                    if let err = err {
+                        print("Error removing document: \(err)")
+                    } else {
+                        userData.colaboradores.remove(at: indexPath.row)
+                        alertController2.dismiss(animated: true, completion: {
+                            self.navigationController?.popViewController(animated: true)
+                        })
+                    }
+                }
+            })
+            self.present(alertController, animated: true, completion: nil)
+        }
     }
 }

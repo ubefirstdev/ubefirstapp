@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ubefirstapp/LoginViewController.swift"
-            timestampString = "573714619.124648"
+            timestampString = "581381160.535689"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "98"
@@ -458,7 +458,7 @@
                   moduleName = "Ubefirstapp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/luisoliva/Documents/Proyectos%20Swift/ubefirstapp/Ubefirstapp/HijosConfigViewController.swift"
-                  timestampString = "581308688.157028"
+                  timestampString = "581381161.542828"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "230"
@@ -473,7 +473,7 @@
                   moduleName = "Ubefirstapp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/luisoliva/Documents/Proyectos%20Swift/ubefirstapp/Ubefirstapp/HijosConfigViewController.swift"
-                  timestampString = "581308688.16205"
+                  timestampString = "581381161.567951"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "230"
@@ -570,7 +570,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ubefirstapp/LoadingPageViewController.swift"
-            timestampString = "581308686.127179"
+            timestampString = "581381160.5365731"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "112"
@@ -586,7 +586,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ubefirstapp/LoadingPageViewController.swift"
-            timestampString = "581308686.127298"
+            timestampString = "581381160.5366859"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "86"
@@ -602,7 +602,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ubefirstapp/ConfirmarInvitacionViewController.swift"
-            timestampString = "581308686.1273921"
+            timestampString = "581381160.536775"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "44"
@@ -618,12 +618,60 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ubefirstapp/ConfirmarInvitacionViewController.swift"
-            timestampString = "581308686.128121"
+            timestampString = "581381160.536859"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "31"
             endingLineNumber = "31"
             landmarkName = "btn_enviarInvitacionPressed(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ubefirstapp/EliminarColaboracionViewController.swift"
+            timestampString = "581381160.536944"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "btn_eliminarVinculacionPressed(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ubefirstapp/GestionColaboradoresViewController.swift"
+            timestampString = "581381160.538573"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ubefirstapp/GestionColaboradoresViewController.swift"
+            timestampString = "581381160.53912"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "tableView(_:didSelectRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -72,7 +72,8 @@ class ConfirmarInvitacionViewController: UIViewController {
                 "suscripcion":busquedaColaboradorData.suscripcion,
                 "status": "Invitación enviada",
                 "userUID": busquedaColaboradorData.uid,
-                "hijos_compartidos": hijosSelected
+                "hijos_compartidos": hijosSelected,
+                "idInvitacion": id2
                 
             ]
             db.collection("users").document(userData.uid).collection("colaboradores").document(id2).setData(docDataColaborador)

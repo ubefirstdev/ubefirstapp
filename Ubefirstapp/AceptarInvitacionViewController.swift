@@ -35,7 +35,11 @@ class AceptarInvitacionViewController: UIViewController {
             }
         })
         
-        let array = busquedaColaboradorData.hijosCompartidosRef
+        var array = userData.hijosref
+        for i in (0...busquedaColaboradorData.hijosCompartidosRef.count-1){
+            array?.append(busquedaColaboradorData.hijosCompartidosRef[i]!)
+        }
+        
         let docUpdate=[
             "colaborador": true,
             "hijosref": array
