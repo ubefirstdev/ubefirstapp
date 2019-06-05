@@ -237,8 +237,8 @@ class LoadingPageViewController: UIViewController {
                     
                     if (status == "Colaborando"){
                         let hijosref = document.data()["hijos_compartidos_ref"] as? [String]
-                        for i in (0...hijosref!.count-1){
-                            for ii in (0...userData.hijosref.count-1){
+                        for i in (0...userData.hijosref.count-1){
+                            for ii in (0...hijosref!.count-1){
                                 if (userData.hijosref[i]==hijosref![ii]){
                                     userData.hijos[i].owner = false
                                 }
